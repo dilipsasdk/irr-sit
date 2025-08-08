@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Auth provider details for auth providers where theuser name and password is entered locally since the access token can only be retrieved using an external service.</description>
+    <label>Local Auth Provider</label>
+    <pluralLabel>Local Auth Providers</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Numbers_Not_Allowed</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR((NOT(REGEX(Payee_First_Name__c ,&quot;^\\s*[A-Za-z\\p{Ll}\\ -]*$&quot;))), (NOT(REGEX(Payee_Last_Name__c  ,&quot;^\\s*[A-Za-z\\p{Ll}\\ -]*$&quot;))))</errorConditionFormula>
+    <errorMessage>Numbers not allowed in name fields.</errorMessage>
+</ValidationRule>

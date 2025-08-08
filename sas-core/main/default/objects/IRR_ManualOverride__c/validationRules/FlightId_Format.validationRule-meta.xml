@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FlightId_Format</fullName>
+    <active>true</active>
+    <description>Flight Id must be entered in the correct format</description>
+    <errorConditionFormula>!ISBLANK(IRR_FlightId__c) &amp;&amp;
+!REGEX(
+  IRR_FlightId__c,
+  &quot;([A-Z]{2})([0-9]{4})-([0-9]{8})-([A-Z]{3})-([A-Z]{3})&quot;
+)</errorConditionFormula>
+    <errorDisplayField>IRR_FlightId__c</errorDisplayField>
+    <errorMessage>Flight Id must be entered in the correct format, e.g. SK1238-20200213-ARN-CPH</errorMessage>
+</ValidationRule>

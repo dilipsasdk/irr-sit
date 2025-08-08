@@ -1,0 +1,867 @@
+<template>
+  <lightning-card title="Retrieve Booking" if:false={bookings}>
+    <div
+      class="slds-grid slds-gutters slds-grid_vertical-align-end slds-p-left_small"
+    >
+      <div class="slds-col">
+        <lightning-input
+          type="text"
+          label="Enter PNR code"
+          value={searchValue}
+          onchange={handleSearchValueChange}
+          onkeydown={handlePressEnterKey}
+          class="search-field"
+        >
+        </lightning-input>
+      </div>
+
+      <div class="slds-col">
+        <lightning-button
+          variant="brand"
+          label="Search"
+          title="Search button"
+          onclick={handleSearchButtonClick}
+        >
+        </lightning-button>
+      </div>
+    </div>
+    <div if:true={showSpinner}>
+      <lightning-spinner
+        alternative-text="Loading"
+        size="medium"
+        variant="brand"
+      ></lightning-spinner>
+    </div>
+
+    <template if:true={error}>
+      <c-c_-error-panel errors={error}></c-c_-error-panel>
+    </template>
+
+    <div class="slds-p-around_medium searchError" if:true={noSearchResult}>
+      <lightning-icon
+        icon-name="utility:warning"
+        variant="warning"
+      ></lightning-icon>
+      <div class="slds-p-around_small">
+        <p>Could not find a matching booking</p>
+      </div>
+    </div>
+  </lightning-card>
+
+  <article class="slds-card" if:true={bookings}>
+    <div if:true={showSpinner}>
+      <lightning-spinner
+        alternative-text="Loading"
+        size="medium"
+        variant="brand"
+      ></lightning-spinner>
+    </div>
+    <div class="slds-p-around_medium searchError" if:true={hasDuplicates}>
+      <lightning-icon
+        icon-name="utility:warning"
+        variant="warning"
+      ></lightning-icon>
+      <div class="slds-p-around_small">
+        <p>
+          Multiple bookings were found for the entered PNR. This is most likely
+          due to the PNR being reused. Please disconnect any bookings that do
+          not belong to the customer present in the case.
+        </p>
+      </div>
+    </div>
+
+    <div class="slds-card__header slds-grid">
+      <header>
+        <h2 class="slds-card__header-title slds-text-heading_small">
+          Related bookings
+        </h2>
+      </header>
+    </div>
+    <ul class="slds-has-dividers_bottom-space">
+      <lightning-accordion allow-multiple-sections-open active-section-name="Upcoming_Bookings">
+        <lightning-accordion-section label={visibleUpcomingBookingCount} name="Upcoming_Bookings">
+          <div class="slds-card__body slds-card__body_inner">
+            <template iterator:b={visibleUpcomingBookings}>
+                <lightning-accordion-section key={b.value.bookingReference} label={b.value.accordionTitle}>
+                  <lightning-tabset>
+                    <lightning-tab label="Flight data">
+                      <template
+                        iterator:trip={b.value.trips}
+                        class="slds-m-bottom_small"
+                      >
+                        <div class="slds-col slds-size_1-of-1" key={trip.value.type}>
+                          <strong>{trip.value.type}&nbsp;</strong>
+                          <strong if:true={trip.first} class="slds-float_right"
+                            >{b.value.bookingReference}{b.value.travelOfficeId}</strong
+                          >
+                        </div>
+                        <div
+                          for:each={trip.value.flights}
+                          for:item="flight"
+                          class="slds-col slds-size_1-of-1 slds-grid slds-border_bottom slds-p-vertical_x-small"
+                          key={flight.flightNumber}
+                        >
+                          <div
+                            class="slds-col slds-size_3-of-12 slds-p-right_small slds-grid slds-grid_vertical"
+                          >
+                            <span class="slds-col slds-size_1-of-1"
+                              ><span class={flight.bulletClassName}>&#8226;</span
+                              >{flight.flightNumber}</span
+                            >
+                            <span class="slds-col slds-size_1-of-1 flight-date"
+                              >{flight.scheduledDepartureDateLocal}</span
+                            >
+                          </div>
+                          <div
+                            class="slds-col slds-size_3-of-12 slds-grid slds-grid_vertical slds-p-right_small"
+                          >
+                            <div class="slds-col slds-size_1-of-1">
+                              <span>Origin&nbsp;{flight.departureAirport}</span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                              <span
+                                >T{flight.departureTerminal},&nbsp;{flight.departureGate}</span
+                              >
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                              <span class={flight.departureTimeClassName}
+                                >{flight.scheduledDepartureTimeLocal}</span
+                              >
+                              <span if:true={flight.departureDelayed}>&nbsp;</span>
+                              <span if:true={flight.departureDelayed}
+                                >{flight.estimatedDepartureTimeLocal}</span
+                              >
+                            </div>
+                          </div>
+                          <div
+                            class="slds-col slds-size_3-of-12 slds-grid slds-grid_vertical"
+                          >
+                            <div class="slds-col slds-size_1-of-1">
+                              <span>Destination&nbsp;{flight.arrivalAirport}</span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                              <span
+                                >T{flight.arrivalTerminal},&nbsp;{flight.arrivalGate}</span
+                              >
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                              <span class={flight.arrivalTimeClassName}
+                                >{flight.scheduledArrivalTimeLocal}</span
+                              >
+                              <span if:true={flight.arrivalDelayed}>&nbsp;</span>
+                              <span if:true={flight.arrivalDelayed}
+                                >{flight.estimatedArrivalTimeLocal}</span
+                              >
+                            </div>
+                          </div>
+                          <div
+                            class="slds-col slds-size_3-of-12 slds-grid slds-grid_vertical-reverse"
+                          >
+                            <span if:true={flight.arrivalDelayed}
+                              >Delay: {flight.arrivalDelayedMinutes}</span
+                            >
+                            <span if:true={flight.cancelled}>Cancelled</span>
+                          </div>
+                        </div>
+                      </template>
+                      <div>
+                        <span
+                          class="slds-text-align_left slds-text-color_weak slds-text-body_small"
+                          >Showing&nbsp;{b.value.displayDetails.flightsVisible}&nbsp;flight&nbsp;segments</span
+                        >
+                      </div>
+                      <div
+                        class="slds-m-vertical_small"
+                        if:false={b.value.displayDetails.showAllFlights}
+                      >
+                        <a
+                          class="slds-align_absolute-center"
+                          data-id={b.value.bookingReference}
+                          onclick={handleDisplayAllFlights}
+                          >Load more flights,</a
+                        >
+                      </div>
+                      <div class="case-count-text">
+                        <span
+                          class="slds-text-align_left slds-text-color_weak slds-text-body_small"
+                          >Last update&nbsp;
+                          <lightning-formatted-date-time
+                            value={b.value.lastUpdated}
+                            year="numeric"
+                            month="short"
+                            day="2-digit"
+                            hour="2-digit"
+                            minute="2-digit"
+                          ></lightning-formatted-date-time>
+                          &nbsp;-&nbsp;
+                        </span>
+                        <a onclick={refreshBooking} data-id={b.value.bookingIdentifier}
+                          >refresh</a
+                        >
+                      </div>
+                    </lightning-tab>
+        
+                    <lightning-tab label="Booking data">
+                      <div>
+                        <strong>Travellers&nbsp;</strong>
+                        <strong class="slds-float_right"
+                          >{b.value.bookingReference}{b.value.travelOfficeId}</strong
+                        >
+                      </div>
+                      <lightning-accordion
+                        allow-multiple-sections-open
+                        class="slds-border_bottom"
+                      >
+                        <lightning-accordion-section
+                          name="P"
+                          label={p.name}
+                          for:each={b.value.visiblePassengers}
+                          for:item="p"
+                          key={p.identifier}
+                        >
+                          <div class="slds-grid slds-wrap slds-gutters_direct">
+                            <div
+                              class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-m-bottom_x-small"
+                            >
+                              <span class="detail-box-label">Phone number</span>
+                              <span class="slds-border_bottom">{p.phone}</span>
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-m-bottom_x-small"
+                            >
+                              <span class="detail-box-label">Email</span>
+                              <span class="slds-border_bottom">{p.email}</span>
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-m-bottom_x-small"
+                            >
+                              <span class="detail-box-label">Ticket number</span>
+                              <span class="slds-border_bottom">{p.ticketNumbers}</span>
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-m-bottom_x-small"
+                            >
+                              <span class="detail-box-label">FQTV</span>
+                              <span class="slds-border_bottom"
+                                >{p.euroBonusNumber}</span
+                              >
+                            </div>
+                            <template for:each={p.ssrs} for:item="s">
+                              <div
+                                class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-m-bottom_x-small"
+                                key={s}
+                              >
+                                <span class="detail-box-label">SSR</span>
+                                <span class="slds-border_bottom">{p.ssrs}</span>
+                              </div>
+                            </template>
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-grid slds-m-bottom_x-small"
+                            >
+                              <!--  force seats and bags to the same row as both take a lot of space when there are
+                                        several segments for each passenger. -->
+                              <div
+                                class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-m-right_small"
+                              >
+                                <span class="detail-box-label">Seats</span>
+                                <div
+                                  class="slds-border_bottom slds-grid slds-grid_vertical"
+                                >
+                                  <span
+                                    class="slds-size_1-of-1"
+                                    for:each={p.seats}
+                                    for:item="seat"
+                                    key={bag}
+                                    >{seat}</span
+                                  >
+                                </div>
+                              </div>
+                              <div
+                                class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical"
+                              >
+                                <span class="detail-box-label">Bags</span>
+                                <div
+                                  class="slds-border_bottom slds-grid slds-grid_vertical"
+                                >
+                                  <span
+                                    class="slds-size_1-of-1"
+                                    for:each={p.bags}
+                                    for:item="bag"
+                                    key={bag}
+                                    >{bag}</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </lightning-accordion-section>
+                      </lightning-accordion>
+                      <div class="slds-m-bottom_small">
+                        <span
+                          class="slds-text-align_left slds-text-color_weak slds-text-body_small"
+                          >Showing&nbsp;{b.value.displayDetails.passengersVisible}&nbsp;travelers</span
+                        >
+                      </div>
+                      <div
+                        class="slds-m-vertical_small"
+                        if:false={b.value.displayDetails.showAllPassengers}
+                      >
+                        <a
+                          class="slds-align_absolute-center"
+                          data-id={b.value.bookingReference}
+                          onclick={handleDisplayAllPassengers}
+                          >Load more travellers</a
+                        >
+                      </div>
+                      <div for:each={b.value.trips} for:item="trip" key={trip.type}>
+                        <div class="slds-p-vertical_x-small">
+                          <strong>{trip.type} </strong>
+                          <span>({b.value.type})</span>
+                        </div>
+                        <div
+                          for:each={trip.flights}
+                          for:item="flight"
+                          class="slds-col slds-size_1-of-1 slds-grid slds-p-vertical_x-small"
+                          key={flight.flightNumber}
+                        >
+                          <div class="slds-col slds-size_2-of-12 slds-p-right_small">
+                            <span>{flight.flightNumber}</span>
+                          </div>
+                          <div class="slds-col slds-size_2-of-12 slds-p-right_small">
+                            <span>{flight.scheduledDepartureDateLocal}</span>
+                          </div>
+                          <div
+                            class="slds-col slds-size_4-of-12 slds-grid slds-grid_vertical slds-p-right_small"
+                          >
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-p-bottom_xx-small"
+                            >
+                              <span>Origin&nbsp;{flight.departureAirport}</span>
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-grid slds-grid_vertical"
+                            >
+                              <span class="detail-box-label">Service class</span>
+                              <span class="slds-border_bottom"
+                                >{flight.serviceClass}</span
+                              >
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-grid slds-grid_vertical"
+                            >
+                              <span class="detail-box-label">Status</span>
+                              <span class="slds-border_bottom"
+                                >{flight.segmentStatusCode}</span
+                              >
+                            </div>
+                          </div>
+                          <div
+                            class="slds-col slds-size_4-of-12 slds-grid slds-grid_vertical"
+                          >
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-p-bottom_xx-small"
+                            >
+                              <span>Destination&nbsp;{flight.arrivalAirport}</span>
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-grid slds-grid_vertical"
+                            >
+                              <span class="detail-box-label">Booking class</span>
+                              <span class="slds-border_bottom"
+                                >{flight.bookingClass}</span
+                              >
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-grid slds-grid_vertical"
+                            >
+                              <span class="detail-box-label">Fare basis</span>
+                              <span class="slds-border_bottom">{flight.fareBasis}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <span
+                          class="slds-text-align_left slds-text-color_weak slds-text-body_small"
+                          >Showing&nbsp;{b.value.displayDetails.flightsVisible}&nbsp;flight&nbsp;segments</span
+                        >
+                      </div>
+                      <div
+                        class="slds-m-vertical_small"
+                        if:false={b.value.displayDetails.showAllFlights}
+                      >
+                        <a
+                          class="slds-align_absolute-center"
+                          data-id={b.value.bookingReference}
+                          onclick={handleDisplayAllFlights}
+                          >Load more flights</a
+                        >
+                      </div>
+                    </lightning-tab>
+        
+                    <lightning-tab label={b.value.displayDetails.caseTabTitle}>
+                      <strong class="slds-float_right"
+                        >{b.value.bookingReference}{b.value.travelOfficeId}</strong
+                      >
+                      <c-case-list cases={b.value.relatedCases}></c-case-list>
+                    </lightning-tab>
+                    <lightning-tab
+                      label={b.value.displayDetails.communicationLogsTabTitle}
+                    >
+                      <strong class="slds-float_right"
+                        >{b.value.bookingReference}{b.value.travelOfficeId}</strong
+                      >
+                      <c-communication-log
+                        communicationlogs={b.value.relatedCommunicationLogs}
+                      ></c-communication-log>
+                    </lightning-tab>
+                  </lightning-tabset>
+                  <div class="booking-separator slds-grid slds-grid_align-spread">
+                    <div class="slds-col">
+                      <a class="slds-float_left" 
+                      if:true={addPNRVisible} 
+                      onclick={handleAddPNRToCase} 
+                      data-pnr={b.value.bookingReference}
+                      >Add booking to case</a>
+                    </div>
+                    <div class="slds-col">
+                      <a class="slds-float_right"
+                      onclick={removeBookingFromCase}
+                      data-id={b.value.bookingIdentifier}
+                      >Disconnect booking</a>
+                    </div>
+                  </div>
+                </lightning-accordion-section>
+            </template>
+            <div if:true={hasUpcomingBookings} class="slds-text-align_center">{shownUpcomingBookingCount}
+              <div class="slds-m-vertical_small" if:false={displayedAllUpcomingBookings}>
+                  <a 
+                  class="slds-align_absolute-center"
+                  onclick={handleDisplayUpcomingBookings}
+                  >Load more</a>
+              </div>
+            </div>
+            <div class="slds-text-align_center" if:false={hasUpcomingBookings}>
+              No upcoming bookings
+            </div>
+          </div>
+        </lightning-accordion-section>
+        <lightning-accordion-section label={visiblePastBookingCount} name="Past_Bookings">
+          <div class="slds-card__body slds-card__body_inner">
+            <template iterator:b={visiblePastBookings}>
+                <lightning-accordion-section key={b.value.bookingReference} label={b.value.accordionTitle}>
+                  <lightning-tabset>
+                    <lightning-tab label="Flight data">
+                      <template
+                        iterator:trip={b.value.trips}
+                        class="slds-m-bottom_small"
+                      >
+                        <div class="slds-col slds-size_1-of-1" key={trip.value.type}>
+                          <strong>{trip.value.type}&nbsp;</strong>
+                          <strong if:true={trip.first} class="slds-float_right"
+                            >{b.value.bookingReference}{b.value.travelOfficeId}</strong
+                          >
+                        </div>
+                        <div
+                          for:each={trip.value.flights}
+                          for:item="flight"
+                          class="slds-col slds-size_1-of-1 slds-grid slds-border_bottom slds-p-vertical_x-small"
+                          key={flight.Id}
+                        >
+                          <div
+                            class="slds-col slds-size_3-of-12 slds-p-right_small slds-grid slds-grid_vertical"
+                          >
+                            <span class="slds-col slds-size_1-of-1"
+                              ><span class={flight.bulletClassName}>&#8226;</span
+                              >{flight.flightNumber}</span
+                            >
+                            <span class="slds-col slds-size_1-of-1 flight-date"
+                              >{flight.scheduledDepartureDateLocal}</span
+                            >
+                          </div>
+                          <div
+                            class="slds-col slds-size_3-of-12 slds-grid slds-grid_vertical slds-p-right_small"
+                          >
+                            <div class="slds-col slds-size_1-of-1">
+                              <span>Origin&nbsp;{flight.departureAirport}</span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                              <span
+                                >T{flight.departureTerminal},&nbsp;{flight.departureGate}</span
+                              >
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                              <span class={flight.departureTimeClassName}
+                                >{flight.scheduledDepartureTimeLocal}</span
+                              >
+                              <span if:true={flight.departureDelayed}>&nbsp;</span>
+                              <span if:true={flight.departureDelayed}
+                                >{flight.estimatedDepartureTimeLocal}</span
+                              >
+                            </div>
+                          </div>
+                          <div
+                            class="slds-col slds-size_3-of-12 slds-grid slds-grid_vertical"
+                          >
+                            <div class="slds-col slds-size_1-of-1">
+                              <span>Destination&nbsp;{flight.arrivalAirport}</span>
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                              <span
+                                >T{flight.arrivalTerminal},&nbsp;{flight.arrivalGate}</span
+                              >
+                            </div>
+                            <div class="slds-col slds-size_1-of-1">
+                              <span class={flight.arrivalTimeClassName}
+                                >{flight.scheduledArrivalTimeLocal}</span
+                              >
+                              <span if:true={flight.arrivalDelayed}>&nbsp;</span>
+                              <span if:true={flight.arrivalDelayed}
+                                >{flight.estimatedArrivalTimeLocal}</span
+                              >
+                            </div>
+                          </div>
+                          <div
+                            class="slds-col slds-size_3-of-12 slds-grid slds-grid_vertical-reverse"
+                          >
+                            <span if:true={flight.arrivalDelayed}
+                              >Delay: {flight.arrivalDelayedMinutes}</span
+                            >
+                            <span if:true={flight.cancelled}>Cancelled</span>
+                          </div>
+                        </div>
+                      </template>
+                      <div>
+                        <span
+                          class="slds-text-align_left slds-text-color_weak slds-text-body_small"
+                          >Showing&nbsp;{b.value.displayDetails.flightsVisible}&nbsp;flight&nbsp;segments</span
+                        >
+                      </div>
+                      <div
+                        class="slds-m-vertical_small"
+                        if:false={b.value.displayDetails.showAllFlights}
+                      >
+                        <a
+                          class="slds-align_absolute-center"
+                          data-id={b.value.bookingReference}
+                          onclick={handleDisplayAllFlights}
+                          >Load more flights</a
+                        >
+                      </div>
+                      <div class="case-count-text">
+                        <span
+                          class="slds-text-align_left slds-text-color_weak slds-text-body_small"
+                          >Last update&nbsp;
+                          <lightning-formatted-date-time
+                            value={b.value.lastUpdated}
+                            year="numeric"
+                            month="short"
+                            day="2-digit"
+                            hour="2-digit"
+                            minute="2-digit"
+                          ></lightning-formatted-date-time>
+                          &nbsp;-&nbsp;
+                        </span>
+                        <a onclick={refreshBooking} data-id={b.value.bookingIdentifier}
+                          >refresh</a
+                        >
+                      </div>
+                    </lightning-tab>
+        
+                    <lightning-tab label="Booking data">
+                      <div>
+                        <strong>Travellers&nbsp;</strong>
+                        <strong class="slds-float_right"
+                          >{b.value.bookingReference}{b.value.travelOfficeId}</strong
+                        >
+                      </div>
+                      <lightning-accordion
+                        allow-multiple-sections-open
+                        class="slds-border_bottom"
+                      >
+                        <lightning-accordion-section
+                          name="P"
+                          label={p.name}
+                          for:each={b.value.visiblePassengers}
+                          for:item="p"
+                          key={p.identifier}
+                        >
+                          <div class="slds-grid slds-wrap slds-gutters_direct">
+                            <div
+                              class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-m-bottom_x-small"
+                            >
+                              <span class="detail-box-label">Phone number</span>
+                              <span class="slds-border_bottom">{p.phone}</span>
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-m-bottom_x-small"
+                            >
+                              <span class="detail-box-label">Email</span>
+                              <span class="slds-border_bottom">{p.email}</span>
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-m-bottom_x-small"
+                            >
+                              <span class="detail-box-label">Ticket number</span>
+                              <span class="slds-border_bottom">{p.ticketNumbers}</span>
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-m-bottom_x-small"
+                            >
+                              <span class="detail-box-label">FQTV</span>
+                              <span class="slds-border_bottom"
+                                >{p.euroBonusNumber}</span
+                              >
+                            </div>
+                            <template for:each={p.ssrs} for:item="s">
+                              <div
+                                class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-m-bottom_x-small"
+                                key={s}
+                              >
+                                <span class="detail-box-label">SSR</span>
+                                <span class="slds-border_bottom">{p.ssrs}</span>
+                              </div>
+                            </template>
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-grid slds-m-bottom_x-small"
+                            >
+                              <!--  force seats and bags to the same row as both take a lot of space when there are
+                                        several segments for each passenger. -->
+                              <div
+                                class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-m-right_small"
+                              >
+                                <span class="detail-box-label">Seats</span>
+                                <div
+                                  class="slds-border_bottom slds-grid slds-grid_vertical"
+                                >
+                                  <span
+                                    class="slds-size_1-of-1"
+                                    for:each={p.seats}
+                                    for:item="seat"
+                                    key={bag}
+                                    >{seat}</span
+                                  >
+                                </div>
+                              </div>
+                              <div
+                                class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical"
+                              >
+                                <span class="detail-box-label">Bags</span>
+                                <div
+                                  class="slds-border_bottom slds-grid slds-grid_vertical"
+                                >
+                                  <span
+                                    class="slds-size_1-of-1"
+                                    for:each={p.bags}
+                                    for:item="bag"
+                                    key={bag}
+                                    >{bag}</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </lightning-accordion-section>
+                      </lightning-accordion>
+                      <div class="slds-m-bottom_small">
+                        <span
+                          class="slds-text-align_left slds-text-color_weak slds-text-body_small"
+                          >Showing&nbsp;{b.value.displayDetails.passengersVisible}&nbsp;travelers</span
+                        >
+                      </div>
+                      <div
+                        class="slds-m-vertical_small"
+                        if:false={b.value.displayDetails.showAllPassengers}
+                      >
+                        <a
+                          class="slds-align_absolute-center"
+                          data-id={b.value.bookingReference}
+                          onclick={handleDisplayAllPassengers}
+                          >Load more travellers</a
+                        >
+                      </div>
+                      <div for:each={b.value.trips} for:item="trip" key={trip.type}>
+                        <div class="slds-p-vertical_x-small">
+                          <strong>{trip.type} </strong>
+                          <span>({b.value.type})</span>
+                        </div>
+                        <div
+                          for:each={trip.flights}
+                          for:item="flight"
+                          class="slds-col slds-size_1-of-1 slds-grid slds-p-vertical_x-small"
+                          key={flight.flightNumber}
+                        >
+                          <div class="slds-col slds-size_2-of-12 slds-p-right_small">
+                            <span>{flight.flightNumber}</span>
+                          </div>
+                          <div class="slds-col slds-size_2-of-12 slds-p-right_small">
+                            <span>{flight.scheduledDepartureDateLocal}</span>
+                          </div>
+                          <div
+                            class="slds-col slds-size_4-of-12 slds-grid slds-grid_vertical slds-p-right_small"
+                          >
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-p-bottom_xx-small"
+                            >
+                              <span>Origin&nbsp;{flight.departureAirport}</span>
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-grid slds-grid_vertical"
+                            >
+                              <span class="detail-box-label">Service class</span>
+                              <span class="slds-border_bottom"
+                                >{flight.serviceClass}</span
+                              >
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-grid slds-grid_vertical"
+                            >
+                              <span class="detail-box-label">Status</span>
+                              <span class="slds-border_bottom"
+                                >{flight.segmentStatusCode}</span
+                              >
+                            </div>
+                          </div>
+                          <div
+                            class="slds-col slds-size_4-of-12 slds-grid slds-grid_vertical"
+                          >
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-p-bottom_xx-small"
+                            >
+                              <span>Destination&nbsp;{flight.arrivalAirport}</span>
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-grid slds-grid_vertical"
+                            >
+                              <span class="detail-box-label">Booking class</span>
+                              <span class="slds-border_bottom"
+                                >{flight.bookingClass}</span
+                              >
+                            </div>
+                            <div
+                              class="slds-col slds-size_1-of-1 slds-grid slds-grid_vertical"
+                            >
+                              <span class="detail-box-label">Fare basis</span>
+                              <span class="slds-border_bottom">{flight.fareBasis}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <span
+                          class="slds-text-align_left slds-text-color_weak slds-text-body_small"
+                          >Showing&nbsp;{b.value.displayDetails.flightsVisible}&nbsp;flight&nbsp;segments</span
+                        >
+                      </div>
+                      <div
+                        class="slds-m-vertical_small"
+                        if:false={b.value.displayDetails.showAllFlights}
+                      >
+                        <a
+                          class="slds-align_absolute-center"
+                          data-id={b.value.bookingReference}
+                          onclick={handleDisplayAllFlights}
+                          >Load more flights</a
+                        >
+                      </div>
+                    </lightning-tab>
+        
+                    <lightning-tab label={b.value.displayDetails.caseTabTitle}>
+                      <strong class="slds-float_right"
+                        >{b.value.bookingReference}{b.value.travelOfficeId}</strong
+                      >
+                      <c-case-list cases={b.value.relatedCases}></c-case-list>
+                    </lightning-tab>
+                    <lightning-tab
+                      label={b.value.displayDetails.communicationLogsTabTitle}
+                    >
+                      <strong class="slds-float_right"
+                        >{b.value.bookingReference}{b.value.travelOfficeId}</strong
+                      >
+                      <c-communication-log
+                        communicationlogs={b.value.relatedCommunicationLogs}
+                      ></c-communication-log>
+                    </lightning-tab>
+                  </lightning-tabset>
+                  <div class="booking-separator slds-grid slds-grid_align-spread">
+                    <div class="slds-col">
+                      <a class="slds-float_left" 
+                      if:true={addPNRVisible} 
+                      onclick={handleAddPNRToCase} 
+                      data-pnr={b.value.bookingReference}
+                      >Add booking to case</a>
+                    </div>
+                    <div class="slds-col">
+                      <a class="slds-float_right"
+                      onclick={removeBookingFromCase}
+                      data-id={b.value.bookingIdentifier}
+                      >Disconnect booking</a>
+                    </div>
+                  </div>
+                </lightning-accordion-section>
+            </template>
+            <div if:true={hasPastBookings} class="slds-text-align_center">{shownPastBookingCount}</div>
+            <div class="slds-m-vertical_small" if:false={displayedAllPastBookings}>
+              <div if:true={hasPastBookings}>
+                <a
+                class="slds-align_absolute-center"
+                onclick={handleDisplayPastBookings}
+                >Load more</a
+              >
+              </div>
+            </div>
+            <div class="slds-text-align_center" if:false={hasPastBookings}>
+              No past bookings
+            </div>
+          </div>
+          
+          
+        </lightning-accordion-section>
+      </lightning-accordion>
+
+    </ul>
+
+    <div
+      if:true={displayAddAnotherBookingForm}
+      class="slds-card__body slds-card__body_inner slds-p-vertical_small add-another-booking"
+    >
+      <div
+        class="slds-grid slds-gutters slds-wrap slds-grid_vertical-align-end"
+      >
+        <div
+          class="slds-col slds-size_1-of-1 slds-card__header-title slds-text-heading_small"
+        >
+          <h3>Retrieve another booking</h3>
+        </div>
+        <div class="slds-col slds-size_8-of-12">
+          <lightning-input
+            type="text"
+            label="Enter PNR code"
+            value={searchValue}
+            onchange={handleSearchValueChange}
+            onkeydown={handlePressEnterKey}
+            class="search-field"
+          >
+          </lightning-input>
+        </div>
+        <div class="slds-col slds-size_4-of-12">
+          <lightning-button
+            variant="brand"
+            label="Search"
+            title="Search button"
+            onclick={handleSearchButtonClick}
+          >
+          </lightning-button>
+        </div>
+      </div>
+
+      <template if:true={error}>
+        <c-c_-error-panel errors={error}></c-c_-error-panel>
+      </template>
+    </div>
+
+    <div if:false={displayAddAnotherBookingForm} class="slds-card__footer">
+      <a onclick={flipDisplayAddAnotherBookingForm}>Add another booking</a>
+    </div>
+  </article>
+</template>

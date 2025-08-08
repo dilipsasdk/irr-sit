@@ -1,0 +1,3 @@
+Id,Booking_Reference__c,Is_Cancelled__c,TEDS_Identifier__c,Type__c,Name
+a021j000008cjL3AAI,123456,false,123456-202103105,MultiCity,a021j000008cjL3
+a021j000008cjJCAAY,123456,false,123457-202103105,MultiCity,a021j000008cjJC

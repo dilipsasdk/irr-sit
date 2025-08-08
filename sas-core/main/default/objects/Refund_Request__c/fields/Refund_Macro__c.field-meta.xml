@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Refund_Macro__c</fullName>
+    <externalId>false</externalId>
+    <label>Refund Macro</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>1 - REFUND TAX</fullName>
+                <default>false</default>
+                <label>1 - REFUND TAX</label>
+            </value>
+            <value>
+                <fullName>2 - REFUND PART</fullName>
+                <default>false</default>
+                <label>2 - REFUND PART</label>
+            </value>
+            <value>
+                <fullName>3 - REFUND FLEX+RESTRICT</fullName>
+                <default>false</default>
+                <label>3 - REFUND FLEX+RESTRICT</label>
+            </value>
+            <value>
+                <fullName>4 - REFUNDS 24 HRS</fullName>
+                <default>false</default>
+                <label>4 - REFUNDS 24 HRS</label>
+            </value>
+            <value>
+                <fullName>5 - REFUND 24/12 HRS</fullName>
+                <default>false</default>
+                <label>5 - REFUND 24/12 HRS</label>
+            </value>
+            <value>
+                <fullName>6 - REFUND Residual Value</fullName>
+                <default>false</default>
+                <label>6 - REFUND Residual Value</label>
+            </value>
+            <value>
+                <fullName>7 - REFUND FLEX</fullName>
+                <default>false</default>
+                <label>7 - REFUND FLEX</label>
+            </value>
+            <value>
+                <fullName>8 - REFUND EB</fullName>
+                <default>false</default>
+                <label>8 - REFUND EB</label>
+            </value>
+            <value>
+                <fullName>9 - REFUND IRR</fullName>
+                <default>false</default>
+                <label>9 - REFUND IRR</label>
+            </value>
+            <value>
+                <fullName>10 - CANCELLED BY</fullName>
+                <default>false</default>
+                <label>10 - CANCELLED BY</label>
+            </value>
+            <value>
+                <fullName>11 - CANCELLED ONLINE ON BEHALF OF CUSTOMER</fullName>
+                <default>false</default>
+                <label>11 - CANCELLED ONLINE ON BEHALF OF CUSTOMER</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

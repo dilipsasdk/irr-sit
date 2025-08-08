@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Settlement_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Settlement Reason</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre-litigation settlement list</fullName>
+                <default>false</default>
+                <label>Pre-litigation settlement list</label>
+            </value>
+            <value>
+                <fullName>Wrongly handled by agent</fullName>
+                <default>false</default>
+                <label>Wrongly handled by agent</label>
+            </value>
+            <value>
+                <fullName>Tricky/gray zone/sensitive case</fullName>
+                <default>false</default>
+                <label>Tricky/gray zone/sensitive case</label>
+            </value>
+            <value>
+                <fullName>Lack of time to handle</fullName>
+                <default>false</default>
+                <label>Lack of time to handle</label>
+            </value>
+            <value>
+                <fullName>Low amount/high legal cost</fullName>
+                <default>false</default>
+                <label>Low amount/high legal cost</label>
+            </value>
+            <value>
+                <fullName>Lack of evidence</fullName>
+                <default>false</default>
+                <label>Lack of evidence</label>
+            </value>
+            <value>
+                <fullName>Incomplete data for investigation</fullName>
+                <default>false</default>
+                <label>Incomplete data for investigation</label>
+            </value>
+            <value>
+                <fullName>No case submitted from Pax</fullName>
+                <default>false</default>
+                <label>No case submitted from Pax</label>
+            </value>
+            <value>
+                <fullName>No response from passenger – went to NEB</fullName>
+                <default>false</default>
+                <label>No response from passenger – went to NEB</label>
+            </value>
+            <value>
+                <fullName>Pax entitled to compensation</fullName>
+                <default>false</default>
+                <label>Pax entitled to compensation</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>true</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

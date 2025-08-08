@@ -1,0 +1,35 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="MCENS_SubscriptionService" access="global">
+    <aura:attribute type="Id" name="recordId" access="global" />
+    <aura:attribute name="errorMessage" type="String" default="" access="private" />
+    <aura:attribute name="isWaiting" type="Boolean" default="false" access="private" />
+    <lightning:navigation aura:id="navService"/>
+    
+    <aura:html tag="style">
+        .cuf-content {
+            padding: 0 0rem !important;
+        }
+        .slds-modal__content{
+            overflow-y:hidden !important;
+            height:unset !important;
+            max-height:unset !important;
+            padding: 0rem !important;
+        }
+    </aura:html>
+    <div class="slds-modal__header">
+        <h2 class="slds-text-heading--medium">Deleting Callback</h2>
+    </div>
+    <div class="slds-p-around--medium slds-grid slds-wrap ">
+        <aura:if isTrue="{!v.errorMessage}">
+            <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                <span class="slds-assistive-text">error</span>
+                <lightning:icon iconName="utility:error" alternativeText="Error!" title="Error" variant="inverse" size="x-small" class="slds-m-right_x-small" />
+                <h2>{!v.errorMessage}</h2>
+            </div>
+        </aura:if>
+        <p>Are you sure you want to delete this callback?</p>
+    </div>
+    <div class="slds-modal__footer">
+        <lightning:button aura:id="cancelButton" variant="neutral" label="Cancel" onclick="{!c.cancelDialog}" disabled="{!v.isWaiting}" />
+        <lightning:button aura:id="deleteButton" variant="brand" label="Delete" onclick="{!c.deleteRecord}" disabled="{!v.isWaiting}" />
+    </div>
+</aura:component>	

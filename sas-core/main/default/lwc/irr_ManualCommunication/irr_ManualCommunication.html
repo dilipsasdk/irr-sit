@@ -1,0 +1,170 @@
+<!--
+ - @author Niklas Lundkvist, Deloitte
+ - @date 2020
+ -->
+
+<!-- IRR Manual Communication -->
+<template>
+   
+    <div focusable="" onkeyup={handleGlobalKeyUp} tabindex="0" class="no-focus">
+        <c-c_-loading-modal load-count={loadCount}></c-c_-loading-modal>
+        <c-c_-error-modal errors={errors} critical={criticalError} onclearerrors={clearErrors}></c-c_-error-modal>
+        <c-irr_-confirmation-modal
+                selected-count={recipientCount}
+                show-confirmation={showConfirmation}
+                confirm-detail={confirmDetail}
+                onhideconfirm={handleHideConfirmEvent}
+                onsendconfirm={handleSendConfirmEvent}>
+        </c-irr_-confirmation-modal>
+        <c-irr_-success-modal
+                selected-count={recipientCount}
+                show-success={showSuccess}
+                email-success={emailSuccess}
+                onhidesuccess={handleHideSuccessEvent}
+                onnewsearch={handleResetEvent}>
+        </c-irr_-success-modal>
+        <c-irr_-schedule-message
+                show-schedule-success={showScheduleSuccess}
+                selected-count={recipientCount}
+                onhidesuccess={handleHideScheduleEvent}
+                onnewsearch={handleResetEvent}>
+        </c-irr_-schedule-message>
+        <c-irr_-recipient-modal
+                onupdaterecipients={handleUpdateAdditionalRecipients}
+                onhiderecipientmodal={handleHideRecipientModal}
+                selected-recipients={additionalRecipients}
+                show-recipient-modal={showRecipientModal}>
+        </c-irr_-recipient-modal>
+        <c-irr_-icoupon
+                show-icoupon-modal={showIcouponModal}
+                onhideicouponmodal={handleHideIcouponModal}
+                onhidestandaloneicouponmodal={handleHideStandaloneIcouponModal}>
+        </c-irr_-icoupon>
+        <template if:true={isHotelModel}>
+                <c-irr_-hotel-accomodation 
+                onclosehotelacc={hideHotelModel}
+                is-show-modal={isHotelModel}
+                pax-data={paxData}
+                selected-count={passengerCount}
+                file-name = {fileName}>
+               </c-irr_-hotel-accomodation> 
+       </template>
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item padding="around-small" size="12">
+                <div class="page-section page-header">
+                    <c-irr_-retrieve-panel
+                            if:true={showRetrieve}
+                            onretrieve={handleRetrieveEvent}>
+                    </c-irr_-retrieve-panel>
+                   <c-irr_-send-panel
+                            if:false={showRetrieve}
+                            additional-recipient-count={additionalRecipients.length}
+                            templates-by-send-mode={templatesBySendMode}
+                            flight-id={retrieveParameters.flightIds}
+                            ontemplatechange={handleTemplateChange}
+                            onshowrecipientmodal={handleShowRecipientModal}
+                            onsend={handleSendEvent}
+                            oncancel={handleResetEvent}>
+                    </c-irr_-send-panel>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" if:false={showRetrieve}>
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="2">
+                        <lightning-card title={leftPanelTitle} icon-name={leftPanelIcon}>
+                            <lightning-tabset active-tab-value={leftPanelTab}>
+                                <lightning-tab
+                                        label="Filter"
+                                        value="LEFT_FILTER"
+                                        title="Filter retrieved passengers"
+                                        onactive={handleTabSwitch}>
+                                    <div class="slds-p-horizontal_small">
+                                        <c-irr_-filter-panel
+                                                filter-parameters={filterParameters}
+                                                onapplyfilter={handleFilterApplyEvent}>
+                                        </c-irr_-filter-panel>
+                                    </div>
+                                </lightning-tab>
+                                <lightning-tab
+                                        label="Preview"
+                                        value="LEFT_PREVIEW"
+                                        title="Preview selected template"
+                                        onactive={handleTabSwitch}>
+                                    <div class="slds-p-horizontal_small">
+                                        <div class="slds-form-element">
+                                            <span class="slds-form-element__label">Template Text</span>
+                                            <div class="slds-form-element__control slds-border_bottom">
+                                                <div class="slds-form-element__static">
+                                                    <p>
+                                                        <lightning-formatted-text value={templatePreview}>
+                                                        </lightning-formatted-text>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </lightning-tab>
+                            </lightning-tabset>
+                        </lightning-card>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="10">
+                        <div class="page-section page-main">
+                            <lightning-card icon-name="utility:groups">
+                                <h1 slot="title" class="no-wrap">{tableHeading}</h1>
+                                <lightning-card>
+                                    <lightning-card>
+                                        <div class="slds-p-around_medium lgc-bg-inverse">
+                                            
+                                                <lightning-button
+                                                        icon-name="utility:email" 
+                                                        label="Send Email to Hotel Accomodation App" 
+                                                        title="Send Email to Hotel Accomodation App"
+                                                        onclick={handleFileSend} 
+                                                        variant="brand">
+                                                </lightning-button>
+                                                  
+                                                <lightning-button
+                                                        icon-name="utility:coupon_codes" 
+                                                        label="Create iCoupon" 
+                                                        title="Create iCoupon"
+                                                        onclick={handleShowIcouponModal} 
+                                                        variant="brand"
+                                                        class="slds-p-around_medium lgc-bg-inverse"
+                                                        slot="actions"
+                                                        if:true={showIcouponButton}>
+                                                </lightning-button>
+                                               
+                                                <lightning-input   if:true={showIcouponButton} style="width: 200px;float: right;margin-top: -24px;" type="search" label="Search" onchange={handleSearch}></lightning-input>
+                                            
+                                        </div>
+                                    </lightning-card>
+                                        <div class="slds-p-horizontal_small">
+                                            <div class="slds-media">
+                                                <div class="slds-media__body">
+                                                    <lightning-datatable
+                                                            if:true={hasResults}
+                                                            key-field="passengerId"
+                                                            data={processedTable}
+                                                            columns={COLUMNS}
+                                                            sorted-by={sortBy}
+                                                            sorted-direction={sortDirection}
+                                                            onsort={handleTableSort}
+                                                            onrowselection={handleTableSelection}>
+                                                    </lightning-datatable>
+                                                    <div
+                                                            if:false={hasResults}
+                                                            class="slds-align_absolute-center slds-m-vertical_small">
+                                                        {noPassengersFoundText}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </lightning-card>
+                            </lightning-card>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

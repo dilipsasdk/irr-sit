@@ -1,0 +1,3 @@
+Id,Account__c,Booking__c,EuroBonus_Number__c,First_Name__c,Identifier__c,Last_Name__c,Name,Account__r.Id,Account__r.Name,Booking__r.Id,Booking__r.Name
+a0Q1j000007ZAQ0EAO,0011j00001KWmpJAAT,a021j000008cjJCAAY,012345678,Test,PT1,Testsson,Test Testsson,0011j00001KWlpXAAT,Test Testsson,a021j000008cjJCAAY,a021j000008cjJC
+a0Q1j000007ZAQ1EAO,,a021j000008cjJCAAY,,Test,PT2,Testsdottir,Test Testsdottir,,,a021j000008cjJCAAY,a021j000008cjJC

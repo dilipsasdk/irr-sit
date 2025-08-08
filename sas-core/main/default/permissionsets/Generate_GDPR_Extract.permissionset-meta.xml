@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>GDPR_AccountGDPRExtractController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Generate_GDPR_Extract</name>
+    </customPermissions>
+    <description>Gives a user permission to extract and download all Personal Identifiable Information from an account record.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Generate GDPR Extract</label>
+</PermissionSet>

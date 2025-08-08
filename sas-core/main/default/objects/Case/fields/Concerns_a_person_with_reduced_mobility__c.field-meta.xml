@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Concerns_a_person_with_reduced_mobility__c</fullName>
+    <description>It marks that the case is related to a reduced mobility person</description>
+    <externalId>false</externalId>
+    <formula>LIA_Claim__r.Concerns_a_person_with_reduced_mobility__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Indicates that the claim concerns a person with special assistance needs</inlineHelpText>
+    <label>Concerns a person with reduced mobility</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,1279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Team__c</fullName>
+    <complianceGroup>WipeRetain</complianceGroup>
+    <description>Team within a department that is responsible for the case</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Team within a department that is responsible for the case</inlineHelpText>
+    <label>Team</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Department__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Access</fullName>
+                <default>false</default>
+                <label>Access</label>
+            </value>
+            <value>
+                <fullName>Accessibility</fullName>
+                <default>false</default>
+                <label>Accessibility</label>
+            </value>
+            <value>
+                <fullName>ACE</fullName>
+                <default>false</default>
+                <label>ACE</label>
+            </value>
+            <value>
+                <fullName>ADM</fullName>
+                <default>false</default>
+                <label>ADM</label>
+            </value>
+            <value>
+                <fullName>Admin</fullName>
+                <default>false</default>
+                <label>Admin</label>
+            </value>
+            <value>
+                <fullName>AT</fullName>
+                <default>false</default>
+                <label>AT</label>
+            </value>
+            <value>
+                <fullName>Backoffice</fullName>
+                <default>false</default>
+                <label>Backoffice</label>
+            </value>
+            <value>
+                <fullName>Backoffice Sitel</fullName>
+                <default>false</default>
+                <label>Backoffice Sitel</label>
+            </value>
+            <value>
+                <fullName>Bank Payment</fullName>
+                <default>false</default>
+                <label>Bank Payment</label>
+            </value>
+            <value>
+                <fullName>Benelux</fullName>
+                <default>false</default>
+                <label>Benelux</label>
+            </value>
+            <value>
+                <fullName>BOM ARC</fullName>
+                <default>false</default>
+                <label>BOM ARC</label>
+            </value>
+            <value>
+                <fullName>BOM BSP</fullName>
+                <default>false</default>
+                <label>BOM BSP</label>
+            </value>
+            <value>
+                <fullName>BOM Customer Care</fullName>
+                <default>false</default>
+                <label>BOM Customer Care</label>
+            </value>
+            <value>
+                <fullName>BOM Error Handling</fullName>
+                <default>false</default>
+                <label>BOM Error Handling</label>
+            </value>
+            <value>
+                <fullName>BOM Forms Customer</fullName>
+                <default>false</default>
+                <label>BOM Forms Customer</label>
+            </value>
+            <value>
+                <fullName>BOM Forms Travel Agent</fullName>
+                <default>false</default>
+                <label>BOM Forms Travel Agent</label>
+            </value>
+            <value>
+                <fullName>BOM Forsvaret</fullName>
+                <default>false</default>
+                <label>BOM Forsvaret</label>
+            </value>
+            <value>
+                <fullName>BOM General</fullName>
+                <default>false</default>
+                <label>BOM General</label>
+            </value>
+            <value>
+                <fullName>BOM Groups</fullName>
+                <default>false</default>
+                <label>BOM Groups</label>
+            </value>
+            <value>
+                <fullName>BOM IOM</fullName>
+                <default>false</default>
+                <label>BOM IOM</label>
+            </value>
+            <value>
+                <fullName>BOM Reminders</fullName>
+                <default>false</default>
+                <label>BOM Reminders</label>
+            </value>
+            <value>
+                <fullName>BOM Tenured</fullName>
+                <default>false</default>
+                <label>BOM Tenured</label>
+            </value>
+            <value>
+                <fullName>BOM Voucher</fullName>
+                <default>false</default>
+                <label>BOM Voucher</label>
+            </value>
+            <value>
+                <fullName>BOM Waivers</fullName>
+                <default>false</default>
+                <label>BOM Waivers</label>
+            </value>
+            <value>
+                <fullName>Bulk</fullName>
+                <default>false</default>
+                <label>Bulk</label>
+            </value>
+            <value>
+                <fullName>Businesstravel STO</fullName>
+                <default>false</default>
+                <label>Businesstravel STO</label>
+            </value>
+            <value>
+                <fullName>CH</fullName>
+                <default>false</default>
+                <label>CH</label>
+            </value>
+            <value>
+                <fullName>Charge Back</fullName>
+                <default>false</default>
+                <label>Charge Back</label>
+            </value>
+            <value>
+                <fullName>Chat</fullName>
+                <default>false</default>
+                <label>Chat</label>
+            </value>
+            <value>
+                <fullName>Claims</fullName>
+                <default>false</default>
+                <label>Claims</label>
+            </value>
+            <value>
+                <fullName>Language</fullName>
+                <default>false</default>
+                <label>Claims Escalations</label>
+            </value>
+            <value>
+                <fullName>Compensation Card</fullName>
+                <default>false</default>
+                <label>Compensation Card</label>
+            </value>
+            <value>
+                <fullName>CS Denmark</fullName>
+                <default>false</default>
+                <label>CS Denmark</label>
+            </value>
+            <value>
+                <fullName>CS Norway</fullName>
+                <default>false</default>
+                <label>CS Norway</label>
+            </value>
+            <value>
+                <fullName>CS Sweden</fullName>
+                <default>false</default>
+                <label>CS Sweden</label>
+            </value>
+            <value>
+                <fullName>Customer Feedback</fullName>
+                <default>false</default>
+                <label>Customer Feedback</label>
+            </value>
+            <value>
+                <fullName>DE</fullName>
+                <default>false</default>
+                <label>DE</label>
+            </value>
+            <value>
+                <fullName>Defense</fullName>
+                <default>false</default>
+                <label>Defense</label>
+            </value>
+            <value>
+                <fullName>Diamond DK</fullName>
+                <default>false</default>
+                <label>Diamond DK</label>
+            </value>
+            <value>
+                <fullName>Diamond NO</fullName>
+                <default>false</default>
+                <label>Diamond NO</label>
+            </value>
+            <value>
+                <fullName>Diamond SE</fullName>
+                <default>false</default>
+                <label>Diamond SE</label>
+            </value>
+            <value>
+                <fullName>DK</fullName>
+                <default>false</default>
+                <label>DK</label>
+            </value>
+            <value>
+                <fullName>EB Tier</fullName>
+                <default>false</default>
+                <label>EB Tier</label>
+            </value>
+            <value>
+                <fullName>EB Vendor Support</fullName>
+                <default>false</default>
+                <label>EB Vendor Support</label>
+            </value>
+            <value>
+                <fullName>EE</fullName>
+                <default>false</default>
+                <label>EE</label>
+            </value>
+            <value>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+                <label>EMEA</label>
+            </value>
+            <value>
+                <fullName>ES</fullName>
+                <default>false</default>
+                <label>ES</label>
+            </value>
+            <value>
+                <fullName>External Lawyers</fullName>
+                <default>false</default>
+                <label>External Lawyers</label>
+            </value>
+            <value>
+                <fullName>Facebook Messenger</fullName>
+                <default>false</default>
+                <label>Facebook Messenger</label>
+            </value>
+            <value>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+                <label>Feedback</label>
+            </value>
+            <value>
+                <fullName>FI</fullName>
+                <default>false</default>
+                <label>FI</label>
+            </value>
+            <value>
+                <fullName>Flight Delay Certificate</fullName>
+                <default>false</default>
+                <label>Flight Delay Certificate</label>
+            </value>
+            <value>
+                <fullName>Forsvaret NO</fullName>
+                <default>false</default>
+                <label>Forsvaret NO</label>
+            </value>
+            <value>
+                <fullName>Foundever CS Norway Refunds</fullName>
+                <default>false</default>
+                <label>Foundever CS Norway Refunds</label>
+            </value>
+            <value>
+                <fullName>Foundever Customer Care</fullName>
+                <default>false</default>
+                <label>Foundever Customer Care</label>
+            </value>
+            <value>
+                <fullName>Foundever General</fullName>
+                <default>false</default>
+                <label>Foundever General</label>
+            </value>
+            <value>
+                <fullName>Foundever Insurance</fullName>
+                <default>false</default>
+                <label>Foundever Insurance</label>
+            </value>
+            <value>
+                <fullName>Foundever Voucher</fullName>
+                <default>false</default>
+                <label>Foundever Voucher</label>
+            </value>
+            <value>
+                <fullName>Foundever Waivers</fullName>
+                <default>false</default>
+                <label>Foundever Waivers</label>
+            </value>
+            <value>
+                <fullName>FR</fullName>
+                <default>false</default>
+                <label>FR</label>
+            </value>
+            <value>
+                <fullName>Fraud Investigation</fullName>
+                <default>false</default>
+                <label>Fraud Investigation</label>
+            </value>
+            <value>
+                <fullName>Frontline</fullName>
+                <default>false</default>
+                <label>Frontline</label>
+            </value>
+            <value>
+                <fullName>GDPR</fullName>
+                <default>false</default>
+                <label>GDPR</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>General Support</fullName>
+                <default>false</default>
+                <label>General Support</label>
+            </value>
+            <value>
+                <fullName>Gold DK</fullName>
+                <default>false</default>
+                <label>Gold DK</label>
+            </value>
+            <value>
+                <fullName>Gold NO</fullName>
+                <default>false</default>
+                <label>Gold NO</label>
+            </value>
+            <value>
+                <fullName>Gold SE</fullName>
+                <default>false</default>
+                <label>Gold SE</label>
+            </value>
+            <value>
+                <fullName>Groups</fullName>
+                <default>false</default>
+                <label>Groups</label>
+            </value>
+            <value>
+                <fullName>HQ Expert</fullName>
+                <default>false</default>
+                <label>HQ Expert</label>
+            </value>
+            <value>
+                <fullName>Identify Customer</fullName>
+                <default>false</default>
+                <label>Identify Customer</label>
+            </value>
+            <value>
+                <fullName>IE</fullName>
+                <default>false</default>
+                <label>IE</label>
+            </value>
+            <value>
+                <fullName>Inhouse</fullName>
+                <default>false</default>
+                <label>Inhouse</label>
+            </value>
+            <value>
+                <fullName>Interline</fullName>
+                <default>false</default>
+                <label>Interline</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+            <value>
+                <fullName>Internal Feedback</fullName>
+                <default>false</default>
+                <label>Internal Feedback</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>IS</fullName>
+                <default>false</default>
+                <label>IS</label>
+            </value>
+            <value>
+                <fullName>Issue</fullName>
+                <default>false</default>
+                <label>Issue</label>
+            </value>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>KANA US</fullName>
+                <default>false</default>
+                <label>KANA US</label>
+            </value>
+            <value>
+                <fullName>LT</fullName>
+                <default>false</default>
+                <label>LT</label>
+            </value>
+            <value>
+                <fullName>LV</fullName>
+                <default>false</default>
+                <label>LV</label>
+            </value>
+            <value>
+                <fullName>Missing Points</fullName>
+                <default>false</default>
+                <label>Missing Points</label>
+            </value>
+            <value>
+                <fullName>Name Change</fullName>
+                <default>false</default>
+                <label>Name Change</label>
+            </value>
+            <value>
+                <fullName>NO</fullName>
+                <default>false</default>
+                <label>NO</label>
+            </value>
+            <value>
+                <fullName>OC ARC</fullName>
+                <default>false</default>
+                <label>OC ARC</label>
+            </value>
+            <value>
+                <fullName>OC Bank Transfer</fullName>
+                <default>false</default>
+                <label>OC Bank Transfer</label>
+            </value>
+            <value>
+                <fullName>OC Customer Care</fullName>
+                <default>false</default>
+                <label>OC Customer Care</label>
+            </value>
+            <value>
+                <fullName>OC Error Handling</fullName>
+                <default>false</default>
+                <label>OC Error Handling</label>
+            </value>
+            <value>
+                <fullName>OC General</fullName>
+                <default>false</default>
+                <label>OC General</label>
+            </value>
+            <value>
+                <fullName>OC Gift Card</fullName>
+                <default>false</default>
+                <label>OC Gift Card</label>
+            </value>
+            <value>
+                <fullName>OC Groups Europe</fullName>
+                <default>false</default>
+                <label>OC Groups Europe</label>
+            </value>
+            <value>
+                <fullName>OC Insurance</fullName>
+                <default>false</default>
+                <label>OC Insurance</label>
+            </value>
+            <value>
+                <fullName>OC Klarna Disputes</fullName>
+                <default>false</default>
+                <label>OC Klarna Disputes</label>
+            </value>
+            <value>
+                <fullName>OC Reserved Amount</fullName>
+                <default>false</default>
+                <label>OC Reserved Amount</label>
+            </value>
+            <value>
+                <fullName>OC SC Under 180 Minutes</fullName>
+                <default>false</default>
+                <label>OC SC Under 180 Minutes</label>
+            </value>
+            <value>
+                <fullName>OC Travel Agent</fullName>
+                <default>false</default>
+                <label>OC Travel Agent</label>
+            </value>
+            <value>
+                <fullName>OC Voucher</fullName>
+                <default>false</default>
+                <label>OC Voucher</label>
+            </value>
+            <value>
+                <fullName>OC Waivers</fullName>
+                <default>false</default>
+                <label>OC Waivers</label>
+            </value>
+            <value>
+                <fullName>Olympic DK</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Olympic DK</label>
+            </value>
+            <value>
+                <fullName>Olympic NO</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Olympic NO</label>
+            </value>
+            <value>
+                <fullName>Olympic SE</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Olympic SE</label>
+            </value>
+            <value>
+                <fullName>Pai Manual</fullName>
+                <default>false</default>
+                <label>Pai Manual</label>
+            </value>
+            <value>
+                <fullName>Pandion DK</fullName>
+                <default>false</default>
+                <label>Pandion DK</label>
+            </value>
+            <value>
+                <fullName>Pandion NO</fullName>
+                <default>false</default>
+                <label>Pandion NO</label>
+            </value>
+            <value>
+                <fullName>Pandion SE</fullName>
+                <default>false</default>
+                <label>Pandion SE</label>
+            </value>
+            <value>
+                <fullName>Partner Support</fullName>
+                <default>false</default>
+                <label>Partner Support</label>
+            </value>
+            <value>
+                <fullName>Payment Escalation</fullName>
+                <default>false</default>
+                <label>Payment Escalation</label>
+            </value>
+            <value>
+                <fullName>PL</fullName>
+                <default>false</default>
+                <label>PL</label>
+            </value>
+            <value>
+                <fullName>Premium Corporate Support</fullName>
+                <default>false</default>
+                <label>Premium Corporate Support</label>
+            </value>
+            <value>
+                <fullName>Proration</fullName>
+                <default>false</default>
+                <label>Proration</label>
+            </value>
+            <value>
+                <fullName>Recovery</fullName>
+                <default>false</default>
+                <label>Recovery</label>
+            </value>
+            <value>
+                <fullName>Redress</fullName>
+                <default>false</default>
+                <label>Redress</label>
+            </value>
+            <value>
+                <fullName>RU</fullName>
+                <default>false</default>
+                <label>RU</label>
+            </value>
+            <value>
+                <fullName>Sales Control</fullName>
+                <default>false</default>
+                <label>Sales Control</label>
+            </value>
+            <value>
+                <fullName>Sales Control BOM</fullName>
+                <default>false</default>
+                <label>Sales Control BOM</label>
+            </value>
+            <value>
+                <fullName>Sales Information</fullName>
+                <default>false</default>
+                <label>Sales Information</label>
+            </value>
+            <value>
+                <fullName>SAS Poland</fullName>
+                <default>false</default>
+                <label>SAS Poland</label>
+            </value>
+            <value>
+                <fullName>SASSI Internal</fullName>
+                <default>false</default>
+                <label>SASSI Internal</label>
+            </value>
+            <value>
+                <fullName>Scandinavia</fullName>
+                <default>false</default>
+                <label>Scandinavia</label>
+            </value>
+            <value>
+                <fullName>SE</fullName>
+                <default>false</default>
+                <label>SE</label>
+            </value>
+            <value>
+                <fullName>Settlement</fullName>
+                <default>false</default>
+                <label>Settlement</label>
+            </value>
+            <value>
+                <fullName>SGH Bag DK</fullName>
+                <default>false</default>
+                <label>SGH Bag DK</label>
+            </value>
+            <value>
+                <fullName>SGH Bag NO</fullName>
+                <default>false</default>
+                <label>SGH Bag NO</label>
+            </value>
+            <value>
+                <fullName>SGH Bag SE</fullName>
+                <default>false</default>
+                <label>SGH Bag SE</label>
+            </value>
+            <value>
+                <fullName>Sitel Phone Agents</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sitel Phone Agents</label>
+            </value>
+            <value>
+                <fullName>SoMe</fullName>
+                <default>false</default>
+                <label>SoMe</label>
+            </value>
+            <value>
+                <fullName>SOS Medical</fullName>
+                <default>false</default>
+                <label>SOS Medical</label>
+            </value>
+            <value>
+                <fullName>Special Sales NO</fullName>
+                <default>false</default>
+                <label>Special Sales NO</label>
+            </value>
+            <value>
+                <fullName>Star Alliance Request</fullName>
+                <default>false</default>
+                <label>Star Alliance Request</label>
+            </value>
+            <value>
+                <fullName>Star Alliance Upgrades</fullName>
+                <default>false</default>
+                <label>Star Alliance Upgrades</label>
+            </value>
+            <value>
+                <fullName>STOPY</fullName>
+                <default>false</default>
+                <label>STOPY</label>
+            </value>
+            <value>
+                <fullName>Support Backoffice</fullName>
+                <default>false</default>
+                <label>Support Backoffice</label>
+            </value>
+            <value>
+                <fullName>Support International</fullName>
+                <default>false</default>
+                <label>Support International</label>
+            </value>
+            <value>
+                <fullName>Support Scandinavia</fullName>
+                <default>false</default>
+                <label>Support Scandinavia</label>
+            </value>
+            <value>
+                <fullName>System &amp; Tariff</fullName>
+                <default>false</default>
+                <label>System &amp; Tariff</label>
+            </value>
+            <value>
+                <fullName>TAWEB</fullName>
+                <default>false</default>
+                <label>TAWEB</label>
+            </value>
+            <value>
+                <fullName>Ticketless Support</fullName>
+                <default>false</default>
+                <label>Ticketless Support</label>
+            </value>
+            <value>
+                <fullName>UK</fullName>
+                <default>false</default>
+                <label>UK</label>
+            </value>
+            <value>
+                <fullName>US</fullName>
+                <default>false</default>
+                <label>US</label>
+            </value>
+            <value>
+                <fullName>Vendor Management</fullName>
+                <default>false</default>
+                <label>Vendor Management</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>ACE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>ADM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>AT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>Benelux</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>Bulk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>CH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>DE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>DK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>EE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>ES</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>FI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>Forsvaret NO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>FR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>IE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>Interline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>IS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>IT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>LT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>LV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>NO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>PL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>RU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>SE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>UK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <valueName>US</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Info Hub</controllingFieldValue>
+            <valueName>Sales Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Info Hub</controllingFieldValue>
+            <valueName>SASSI Internal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Charge Back</controllingFieldValue>
+            <valueName>Charge Back</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liability</controllingFieldValue>
+            <valueName>Accessibility</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liability</controllingFieldValue>
+            <valueName>Admin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liability</controllingFieldValue>
+            <valueName>Defense</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liability</controllingFieldValue>
+            <valueName>External Lawyers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liability</controllingFieldValue>
+            <valueName>Inhouse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Liability</controllingFieldValue>
+            <valueName>Settlement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM ARC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM BSP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM Customer Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM Error Handling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM Forms Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM Forms Travel Agent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM Forsvaret</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM Groups</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM IOM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM Reminders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM Tenured</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM Voucher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>BOM Waivers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>Foundever CS Norway Refunds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>Foundever Customer Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>Foundever General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>Foundever Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>Foundever Voucher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>Foundever Waivers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC ARC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC Bank Transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC Customer Care</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC Error Handling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC General</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC Gift Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC Groups Europe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC Klarna Disputes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC Reserved Amount</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC SC Under 180 Minutes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC Travel Agent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC Voucher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>OC Waivers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds OC KANA</controllingFieldValue>
+            <valueName>Bank Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds OC KANA</controllingFieldValue>
+            <valueName>Groups</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds OC KANA</controllingFieldValue>
+            <valueName>HQ Expert</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds OC KANA</controllingFieldValue>
+            <valueName>KANA US</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds OC KANA</controllingFieldValue>
+            <valueName>STOPY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds OC KANA</controllingFieldValue>
+            <valueName>TAWEB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Control BOM</controllingFieldValue>
+            <valueName>Sales Control BOM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>Businesstravel STO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>EB Vendor Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>Feedback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>Fraud Investigation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>GDPR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>Pandion DK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>Pandion NO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>Pandion SE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>Premium Corporate Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>Sales Control</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>Special Sales NO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>System &amp; Tariff</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>Ticketless Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <valueName>Chat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <valueName>Facebook Messenger</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <valueName>SoMe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agent Helpdesk</controllingFieldValue>
+            <valueName>International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agent Helpdesk</controllingFieldValue>
+            <valueName>SAS Poland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Agent Helpdesk</controllingFieldValue>
+            <valueName>Scandinavia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Care</controllingFieldValue>
+            <valueName>SGH Bag DK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Care</controllingFieldValue>
+            <valueName>SGH Bag NO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Care</controllingFieldValue>
+            <valueName>SGH Bag SE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate</controllingFieldValue>
+            <valueName>Support Backoffice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate</controllingFieldValue>
+            <valueName>Support International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Corporate</controllingFieldValue>
+            <valueName>Support Scandinavia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Claim</controllingFieldValue>
+            <valueName>Claims</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Claim</controllingFieldValue>
+            <valueName>Language</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Claim</controllingFieldValue>
+            <valueName>Compensation Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Claim</controllingFieldValue>
+            <valueName>Flight Delay Certificate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Claim</controllingFieldValue>
+            <valueName>Payment Escalation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Claim</controllingFieldValue>
+            <valueName>Proration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Claim</controllingFieldValue>
+            <valueName>Recovery</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Claim</controllingFieldValue>
+            <valueName>Redress</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital Channel Support</controllingFieldValue>
+            <valueName>Internal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Direct Sales</controllingFieldValue>
+            <valueName>Backoffice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <valueName>CS Denmark</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <valueName>CS Norway</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <valueName>CS Sweden</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Backoffice Sitel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Diamond DK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Diamond NO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Diamond SE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>EB Tier</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>General Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Gold DK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Gold NO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Gold SE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Identify Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Missing Points</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Name Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Pai Manual</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Partner Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Star Alliance Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Star Alliance Upgrades</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fraud</controllingFieldValue>
+            <valueName>EMEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telephony</controllingFieldValue>
+            <valueName>Frontline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Product Support</controllingFieldValue>
+            <valueName>Access</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Product Support</controllingFieldValue>
+            <valueName>Internal Feedback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Product Support</controllingFieldValue>
+            <valueName>Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor Management</controllingFieldValue>
+            <valueName>SOS Medical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vendor Management</controllingFieldValue>
+            <valueName>Vendor Management</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

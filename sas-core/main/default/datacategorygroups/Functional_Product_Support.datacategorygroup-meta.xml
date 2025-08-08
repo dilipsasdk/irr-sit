@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>Case</label>
+            <name>DC_Case</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Chat</label>
+            <name>DC_Chat</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Email</label>
+            <name>DC_Email</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Settlement</label>
+            <name>DC_Settlement</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Telephony</label>
+            <name>DC_Telephony</name>
+        </dataCategory>
+        <dataCategory>
+            <label>General Guidelines</label>
+            <name>DC_GeneralGuidelines</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Access</label>
+            <name>DC_Access</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Functional Product Support</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+<!-- CustomersGetResponseWithTwoCustomers -->
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Body>
+        <CustomersGetResponse xmlns="http://www.flysas.com/wcf/CSharkCustomerManagementTicketless/v1">
+		    <CustomersGetResult xmlns:a="http://www.flysas.com/wcf/CSharkCustomerManagement/v1" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+				<a:Customer>
+					<a:BirthDate>1988-10-13T00:00:00</a:BirthDate>
+					<a:CitizenOf i:nil="true"/>
+					<a:Closed>false</a:Closed>
+					<a:CustomerValue i:nil="true"/>
+					<a:EngagementList>
+						<a:Engagement i:type="a:EuroBonusEngagement">
+							<a:Profile i:nil="true"/>
+							<a:Account i:nil="true"/>
+							<a:CID i:nil="true"/>
+							<a:CMP i:nil="true"/>
+							<a:CommunicationLanguage i:nil="true"/>
+							<a:CorporateBuyerAccess>false</a:CorporateBuyerAccess>
+							<a:EarnEbPoints>false</a:EarnEbPoints>
+							<a:EnrollmentDate>2016-09-28T00:00:00</a:EnrollmentDate>
+							<a:EuroBonusNumber>700001423</a:EuroBonusNumber>
+							<a:IncentiveLevel>B</a:IncentiveLevel>
+							<a:LastModified>2019-03-07T13:11:39.5319484</a:LastModified>
+							<a:MemberStatus>EB</a:MemberStatus>
+							<a:NameOnCard>Marcus CLMTestSix</a:NameOnCard>
+							<a:PointsInformation i:nil="true"/>
+						</a:Engagement>
+						<a:Engagement i:type="a:SiteMemberEngagement">
+							<a:Profile i:nil="true"/>
+							<a:CID i:nil="true"/>
+							<a:CMP i:nil="true"/>
+							<a:CommunicationLanguage i:nil="true"/>
+							<a:FrequentFlyerPrograms i:nil="true"/>
+							<a:LastModified>2017-01-23T12:24:46.4896998</a:LastModified>
+							<a:Password i:nil="true"/>
+							<a:PurchaseNeedPassword>false</a:PurchaseNeedPassword>
+							<a:UserName>clmtest6</a:UserName>
+						</a:Engagement>
+						<a:Engagement i:type="a:TravelPassEngagement">
+							<a:Profile i:nil="true"/>
+							<a:Account i:nil="true"/>
+							<a:CID>020802</a:CID>
+							<a:CMP>NOSECUR</a:CMP>
+							<a:Closed>false</a:Closed>
+							<a:CommunicationLanguage>sv</a:CommunicationLanguage>
+							<a:CreatedInSourceSystem i:nil="true"/>
+							<a:EmployeeNumber i:nil="true"/>
+							<a:GroupAdministrator>true</a:GroupAdministrator>
+							<a:LastModified>2017-03-30T05:20:24.5206937</a:LastModified>
+							<a:NameOnCard i:nil="true"/>
+							<a:ParentIdentifier>10326999</a:ParentIdentifier>
+							<a:PassengerType>A</a:PassengerType>
+							<a:Status>Active</a:Status>
+							<a:TravelPassAccountNumber>928004605</a:TravelPassAccountNumber>
+						</a:Engagement>
+						<a:Engagement i:type="a:SubscriptionEngagement">
+							<a:Profile i:nil="true"/>
+							<a:LastModified>2018-04-23T14:19:23.3753901</a:LastModified>
+							<a:SubscriptionID>700001423</a:SubscriptionID>
+							<a:Subscriptions>
+								<a:SubscriptionItem>
+									<a:Active>false</a:Active>
+									<a:CommunicationLanguage>sv</a:CommunicationLanguage>
+									<a:CountryCode>SE</a:CountryCode>
+									<a:Market i:nil="true"/>
+									<a:NotificationAddress>+</a:NotificationAddress>
+									<a:NotificationType>SMS</a:NotificationType>
+									<a:SourceMarket i:nil="true"/>
+									<a:SubscriptionItemKey>0</a:SubscriptionItemKey>
+									<a:SubscriptionItemSource i:nil="true"/>
+									<a:SubscriptionType>FlightInfo</a:SubscriptionType>
+								</a:SubscriptionItem>
+								<a:SubscriptionItem>
+									<a:Active>false</a:Active>
+									<a:CommunicationLanguage>sv</a:CommunicationLanguage>
+									<a:CountryCode>SE</a:CountryCode>
+									<a:Market i:nil="true"/>
+									<a:NotificationAddress>+</a:NotificationAddress>
+									<a:NotificationType>SMS</a:NotificationType>
+									<a:SourceMarket i:nil="true"/>
+									<a:SubscriptionItemKey>1</a:SubscriptionItemKey>
+									<a:SubscriptionItemSource i:nil="true"/>
+									<a:SubscriptionType>CheckIn</a:SubscriptionType>
+								</a:SubscriptionItem>
+								<a:SubscriptionItem>
+									<a:Active>false</a:Active>
+									<a:CommunicationLanguage>sv</a:CommunicationLanguage>
+									<a:CountryCode>SE</a:CountryCode>
+									<a:Market i:nil="true"/>
+									<a:NotificationAddress>testskapp@gmail.comm</a:NotificationAddress>
+									<a:NotificationType>EMail</a:NotificationType>
+									<a:SourceMarket i:nil="true"/>
+									<a:SubscriptionItemKey>2</a:SubscriptionItemKey>
+									<a:SubscriptionItemSource i:nil="true"/>
+									<a:SubscriptionType>CheckIn</a:SubscriptionType>
+								</a:SubscriptionItem>
+								<a:SubscriptionItem>
+									<a:Active>true</a:Active>
+									<a:CommunicationLanguage i:nil="true"/>
+									<a:CountryCode i:nil="true"/>
+									<a:Market i:nil="true"/>
+									<a:NotificationAddress>testskapp@gmail.comm</a:NotificationAddress>
+									<a:NotificationType>EMail</a:NotificationType>
+									<a:SourceMarket i:nil="true"/>
+									<a:SubscriptionItemKey>3</a:SubscriptionItemKey>
+									<a:SubscriptionItemSource i:nil="true"/>
+									<a:SubscriptionType>NewsLetter</a:SubscriptionType>
+								</a:SubscriptionItem>
+							</a:Subscriptions>
+						</a:Engagement>
+						<a:Engagement i:type="a:PrivacySettings">
+							<a:Profile i:nil="true"/>
+							<a:LastModified>2018-08-02T06:59:38.917313</a:LastModified>
+							<a:SettingID>10401209</a:SettingID>
+							<a:Settings>
+								<a:PrivacyItem>
+									<a:ActivationDate i:nil="true"/>
+									<a:Active>false</a:Active>
+									<a:PrivacyArea>DirectMarketing</a:PrivacyArea>
+									<a:PrivacyItemKey>1</a:PrivacyItemKey>
+									<a:Type>EMail</a:Type>
+									<a:Version i:nil="true"/>
+								</a:PrivacyItem>
+								<a:PrivacyItem>
+									<a:ActivationDate i:nil="true"/>
+									<a:Active>true</a:Active>
+									<a:PrivacyArea>DirectMarketing</a:PrivacyArea>
+									<a:PrivacyItemKey>2</a:PrivacyItemKey>
+									<a:Type>SMS</a:Type>
+									<a:Version i:nil="true"/>
+								</a:PrivacyItem>
+								<a:PrivacyItem>
+									<a:ActivationDate i:nil="true"/>
+									<a:Active>false</a:Active>
+									<a:PrivacyArea>DirectMarketing</a:PrivacyArea>
+									<a:PrivacyItemKey>3</a:PrivacyItemKey>
+									<a:Type>Telemarketing</a:Type>
+									<a:Version i:nil="true"/>
+								</a:PrivacyItem>
+								<a:PrivacyItem>
+									<a:ActivationDate>2018-08-02T04:59:37.5581901</a:ActivationDate>
+									<a:Active>true</a:Active>
+									<a:PrivacyArea>TOC</a:PrivacyArea>
+									<a:PrivacyItemKey>5</a:PrivacyItemKey>
+									<a:Type>EB</a:Type>
+									<a:Version>14</a:Version>
+								</a:PrivacyItem>
+							</a:Settings>
+						</a:Engagement>
+						<a:Engagement i:type="a:CorporateMemberEngagement">
+							<a:Profile i:nil="true"/>
+							<a:AuthoritytoAccess>Approved</a:AuthoritytoAccess>
+							<a:CMPCode i:nil="true">RFISHSE</a:CMPCode>
+							<a:CNFCID>000000</a:CNFCID>
+							<a:Closed>false</a:Closed>
+							<a:CompanyContactEmail i:nil="true"/>
+							<a:CompanyIdentifier>11866721</a:CompanyIdentifier>
+							<a:CompanyName>RockFish</a:CompanyName>
+							<a:CorporateMemberId>12002219</a:CorporateMemberId>
+							<a:LastModified>2019-09-25T07:02:55.4244822</a:LastModified>
+							<a:ParentIdentifier>11866633</a:ParentIdentifier>
+							<a:SCPAgreementStatus>Active</a:SCPAgreementStatus>
+						</a:Engagement>
+						<a:Engagement i:type="a:DefaultProfileEngagement">
+							<a:Profile>
+								<a:CoTravelers/>
+								<a:FOIDs/>
+								<a:FOPs>
+									<a:FOP i:type="a:CreditCard">
+										<a:EntryChannel>SSL</a:EntryChannel>
+										<a:FOPKey>0</a:FOPKey>
+										<a:FOPNickName>Credit Card payment</a:FOPNickName>
+										<a:SOFNumber i:nil="true"/>
+										<a:AuthenticationRequired>false</a:AuthenticationRequired>
+										<a:CardDescription>Primary</a:CardDescription>
+										<a:CorporateCreditCard>false</a:CorporateCreditCard>
+										<a:CreditCardIssuer>CA</a:CreditCardIssuer>
+										<a:CreditCardNumber>558555OXTVSW5583</a:CreditCardNumber>
+										<a:CreditCardType>CC</a:CreditCardType>
+										<a:ExpireDate>2018-08-01T00:00:00</a:ExpireDate>
+										<a:ExpiryReminderSent>false</a:ExpiryReminderSent>
+										<a:IsDefault>true</a:IsDefault>
+										<a:NameOnCard>MARCUS</a:NameOnCard>
+									</a:FOP>
+								</a:FOPs>
+								<a:Flight i:nil="true"/>
+								<a:Hotels/>
+								<a:PhysicalAddresses>
+									<a:PhysicalAddress>
+										<a:AddressLine1>Teststreet 11</a:AddressLine1>
+										<a:AddressLine2 i:nil="true"/>
+										<a:AddressLine3 i:nil="true"/>
+										<a:Attention i:nil="true"/>
+										<a:Bounced>false</a:Bounced>
+										<a:CityName>Stockholm</a:CityName>
+										<a:CompanyName i:nil="true"/>
+										<a:CountryCode>SE</a:CountryCode>
+										<a:CountyState i:nil="true"/>
+										<a:Department i:nil="true"/>
+										<a:Functions>
+											<a:Function>
+												<a:FunctionName>Home</a:FunctionName>
+											</a:Function>
+										</a:Functions>
+										<a:PhysicalAddressKey>0</a:PhysicalAddressKey>
+										<a:PostOfficeBox i:nil="true"/>
+										<a:ZipCode>117 30</a:ZipCode>
+									</a:PhysicalAddress>
+								</a:PhysicalAddresses>
+								<a:PreferredCommunicationLanguage>sv</a:PreferredCommunicationLanguage>
+								<a:VirtualAddresses>
+									<a:VirtualAddress>
+										<a:Bounced>false</a:Bounced>
+										<a:Functions>
+											<a:Function>
+												<a:FunctionName>HomeE-mail</a:FunctionName>
+											</a:Function>
+										</a:Functions>
+										<a:VirtualAddressKey>0</a:VirtualAddressKey>
+										<a:VirtualAddressLine>testskapp@gmail.comm</a:VirtualAddressLine>
+									</a:VirtualAddress>
+									<a:VirtualAddress>
+										<a:Bounced>false</a:Bounced>
+										<a:Functions>
+											<a:Function>
+												<a:FunctionName>HomeMobile</a:FunctionName>
+											</a:Function>
+										</a:Functions>
+										<a:VirtualAddressKey>1</a:VirtualAddressKey>
+										<a:VirtualAddressLine>+46725465098</a:VirtualAddressLine>
+									</a:VirtualAddress>
+									<a:VirtualAddress>
+										<a:Bounced>false</a:Bounced>
+										<a:Functions>
+											<a:Function>
+												<a:FunctionName>HomePhone</a:FunctionName>
+											</a:Function>
+										</a:Functions>
+										<a:VirtualAddressKey>2</a:VirtualAddressKey>
+										<a:VirtualAddressLine>+46725465099</a:VirtualAddressLine>
+									</a:VirtualAddress>
+									<a:VirtualAddress>
+										<a:Bounced>false</a:Bounced>
+										<a:Functions>
+											<a:Function>
+												<a:FunctionName>AltE-mail</a:FunctionName>
+											</a:Function>
+										</a:Functions>
+										<a:VirtualAddressKey>3</a:VirtualAddressKey>
+										<a:VirtualAddressLine>testskapp@gmail.com</a:VirtualAddressLine>
+									</a:VirtualAddress>
+								</a:VirtualAddresses>
+							</a:Profile>
+						</a:Engagement>
+					</a:EngagementList>
+					<a:FirstName>Marcus</a:FirstName>
+					<a:Gender>M</a:Gender>
+					<a:Identifier>10401209</a:Identifier>
+					<a:LastModified>2017-08-09T06:52:04.5588011</a:LastModified>
+					<a:LastName>CLMTestSix</a:LastName>
+					<a:MiddleName>Middle</a:MiddleName>
+					<a:Salutation>Mr</a:Salutation>
+					<a:Title>Senior Title</a:Title>
+				</a:Customer>	
+            </CustomersGetResult>
+            <CustomersGetResult xmlns:a="http://www.flysas.com/wcf/CSharkCustomerManagement/v1" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+				<a:Customer>
+					<a:BirthDate>1988-10-13T00:00:00</a:BirthDate>
+					<a:CitizenOf i:nil="true"/>
+					<a:Closed>false</a:Closed>
+					<a:CustomerValue i:nil="true"/>
+					<a:EngagementList>
+						<a:Engagement i:type="a:EuroBonusEngagement">
+							<a:Profile i:nil="true"/>
+							<a:Account i:nil="true"/>
+							<a:CID i:nil="true"/>
+							<a:CMP i:nil="true"/>
+							<a:CommunicationLanguage i:nil="true"/>
+							<a:CorporateBuyerAccess>false</a:CorporateBuyerAccess>
+							<a:EarnEbPoints>false</a:EarnEbPoints>
+							<a:EnrollmentDate>2016-09-28T00:00:00</a:EnrollmentDate>
+							<a:EuroBonusNumber>700001423</a:EuroBonusNumber>
+							<a:IncentiveLevel>B</a:IncentiveLevel>
+							<a:LastModified>2019-03-07T13:11:39.5319484</a:LastModified>
+							<a:MemberStatus>EB</a:MemberStatus>
+							<a:NameOnCard>Marcus CLMTestSix</a:NameOnCard>
+							<a:PointsInformation i:nil="true"/>
+						</a:Engagement>
+						<a:Engagement i:type="a:SiteMemberEngagement">
+							<a:Profile i:nil="true"/>
+							<a:CID i:nil="true"/>
+							<a:CMP i:nil="true"/>
+							<a:CommunicationLanguage i:nil="true"/>
+							<a:FrequentFlyerPrograms i:nil="true"/>
+							<a:LastModified>2017-01-23T12:24:46.4896998</a:LastModified>
+							<a:Password i:nil="true"/>
+							<a:PurchaseNeedPassword>false</a:PurchaseNeedPassword>
+							<a:UserName>clmtest6</a:UserName>
+						</a:Engagement>
+						<a:Engagement i:type="a:TravelPassEngagement">
+							<a:Profile i:nil="true"/>
+							<a:Account i:nil="true"/>
+							<a:CID>020802</a:CID>
+							<a:CMP>NOSECUR</a:CMP>
+							<a:Closed>false</a:Closed>
+							<a:CommunicationLanguage>sv</a:CommunicationLanguage>
+							<a:CreatedInSourceSystem i:nil="true"/>
+							<a:EmployeeNumber i:nil="true"/>
+							<a:GroupAdministrator>true</a:GroupAdministrator>
+							<a:LastModified>2017-03-30T05:20:24.5206937</a:LastModified>
+							<a:NameOnCard i:nil="true"/>
+							<a:ParentIdentifier>10326999</a:ParentIdentifier>
+							<a:PassengerType>A</a:PassengerType>
+							<a:Status>Active</a:Status>
+							<a:TravelPassAccountNumber>928004605</a:TravelPassAccountNumber>
+						</a:Engagement>
+						<a:Engagement i:type="a:SubscriptionEngagement">
+							<a:Profile i:nil="true"/>
+							<a:LastModified>2018-04-23T14:19:23.3753901</a:LastModified>
+							<a:SubscriptionID>700001423</a:SubscriptionID>
+							<a:Subscriptions>
+								<a:SubscriptionItem>
+									<a:Active>false</a:Active>
+									<a:CommunicationLanguage>sv</a:CommunicationLanguage>
+									<a:CountryCode>SE</a:CountryCode>
+									<a:Market i:nil="true"/>
+									<a:NotificationAddress>+</a:NotificationAddress>
+									<a:NotificationType>SMS</a:NotificationType>
+									<a:SourceMarket i:nil="true"/>
+									<a:SubscriptionItemKey>0</a:SubscriptionItemKey>
+									<a:SubscriptionItemSource i:nil="true"/>
+									<a:SubscriptionType>FlightInfo</a:SubscriptionType>
+								</a:SubscriptionItem>
+								<a:SubscriptionItem>
+									<a:Active>false</a:Active>
+									<a:CommunicationLanguage>sv</a:CommunicationLanguage>
+									<a:CountryCode>SE</a:CountryCode>
+									<a:Market i:nil="true"/>
+									<a:NotificationAddress>+</a:NotificationAddress>
+									<a:NotificationType>SMS</a:NotificationType>
+									<a:SourceMarket i:nil="true"/>
+									<a:SubscriptionItemKey>1</a:SubscriptionItemKey>
+									<a:SubscriptionItemSource i:nil="true"/>
+									<a:SubscriptionType>CheckIn</a:SubscriptionType>
+								</a:SubscriptionItem>
+								<a:SubscriptionItem>
+									<a:Active>false</a:Active>
+									<a:CommunicationLanguage>sv</a:CommunicationLanguage>
+									<a:CountryCode>SE</a:CountryCode>
+									<a:Market i:nil="true"/>
+									<a:NotificationAddress>testskapp@gmail.comm</a:NotificationAddress>
+									<a:NotificationType>EMail</a:NotificationType>
+									<a:SourceMarket i:nil="true"/>
+									<a:SubscriptionItemKey>2</a:SubscriptionItemKey>
+									<a:SubscriptionItemSource i:nil="true"/>
+									<a:SubscriptionType>CheckIn</a:SubscriptionType>
+								</a:SubscriptionItem>
+								<a:SubscriptionItem>
+									<a:Active>true</a:Active>
+									<a:CommunicationLanguage i:nil="true"/>
+									<a:CountryCode i:nil="true"/>
+									<a:Market i:nil="true"/>
+									<a:NotificationAddress>testskapp@gmail.comm</a:NotificationAddress>
+									<a:NotificationType>EMail</a:NotificationType>
+									<a:SourceMarket i:nil="true"/>
+									<a:SubscriptionItemKey>3</a:SubscriptionItemKey>
+									<a:SubscriptionItemSource i:nil="true"/>
+									<a:SubscriptionType>NewsLetter</a:SubscriptionType>
+								</a:SubscriptionItem>
+							</a:Subscriptions>
+						</a:Engagement>
+						<a:Engagement i:type="a:PrivacySettings">
+							<a:Profile i:nil="true"/>
+							<a:LastModified>2018-08-02T06:59:38.917313</a:LastModified>
+							<a:SettingID>10401209</a:SettingID>
+							<a:Settings>
+								<a:PrivacyItem>
+									<a:ActivationDate i:nil="true"/>
+									<a:Active>false</a:Active>
+									<a:PrivacyArea>DirectMarketing</a:PrivacyArea>
+									<a:PrivacyItemKey>1</a:PrivacyItemKey>
+									<a:Type>EMail</a:Type>
+									<a:Version i:nil="true"/>
+								</a:PrivacyItem>
+								<a:PrivacyItem>
+									<a:ActivationDate i:nil="true"/>
+									<a:Active>true</a:Active>
+									<a:PrivacyArea>DirectMarketing</a:PrivacyArea>
+									<a:PrivacyItemKey>2</a:PrivacyItemKey>
+									<a:Type>SMS</a:Type>
+									<a:Version i:nil="true"/>
+								</a:PrivacyItem>
+								<a:PrivacyItem>
+									<a:ActivationDate i:nil="true"/>
+									<a:Active>false</a:Active>
+									<a:PrivacyArea>DirectMarketing</a:PrivacyArea>
+									<a:PrivacyItemKey>3</a:PrivacyItemKey>
+									<a:Type>Telemarketing</a:Type>
+									<a:Version i:nil="true"/>
+								</a:PrivacyItem>
+								<a:PrivacyItem>
+									<a:ActivationDate>2018-08-02T04:59:37.5581901</a:ActivationDate>
+									<a:Active>true</a:Active>
+									<a:PrivacyArea>TOC</a:PrivacyArea>
+									<a:PrivacyItemKey>5</a:PrivacyItemKey>
+									<a:Type>EB</a:Type>
+									<a:Version>14</a:Version>
+								</a:PrivacyItem>
+							</a:Settings>
+						</a:Engagement>
+						<a:Engagement i:type="a:CorporateMemberEngagement">
+							<a:Profile i:nil="true"/>
+							<a:AuthoritytoAccess>Approved</a:AuthoritytoAccess>
+							<a:CMPCode i:nil="true">RFISHSE</a:CMPCode>
+							<a:CNFCID>000000</a:CNFCID>
+							<a:Closed>false</a:Closed>
+							<a:CompanyContactEmail i:nil="true"/>
+							<a:CompanyIdentifier>11866721</a:CompanyIdentifier>
+							<a:CompanyName>RockFish</a:CompanyName>
+							<a:CorporateMemberId>12002219</a:CorporateMemberId>
+							<a:LastModified>2019-09-25T07:02:55.4244822</a:LastModified>
+							<a:ParentIdentifier>11866633</a:ParentIdentifier>
+							<a:SCPAgreementStatus>Active</a:SCPAgreementStatus>
+						</a:Engagement>
+						<a:Engagement i:type="a:DefaultProfileEngagement">
+							<a:Profile>
+								<a:CoTravelers/>
+								<a:FOIDs/>
+								<a:FOPs>
+									<a:FOP i:type="a:CreditCard">
+										<a:EntryChannel>SSL</a:EntryChannel>
+										<a:FOPKey>0</a:FOPKey>
+										<a:FOPNickName>Credit Card payment</a:FOPNickName>
+										<a:SOFNumber i:nil="true"/>
+										<a:AuthenticationRequired>false</a:AuthenticationRequired>
+										<a:CardDescription>Primary</a:CardDescription>
+										<a:CorporateCreditCard>false</a:CorporateCreditCard>
+										<a:CreditCardIssuer>CA</a:CreditCardIssuer>
+										<a:CreditCardNumber>558555OXTVSW5583</a:CreditCardNumber>
+										<a:CreditCardType>CC</a:CreditCardType>
+										<a:ExpireDate>2018-08-01T00:00:00</a:ExpireDate>
+										<a:ExpiryReminderSent>false</a:ExpiryReminderSent>
+										<a:IsDefault>true</a:IsDefault>
+										<a:NameOnCard>MARCUS</a:NameOnCard>
+									</a:FOP>
+								</a:FOPs>
+								<a:Flight i:nil="true"/>
+								<a:Hotels/>
+								<a:PhysicalAddresses>
+									<a:PhysicalAddress>
+										<a:AddressLine1>Teststreet 11</a:AddressLine1>
+										<a:AddressLine2 i:nil="true"/>
+										<a:AddressLine3 i:nil="true"/>
+										<a:Attention i:nil="true"/>
+										<a:Bounced>false</a:Bounced>
+										<a:CityName>Stockholm</a:CityName>
+										<a:CompanyName i:nil="true"/>
+										<a:CountryCode>SE</a:CountryCode>
+										<a:CountyState i:nil="true"/>
+										<a:Department i:nil="true"/>
+										<a:Functions>
+											<a:Function>
+												<a:FunctionName>Home</a:FunctionName>
+											</a:Function>
+										</a:Functions>
+										<a:PhysicalAddressKey>0</a:PhysicalAddressKey>
+										<a:PostOfficeBox i:nil="true"/>
+										<a:ZipCode>117 30</a:ZipCode>
+									</a:PhysicalAddress>
+								</a:PhysicalAddresses>
+								<a:PreferredCommunicationLanguage>sv</a:PreferredCommunicationLanguage>
+								<a:VirtualAddresses>
+									<a:VirtualAddress>
+										<a:Bounced>false</a:Bounced>
+										<a:Functions>
+											<a:Function>
+												<a:FunctionName>HomeE-mail</a:FunctionName>
+											</a:Function>
+										</a:Functions>
+										<a:VirtualAddressKey>0</a:VirtualAddressKey>
+										<a:VirtualAddressLine>testskapp@gmail.comm</a:VirtualAddressLine>
+									</a:VirtualAddress>
+									<a:VirtualAddress>
+										<a:Bounced>false</a:Bounced>
+										<a:Functions>
+											<a:Function>
+												<a:FunctionName>HomeMobile</a:FunctionName>
+											</a:Function>
+										</a:Functions>
+										<a:VirtualAddressKey>1</a:VirtualAddressKey>
+										<a:VirtualAddressLine>+46725465098</a:VirtualAddressLine>
+									</a:VirtualAddress>
+									<a:VirtualAddress>
+										<a:Bounced>false</a:Bounced>
+										<a:Functions>
+											<a:Function>
+												<a:FunctionName>HomePhone</a:FunctionName>
+											</a:Function>
+										</a:Functions>
+										<a:VirtualAddressKey>2</a:VirtualAddressKey>
+										<a:VirtualAddressLine>+46725465099</a:VirtualAddressLine>
+									</a:VirtualAddress>
+									<a:VirtualAddress>
+										<a:Bounced>false</a:Bounced>
+										<a:Functions>
+											<a:Function>
+												<a:FunctionName>AltE-mail</a:FunctionName>
+											</a:Function>
+										</a:Functions>
+										<a:VirtualAddressKey>3</a:VirtualAddressKey>
+										<a:VirtualAddressLine>testskapp@gmail.com</a:VirtualAddressLine>
+									</a:VirtualAddress>
+								</a:VirtualAddresses>
+							</a:Profile>
+						</a:Engagement>
+					</a:EngagementList>
+					<a:FirstName>Marcus</a:FirstName>
+					<a:Gender>M</a:Gender>
+					<a:Identifier>10401209</a:Identifier>
+					<a:LastModified>2017-08-09T06:52:04.5588011</a:LastModified>
+					<a:LastName>CLMTestSix</a:LastName>
+					<a:MiddleName>Middle</a:MiddleName>
+					<a:Salutation>Mr</a:Salutation>
+					<a:Title>Senior Title</a:Title>
+				</a:Customer>	
+            </CustomersGetResult>
+        </CustomersGetResponse>
+    </s:Body>
+</s:Envelope>

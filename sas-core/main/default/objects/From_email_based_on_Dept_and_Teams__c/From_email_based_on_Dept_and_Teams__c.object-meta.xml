@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>used to configure the from email address while replying to Case feed emails based on Department and Teams</description>
+    <enableFeeds>false</enableFeeds>
+    <label>From email  based on Dept and Teams</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Arriving_Or_Departing_Required</fullName>
+    <active>true</active>
+    <description>Choosing to either or match on flights arriving to or departing from an airport is required</description>
+    <errorConditionFormula>AND(NOT(ISBLANK(Airport__c)), AND( Match_Flights_Arriving_To_Airport__c = FALSE,  Match_Flights_Departing_Airport__c = FALSE))</errorConditionFormula>
+    <errorMessage>You have to match flights arriving to and/or departing the airport.</errorMessage>
+</ValidationRule>

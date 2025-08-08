@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:utilityBarAPI aura:id="utilitybar" />
+    <aura:attribute name="error" type="String"/>
+    <c:fcs_OmniChannelQueueBacklog aura:id="childLwc" oncomponentInitiated="{!c.registerUtilityClickHandler}" error="{!v.error}"/>
+</aura:component>

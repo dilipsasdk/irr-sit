@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>NOK</label>
+    <protected>false</protected>
+    <values>
+        <field>Currency__c</field>
+        <value xsi:type="xsd:string">NOK</value>
+    </values>
+    <values>
+        <field>Settlement_Bank_Setting__c</field>
+        <value xsi:type="xsd:string">NOK</value>
+    </values>
+    <values>
+        <field>bankAccountNumber__c</field>
+        <value xsi:type="xsd:string">97500702552</value>
+    </values>
+</CustomMetadata>

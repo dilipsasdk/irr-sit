@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Represents a connection linking an AD role to another AD role to include all the permission and properties of the related AD role.</description>
+    <label>AD Role Link</label>
+    <pluralLabel>AD Role Links</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

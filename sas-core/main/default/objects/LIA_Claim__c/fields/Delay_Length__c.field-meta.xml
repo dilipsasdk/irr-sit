@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delay_Length__c</fullName>
+    <description>Indicates the delay of the baggage. This value is important in handling baggage related claims</description>
+    <externalId>false</externalId>
+    <label>Delay Length</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Less than 21 days</fullName>
+                <default>false</default>
+                <label>Less than 21 days</label>
+            </value>
+            <value>
+                <fullName>21 days or more</fullName>
+                <default>false</default>
+                <label>21 days or more</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

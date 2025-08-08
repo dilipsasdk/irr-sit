@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Percentage_Sent_to_Control__c</fullName>
+    <description>The percentage of valid EU261 claims which should be sent to be controlled.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The percentage of valid EU261 claims which should be sent to be controlled.</inlineHelpText>
+    <label>Percentage sent to control</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Percent</type>
+</CustomField>

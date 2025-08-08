@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="line-height:115%"><span lang="EN-US"><span style="line-height:115%">Dear&nbsp;&nbsp;{{{Case.Claim_Contact_Name__c}}},</span></span><br />
+<br />
+<span lang="EN-US"><span style="line-height:115%">We contacted you regarding your case 15 days ago and still have not received an answer from you. Sometimes our Emails end up in our customers spam folder and that could be the case here as well. If you still have a need for us to look at your case, please look for our latest email and respond to our questions.<br />
+<br />
+If we don’t hear from you within 5 days, your case will be closed. You can reopen your claim by responding to one of our previous emails. If we don’t hear from you, your case will be permanently closed after 3 months from the first closing date.<br />
+<br />
+Best regards</span></span></span><br />
+<span style="line-height:115%"><span lang="EN-US"><span style="line-height:115%">SAS</span></span></span></span></span><br />
+<br />
+&nbsp;</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submitted_Claim_Expenses_in_SEK__c</fullName>
+    <description>The sum of all claim expenses connected to the Claim converted into SEK.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The sum of all claim expenses connected to the Claim converted into SEK.</inlineHelpText>
+    <label>Submitted Claim Expenses in SEK</label>
+    <summarizedField>Claim_Expense__c.Claim_Expense_Amount_In_SEK__c</summarizedField>
+    <summaryForeignKey>Claim_Expense__c.Claim__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

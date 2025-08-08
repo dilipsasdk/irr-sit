@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expenses_Reject_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Expenses Reject Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Alcohol</fullName>
+                <default>false</default>
+                <label>Alcohol</label>
+            </value>
+            <value>
+                <fullName>Delay less than 2 hrs</fullName>
+                <default>false</default>
+                <label>Delay less than 2 hrs</label>
+            </value>
+            <value>
+                <fullName>Duplicate case</fullName>
+                <default>false</default>
+                <label>Duplicate case</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Loss of income</fullName>
+                <default>false</default>
+                <label>Loss of income</label>
+            </value>
+            <value>
+                <fullName>Parking Expenses</fullName>
+                <default>false</default>
+                <label>Parking Expenses</label>
+            </value>
+            <value>
+                <fullName>Prebooked &amp; Prepaid Expenses</fullName>
+                <default>false</default>
+                <label>Prebooked &amp; Prepaid Expenses</label>
+            </value>
+            <value>
+                <fullName>Rental Car - Prebooked</fullName>
+                <default>false</default>
+                <label>Rental Car - Prebooked</label>
+            </value>
+            <value>
+                <fullName>Voluntry Cancelation of rebooked flight with SAS</fullName>
+                <default>false</default>
+                <label>Voluntry Cancelation of rebooked flight with SAS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

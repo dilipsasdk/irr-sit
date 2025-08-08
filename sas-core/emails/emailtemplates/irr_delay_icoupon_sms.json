@@ -1,0 +1,28 @@
+<html style="overflow-y: hidden;">
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;">
+<p><i>Dear Traveler,</i></p>
+
+<p><i>Thank you for flying SAS.<br />
+<br />
+We apologize for the delay of your flight today and would like to offer you refreshments during your wait.</i></p>
+
+<p><i>A digital voucher is loaded on your boarding pass. You can use it for partial or full payment at&nbsp;the following establishments at your departing airport during the next 24hours:&nbsp;<a aria-label="Link https://icpn.fyi/FAO" href="https://icpn.fyi/FAO" rel="noopener noreferrer" tabindex="-1" target="_blank" title="https://icpn.fyi/fao">https: //icpn.fyi/{{{delayInfo.stationDeparture}}}</a>.</i><br />
+<br />
+<em>You can either use your boarding card or the attached QR code&nbsp;in this mail upon ordering your refreshment at any of the establishments shown in the link.</em></p>
+
+<p><i>The voucher cannot be exchanged for cash and no cash change will be given. Multiple vouchers can be used together.</i></p>
+
+<p>{
+    {
+        {passengerInfo.thisSegment.emailBackBody
+        }
+    }
+}</p>
+
+<p><i>Best regards<br />
+SAS</i></p>
+</body>
+</html>

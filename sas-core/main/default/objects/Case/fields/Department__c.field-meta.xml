@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Department__c</fullName>
+    <complianceGroup>WipeRetain</complianceGroup>
+    <description>The department responsible for this case</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The department responsible for this case</inlineHelpText>
+    <label>Department</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Agent Helpdesk</fullName>
+                <default>false</default>
+                <label>Agent Helpdesk</label>
+            </value>
+            <value>
+                <fullName>Care</fullName>
+                <default>false</default>
+                <label>Care</label>
+            </value>
+            <value>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+            <value>
+                <fullName>Customer Claim</fullName>
+                <default>false</default>
+                <label>Customer Claim</label>
+            </value>
+            <value>
+                <fullName>Digital Channel Support</fullName>
+                <default>false</default>
+                <label>Digital Channel Support</label>
+            </value>
+            <value>
+                <fullName>Direct Sales</fullName>
+                <default>false</default>
+                <label>Direct Sales</label>
+            </value>
+            <value>
+                <fullName>Distribution</fullName>
+                <default>false</default>
+                <label>Distribution</label>
+            </value>
+            <value>
+                <fullName>EuroBonus</fullName>
+                <default>false</default>
+                <label>EuroBonus</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Functional Product Support</fullName>
+                <default>false</default>
+                <label>Functional Product Support</label>
+            </value>
+            <value>
+                <fullName>Group Sales</fullName>
+                <default>false</default>
+                <label>Group Sales</label>
+            </value>
+            <value>
+                <fullName>Info Hub</fullName>
+                <default>false</default>
+                <label>Info Hub</label>
+            </value>
+            <value>
+                <fullName>Liability</fullName>
+                <default>false</default>
+                <label>Liability</label>
+            </value>
+            <value>
+                <fullName>Refunds</fullName>
+                <default>false</default>
+                <label>Refunds</label>
+            </value>
+            <value>
+                <fullName>Refunds OC KANA</fullName>
+                <default>false</default>
+                <label>Refunds OC KANA</label>
+            </value>
+            <value>
+                <fullName>Sales Control BOM</fullName>
+                <default>false</default>
+                <label>Sales Control BOM</label>
+            </value>
+            <value>
+                <fullName>SAS Operating Center</fullName>
+                <default>false</default>
+                <label>SAS Operating Center</label>
+            </value>
+            <value>
+                <fullName>SME</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SME</label>
+            </value>
+            <value>
+                <fullName>SoMe Support</fullName>
+                <default>false</default>
+                <label>SoMe Support</label>
+            </value>
+            <value>
+                <fullName>Telephony</fullName>
+                <default>false</default>
+                <label>Telephony</label>
+            </value>
+            <value>
+                <fullName>Vendor Management</fullName>
+                <default>false</default>
+                <label>Vendor Management</label>
+            </value>
+             <value>
+                <fullName>Charge Back</fullName>
+                <default>false</default>
+                <label>Charge Back</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

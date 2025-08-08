@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAS_Channel_Case</fullName>
+    <fields>Subject</fields>
+    <fields>CaseNumber</fields>
+    <fields>OwnerId</fields>
+    <fields>Status</fields>
+    <fields>Priority</fields>
+    <fields>FCS_EBNumber__c</fields>
+    <fields>Origin</fields>
+    <label>SAS Channel Case</label>
+</CompactLayout>

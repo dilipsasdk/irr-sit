@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Sutherland</fullName>
+        <default>false</default>
+        <label>Sutherland</label>
+    </customValue>
+    <customValue>
+        <fullName>Sykes</fullName>
+        <default>false</default>
+        <label>Sykes</label>
+    </customValue>
+    <customValue>
+        <fullName>SAS</fullName>
+        <default>false</default>
+        <label>SAS</label>
+    </customValue>
+    <customValue>
+        <fullName>Student Consulting</fullName>
+        <default>false</default>
+        <label>Student Consulting</label>
+    </customValue>
+    <customValue>
+        <fullName>Majorel</fullName>
+        <default>false</default>
+        <label>Majorel</label>
+    </customValue>
+    <description>The vendor of the user or record owner (that is a user)</description>
+    <masterLabel>FCS Vendor</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

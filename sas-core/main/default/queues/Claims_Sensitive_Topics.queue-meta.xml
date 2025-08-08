@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Claims - Sensitive Topics</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>Claims_Sensitive_Topics</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueRoutingConfig>Sensitive_Topics</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AccountIdFieldName__c</fullName>
+    <description>The developer name of the field on this object that relates to to an account, e.g. AccountId. Should be set only if the object should be included as a standalone object, and not listed as child to another object.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The developer name of the field on this object that relates to to an account, e.g. AccountId. Should be set only if the object should be included as a standalone object, and not listed as child to another object.</inlineHelpText>
+    <label>Account Id Field Name</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

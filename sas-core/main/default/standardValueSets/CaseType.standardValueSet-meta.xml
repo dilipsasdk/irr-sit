@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Booking</fullName>
+        <default>false</default>
+        <label>Booking</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Businesstravel</fullName>
+        <default>false</default>
+        <label>Businesstravel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Channel</fullName>
+        <default>false</default>
+        <label>Channel</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Claim</fullName>
+        <default>false</default>
+        <label>Claim</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CS Feedback</fullName>
+        <default>false</default>
+        <label>CS Feedback</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EB Vendor</fullName>
+        <default>false</default>
+        <label>EB Vendor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Feedback</fullName>
+        <default>false</default>
+        <label>Feedback</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fraud</fullName>
+        <default>false</default>
+        <label>Fraud</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Functional Product Support</fullName>
+        <default>false</default>
+        <label>Functional Product Support</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GDPR</fullName>
+        <default>false</default>
+        <label>GDPR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Information</fullName>
+        <default>false</default>
+        <label>Information</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Refund</fullName>
+        <default>false</default>
+        <label>Refund</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales Control</fullName>
+        <default>false</default>
+        <label>Sales Control</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales Information</fullName>
+        <default>false</default>
+        <label>Sales Information</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SASSI Internal</fullName>
+        <default>false</default>
+        <label>SASSI Internal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Support</fullName>
+        <default>false</default>
+        <label>Support</label>
+    </standardValue>
+    <standardValue>
+        <fullName>System</fullName>
+        <default>false</default>
+        <label>System</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tariff</fullName>
+        <default>false</default>
+        <label>Tariff</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ticketless</fullName>
+        <default>false</default>
+        <label>Ticketless</label>
+    </standardValue>
+</StandardValueSet>

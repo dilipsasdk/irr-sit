@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FrequentFlyer__c</fullName>
+    <description>Frequent Flyer (EuroBonus account) related to booking</description>
+    <externalDeveloperName>frequentFlyer</externalDeveloperName>
+    <externalId>false</externalId>
+    <inlineHelpText>Frequent Flyer (EuroBonus account) related to booking</inlineHelpText>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>Frequent Flyer</label>
+    <length>255</length>
+    <referenceTo>FCS_FrequentFlyer__x</referenceTo>
+    <relationshipLabel>Passengers</relationshipLabel>
+    <relationshipName>Passengers</relationshipName>
+    <type>ExternalLookup</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Directly_Routed_To_Agent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This will be marked as true if the agent was re-assigned a previous chat in a new message session</description>
+    <externalId>false</externalId>
+    <label>Directly Routed To Agent</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

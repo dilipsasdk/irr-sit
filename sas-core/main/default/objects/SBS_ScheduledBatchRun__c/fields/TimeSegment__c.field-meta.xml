@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TimeSegment__c</fullName>
+    <description>The time segment of the batches included in this batch run. Time segments are used to run batches in groups at different points in time.</description>
+    <externalId>false</externalId>
+    <label>Time Segment</label>
+    <length>40</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customObject>true</customObject>
+    <description>The combination of one customer and cost account. At settlement file can contain several passenger and each passenger several reasons for compensation.</description>
+    <motif>Custom83: Pencil</motif>
+</CustomTab>

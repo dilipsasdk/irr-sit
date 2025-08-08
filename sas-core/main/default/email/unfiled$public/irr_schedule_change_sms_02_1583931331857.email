@@ -1,0 +1,19 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Important information about your SAS booking {{{passengerInfo.bookingReference}}}
+  <br />
+  <br />Hi,
+  <br />
+  <br />There has been a change in your flight schedule, and this has impacted your trip. We are unable to find alternative flights on your travel dates and apologize for not being able to rebook you.
+  <br />
+  <br />To change your trip to future dates:
+  <br />https://sas.travel/go/mmb?l=en&r={{{passengerInfo.bookingReference}}}&n={{{passengerInfo.lastName}}}
+  <br />
+  <br />Read more here: https://www.flysas.com/en/traffic-information/message/
+  <br />
+  <br />Regards, SAS​
+ </body>
+</html>

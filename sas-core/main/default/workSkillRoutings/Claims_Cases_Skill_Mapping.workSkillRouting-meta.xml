@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkSkillRouting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isActive>true</isActive>
+    <masterLabel>Claims Cases Skill Mapping</masterLabel>
+    <relatedEntity>Case</relatedEntity>
+    <workSkillRoutingAttributes>
+        <field>Case.FCS_EBLevel__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>EB_Diamond</skill>
+        <skillLevel>0</skillLevel>
+        <value>D</value>
+    </workSkillRoutingAttributes>
+    <workSkillRoutingAttributes>
+        <field>Case.FCS_EBLevel__c</field>
+        <isAdditionalSkill>false</isAdditionalSkill>
+        <skill>EB_Pandion</skill>
+        <skillLevel>0</skillLevel>
+        <value>P</value>
+    </workSkillRoutingAttributes>
+</WorkSkillRouting>

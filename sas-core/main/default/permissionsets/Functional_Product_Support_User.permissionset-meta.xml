@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission set to give access to Functional Product Support case record type</description>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.FCS_CaseReason__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.FCS_CaseSubReason__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Functional Product Support User</label>
+    <recordTypeVisibilities>
+        <recordType>Case.FunctionalProductSupport</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

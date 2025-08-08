@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Type__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Payment Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CROSS BORDER EDI</fullName>
+                <default>true</default>
+                <label>CROSS BORDER EDI</label>
+            </value>
+            <value>
+                <fullName>SEPA</fullName>
+                <default>false</default>
+                <label>SEPA</label>
+            </value>
+            <value>
+                <fullName>DK BANK TRANSFER</fullName>
+                <default>false</default>
+                <label>DK BANK TRANSFER</label>
+            </value>
+            <value>
+                <fullName>DIRECT CREDIT ADV</fullName>
+                <default>false</default>
+                <label>DIRECT CREDIT ADV</label>
+            </value>
+            <value>
+                <fullName>NORDEA US DOM EDI</fullName>
+                <default>false</default>
+                <label>NORDEA US DOM EDI</label>
+            </value>
+            <value>
+                <fullName>SEB PLN PAYMENTS TO PL</fullName>
+                <default>false</default>
+                <label>SEB PLN PAYMENTS TO PL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

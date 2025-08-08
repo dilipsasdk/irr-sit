@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <customErrors>
+        <name>Error_While_Updating_Case</name>
+        <label>Error While Updating Case</label>
+        <locationX>490</locationX>
+        <locationY>431</locationY>
+        <customErrorMessages>
+            <errorMessage>{!$Flow.FaultMessage}</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Should_Survey_Be_Sent</name>
+        <label>Should Survey Be Sent</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Send_Survey</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Number_of_Email_Messages_Sent__c</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <numberValue>1.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>CreateSurvey</targetReference>
+            </connector>
+            <label>Send Survey</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>CASE Process Builder {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CASE Process Builder First Closing Date</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_First_Closing_Date</name>
+        <label>Update First Closing Date</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>Should_Survey_Be_Sent</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_While_Updating_Case</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>FCS_FirstClosingDate__c</field>
+            <value>
+                <elementReference>$Record.ClosedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_First_Closing_Date</targetReference>
+        </connector>
+        <filterLogic>((1 OR 2) AND 3) AND 4 AND 5 AND 6</filterLogic>
+        <filters>
+            <field>Origin</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Email - Customer Claim</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Origin</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>Email - SAS Poland</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>IsReadOnly__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>IsClosed</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>FCS_IsReopened__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>FCS_FirstClosingDate__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>CreateSurvey</name>
+        <label>Create Survey</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <flowName>CASE_Process_Builder_Create_Survey</flowName>
+        <inputAssignments>
+            <name>Case</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

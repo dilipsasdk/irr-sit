@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesMinimizeWidgetOnAccept>true</doesMinimizeWidgetOnAccept>
+    <hasAutoAcceptEnabled>false</hasAutoAcceptEnabled>
+    <label>Phone</label>
+    <relatedEntityType>VoiceCall</relatedEntityType>
+    <secondaryRoutingPriorityField>Priority__c</secondaryRoutingPriorityField>
+    <serviceChannelFieldPriorities>
+        <priority>1</priority>
+        <value>Urgent</value>
+    </serviceChannelFieldPriorities>
+    <serviceChannelFieldPriorities>
+        <priority>2</priority>
+        <value>High</value>
+    </serviceChannelFieldPriorities>
+    <serviceChannelFieldPriorities>
+        <priority>3</priority>
+        <value>Medium</value>
+    </serviceChannelFieldPriorities>
+    <serviceChannelFieldPriorities>
+        <priority>4</priority>
+        <value>Low</value>
+    </serviceChannelFieldPriorities>
+</ServiceChannel>

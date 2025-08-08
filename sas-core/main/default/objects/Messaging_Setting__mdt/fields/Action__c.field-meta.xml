@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Action__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Action</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CallEnd Survey</fullName>
+                <default>true</default>
+                <label>CallEnd Survey</label>
+            </value>
+            <value>
+                <fullName>AddExtraSeat</fullName>
+                <default>false</default>
+                <label>AddExtraSeat</label>
+            </value>
+            <value>
+                <fullName>AddPetToCabin</fullName>
+                <default>false</default>
+                <label>AddPetToCabin</label>
+            </value>
+            <value>
+                <fullName>AddBaggage</fullName>
+                <default>false</default>
+                <label>AddBaggage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

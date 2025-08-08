@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FlightId_Cannot_Be_Combined</fullName>
+    <active>true</active>
+    <description>Flight Id filter cannot be combined with other filters</description>
+    <errorConditionFormula>!ISBLANK(IRR_FlightId__c) &amp;&amp; (
+  !ISBLANK(IRR_FlightNumber__c) || 
+  !ISBLANK(IRR_StationArrival__c) || 
+  !ISBLANK(IRR_StationDeparture__c) || 
+  !ISBLANK(IRR_DepartureDate__c)
+)</errorConditionFormula>
+    <errorMessage>Flight Id filter cannot be combined with other filters</errorMessage>
+</ValidationRule>

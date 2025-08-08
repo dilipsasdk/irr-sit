@@ -1,0 +1,19 @@
+{
+  "name": "fcs-salesforce",
+  "version": "1.0.0",
+  "description": "This repository contains the source code for SAS implementation of Salesforce.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@ssh.dev.azure.com:v3/flysas/FCS%20-%20Implementation/FCS%20-%20Salesforce"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "3.0.3",
+    "prettier-plugin-apex": "2.0.1"
+  }
+}

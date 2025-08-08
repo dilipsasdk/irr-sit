@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legal_Conclusion__c</fullName>
+    <externalId>false</externalId>
+    <label>Legal Conclusion</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pre-litigation settlement list</fullName>
+                <default>false</default>
+                <label>Pre-litigation settlement list</label>
+            </value>
+            <value>
+                <fullName>Pax entitled to compensation/refund</fullName>
+                <default>false</default>
+                <label>Pax entitled to compensation/refund</label>
+            </value>
+            <value>
+                <fullName>Pax not entitled to refund</fullName>
+                <default>false</default>
+                <label>Pax not entitled to refund</label>
+            </value>
+            <value>
+                <fullName>Extraordinary circumstances not proven</fullName>
+                <default>false</default>
+                <label>Extraordinary circumstances not proven</label>
+            </value>
+            <value>
+                <fullName>Additional reasonable measures not taken</fullName>
+                <default>false</default>
+                <label>Additional reasonable measures not taken</label>
+            </value>
+            <value>
+                <fullName>Extraordinary circumstances and additional reasonable measures proven</fullName>
+                <default>false</default>
+                <label>Extraordinary circumstances and additional reasonable measures proven</label>
+            </value>
+            <value>
+                <fullName>Claim firm not eligible to represent pax</fullName>
+                <default>false</default>
+                <label>Claim firm not eligible to represent pax</label>
+            </value>
+            <value>
+                <fullName>Claim submitted too late</fullName>
+                <default>false</default>
+                <label>Claim submitted too late</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>true</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

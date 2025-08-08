@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Sharing_Settlements_to_SAS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sharing Settlements to SAS</label>
+        <sharedTo>
+            <role>SAS</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>IsEmergencyClaim__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Sharing_Settlements_to_Vendors</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sharing Settlements to Vendors</label>
+        <sharedTo>
+            <group>All_Vendors</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>IsEmergencyClaim__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Sharing_emergency_claim_related_settlements_to_emergency_group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing the settlements related to emergency claims only to users in the emergency group.</description>
+        <label>Sharing emergency claim related settlements to emergency group</label>
+        <sharedTo>
+            <group>Emergency</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>IsEmergencyClaim__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

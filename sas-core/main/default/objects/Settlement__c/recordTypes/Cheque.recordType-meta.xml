@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cheque</fullName>
+    <active>true</active>
+    <description>Record type for cheque settlements in US</description>
+    <label>Cheque</label>
+    <picklistValues>
+        <picklist>Bank_Country__c</picklist>
+        <values>
+            <fullName>United States</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Country__c</picklist>
+        <values>
+            <fullName>United States</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Currency__c</picklist>
+        <values>
+            <fullName>USD</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Settlement_Status__c</picklist>
+        <values>
+            <fullName>Blocked</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Controlled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Done</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Failed - Processed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In progress</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Rejected by Racer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected by bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Racer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for approval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for control</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for transfer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Voucher_Type__c</picklist>
+        <values>
+            <fullName>6733 - Goodwill voucher</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

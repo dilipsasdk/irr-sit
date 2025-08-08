@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used to give access to IRR logs for non IRR Agents.</description>
+    <label>IRR Access</label>
+    <permissionSets>IRR_Logs</permissionSets>
+    <permissionSets>IRR_ManualCommunication</permissionSets>
+    <permissionSets>IRR_Overrides_View</permissionSets>
+    <permissionSets>IRR_SMSResponse</permissionSets>
+    <permissionSets>SAS_Disruption_User</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment_Status__c</fullName>
+    <description>Status of this segment in the booking. Should be the same for all passengers for a given segment.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Status of this segment in the booking. Should be the same for all passengers for a given segment.</inlineHelpText>
+    <label>Segment Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>true</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>CallToConfirm</fullName>
+                <default>false</default>
+                <label>CallToConfirm</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>Confirmed</fullName>
+                <default>false</default>
+                <label>Confirmed</label>
+            </value>
+            <value>
+                <fullName>SpaceAvailable</fullName>
+                <default>false</default>
+                <label>SpaceAvailable</label>
+            </value>
+            <value>
+                <fullName>Suspended</fullName>
+                <default>false</default>
+                <label>Suspended</label>
+            </value>
+            <value>
+                <fullName>Unconfirmed</fullName>
+                <default>false</default>
+                <label>Unconfirmed</label>
+            </value>
+            <value>
+                <fullName>Waitlisted</fullName>
+                <default>false</default>
+                <label>Waitlisted</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

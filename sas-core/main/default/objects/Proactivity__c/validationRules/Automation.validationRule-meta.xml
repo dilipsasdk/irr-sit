@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Automation</fullName>
+    <active>true</active>
+    <description>Checks whether the atutomation values are compatible</description>
+    <errorConditionFormula>AND(Automate_Matching_Claims__c,  ISPICKVAL(EU261_Eligibility__c, &quot;No&quot;), ISBLANK( Eligibility_Explanation__c ))</errorConditionFormula>
+    <errorDisplayField>Eligibility_Explanation__c</errorDisplayField>
+    <errorMessage>Proactivities which can lead to denied claims requires customer tailored explanations.</errorMessage>
+</ValidationRule>

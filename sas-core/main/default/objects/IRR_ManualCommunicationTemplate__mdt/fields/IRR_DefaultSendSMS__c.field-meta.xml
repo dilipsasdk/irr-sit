@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IRR_DefaultSendSMS__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates whether Send SMS should be automatically selected for this template</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Default Send SMS</label>
+    <type>Checkbox</type>
+</CustomField>

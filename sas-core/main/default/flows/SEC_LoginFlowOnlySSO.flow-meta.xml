@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <description>Forcefully logout the user as a result of this login flow.</description>
+        <name>Force_Logout</name>
+        <label>Force Logout</label>
+        <locationX>598</locationX>
+        <locationY>51</locationY>
+        <assignmentItems>
+            <assignToReference>LoginFlow_ForceLogout</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>A split for the logic depending on the login type used by the user.</description>
+        <name>Login_Type</name>
+        <label>Login Type</label>
+        <locationX>242</locationX>
+        <locationY>52</locationY>
+        <defaultConnector>
+            <targetReference>Login_Type_Forbidden</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Non SSO</defaultConnectorLabel>
+        <rules>
+            <name>SSO</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>LoginFlow_LoginType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SAML Sfdc Initiated SSO</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>LoginFlow_LoginType</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>SAML Idp Initiated SSO</stringValue>
+                </rightValue>
+            </conditions>
+            <label>SSO</label>
+        </rules>
+    </decisions>
+    <description>Login flow used to restrict the user to only use SSO for logins.</description>
+    <interviewLabel>Login Flow Only SSO {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Login Flow Only SSO</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <description>Explains for the user that the login type is not allowed.</description>
+        <name>Login_Type_Forbidden</name>
+        <label>Login Type Forbidden</label>
+        <locationX>436</locationX>
+        <locationY>51</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>Force_Logout</targetReference>
+        </connector>
+        <fields>
+            <name>Login_Type_Forbidden_Desc</name>
+            <fieldText>&lt;p&gt;Your user is not allowed to access the system except via SAS Azure AD.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Login_Type</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Whether to forcfully logout the user as a result of this login flow.</description>
+        <name>LoginFlow_ForceLogout</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <description>The type of method used  by the user to login.</description>
+        <name>LoginFlow_LoginType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

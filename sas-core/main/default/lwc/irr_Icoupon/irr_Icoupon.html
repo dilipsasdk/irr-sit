@@ -1,0 +1,138 @@
+<template>
+        <template if:true={showIcouponModal}>
+         
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                 <!-- modal header start -->
+                   <header class="slds-modal__header">
+                      <button 
+                                class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" 
+                                title="Close" 
+                                onclick={handleCancel}>
+                        <lightning-icon icon-name="utility:close" alternative-text="close" variant="inverse" size="small">
+                        </lightning-icon>
+                         <span class="slds-assistive-text">Close</span>
+                      </button>
+                   </header>
+                   <!-- modal body start -->
+
+                   <lightning-card title="Create iCoupon" icon-name="standard:coupon_codes">
+                   <lightning-tabset>
+                        <lightning-tab label="Create iCoupon" title="To be used when issuing regular iCoupon manually. E.g. for paused flights when iCoupon is triggered automatically for delayed flights. Psgrs boarding card will be updated for use at the vendors + iCoupon SMS/email sent.">
+                           
+                                <lightning-layout-item size="12" class="slds-p-around_xx-small" style="padding-left: 14px;">
+                                        <lightning-combobox
+                                        name="CurrnecyCode"
+                                        label="Currency Code"
+                                        value={selectedCurrencyCode}
+                                        placeholder="Currency Code"
+                                        options={currencyCodeOptions}
+                                        onchange={handleCurrencyChange}
+                                        style="padding-left: 14px;width: 194px;">
+                                </lightning-combobox>
+                                </lightning-layout-item>
+        
+                                <lightning-layout-item size="12" class="slds-p-around_xx-small" >
+                                        <lightning-combobox
+                                        name="ICouponVoucherAmount"
+                                        label="Voucher Amount"
+                                        value={selectedIcouponAmount}
+                                        placeholder="Voucher Amount"
+                                        options={icouponAmountOptions}
+                                        onchange={handleVoucherAmountChange}
+                                        style="padding-left: 14px;width: 194px;">
+                                </lightning-combobox>
+                                </lightning-layout-item>
+        
+                                <lightning-layout-item size="12" class="slds-p-around_xx-small" style="padding-left: 14px;">
+                                        <lightning-combobox
+                                        name="ReasonComment"
+                                        label="Reason Comment"
+                                        value={selectedReasonComment}
+                                        placeholder="Reason Comment"
+                                        options={reasonCommentOptions}
+                                        onchange={handleReasonCommentChange}
+                                        
+                                        style="padding-left: 14px;width: 400px;">
+                                </lightning-combobox>
+                                </lightning-layout-item>
+                                
+                                <lightning-layout-item size="12" class="slds-p-around_xx-small" style="padding-left: 14px;">
+                                        <lightning-input
+                                        name="IncludedBoardedPass"
+                                        label="Include Boarded Passenger"
+                                        value={includedBoardedPass}
+                                        type="checkbox"
+                                        onchange={handleIncludedBoardedPassChange}
+                                        style="padding-left: 14px;width: 400px;">
+                                        </lightning-input>
+        
+                                
+                                </lightning-layout-item>
+                                <lightning-layout>
+                                <lightning-layout-item size="12" flexibility="auto" padding="horizontal-small" class="slds-text-align_right" style="padding-bottom: 10px;">
+                                        <lightning-button label="Submit" variant="brand" class="slds-p-left_xx-small" onclick={handleSubmit} disabled={isSubmitButtonDisabled}></lightning-button>
+                                        </lightning-layout-item>
+                                </lightning-layout>
+                    
+                        </lightning-tab>
+                        
+                                                            
+                        <lightning-tab label=" Standalone iCoupon" title="Use this for miscnx due late incoming flight, canceled flights or miscellaneous situation. Psgr to use iCoupon in SMS/email, boarding card cannot be used due no SEQ#.">
+                                <lightning-layout-item size="12" class="slds-p-around_xx-small" style="padding-left: 14px;">
+                                        <lightning-combobox
+                                        name="StandaloneAirportCode"
+                                        label="Airport Code"
+                                        value={selectedStandaloneAirport}
+                                        placeholder="Airport Code"
+                                        options={standaloneIcouponAirportCodes}
+                                        onchange={handleAirportChange}
+                                        style="padding-left: 14px;width: 194px;">
+                                </lightning-combobox>
+                                </lightning-layout-item>
+
+                                <lightning-layout-item size="12" class="slds-p-around_xx-small" style="padding-left: 14px;">
+                                        <lightning-combobox
+                                        name="StandaloneReasonComment"
+                                        label="Reason Comment"
+                                        value={selectedStandaloneReason}
+                                        placeholder="Reason Comment"
+                                        options={standaloneIcouponReasons}
+                                        onchange={handleReasonChange}
+                                        disabled = {isStandaloneIcouponReasonsDisbled}
+                                        style="padding-left: 14px;width: 400px;">
+                                </lightning-combobox>
+        
+                                </lightning-layout-item>
+        
+                                <lightning-layout-item size="12" class="slds-p-around_xx-small" >
+                                        <lightning-combobox
+                                        name="StandaloneVoucher"
+                                        label="Voucher Profile"
+                                        value={selectedStandaloneVoucher}
+                                        placeholder="Voucher Profile"
+                                        options={standaloneIcouponVouchers}
+                                        onchange={handleVoucherChange}
+                                        style="padding-left: 14px;width: 400px;">
+                                </lightning-combobox>
+                                </lightning-layout-item>
+                                
+                                <lightning-layout>
+                                <lightning-layout-item size="12" flexibility="auto" padding="horizontal-small" class="slds-text-align_right" style="padding-bottom: 10px;">
+                                        <lightning-button label="Submit" variant="brand" class="slds-p-left_xx-small" onclick={submitStandaloneIcoupon} disabled={isSubmitButtonDisabled}></lightning-button>
+                                </lightning-layout-item>
+                                </lightning-layout>
+                        </lightning-tab>
+
+
+                    </lightning-tabset>
+                   
+                </lightning-card>     
+                </div>
+             </section>
+             <div class="slds-backdrop slds-backdrop_open"></div>
+
+            
+        </template>
+        
+</template>

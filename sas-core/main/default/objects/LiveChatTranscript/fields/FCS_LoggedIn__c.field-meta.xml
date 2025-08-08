@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCS_LoggedIn__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Whether the customer was logged in to SAS when the chat was created.</description>
+    <externalId>false</externalId>
+    <label>Logged In</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

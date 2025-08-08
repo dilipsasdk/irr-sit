@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Contains the classes which are included in the scheduled batch runs. The components can be filtered to only be included in certain batch runs and have a priority in order to enforce an order of the batches.</description>
+    <label>Scheduled Batch Component</label>
+    <pluralLabel>Scheduled Batch Components</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

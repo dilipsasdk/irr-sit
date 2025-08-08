@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FlightNumber_Format</fullName>
+    <active>true</active>
+    <description>Flight Number must be entered in the correct format</description>
+    <errorConditionFormula>!ISBLANK(IRR_FlightNumber__c) &amp;&amp; 
+!REGEX(
+  IRR_FlightNumber__c,
+  &quot;([A-Z]{2})([0-9]{4})&quot;
+)</errorConditionFormula>
+    <errorDisplayField>IRR_FlightNumber__c</errorDisplayField>
+    <errorMessage>Flight Number must be entered in the correct format, e.g. SK1238</errorMessage>
+</ValidationRule>

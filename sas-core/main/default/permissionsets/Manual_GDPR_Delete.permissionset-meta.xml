@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>GDPR_WipeAccountService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Manual_GDPR_Delete</name>
+    </customPermissions>
+    <description>Allows a user to access a component on Account to initiate deletion of account data and related data</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Manual GDPR Delete</label>
+</PermissionSet>

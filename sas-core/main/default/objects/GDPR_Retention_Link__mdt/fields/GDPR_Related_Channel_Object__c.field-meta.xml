@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GDPR_Related_Channel_Object__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>GDPR Related Channel Object</label>
+    <referenceTo>GDPR_Related_Channel_Object__mdt</referenceTo>
+    <relationshipLabel>GDPR Retention Links</relationshipLabel>
+    <relationshipName>RetentionLink</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

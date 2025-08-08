@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Claim__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>The claim this compensation was paid out in relation to.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The claim this compensation was paid out in relation to.</inlineHelpText>
+    <label>Claim</label>
+    <referenceTo>LIA_Claim__c</referenceTo>
+    <relationshipLabel>Compensation Cards</relationshipLabel>
+    <relationshipName>Compensation_Cards</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

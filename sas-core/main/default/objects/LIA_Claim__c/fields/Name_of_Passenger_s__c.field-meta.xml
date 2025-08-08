@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_of_Passenger_s__c</fullName>
+    <description>Passengers who are making the claim</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Passenger(s) who are making the claim</inlineHelpText>
+    <label>Name of Passenger(s)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

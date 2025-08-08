@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAS_Compact_Layout</fullName>
+    <fields>TruncatedContent</fields>
+    <fields>OwnerId</fields>
+    <fields>PersonaId</fields>
+    <fields>Posted</fields>
+    <fields>Provider</fields>
+    <fields>ReplyToId</fields>
+    <label>SAS Compact Layout</label>
+</CompactLayout>

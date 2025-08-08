@@ -1,0 +1,3 @@
+Id,Name,FCS_CMP__c,FCS_EBLevel__c,FCS_EBNumber__c,FCS_TPAccountNumber__c,IsPersonAccount
+0011j00001KWmpJAAT,Test Testsson,0123456,G,012345678,9876543210,false
+0011j00001KWlpXAAT,Test Testsson,0123456,G,012345678,9999543221,false

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Case_validation_for_refund_cases</fullName>
+    <active>true</active>
+    <description>Ensures that refund cases have a refund request</description>
+    <errorConditionFormula>AND(ISPICKVAL(Department__c, &quot;Refunds&quot;), 
+ISBLANK( Refund_Request__c ),  
+ISPICKVAL( Status , &quot;Closed&quot;),
+NOT(ISPICKVAL( FCS_CaseType__c , &quot;Error&quot;)),
+NOT($User.LastName = &apos;SAS Automation Process&apos;))</errorConditionFormula>
+    <errorMessage>Please create a refund request in order to close the refund case</errorMessage>
+</ValidationRule>

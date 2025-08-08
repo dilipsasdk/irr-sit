@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Under_Expense_Limit__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(AND(Claim_Expense_Amount_In_SEK__c &lt;= 4000, ISPICKVAL(Type__c , &quot;Accommodation&quot;)),
+AND(Claim_Expense_Amount_In_SEK__c &lt;= 4000, ISPICKVAL(Type__c , &quot;Transportation&quot;)),
+AND(Claim_Expense_Amount_In_SEK__c &lt;= 1000, ISPICKVAL(Type__c , &quot;Food&quot;)),
+AND(Claim_Expense_Amount_In_SEK__c &lt;= 500, ISPICKVAL(Type__c , &quot;Phone calls&quot;))),
+IMAGE(&quot;/img/msg_icons/confirm24.png&quot;, &quot;Under&quot;, 24,24),
+IMAGE(&quot;/img/msg_icons/error24.png&quot;, &quot;Above&quot;,24,24))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Indicate whether or not the receipt is under the limit based on the type of expense</inlineHelpText>
+    <label>Under Expense Limit</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

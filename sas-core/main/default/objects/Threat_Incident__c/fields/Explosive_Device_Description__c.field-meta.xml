@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Explosive_Device_Description__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If you cannot find a description matching what the bomb looks like, please describe it in &quot;Why are you doing this? &quot; field</inlineHelpText>
+    <label>If it is a bomb, what does it look like?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bag</fullName>
+                <default>false</default>
+                <label>Bag</label>
+            </value>
+            <value>
+                <fullName>Box</fullName>
+                <default>false</default>
+                <label>Box</label>
+            </value>
+            <value>
+                <fullName>Briefcase</fullName>
+                <default>false</default>
+                <label>Briefcase</label>
+            </value>
+            <value>
+                <fullName>Package</fullName>
+                <default>false</default>
+                <label>Package</label>
+            </value>
+            <value>
+                <fullName>Suitcase</fullName>
+                <default>false</default>
+                <label>Suitcase</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_EU261_Applicable__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Asserts whether the airport is within the territory of the European Union or in Norway, Switzerland or Iceland.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Asserts whether the airport is within the territory of the European Union or in Norway, Switzerland or Iceland.</inlineHelpText>
+    <label>Is EU261 Applicable</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

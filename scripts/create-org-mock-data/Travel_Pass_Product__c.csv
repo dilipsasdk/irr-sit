@@ -1,0 +1,3 @@
+Id,Account__c,Category_Code__c,Category_Name__c,External_Name__c,Internal_Name__c,Name,Type_Code__c,Type_Name__c,Account__r.Id,Account__r.Name
+a0c1j000003jKbnAAE,0011j00001KWmpJAAT,PAYF,Pay-As-You-Fly,Worldwide,Worldwide,Worldwide,TPC,Travel Pass Corporate,0011j00001KWmpJAAT,Test Testsson
+a0c1j000003jKboAAE,0011j00001KWmpJAAT,CLIP,Punches,Clip card OSL-ARN for individual or multiple users,Clip card OSL-ARN for individual or multiple users,Clip card OSL-ARN for individual or multiple users,TMP,Travel Pass Multiple Punch,0011j00001KWmpJAAT,Test Testsson

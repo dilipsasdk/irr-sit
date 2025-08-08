@@ -1,0 +1,157 @@
+{
+  "orgName": "SAS",
+  "edition": "Developer",
+  "language": "en_US",
+  "features": [
+    "Communities",
+    "ContactsToMultipleAccounts",
+    "Entitlements",
+    "Knowledge",
+    "LightningServiceConsole",
+    "LiveAgent",
+    "LiveMessage",
+    "Macros",
+    "PersonAccounts",
+    "ServiceCloud",
+    "ServiceCloudVoicePartnerTelephony:1",
+    "ServiceUser",
+    "SocialCustomerService",
+    "DebugApex"
+  ],
+  "settings": {
+    "accountSettings": {
+      "enableRelateContactToMultipleAccounts": true,
+      "enableAccountHistoryTracking": true,
+      "enableContactHistoryTracking": true
+    },
+    "apexSettings": {
+      "enableApexApprovalLockUnlock": true
+    },
+    "caseSettings": {
+      "emailToCase": {
+        "enableEmailToCase": true,
+        "enableOnDemandEmailToCase": true,
+        "enableThreadIDInBody": true,
+        "enableThreadIDInSubject": true
+      },
+      "enableCaseFeed": true,
+      "enableCollapseEmailThread": true,
+      "enableDraftEmails": true
+    },
+    "chatterSettings": {
+      "enableChatter": true
+    },
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    },
+    "emailAdministrationSettings": {
+      "enableEnhancedEmailEnabled": true
+    },
+    "emailTemplateSettings": {
+      "enableTemplateEnhancedFolderPref": true
+    },
+    "enhancedNotesSettings": {
+      "enableEnhancedNotes": true,
+      "enableTasksOnEnhancedNotes": true
+    },
+    "entitlementSettings": {
+      "enableEntitlements": true,
+      "enableEntitlementVersioning": true,
+      "enableMilestoneFeedItem": true,
+      "enableMilestoneStoppedTime": true,
+      "entitlementLookupLimitedToActiveStatus": true,
+      "entitlementLookupLimitedToSameAccount": true,
+      "entitlementLookupLimitedToSameAsset": false,
+      "entitlementLookupLimitedToSameContact": false,
+      "ignoreMilestoneBusinessHours": true
+    },
+    "knowledgeSettings": {
+      "cases": {
+        "enableArticleCreation": false,
+        "enableArticlePublicSharingSites": false,
+        "enableCaseDataCategoryMapping": true,
+        "useProfileForPDFCreation": false
+      },
+      "defaultLanguage": "en_US",
+      "enableExternalMediaContent": true,
+      "enableKnowledge": true,
+      "enableKnowledgeArticleTextHighlights": true,
+      "enableKnowledgeKeywordAutoComplete": true,
+      "enableKnowledgeTitleAutoComplete": true,
+      "enableLightningKbAutoLoadRichTextField": true, 
+      "enableLightningKnowledge": true,
+      "showArticleSummariesCustomerPortal": true,
+      "showArticleSummariesInternalApp": true,
+      "showArticleSummariesPartnerPortal": true,
+      "showValidationStatusField": true
+    },
+    "languageSettings": {
+      "enableTranslationWorkbench": true
+    },
+    "liveAgentSettings": {
+      "enableLiveAgent": true,
+      "enableQuickTextEnabled": true
+    },
+    "macroSettings": {
+      "enableAdvancedSearch": true,
+      "macrosInFolders": true
+    },
+    "nameSettings": {
+      "enableMiddleName": true,
+      "enableNameSuffix": true
+    },
+    "omniChannelSettings": {
+      "enableOmniChannel": true,
+      "enableOmniSecondaryRoutingPriority": true,
+      "enableOmniSkillsRouting": true
+    },
+    "liveMessageSettings": {
+      "enableLiveMessage": true
+    },
+    "pathAssistantSettings": {
+      "pathAssistantEnabled": true
+    },
+    "securitySettings": {
+      "enableAuditFieldsInactiveOwner": true
+    },
+    "serviceCloudVoiceSettings": {
+      "enableServiceCloudVoice": true,
+      "enableSCVExternalTelephony": true
+    },
+    "socialCustomerServiceSettings": {
+      "caseSubjectOption": "SocialPostContent",
+      "enableSocialApprovals": false,
+      "enableSocialCaseAssignmentRules": true,
+      "enableSocialCustomerService": true,
+      "enableSocialPersonaHistoryTracking": true,
+      "enableSocialPostHistoryTracking": true,
+      "enableSocialReceiveParentPost": true
+    },
+    "surveySettings": {
+      "enableSurvey": true,
+      "enableSurveyOwnerCanManageResponse": false
+    },
+    "userManagementSettings": {
+      "enableEnhancedPermsetMgmt": true,
+      "enableEnhancedProfileMgmt": true,
+      "enableNewProfileUI": true
+    }
+  },
+  "objectSettings": {
+    "account": {
+      "sharingModel": "private"
+    },
+    "case": {
+      "sharingModel": "private"
+    },
+    "contact": {
+      "sharingModel": "private"
+    },
+    "contract": {
+      "sharingModel": "private"
+    },
+    "opportunity": {
+      "sharingModel": "private"
+    }
+  }
+}

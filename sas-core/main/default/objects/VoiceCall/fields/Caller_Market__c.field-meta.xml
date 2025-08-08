@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caller_Market__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(FromPhoneNumber), &apos;n/a&apos;,
+CASE(LEFT(FromPhoneNumber,3),
+&apos;+45&apos;, &apos;Denmark&apos;,
+&apos;+46&apos;, &apos;Sweden&apos;,
+&apos;+47&apos;, &apos;Norway&apos;,
+&apos;+44&apos;, &apos;England&apos;,
+&apos;Other&apos;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Caller Market</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Calls Update Liability Claim Result</description>
+    <flowDefinition>LIA_Update_Liability_Claim_Result</flowDefinition>
+    <label>Update Liability Claim Result</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

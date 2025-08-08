@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EU261_Handling_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Result of the automatic EU261 automation evaluation. 
+Please review email conversation before start handling the case.</inlineHelpText>
+    <label>EU261 Handling Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Eligible for compensation</fullName>
+                <default>false</default>
+                <label>Eligible for compensation</label>
+            </value>
+            <value>
+                <fullName>Ineligible for compensation</fullName>
+                <default>false</default>
+                <label>Ineligible for compensation</label>
+            </value>
+            <value>
+                <fullName>Ineligible for compensation and expenses</fullName>
+                <default>false</default>
+                <label>Ineligible for compensation and expenses</label>
+            </value>
+            <value>
+                <fullName>Ineligible for compensation but eligible for reimbursement</fullName>
+                <default>false</default>
+                <label>Ineligible for compensation but eligible for reimbursement</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Possibly eligible for compensation</fullName>
+                <default>false</default>
+                <label>Possibly eligible for compensation</label>
+            </value>
+            <value>
+                <fullName>Unable to handle</fullName>
+                <default>false</default>
+                <label>Unable to handle</label>
+            </value>
+            <value>
+                <fullName>Unhandled</fullName>
+                <default>true</default>
+                <label>Unhandled</label>
+            </value>
+            <value>
+                <fullName>Will not handle</fullName>
+                <default>false</default>
+                <label>Will not handle</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

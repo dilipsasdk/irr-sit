@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="GDPR Delete" icon-name="action:delete">
+        <span class="slds-m-horizontal_medium">
+            Delete sensitive data related to this record.
+        </span>
+        <div class="slds-grid slds-gutters_direct-medium slds-align_absolute-center slds-m-top_x-small">
+            <div class="slds-col slds-align-bottom">
+                <div class="slds-grid">
+                    <div class="slds-col">
+                        <lightning-input class="input-field" type="text" label="Verify deletion by entering this record's Id" disabled={deleteDisabled}></lightning-input>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-helptext content="The record Id can be found in the URL field of this page, e.g. https://flysas.lightning.force.com/lightning/r/Account/0011x00000wtUPzAAM/view, where 0011x00000wtUPzAAM is the record Id"></lightning-helptext>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-align-bottom">
+                <div class="slds-float_right">
+                    <lightning-button variant="destructive" label="Delete" title="Delete button" onclick={deleteRecordData} disabled={deleteDisabled}> </lightning-button>
+                </div>
+            </div>
+        </div>
+        <!--Spinner graphics dynamically rendered, controlled by JS-->
+        <div if:true={showSpinner}>
+            <lightning-spinner alternative-text="Loading" size="medium" variant="brand"></lightning-spinner>
+        </div>
+        <!--Custom child component to render errors in search-->
+        <template if:true={error}>
+            <c-c_-error-panel errors={error}></c-c_-error-panel>
+        </template>
+    </lightning-card>
+</template>

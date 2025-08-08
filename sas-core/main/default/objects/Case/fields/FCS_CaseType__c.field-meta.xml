@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCS_CaseType__c</fullName>
+    <complianceGroup>WipeRetain</complianceGroup>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Department__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Baggage</fullName>
+                <default>false</default>
+                <label>Baggage</label>
+            </value>
+            <value>
+                <fullName>Cancellation &amp; Refunds</fullName>
+                <default>false</default>
+                <label>Cancellation &amp; Refunds</label>
+            </value>
+            <value>
+                <fullName>Changes</fullName>
+                <default>false</default>
+                <label>Changes</label>
+            </value>
+            <value>
+                <fullName>Charge Back</fullName>
+                <default>false</default>
+                <label>Charge Back</label>
+            </value>
+            <value>
+                <fullName>Content</fullName>
+                <default>false</default>
+                <label>Content</label>
+            </value>
+            <value>
+                <fullName>Customer Feedback</fullName>
+                <default>false</default>
+                <label>Customer Feedback</label>
+            </value>
+            <value>
+                <fullName>Digital Channel</fullName>
+                <default>false</default>
+                <label>Digital Channel</label>
+            </value>
+            <value>
+                <fullName>Error</fullName>
+                <default>false</default>
+                <label>Error</label>
+            </value>
+            <value>
+                <fullName>Error Handling</fullName>
+                <default>false</default>
+                <label>Error Handling</label>
+            </value>
+            <value>
+                <fullName>EuroBonus</fullName>
+                <default>false</default>
+                <label>EuroBonus</label>
+            </value>
+            <value>
+                <fullName>EuroBonus Partner</fullName>
+                <default>false</default>
+                <label>EuroBonus Partner</label>
+            </value>
+            <value>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+                <label>Feedback</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>GDPR</fullName>
+                <default>false</default>
+                <label>GDPR</label>
+            </value>
+            <value>
+                <fullName>Gift Card</fullName>
+                <default>false</default>
+                <label>Gift Card</label>
+            </value>
+            <value>
+                <fullName>Irregularities</fullName>
+                <default>false</default>
+                <label>Irregularities</label>
+            </value>
+            <value>
+                <fullName>New Booking</fullName>
+                <default>false</default>
+                <label>New Booking</label>
+            </value>
+            <value>
+                <fullName>Non-SAS Products</fullName>
+                <default>false</default>
+                <label>Non-SAS Products</label>
+            </value>
+            <value>
+                <fullName>Plusgrade</fullName>
+                <default>false</default>
+                <label>Plusgrade</label>
+            </value>
+            <value>
+                <fullName>Proration</fullName>
+                <default>false</default>
+                <label>Proration</label>
+            </value>
+            <value>
+                <fullName>Puzzle</fullName>
+                <default>false</default>
+                <label>Puzzle</label>
+            </value>
+            <value>
+                <fullName>Receive Customer Documentation</fullName>
+                <default>false</default>
+                <label>Receive Customer Documentation</label>
+            </value>
+            <value>
+                <fullName>Refund</fullName>
+                <default>false</default>
+                <label>Refund</label>
+            </value>
+            <value>
+                <fullName>Refund Handling</fullName>
+                <default>false</default>
+                <label>Refund Handling</label>
+            </value>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>SAS for Business</fullName>
+                <default>false</default>
+                <label>SAS for Business</label>
+            </value>
+            <value>
+                <fullName>SME</fullName>
+                <default>false</default>
+                <label>SME</label>
+            </value>
+            <value>
+                <fullName>Special Service Request</fullName>
+                <default>false</default>
+                <label>Special Service Request</label>
+            </value>
+            <value>
+                <fullName>Ticketless</fullName>
+                <default>false</default>
+                <label>Ticketless</label>
+            </value>
+            <value>
+                <fullName>Travel Information</fullName>
+                <default>false</default>
+                <label>Travel Information</label>
+            </value>
+            <value>
+                <fullName>Travel Pass</fullName>
+                <default>false</default>
+                <label>Travel Pass</label>
+            </value>
+            <value>
+                <fullName>Voucher</fullName>
+                <default>false</default>
+                <label>Voucher</label>
+            </value>
+            <value>
+                <fullName>Voucher Handling</fullName>
+                <default>false</default>
+                <label>Voucher Handling</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <controllingFieldValue>Agent Helpdesk</controllingFieldValue>
+            <controllingFieldValue>Care</controllingFieldValue>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <controllingFieldValue>Telephony</controllingFieldValue>
+            <valueName>Baggage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <controllingFieldValue>Agent Helpdesk</controllingFieldValue>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <controllingFieldValue>Telephony</controllingFieldValue>
+            <valueName>Cancellation &amp; Refunds</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <controllingFieldValue>Agent Helpdesk</controllingFieldValue>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <controllingFieldValue>Telephony</controllingFieldValue>
+            <valueName>Changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <controllingFieldValue>Refunds OC KANA</controllingFieldValue>
+            <controllingFieldValue>Sales Control BOM</controllingFieldValue>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <controllingFieldValue>Agent Helpdesk</controllingFieldValue>
+            <controllingFieldValue>Care</controllingFieldValue>
+            <controllingFieldValue>Corporate</controllingFieldValue>
+            <controllingFieldValue>Customer Claim</controllingFieldValue>
+            <controllingFieldValue>Digital Channel Support</controllingFieldValue>
+            <controllingFieldValue>Direct Sales</controllingFieldValue>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <controllingFieldValue>Fraud</controllingFieldValue>
+            <controllingFieldValue>Telephony</controllingFieldValue>
+            <controllingFieldValue>Functional Product Support</controllingFieldValue>
+            <valueName>Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <controllingFieldValue>Telephony</controllingFieldValue>
+            <valueName>EuroBonus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <controllingFieldValue>Agent Helpdesk</controllingFieldValue>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <controllingFieldValue>Telephony</controllingFieldValue>
+            <valueName>Irregularities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <controllingFieldValue>Agent Helpdesk</controllingFieldValue>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <controllingFieldValue>Telephony</controllingFieldValue>
+            <valueName>New Booking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <controllingFieldValue>Sales Control BOM</controllingFieldValue>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <controllingFieldValue>Agent Helpdesk</controllingFieldValue>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <controllingFieldValue>Telephony</controllingFieldValue>
+            <valueName>Special Service Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Group Sales</controllingFieldValue>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <controllingFieldValue>Agent Helpdesk</controllingFieldValue>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <controllingFieldValue>Telephony</controllingFieldValue>
+            <valueName>Travel Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Info Hub</controllingFieldValue>
+            <valueName>Content</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <controllingFieldValue>Refunds OC KANA</controllingFieldValue>
+            <valueName>Error Handling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <controllingFieldValue>Refunds OC KANA</controllingFieldValue>
+            <valueName>Gift Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <valueName>Refund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <controllingFieldValue>Refunds OC KANA</controllingFieldValue>
+            <valueName>Refund Handling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refunds</controllingFieldValue>
+            <controllingFieldValue>Refunds OC KANA</controllingFieldValue>
+            <valueName>Voucher Handling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>EuroBonus Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>Vendor Management</controllingFieldValue>
+            <valueName>Feedback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>Fraud</controllingFieldValue>
+            <valueName>Fraud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>GDPR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <controllingFieldValue>Agent Helpdesk</controllingFieldValue>
+            <controllingFieldValue>Distribution</controllingFieldValue>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <controllingFieldValue>Telephony</controllingFieldValue>
+            <valueName>Non-SAS Products</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>Plusgrade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <controllingFieldValue>Corporate</controllingFieldValue>
+            <controllingFieldValue>Telephony</controllingFieldValue>
+            <valueName>SAS for Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <valueName>Ticketless</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SAS Operating Center</controllingFieldValue>
+            <controllingFieldValue>SoMe Support</controllingFieldValue>
+            <controllingFieldValue>Corporate</controllingFieldValue>
+            <controllingFieldValue>Telephony</controllingFieldValue>
+            <valueName>Travel Pass</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Claim</controllingFieldValue>
+            <valueName>Customer Feedback</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Customer Claim</controllingFieldValue>
+            <valueName>Proration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Digital Channel Support</controllingFieldValue>
+            <valueName>Digital Channel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Direct Sales</controllingFieldValue>
+            <valueName>Receive Customer Documentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Product Support</controllingFieldValue>
+            <valueName>Puzzle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Product Support</controllingFieldValue>
+            <valueName>Salesforce</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

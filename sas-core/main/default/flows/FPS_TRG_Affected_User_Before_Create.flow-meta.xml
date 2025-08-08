@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <description>Flow to assign name to affected user before record creation.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>form_Related_User</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Related_User__r.FirstName} + &quot;  &quot;  + {!$Record.Related_User__r.LastName}</expression>
+    </formulas>
+    <interviewLabel>FPS_TRG_Affected_User {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>FPS_TRG_Affected_User_Before_Create</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Updating/assigning the affected users name to the record triggering the flow.</description>
+        <name>Update_Affected_User_Name</name>
+        <label>Update_Affected_User_Name</label>
+        <locationX>176</locationX>
+        <locationY>287</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>form_Related_User</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Affected_User_Name</targetReference>
+        </connector>
+        <object>Affected_User__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

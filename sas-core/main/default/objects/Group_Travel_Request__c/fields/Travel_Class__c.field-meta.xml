@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Travel_Class__c</fullName>
+    <externalId>false</externalId>
+    <label>Travel Class</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SAS Go</fullName>
+                <default>false</default>
+                <label>SAS Go</label>
+            </value>
+            <value>
+                <fullName>SAS Plus</fullName>
+                <default>false</default>
+                <label>SAS Plus</label>
+            </value>
+            <value>
+                <fullName>SAS Business</fullName>
+                <default>false</default>
+                <label>SAS Business</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

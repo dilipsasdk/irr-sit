@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EU261_Handling_Note__c</fullName>
+    <description>EU261 Automation Handling Notes</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Note of automatic EU261 automation evaluation. 
+Please review email conversation before start handling the case.</inlineHelpText>
+    <label>EU261 Handling Note</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,25 @@
+.case-count-text {
+  margin: 5px 0 -5px 0;
+}
+
+.case-bullet::before {
+  content: "\2022"; /* \2022 is unicode for a bullet */
+  display: inline-block;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 13px;
+  margin-right: 0.1em;
+  vertical-align: text-top;
+}
+
+.open-case-bullet::before {
+  color: #2e844a;
+}
+
+.closed-case-bullet::before {
+  color: #c9c7c5;
+}
+
+.section-divider {
+  background-color: #ecebea;
+}

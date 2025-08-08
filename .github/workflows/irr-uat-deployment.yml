@@ -1,0 +1,101 @@
+# Unique name for this workflow
+name: Deploy support branch to IRR-UAT org
+
+# Definition when the workflow should run
+on:
+  push:
+    branches: [irr/support]
+    paths:
+      - "sas-core/**"
+  workflow_dispatch:
+    inputs:
+      deploy-type:
+        type: choice
+        description: "Type of deployment"
+        required: true
+        default: "delta"
+        options:
+          - delta
+          - full
+      from-commit:
+        description: "Commit SHA to start delta from"
+        required: true
+      to-commit:
+        description: "Commit SHA to end delta at"
+        required: true
+
+# Jobs to be executed
+jobs:
+  deploy-branch-to-irr-uat-org:
+    runs-on: ubuntu-latest
+    environment: irr-uat
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    steps:
+      - name: Install latest CLI version
+        id: install-cli
+        run: npm install -g @salesforce/cli
+
+      - name: "Installing sfdx git delta"
+        run: echo y | sf plugins:install sfdx-git-delta
+
+      - name: Checkout sources
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Key is stored as a secret in the repository
+      # We need to create a file with the key in it
+      - name: Make JWT Key File
+        id: make-jwt-key-file
+        run: echo "${{secrets.CI_KEY}}" > ./SF_JWT_KEY.key
+
+      - name: Authorize to IRR-UAT org
+        id: auth-irr-uat-org
+        run: sf org login jwt --username ${{secrets.USERNAME}} --jwt-key-file ./SF_JWT_KEY.key --client-id ${{secrets.CLIENT_ID}} --alias UATSandbox
+
+      - name: "Create delta packages for new, modified or deleted metadata"
+        run: |
+          mkdir changed-sources
+          if [ "${{ github.event_name }}" == "push" ]; then
+            echo "Setting commits for delta based on push event"
+            from_commit=$(git rev-parse HEAD^)
+            to_commit=$(git rev-parse HEAD)
+          else
+            echo "Setting commits for delta based on workflow_dispatch event"
+            from_commit=${{ github.event.inputs.from-commit }}
+            to_commit=${{ github.event.inputs.to-commit }}
+          fi
+          echo "From commit: $from_commit"
+          echo "To commit: $to_commit"
+          sf sgd:source:delta --from $from_commit --to $to_commit --output changed-sources/ --source sas-core/
+
+      # Handle automatic deployment
+      - name: "Deploy the delta to IRR-UAT org (On Push)"
+        if: |
+          github.event_name == 'push'
+        run: |
+          if grep -q '<types>' changed-sources/package/package.xml; then
+            sf project deploy start --manifest changed-sources/package/package.xml  --post-destructive-changes changed-sources/destructiveChanges/destructiveChanges.xml --target-org UATSandbox --ignore-warnings
+          else
+            echo "No changes detected. Skipping deployment." 
+          fi
+
+      # Handle manual deployment
+      - name: "Deploy the delta to IRR-UAT org (Manual)"
+        if: |
+          github.event.inputs.deploy-type == 'delta' &&
+          github.event_name == 'workflow_dispatch'
+        run: |
+          if grep -q '<types>' changed-sources/package/package.xml; then
+            sf project deploy start --manifest changed-sources/package/package.xml --post-destructive-changes changed-sources/destructiveChanges/destructiveChanges.xml --target-org UATSandbox --ignore-warnings
+          else
+            echo "No changes detected. Skipping deployment." 
+          fi
+
+      - name: "Deploy entire source to IRR-UAT org (Manual)"
+        if: |
+          github.event.inputs.deploy-type == 'full' && 
+          github.event_name == 'workflow_dispatch'
+        run: |
+          sf project generate manifest --source-dir sas-core/ -d manifest/ 
+          sf project deploy start --manifest manifest/package.xml --post-destructive-changes changed-sources/destructiveChanges/destructiveChanges.xml --target-org UATSandbox --ignore-warnings

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charge Back</fullName>
+    <description>A process mapped forwards charge back process</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Accepted%2FAirline Acceptance</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Awaiting Acquirer</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Awaiting Credit</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Awaiting Travel Agent</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>CB - Closed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Disputed%2FLoss</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Disputed%2FWon</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Disputed%2FWon%2FPre-arb rcv%27d%2FAccepted</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Disputed%2FWon%2FPre-arb rcvd%2FDisputed%2FLoss</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Disputed%2FWon%2FPre-arb rcvd%2FDisputed%2FWon</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>New Response</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

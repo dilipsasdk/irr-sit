@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disallow_manual_escalation</fullName>
+    <active>true</active>
+    <description>It should not be possible to manually set case status to &quot;Escalated&quot;. Users should use the To Other Department flow instead which sets the IsEscalated field.</description>
+    <errorConditionFormula>AND(
+  IsEscalated__c = False,
+  ISPICKVAL(Status, &apos;Escalated&apos;) 
+)</errorConditionFormula>
+    <errorMessage>Cases can&apos;t be set to Escalated status manually. Use the &quot;To Other Department&quot; tool instead.</errorMessage>
+</ValidationRule>

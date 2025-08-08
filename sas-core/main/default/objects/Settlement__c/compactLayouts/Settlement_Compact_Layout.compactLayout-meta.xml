@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Settlement_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>RecordTypeId</fields>
+    <fields>Claim__c</fields>
+    <fields>Currency__c</fields>
+    <fields>Amount__c</fields>
+    <fields>Submitter__c</fields>
+    <fields>Approver__c</fields>
+    <fields>OwnerId</fields>
+    <label>Settlement Compact Layout</label>
+</CompactLayout>

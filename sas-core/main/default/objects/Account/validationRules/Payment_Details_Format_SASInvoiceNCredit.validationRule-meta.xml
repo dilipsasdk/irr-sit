@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Details_Format_SASInvoiceNCredit</fullName>
+    <active>true</active>
+    <description>Validates that the form for payment details formating</description>
+    <errorConditionFormula>ISPICKVAL(Form_of_Payment__c , &quot;SAS Invoice(Name Credit)&quot;)  &amp;&amp; NOT(REGEX( Form_of_Payment_Details__c ,&quot;[A-Z]{2}[0-9]{7}&quot;))</errorConditionFormula>
+    <errorDisplayField>Form_of_Payment_Details__c</errorDisplayField>
+    <errorMessage>Payments Details for SAS Invoice(Name Credit) format is XX1234567. Two capital letters followed by 7 numbers</errorMessage>
+</ValidationRule>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accent__c</fullName>
+    <externalId>false</externalId>
+    <label>Accent</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Local</fullName>
+                <default>false</default>
+                <label>Local</label>
+            </value>
+            <value>
+                <fullName>Dialect</fullName>
+                <default>false</default>
+                <label>Dialect</label>
+            </value>
+            <value>
+                <fullName>Foreign</fullName>
+                <default>false</default>
+                <label>Foreign</label>
+            </value>
+            <value>
+                <fullName>Slang</fullName>
+                <default>false</default>
+                <label>Slang</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

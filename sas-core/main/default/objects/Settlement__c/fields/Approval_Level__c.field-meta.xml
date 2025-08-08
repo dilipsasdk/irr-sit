@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Level__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( RecordTypeName__c == &apos;EB_points&apos;, IF( EuroBonus_Points__c &lt; 150001, &apos;Level 1&apos;, 
+IF(EuroBonus_Points__c &gt;= 150001, &apos;Level 2&apos;, Null)),IF (RecordTypeName__c == &apos;Voucher&apos;, IF(Settlement_amount_in_SEK__c &lt; 61500, &apos;Level 1&apos;, 
+IF(Settlement_amount_in_SEK__c &gt;= 61501, &apos;Level 2&apos;,Null)),
+IF(Settlement_amount_in_SEK__c &lt; 49501, &apos;Level 1&apos;, 
+ IF(Settlement_amount_in_SEK__c &gt;= 49501, &apos;Level 2&apos;,Null))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Approval Level</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

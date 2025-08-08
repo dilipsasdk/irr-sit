@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gives edit access to Settlement Object&apos;s Date of Payment Field</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Settlement__c.Date_of_Payment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Can_Edit_Date_of_Payment_In_Settlement</label>
+    <license>Salesforce</license>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>Settlement__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <recordTypeVisibilities>
+        <recordType>Settlement__c.Monetary</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+</PermissionSet>

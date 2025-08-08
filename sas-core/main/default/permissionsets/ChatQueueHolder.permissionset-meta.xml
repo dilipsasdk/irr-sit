@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission Set for presence status to hold queue open.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Chat Queue Holder</label>
+</PermissionSet>

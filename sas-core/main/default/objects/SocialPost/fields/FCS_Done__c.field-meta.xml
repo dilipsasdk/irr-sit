@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCS_Done__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked if the post fulfills the criteria of being handled</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checked if the post fulfills the criteria of being handled</inlineHelpText>
+    <label>Done</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,51 @@
+/**
+* @author Niklas Lundkvist, Deloitte
+* @date 2020
+*/
+
+.pull-down {
+  margin-top: auto;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.combobox-actions {
+  display: inherit;
+}
+
+li {
+  display: inline-block;
+}
+
+.uploaded-file {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-top: 7px;
+  padding: 5px;
+  background: #f3f3f3;
+  display: flex;
+}
+
+.remove-file {
+  margin-left: 25px;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.file-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 125px;
+}
+
+.sms-content-height{
+  --sds-c-textarea-sizing-min-height: 128px;
+}
+
+ .lightningInputRichText {
+  --slds-c-textarea-sizing-min-height: 134px;
+}

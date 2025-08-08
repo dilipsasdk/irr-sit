@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Liability_Claim_Compact_Layout</fullName>
+    <fields>Case__c</fields>
+    <fields>External_Case_Number_Court_Reference__c</fields>
+    <fields>Deadline__c</fields>
+    <fields>Jurisdiction__c</fields>
+    <fields>Name_of_Judicial_Body__c</fields>
+    <label>Liability Claim Compact Layout</label>
+</CompactLayout>

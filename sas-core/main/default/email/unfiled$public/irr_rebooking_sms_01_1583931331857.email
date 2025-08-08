@@ -1,0 +1,23 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Important information about your SAS booking {{{passengerInfo.bookingReference}}} 
+  <br /> 
+  <br /> Hi, 
+  <br /> 
+  <br /> Due to earlier flight disruptions, you have been rebooked to the following flight(s):​ [[[LOOP(passengerInfo.itinerary, &quot;trip&quot;)]]][[[LOOP(trip.segments, &quot;segment&quot;)]]][[[DISPLAYIF(contains(segment.segmentId, rebookInfo.addedSegments))]]] 
+  <br /> 
+  <br /> {{{segment.flightNumber}}} [[[formatDatetimeUTC(segment.departureTimeLocal, 'd MMM')]]] 
+  <br /> {{{segment.departureCity}}} ({{{segment.stationDeparture}}}) [[[formatDatetimeUTC(segment.departureTimeLocal, 'HH:mm')]]] 
+  <br /> {{{segment.arrivalCity}}} ({{{segment.stationArrival}}}) [[[formatDatetimeUTC(segment.arrivalTimeLocal, 'HH:mm')]]] [[[ENDDISPLAYIF()]]][[[ENDLOOP()]]][[[ENDLOOP()]]] 
+  <br /> 
+  <br /> We apologize for this change. To check your full reservation; 
+  <br /> https://sas.travel/go/mmb?l=en&amp;r={{{passengerInfo.bookingReference}}}&amp;n={{{passengerInfo.lastName}}} 
+  <br /> 
+  <br /> Read more about your rights here ​ https://www.flysas.com/en/legal-info/eu-passenger-rights/​ 
+  <br /> 
+  <br /> Regards, SAS​
+ </body>
+</html>

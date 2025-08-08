@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ChatSurvey__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(FCS_RelatedCase__r.Origin ,&apos;CHAT&apos;),TRUE, FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ChatSurvey</label>
+    <type>Checkbox</type>
+</CustomField>

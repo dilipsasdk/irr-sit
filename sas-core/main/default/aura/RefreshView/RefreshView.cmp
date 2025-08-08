@@ -1,0 +1,9 @@
+<aura:component implements="lightning:availableForFlowActions,force:hasRecordId">
+  
+  <force:recordData
+    aura:id="recordLoader"
+    layoutType="FULL"
+    recordId="{!v.recordId}"
+    targetError="{!v.recordError}"
+    />
+</aura:component>

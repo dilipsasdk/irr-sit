@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CABH__c</fullName>
+    <externalId>false</externalId>
+    <label>CABH</label>
+    <summarizedField>Case_Status_Change__c.Status_Time__c</summarizedField>
+    <summaryForeignKey>Case_Status_Change__c.Case__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

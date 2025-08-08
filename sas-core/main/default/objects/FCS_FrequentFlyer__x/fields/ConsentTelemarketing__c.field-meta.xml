@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ConsentTelemarketing__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that customer has given consent to Telemarketing</description>
+    <externalDeveloperName>ConsentTelemarketing</externalDeveloperName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that customer has given consent to Telemarketing</inlineHelpText>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>true</isSortingDisabled>
+    <label>Consent Telemarketing</label>
+    <type>Checkbox</type>
+</CustomField>

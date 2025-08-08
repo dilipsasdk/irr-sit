@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Used to set the Date and other detais to send audit trails details to Admin</description>
+    <enableFeeds>false</enableFeeds>
+    <label>FCS_Audit Trail</label>
+    <visibility>Public</visibility>
+</CustomObject>

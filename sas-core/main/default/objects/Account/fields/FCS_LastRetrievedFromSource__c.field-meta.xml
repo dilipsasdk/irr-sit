@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCS_LastRetrievedFromSource__c</fullName>
+    <description>Datetime for when this account was last retrieved from source system. Used to determine if customer should be retrieved at certain points in time, e.g. when opening a case.</description>
+    <externalId>false</externalId>
+    <label>Last Retrieved From Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>DateTime</type>
+</CustomField>

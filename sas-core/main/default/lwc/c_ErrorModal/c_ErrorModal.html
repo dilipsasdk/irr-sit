@@ -1,0 +1,29 @@
+<!--
+ - @author Niklas Lundkvist, Deloitte
+ - @date 2020
+ -->
+
+<!-- C Error Modal -->
+<template>
+    <div role="alertdialog" tabindex="-1" aria-labelledby="prompt-heading-id" aria-describedby="prompt-message-wrapper" class={modalClass}>
+        <div class="slds-modal__container">
+            <div class="slds-modal__header slds-theme--error slds-theme--alert-texture">
+                <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" if:true={allowCancel}>
+                    <lightning-icon icon-name="utility:close" alternative-text="Close" title="Close"></lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 class="slds-text-heading--medium" id="prompt-heading-id">An error occurred</h2>
+            </div>
+            <div class="slds-modal__content slds-p-around--medium">
+                <template for:each={errors} for:item="message">
+                    <p key={message} class="error-message">{message}</p>
+                </template>
+            </div>
+            <div class="slds-modal__footer slds-theme--default">
+                <button class="slds-button slds-button--neutral" if:true={allowCancel} onclick={handleCancel}>Cancel</button>
+                <button class="slds-button slds-button--destructive" onclick={handleReload}>Reload</button>
+            </div>
+        </div>
+    </div>
+    <div class={backdropClass}></div>
+</template>

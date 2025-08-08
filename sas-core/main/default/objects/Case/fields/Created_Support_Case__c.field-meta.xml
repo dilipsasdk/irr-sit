@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_Support_Case__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates whether or not a support case was created in order to solve this case</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates whether or not a support case was created in order to solve this case</inlineHelpText>
+    <label>Created Support Case</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

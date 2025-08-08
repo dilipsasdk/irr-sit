@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Arrival_Status__c</fullName>
+    <defaultValue>&quot;unknown&quot;</defaultValue>
+    <externalId>false</externalId>
+    <label>Arrival Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ontime</fullName>
+                <default>false</default>
+                <label>ontime</label>
+            </value>
+            <value>
+                <fullName>delayed</fullName>
+                <default>false</default>
+                <label>delayed</label>
+            </value>
+            <value>
+                <fullName>cancelled</fullName>
+                <default>false</default>
+                <label>cancelled</label>
+            </value>
+            <value>
+                <fullName>unknown</fullName>
+                <default>false</default>
+                <label>unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

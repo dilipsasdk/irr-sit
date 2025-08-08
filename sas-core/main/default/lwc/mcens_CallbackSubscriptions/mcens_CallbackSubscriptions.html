@@ -1,0 +1,53 @@
+<template>
+    <lightning-card title="Subscriptions" icon-name="standard:data_integration_hub">
+        <lightning-button label="New" slot="actions" onclick={openNewSubscriptionDialog}></lightning-button>
+        <div if:true={showSpinner}>
+            <lightning-spinner alternative-text="Loading" size="medium" variant="brand"></lightning-spinner>
+        </div>
+        <c-mcens_-callback-subscriptions-error error={error} if:true={error}></c-mcens_-callback-subscriptions-error>
+        <table if:true={subscriptionList} class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Id</th>
+                    <th>Events</th>
+                    <th>Filters</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <template for:each={subscriptionList} for:item="sub">
+                    <tr key={sub.subscriptionId}>
+                        <th>{sub.subscriptionName}</th>
+                        <td>{sub.subscriptionId}</td>
+                        <td>{sub.eventCategoryTypesFlat}</td>
+                        <td>{sub.filtersFlat}</td>
+                        <td>
+                            <lightning-button-icon 
+                                data-subid={sub.subscriptionId} 
+                                icon-name="utility:delete" 
+                                alternative-text="Delete" 
+                                title="Delete" 
+                                variant="border-fill+ed" 
+                                onclick={openDeleteSubscriptionDialog}>
+                            </lightning-button-icon>
+                        </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </lightning-card>
+    <c-mcens_-callback-subscriptions-new 
+        if:true={showNewSubscriptionDialog} 
+        callback-id={recordId} 
+        oncanceled={newSubscriptionCanceled}
+        oncreated={newSubscriptionCreated}>
+    </c-mcens_-callback-subscriptions-new>
+    <c-mcens_-callback-subscriptions-delete 
+        if:true={deleteSubscriptionId} 
+        subscription-id={deleteSubscriptionId} 
+        oncanceled={deleteSubscriptionCanceled} 
+        ondeleted={subscriptionDeleted}>
+    </c-mcens_-callback-subscriptions-delete>
+    
+</template>

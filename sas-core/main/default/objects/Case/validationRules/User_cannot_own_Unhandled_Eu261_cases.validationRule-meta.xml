@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_cannot_own_Unhandled_Eu261_cases</fullName>
+    <active>true</active>
+    <description>Prevents users to take cases from SAS Automation Queue while the booking data is gather for EU261 Automatic evaluation.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(LIA_Claim__r.EU261_Handling_Status__c, &apos;Unhandled&apos;),
+CONTAINS(TEXT(LIA_Claim__r.Customer_Claim_Type__c),
+&apos;compensation&apos;),
+LEFT(OwnerId, 3) = &apos;005&apos;,
+ISCHANGED(OwnerId),
+ISPICKVAL( Status , &apos;New&apos;)
+)</errorConditionFormula>
+    <errorMessage>You cannot take ownership of this case. There is an automatic evaluation pending.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCS_Type__c</fullName>
+    <description>Defines the weather the tag is Main, Sub or Additional</description>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Main</fullName>
+                <default>false</default>
+                <label>Main</label>
+            </value>
+            <value>
+                <fullName>Sub</fullName>
+                <default>false</default>
+                <label>Sub</label>
+            </value>
+            <value>
+                <fullName>Additional</fullName>
+                <default>false</default>
+                <label>Additional</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

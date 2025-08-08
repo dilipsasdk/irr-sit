@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAS_Claim_Case_Compact_Layout</fullName>
+    <fields>Subject</fields>
+    <fields>CaseNumber</fields>
+    <fields>LIA_Claim__c</fields>
+    <fields>LIA_Jurisdiction__c</fields>
+    <fields>Team__c</fields>
+    <fields>OwnerId</fields>
+    <fields>ParentId</fields>
+    <label>SAS Claim Case Compact Layout</label>
+</CompactLayout>

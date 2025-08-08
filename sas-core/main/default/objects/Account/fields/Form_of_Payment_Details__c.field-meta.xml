@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Form_of_Payment_Details__c</fullName>
+    <description>Details of the form or payment</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The format is NC1234567 when the form of payment is SAS Invoice (Name Credit)</inlineHelpText>
+    <label>Form of Payment Details</label>
+    <length>9</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

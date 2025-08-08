@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flight_Date__c</fullName>
+    <description>Flight date supplied by customer for feedback cases.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Flight date supplied by customer for feedback cases.</inlineHelpText>
+    <label>Flight Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

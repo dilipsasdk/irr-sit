@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConversationMessageDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <constants>
+        <constantType>Title</constantType>
+        <primitiveValues>
+            <textValue>Vi vil sætte stor pris på din feedback. Vil du besvare et par spørgsmål om vores servicekvalitet?</textValue>
+            <type>Text</type>
+        </primitiveValues>
+    </constants>
+    <label>DK-EndedChat With Survey</label>
+    <language>en_US</language>
+    <messageLayouts>
+        <formatType>WebView</formatType>
+        <layoutItems>
+            <collectionType>None</collectionType>
+            <compositeValues>
+                <compositeTypeName>TitleItem</compositeTypeName>
+                <layoutItems>
+                    <collectionType>None</collectionType>
+                    <name>title</name>
+                    <primitiveValues>
+                        <type>SourcePrimitiveValue</type>
+                        <valueSourceReference>Constants.Title</valueSourceReference>
+                    </primitiveValues>
+                </layoutItems>
+            </compositeValues>
+            <name>title</name>
+        </layoutItems>
+        <layoutItems>
+            <collectionType>None</collectionType>
+            <name>url</name>
+            <primitiveValues>
+                <type>SourceSobjectFormula</type>
+                <valueFormula>SurveyLink__c</valueFormula>
+                <valueSourceReference>Parameters.MessagingSession</valueSourceReference>
+            </primitiveValues>
+        </layoutItems>
+        <messageType>StaticContent</messageType>
+    </messageLayouts>
+    <messageLayouts>
+        <formatType>Text</formatType>
+        <layoutItems>
+            <collectionType>None</collectionType>
+            <name>text</name>
+            <primitiveValues>
+                <formulaTemplate>Vi vil sætte stor pris på din feedback. Vil du besvare et par spørgsmål om vores servicekvalitet?</formulaTemplate>
+                <type>FormulaTemplate</type>
+            </primitiveValues>
+        </layoutItems>
+        <messageType>StaticContent</messageType>
+    </messageLayouts>
+    <type>AutoResponse</type>
+</ConversationMessageDefinition>

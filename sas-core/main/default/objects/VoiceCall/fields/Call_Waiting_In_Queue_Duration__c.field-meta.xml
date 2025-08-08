@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Call_Waiting_In_Queue_Duration__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(FLOOR( MOD( (CallAcceptDateTime - CallQueuedDateTime)* 24, 24 ) ) &gt; 0, TEXT( FLOOR( MOD( (CallAcceptDateTime - CallQueuedDateTime)* 24, 24 ) ) ) &amp; &quot;:&quot;,&quot;00:&quot;) &amp;
+IF(FLOOR( MOD( (CallAcceptDateTime - CallQueuedDateTime)* 24 * 60, 60 ) ) &gt; 0, LPAD( TEXT( ROUND( MOD( (CallAcceptDateTime - CallQueuedDateTime)* 24 * 60, 60 ), 0 ) ), 2, &quot;0&quot;) &amp; &quot;:&quot;,&quot;00:&quot;) &amp;
+IF(FLOOR( MOD( (CallAcceptDateTime - CallQueuedDateTime)* 24 * 60 * 60, 60 ) ) &gt; 0, LPAD( TEXT( ROUND( MOD( (CallAcceptDateTime - CallQueuedDateTime)* 24 * 60 * 60, 60 ), 0 ) ), 2, &quot;0&quot;), &quot;00&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Call Waiting In Queue Duration</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

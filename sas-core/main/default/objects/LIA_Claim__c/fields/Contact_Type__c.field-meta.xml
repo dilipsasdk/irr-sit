@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Type__c</fullName>
+    <description>Use for emergency claims to identify who the contact is. It is important to differentiate whether it is the passenger(e.i. survivor) or relative of a passenger.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>In a emergency claim, it is important to who if we are in contact with the passenger or a relative of the passenger</inlineHelpText>
+    <label>Contact Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Passenger</fullName>
+                <default>false</default>
+                <label>Passenger</label>
+            </value>
+            <value>
+                <fullName>Passenger&apos;s Relative</fullName>
+                <default>false</default>
+                <label>Passenger&apos;s Relative</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_provide_Parent_or_Account_Id</fullName>
+    <active>true</active>
+    <description>Asserts that the user provides either a Parent Object or Account Identifier, and not both values.</description>
+    <errorConditionFormula>OR(AND(ISBLANK(AccountIdFieldName__c), ISBLANK( ParentObjectName__c)), AND(NOT(ISBLANK(AccountIdFieldName__c)), NOT(ISBLANK(ParentObjectName__c))))</errorConditionFormula>
+    <errorMessage>You must provide either the Account Identifier field or a Parent Object. Both values cannot be set.</errorMessage>
+</ValidationRule>

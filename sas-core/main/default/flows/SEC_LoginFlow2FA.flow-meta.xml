@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>Retrieves whether time based one time password is available for the user to authenticate.</description>
+        <name>Get_TOTP_Availability</name>
+        <label>Get TOTP Availability</label>
+        <locationX>370</locationX>
+        <locationY>58</locationY>
+        <actionName>SEC_LoginFlowTOTPAvailability</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>TOTP_Registration_Status</targetReference>
+        </connector>
+        <inputParameters>
+            <name>userIds</name>
+            <value>
+                <elementReference>LoginFlow_UserId</elementReference>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>TOTP_Available</assignToReference>
+            <name>output</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description>Retrieves a verification URL to prompt the user to add an authenticator</description>
+        <name>Get_Verification_Url</name>
+        <label>Get Verification Url</label>
+        <locationX>523</locationX>
+        <locationY>293</locationY>
+        <actionName>SEC_LoginFlowTOTPUrl</actionName>
+        <actionType>apex</actionType>
+        <inputParameters>
+            <name>retUrls</name>
+            <value>
+                <stringValue>/lightning/page/home</stringValue>
+            </value>
+        </inputParameters>
+        <outputParameters>
+            <assignToReference>LoginFlow_FinishLocation</assignToReference>
+            <name>output</name>
+        </outputParameters>
+    </actionCalls>
+    <decisions>
+        <description>Checks whether TOTP is available to determine whether the user should be prompted to register the authenticator.</description>
+        <name>TOTP_Registration_Status</name>
+        <label>TOTP Registration Status</label>
+        <locationX>512</locationX>
+        <locationY>60</locationY>
+        <defaultConnector>
+            <targetReference>Get_Verification_Url</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No TOTP</defaultConnectorLabel>
+        <rules>
+            <name>Has_TOTP</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>TOTP_Available</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Has TOTP</label>
+        </rules>
+    </decisions>
+    <description>Login flow used to require second factor authentication when not logging in using SSO.</description>
+    <interviewLabel>Login Flow 2FA {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Login Flow 2FA</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <start>
+        <locationX>100</locationX>
+        <locationY>58</locationY>
+        <connector>
+            <targetReference>Get_TOTP_Availability</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>The location to which the user is redirected after the login flow.</description>
+        <name>LoginFlow_FinishLocation</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Whether the user should be logged out as a result of the login flow.</description>
+        <name>LoginFlow_ForceLogout</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <variables>
+        <description>The type of method used to login for the user</description>
+        <name>LoginFlow_LoginType</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>The user id of the user attempting to login.</description>
+        <name>LoginFlow_UserId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Whether TOTP is available for the user.</description>
+        <name>TOTP_Available</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsRedirected__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>To indicate that the case has been redirected to another department/team</description>
+    <externalId>false</externalId>
+    <inlineHelpText>To indicate that the case has been redirected to another department/team</inlineHelpText>
+    <label>IsRedirected</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

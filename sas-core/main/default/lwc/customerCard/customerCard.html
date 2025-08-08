@@ -1,0 +1,387 @@
+<template>
+  <lightning-card title="Retrieve Customer" if:false={account}>
+    <div
+      class="slds-grid slds-gutters slds-grid_vertical-align-end slds-p-left_small"
+    >
+      <!--Component that displays buttons where the user can choose a value to search for, e.g. EuroBonus. 
+                Dynimically rendered based on property.-->
+      <div class="slds-col">
+        <lightning-radio-group
+          name="searchOptions"
+          label="Search by"
+          options={options}
+          value={searchOption}
+          required
+          type="button"
+          if:true={showSearchOptions}
+        ></lightning-radio-group>
+        <!--Search field of component-->
+        <lightning-input
+          type="text"
+          label="Enter customer's EuroBonus number"
+          value={searchValue}
+          onchange={handleSearchValueChange}
+          onkeydown={handlePressEnterKey}
+          class="search-field"
+        >
+        </lightning-input>
+      </div>
+      <!--Button to trigger search based on input-->
+      <div class="slds-col">
+        <lightning-button
+          variant="brand"
+          label="Search"
+          title="Search button"
+          onclick={handleSearchButtonClick}
+        >
+        </lightning-button>
+      </div>
+    </div>
+    <!--Spinner graphics dynamically rendered, controlled by JS-->
+    <div if:true={showSpinner}>
+      <lightning-spinner
+        alternative-text="Loading"
+        size="medium"
+        variant="brand"
+      ></lightning-spinner>
+    </div>
+    <!--Custom child component to render errors in search-->
+    <template if:true={error}>
+      <c-c_-error-panel errors={error}></c-c_-error-panel>
+    </template>
+    <!--Displays a warning is no result was found in search-->
+    <div class="slds-p-around_medium searchError" if:true={noSearchResult}>
+      <lightning-icon
+        icon-name="utility:warning"
+        variant="warning"
+      ></lightning-icon>
+      <div class="slds-p-around_small">
+        <p>Could not find a matching customer</p>
+      </div>
+    </div>
+  </lightning-card>
+
+  <article class="slds-card" if:true={account}>
+    <div if:true={showSpinner}>
+      <lightning-spinner
+        alternative-text="Loading"
+        size="medium"
+        variant="brand"
+      ></lightning-spinner>
+    </div>
+    <div class="slds-card__header slds-grid">
+      <header class="slds-media slds-media_center slds-has-flexi-truncate">
+        <div class="slds-media__body">
+          <h2 class="slds-card__header-title">
+            <span class="slds-text-heading_small slds-truncate"
+              >{cardTitle}</span>
+          </h2>
+        </div>
+      </header>
+    </div>
+    <div class="slds-card__body slds-card__body_inner">
+      <lightning-tabset>
+        <lightning-tab label="Bookings">
+          <ul class="slds-has-dividers_bottom-space">
+            <lightning-accordion allow-multiple-sections-open active-section-name="Upcoming_Bookings">
+              <lightning-accordion-section label={upcomingBookingTabTitle} name="Upcoming_Bookings">
+                <template for:each={visibleUpcomingBookings} for:item="b">
+                  <lightning-accordion-section
+                    label={b.accordionTitle}
+                    key={b.bookingReference}
+                    >
+                    <div
+                      class="slds-border_top slds-m-bottom_x-small slds-p-top_x-small"
+                    >
+                      <strong>Travellers&nbsp;</strong>
+                      <strong class="slds-float_right"
+                        >{b.bookingReference}{b.travelOfficeId}</strong
+                      >
+                    </div>
+                    <div
+                      class="slds-grid slds-border_bottom slds-grid_vertical slds-m-bottom_x-small"
+                    >
+                      <div class="slds-col slds-size_1-of-1 slds-grid">
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_5-of-12"
+                          >Full name</span
+                        >
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_4-of-12"
+                          >EuroBonus</span
+                        >
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_3-of-12"
+                          >SSR</span
+                        >
+                      </div>
+                      <div
+                        class="slds-col slds-size_1-of-1 slds-grid slds-m-bottom_xxx-small"
+                        for:each={b.passengers}
+                        for:item="p"
+                        key={p.euroBonusNumber}
+                      >
+                        <span class="slds-col slds-size_5-of-12"
+                          >{p.firstName}&nbsp;{p.lastName}</span
+                        >
+                        <span class="slds-col slds-size_4-of-12"
+                          >{p.euroBonusNumber}</span
+                        >
+                        <span class="slds-col slds-size_3-of-12">{p.ssrs}</span>
+                      </div>
+                    </div>
+                    <div class="slds-m-vertical_x-small">
+                      <strong>Flights</strong>
+                    </div>
+                    <div class="slds-grid slds-border_bottom slds-grid_vertical">
+                      <div class="slds-col slds-size_1-of-1 slds-grid">
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_3-of-12"
+                          >Flight number</span
+                        >
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_3-of-12"
+                          >Date</span
+                        >
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_2-of-12"
+                          >Bkg. class</span
+                        >
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_2-of-12"
+                          >O&amp;D</span
+                        >
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_2-of-12"
+                          >Sgmt. Status</span
+                        >
+                      </div>
+                      <div
+                        class="slds-col slds-size_1-of-1 slds-grid slds-m-bottom_xxx-small"
+                        for:each={b.flights}
+                        for:item="f"
+                        key={f.flightNumber}
+                      >
+                        <span class="slds-col slds-size_3-of-12"
+                          >{f.flightNumber}</span
+                        >
+                        <span class="slds-col slds-size_3-of-12"
+                          >{f.scheduledDepartureTimeLocal}
+                        </span>
+                        <span class="slds-col slds-size_2-of-12"
+                          >{f.bookingClass}</span
+                        >
+                        <span class="slds-col slds-size_2-of-12"
+                          >{f.departureAirport}-{f.arrivalAirport}</span
+                        >
+                        <span class="slds-col slds-size_2-of-12"
+                          >{f.segmentStatusCode}</span
+                        >
+                      </div>
+                    </div>
+                    <div class=" slds-m-top_small slds-text-align_right" if:true={addPNRVisible}>
+                      <a onclick={handleAddPNRToCase} data-pnr={b.bookingReference} >Add booking to case</a>
+                    </div>
+                  </lightning-accordion-section>
+                </template>
+                <div if:true={hasUpcomingBookings} class="slds-text-align_center">{visibleUpcomingBookingCount}
+                  <div class="slds-m-vertical_small" if:false={visibleAllUpcomingBookings}>
+                    <a
+                      class="slds-align_absolute-center"
+                      onclick={handleLoadUpcomingBookings}
+                      >Load more</a
+                    >
+                  </div>
+                </div>
+                <div class="slds-text-align_center" if:false={hasUpcomingBookings}>
+                  No upcoming bookings
+                </div>
+              </lightning-accordion-section>
+              <lightning-accordion-section label={pastBookingTabTitle} name="Past_Bookings"> 
+                <template for:each={visiblePastBookings} for:item="b">
+                  <lightning-accordion-section
+                    label={b.accordionTitle}
+                    key={b.bookingReference}
+                    >
+                    <div
+                      class="slds-border_top slds-m-bottom_x-small slds-p-top_x-small"
+                    >
+                      <strong>Travellers&nbsp;</strong>
+                      <strong class="slds-float_right"
+                        >{b.bookingReference}{b.travelOfficeId}</strong
+                      >
+                    </div>
+                    <div
+                      class="slds-grid slds-border_bottom slds-grid_vertical slds-m-bottom_x-small"
+                    >
+                      <div class="slds-col slds-size_1-of-1 slds-grid">
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_5-of-12"
+                          >Full name</span
+                        >
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_4-of-12"
+                          >EuroBonus</span
+                        >
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_3-of-12"
+                          >SSR</span
+                        >
+                      </div>
+                      <div
+                        class="slds-col slds-size_1-of-1 slds-grid slds-m-bottom_xxx-small"
+                        for:each={b.passengers}
+                        for:item="p"
+                        key={p.euroBonusNumber}
+                      >
+                        <span class="slds-col slds-size_5-of-12"
+                          >{p.firstName}&nbsp;{p.lastName}</span
+                        >
+                        <span class="slds-col slds-size_4-of-12"
+                          >{p.euroBonusNumber}</span
+                        >
+                        <span class="slds-col slds-size_3-of-12">{p.ssrs}</span>
+                      </div>
+                    </div>
+                    <div class="slds-m-vertical_x-small">
+                      <strong>Flights</strong>
+                    </div>
+                    <div class="slds-grid slds-border_bottom slds-grid_vertical">
+                      <div class="slds-col slds-size_1-of-1 slds-grid">
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_3-of-12"
+                          >Flight number</span
+                        >
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_3-of-12"
+                          >Date</span
+                        >
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_2-of-12"
+                          >Bkg. class</span
+                        >
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_2-of-12"
+                          >O&amp;D</span
+                        >
+                        <span
+                          class="field-label slds-truncate slds-col slds-size_2-of-12"
+                          >Sgmt. Status</span
+                        >
+                      </div>
+                      <div
+                        class="slds-col slds-size_1-of-1 slds-grid slds-m-bottom_xxx-small"
+                        for:each={b.flights}
+                        for:item="f"
+                        key={f.flightNumber}
+                      >
+                        <span class="slds-col slds-size_3-of-12"
+                          >{f.flightNumber}</span
+                        >
+                        <span class="slds-col slds-size_3-of-12"
+                          >{f.scheduledDepartureTimeLocal}
+                        </span>
+                        <span class="slds-col slds-size_2-of-12"
+                          >{f.bookingClass}</span
+                        >
+                        <span class="slds-col slds-size_2-of-12"
+                          >{f.departureAirport}-{f.arrivalAirport}</span
+                        >
+                        <span class="slds-col slds-size_2-of-12"
+                          >{f.segmentStatusCode}</span
+                        >
+                      </div>
+                    </div>
+                    <div class=" slds-m-top_small slds-text-align_right" if:true={addPNRVisible}>
+                      <a onclick={handleAddPNRToCase} data-pnr={b.bookingReference} >Add booking to case</a>
+                    </div>
+                  </lightning-accordion-section>
+                </template>
+                <div if:true={hasPastBookings} class="slds-text-align_center">{visiblePastBookingCount}
+                  <div class="slds-m-vertical_small" if:false={visibleAllPastBookings}>
+                    <a
+                      class="slds-align_absolute-center"
+                      onclick={handleLoadPastBookings}
+                      >Load more</a
+                    >
+                  </div>
+                </div>
+                <div class="slds-text-align_center" if:false={hasPastBookings}>
+                  No past bookings
+                </div>
+              </lightning-accordion-section>
+            </lightning-accordion>
+          </ul>
+        </lightning-tab>
+        <lightning-tab label="Cases">
+          <c-case-list cases={cases}></c-case-list>
+        </lightning-tab>
+        <lightning-tab label={communicationLogsTabTitle}>
+          <c-communication-log
+            communicationlogs={communicationLogs}
+          ></c-communication-log>
+        </lightning-tab>
+        <lightning-tab label="Send Security Code">
+          <c-customer-verification
+            euro-bonus-number={euroBonusNumber}
+          ></c-customer-verification>
+        </lightning-tab>
+        <lightning-tab label="Extra Details">
+          <div if:true={account.cmpCode}>
+            <h2 class="slds-m-bottom_xxx-small">
+              <strong>Corporate account</strong>
+            </h2>
+            <div class="slds-col slds-size_1-of-1 slds-grid slds-wrap">
+              <div
+                class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-p-right_small"
+              >
+                <span class="field-label">CMP</span>
+                <span class="slds-border_bottom">{account.cmpCode}</span>
+              </div>
+              <div
+                class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-p-right_small"
+              >
+                <span class="field-label">TP Number</span>
+                <span class="slds-border_bottom">{account.tpNumber}</span>
+              </div>
+              <div
+                for:each={tpProducts}
+                for:item="p"
+                key={p.Id}
+                class="slds-col slds-size_1-of-2 slds-grid slds-grid_vertical slds-p-right_small"
+              >
+                <span class="field-label">TP Product</span>
+                <span class="slds-border_bottom">
+                  <a onclick={navigateToTPProductPage} data-id={p.Id}
+                    >{p.Category_Name__c}</a
+                  ></span
+                >
+              </div>
+            </div>
+            <div class="case-count-text">
+              <span
+                class="slds-text-align_left slds-text-color_weak slds-text-body_small"
+                >Last updated TP Products&nbsp;
+                <lightning-formatted-date-time
+                  value={tpProductsLastModified}
+                  year="numeric"
+                  month="short"
+                  day="2-digit"
+                  hour="2-digit"
+                  minute="2-digit"
+                ></lightning-formatted-date-time>
+                &nbsp;-&nbsp;
+              </span>
+              <a onclick={refreshTPProducts}>refresh</a>
+            </div>
+          </div>
+        </lightning-tab>
+      </lightning-tabset>
+    </div>
+    <div class="slds-card__footer">
+      <a class="card-footer-action" onclick={removeCustomerFromCase}
+        >Disconnect traveller</a
+      >
+    </div>
+  </article>
+</template>

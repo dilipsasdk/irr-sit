@@ -1,0 +1,117 @@
+<!--
+ - @author Ragbirendra Upadhyay CoforgeTech
+ - @date 2023
+ -->
+
+<!-- Send QR for Lounge access -->
+<template>
+    <lightning-card>
+        <template if:true={isEmailSent}>
+            <c-irr_-success-modal
+                  selected-count={recipientCount}
+                  show-success={showSuccess}
+                  onhidesuccess={handleRevertToMainComponent}
+                  onnewsearch={handleRevertToMainComponent}>
+            </c-irr_-success-modal>
+        </template>
+        <lightning-layout class="slds-box slds-theme_shade" verticalalign="end" >
+                <lightning-layout-item size="10" class="">
+                        <div class="slds-text-align_center">
+                            <strong><h1>Total number of active QR code : {activeQRCount} </h1></strong> 
+                            <strong>
+                                <h1>Expiry Date : {expiryDate} <lightning-helptext content="Date formate : DD-MM-YYYY"></lightning-helptext></h1>
+                            </strong>
+                        </div>                              
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                        <lightning-button
+                            variant="neutral"
+                            label="Upload"
+                            title="Upload csv file"
+                            onclick={enableModelFlag}>
+                        </lightning-button>
+                        <lightning-button
+                            class="slds-p-left_small"
+                            variant="brand"
+                            label="Send QR"
+                            title="Send mail to user"
+                            onclick={handleSendQR}>
+                        </lightning-button> 
+                </lightning-layout-item>                           
+        </lightning-layout>
+
+         <c-irr_-lounge-access-c-s-v-uploader onuploadsuccess={handleevent}></c-irr_-lounge-access-c-s-v-uploader>
+        
+        <template for:each={emails} for:item="email" for:index="emailIdx">
+            <span key={email.key}>
+                <lightning-layout>
+                    <lightning-layout-item size="3" padding="around-small">
+                        <lightning-input
+                             value={email.emailAddress}
+                             data-email-idx={emailIdx}
+                             type="Email"
+                             name="Email"
+                             label="Email Address"
+                             required
+                             onmouseout={handleEmailChange}>                                      
+                        </lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3" padding="around-small">
+                            <lightning-record-edit-form object-api-name="IRR_LoungeAccessQRCode__c">
+                                <lightning-input-field
+                                     name ="caseId"
+                                     label="Case Number"
+                                     data-email-idx={emailIdx}
+                                     field-name= "voucherCaseNumber__c"
+                                     value= {email.caseId}
+                                     required
+                                     onmouseout={handleEmailChange}
+                                     onvalueselected={handleChange}>
+                                </lightning-input-field>
+                            </lightning-record-edit-form>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="2">
+                        <lightning-textarea
+                            name="comment"
+                            value= {email.comment}
+                            data-email-idx={emailIdx}
+                            label="Comment"
+                            variant="standard"
+                            onmouseout={handleEmailChange}>
+                                        
+                        </lightning-textarea>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="1" class="pull-down">
+                        <button
+                            onclick={handleEmailRemove}
+                            class="slds-button slds-button_icon"
+                            data-id= {emailIdx}
+                            title="Remove">
+                            <lightning-icon
+                                icon-name="utility:close"
+                                alternative-text="Remove"  
+                                title="Remove">
+                            </lightning-icon>
+                            <span class="slds-assistive-text">Remove</span>
+                        </button>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </span>
+        </template>
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="1" class="pull-right">
+                        <button
+                            onclick={handleEmailsAdd}
+                            class="slds-button slds-button_icon"
+                            title="Add">
+                        <lightning-icon
+                            icon-name="utility:add"
+                            alternative-text="Add"
+                            title="Add">
+                        </lightning-icon>
+                            <span class="slds-assistive-text">Add</span>
+                        </button>
+                    </lightning-layout-item>
+                </lightning-layout>
+    </lightning-card>
+</template>

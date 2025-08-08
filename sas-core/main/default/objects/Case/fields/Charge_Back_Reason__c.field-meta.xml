@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charge_Back_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Charge Back Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>127 - Does Not Recognize / Remember / No Knowledge</fullName>
+                <default>false</default>
+                <label>127 - Does Not Recognize / Remember / No Knowledge</label>
+            </value>
+            <value>
+                <fullName>13.1 - Credit Not Processed</fullName>
+                <default>false</default>
+                <label>13.1 - Credit Not Processed</label>
+            </value>
+            <value>
+                <fullName>13.6 - Merchandise / Service not received</fullName>
+                <default>false</default>
+                <label>13.6 - Merchandise / Service not received</label>
+            </value>
+            <value>
+                <fullName>13.7 - Cancelled Merchandise</fullName>
+                <default>false</default>
+                <label>13.7 - Cancelled Merchandise</label>
+            </value>
+            <value>
+                <fullName>155 - Not Received</fullName>
+                <default>false</default>
+                <label>155 - Not Received</label>
+            </value>
+            <value>
+                <fullName>193 -  Fraud</fullName>
+                <default>false</default>
+                <label>193 -  Fraud</label>
+            </value>
+            <value>
+                <fullName>29 - Fraud</fullName>
+                <default>false</default>
+                <label>29 - Fraud</label>
+            </value>
+            <value>
+                <fullName>4507 - Incorrect Transaction Amount or Account Number Presented</fullName>
+                <default>false</default>
+                <label>4507 - Incorrect Transaction Amount or Account Number Presented</label>
+            </value>
+            <value>
+                <fullName>4512 - Multiple Processing</fullName>
+                <default>false</default>
+                <label>4512 - Multiple Processing</label>
+            </value>
+            <value>
+                <fullName>4513 - Credit Not Presented</fullName>
+                <default>false</default>
+                <label>4513 - Credit Not Presented</label>
+            </value>
+            <value>
+                <fullName>4516 - Request For Support Illegible/Insufficient</fullName>
+                <default>false</default>
+                <label>4516 - Request For Support Illegible/Insufficient</label>
+            </value>
+            <value>
+                <fullName>4521 - Invalid Authorisation</fullName>
+                <default>false</default>
+                <label>4521 - Invalid Authorisation</label>
+            </value>
+            <value>
+                <fullName>4523 - Unassigned Card Member Account Number</fullName>
+                <default>false</default>
+                <label>4523 - Unassigned Card Member Account Number</label>
+            </value>
+            <value>
+                <fullName>4530 - Currency Discrepancy</fullName>
+                <default>false</default>
+                <label>4530 - Currency Discrepancy</label>
+            </value>
+            <value>
+                <fullName>4540 - Card Not Present</fullName>
+                <default>false</default>
+                <label>4540 - Card Not Present</label>
+            </value>
+            <value>
+                <fullName>4544 - Cancellation of Recurring Goods/Services</fullName>
+                <default>false</default>
+                <label>4544 - Cancellation of Recurring Goods/Services</label>
+            </value>
+            <value>
+                <fullName>4533 - Not As Described Or Defective Merchandise</fullName>
+                <default>false</default>
+                <label>4533 - Not As Described Or Defective Merchandise</label>
+            </value>
+            <value>
+                <fullName>4554 - Goods And Services Not Received</fullName>
+                <default>false</default>
+                <label>4554 - Goods And Services Not Received</label>
+            </value>
+            <value>
+                <fullName>4752 - Processing Error</fullName>
+                <default>false</default>
+                <label>4752 - Processing Error</label>
+            </value>
+            <value>
+                <fullName>4755 - No Valid Authorization</fullName>
+                <default>false</default>
+                <label>4755 - No Valid Authorization</label>
+            </value>
+            <value>
+                <fullName>4853 - Dispute Defective/N</fullName>
+                <default>false</default>
+                <label>4853 - Dispute Defective/N</label>
+            </value>
+            <value>
+                <fullName>6003 - Chargeback Documentation Needed</fullName>
+                <default>false</default>
+                <label>6003 - Chargeback Documentation Needed</label>
+            </value>
+            <value>
+                <fullName>6006 - Card Member Claims Fraud</fullName>
+                <default>false</default>
+                <label>6006 - Card Member Claims Fraud</label>
+            </value>
+            <value>
+                <fullName>6008 - Card member Requests Proof Of Transaction</fullName>
+                <default>false</default>
+                <label>6008 - Card member Requests Proof Of Transaction</label>
+            </value>
+            <value>
+                <fullName>6014 - Card Member Does Not Recognise Transaction Or Transaction Amount</fullName>
+                <default>false</default>
+                <label>6014 - Card Member Does Not Recognise Transaction Or Transaction Amount</label>
+            </value>
+            <value>
+                <fullName>6016 - Card Member Needs Documentation For Personal Records</fullName>
+                <default>false</default>
+                <label>6016 - Card Member Needs Documentation For Personal Records</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

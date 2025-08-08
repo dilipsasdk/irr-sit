@@ -1,0 +1,18 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Important information about your SAS booking {{{passengerInfo.bookingReference}}} 
+  <br /> 
+  <br />Hi, 
+  <br /> 
+  <br />Flight {{{cancelInfo.flightRef}}} on [[[formatDatetimeUTC(cancelInfo.scheduledTimeOfDepartureLocal, 'd MMM')]]] from {{{cancelInfo.departureCity}}} ({{{cancelInfo.stationDeparture}}}) to {{{cancelInfo.arrivalCity}}} ({{{cancelInfo.stationArrival}}}) has been cancelled. 
+  <br /> 
+  <br />We apologize and we’re working to book you on another flight. We’ll let you know as soon as we have information about your new flight.&nbsp; 
+  <br /> 
+  <br />Read more about your rights here https://www.flysas.com/en/legal-info/eu-passenger-rights/ 
+  <br /> 
+  <br />Regards, SAS
+ </body>
+</html>

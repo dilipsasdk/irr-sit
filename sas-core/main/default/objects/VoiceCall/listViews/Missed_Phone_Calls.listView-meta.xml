@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missed_Phone_Calls</fullName>
+    <columns>CallStartDateTime</columns>
+    <columns>FromPhoneNumber</columns>
+    <columns>CallType</columns>
+    <columns>CallResolution</columns>
+    <columns>Owner</columns>
+    <columns>Name</columns>
+    <columns>EndUser</columns>
+    <columns>QualityScore</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CallDisposition</field>
+        <operation>notEqual</operation>
+        <value>completed</value>
+    </filters>
+    <label>Missed Phone Calls</label>
+</ListView>

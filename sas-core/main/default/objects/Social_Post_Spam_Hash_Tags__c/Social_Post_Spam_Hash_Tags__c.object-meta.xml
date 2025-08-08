@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Used to define the Spam Hash tags coming for Social Post</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Social Post Spam Hash Tags</label>
+    <visibility>Public</visibility>
+</CustomObject>

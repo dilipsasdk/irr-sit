@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_provide_relationship_name_if_Child</fullName>
+    <active>true</active>
+    <description>If an object should be included as a Child Object, the name of the relationship to the Parent Object must be set.</description>
+    <errorConditionFormula>AND(NOT(ISBLANK(ParentObjectName__c)), ISBLANK( RelationshipName__c))</errorConditionFormula>
+    <errorDisplayField>RelationshipName__c</errorDisplayField>
+    <errorMessage>If an object is included as a Child Object, the name of the relationship to the Parent Object must be set.</errorMessage>
+</ValidationRule>

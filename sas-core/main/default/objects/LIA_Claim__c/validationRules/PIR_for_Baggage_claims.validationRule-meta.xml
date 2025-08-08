@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PIR_for_Baggage_claims</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(RecordType.Name =&quot;CustomerClaim&quot;, TEXT(Customer_Claim_Category__c) = &quot;Baggage&quot;, ISBLANK( PIR__c ),ISBLANK( Case__r.ParentId ))</errorConditionFormula>
+    <errorMessage>PIR value is required for Baggage claims.</errorMessage>
+</ValidationRule>

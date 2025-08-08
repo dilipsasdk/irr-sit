@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Message_Wording__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Write or add threat such as  phone conversation, chat conversation, SoMe conversation, etc.  (Max. 32 000 characters)</inlineHelpText>
+    <label>Wording of the threat</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>20</visibleLines>
+</CustomField>

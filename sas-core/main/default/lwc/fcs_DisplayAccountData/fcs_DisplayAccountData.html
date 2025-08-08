@@ -1,0 +1,14 @@
+<template>
+    <lightning-card icon-name="standard:account">
+        <a style="color: black; font-weight: bold" slot="title" target="_blank" onclick={navigateToRecordViewPage}>Account Details</a>
+        <div class="slds-p-left_small">
+            <lightning-record-form
+                    record-id={accountid}
+                    object-api-name="Account"
+                    layout-type="Compact"
+                    columns="2"
+                    mode="readonly">
+            </lightning-record-form>
+        </div>
+    </lightning-card>
+</template>

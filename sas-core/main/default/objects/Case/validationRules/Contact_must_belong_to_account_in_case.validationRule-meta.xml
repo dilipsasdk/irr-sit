@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_must_belong_to_account_in_case</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(  Account.IsPersonAccount = FALSE, Account.Id   &lt;&gt;   Contact.AccountId,FALSE)</errorConditionFormula>
+    <errorDisplayField>ContactId</errorDisplayField>
+    <errorMessage>The contact does not belong to the same account linked to the case. Please, make sure that account linked to the case and to the contact is the same.</errorMessage>
+</ValidationRule>

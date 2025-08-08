@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_new_customer_claims_to_old_queues</fullName>
+    <active>true</active>
+    <description>Enforcing that only Customer Claim cases &quot;- expenses&quot; or &quot;- compensation&quot; can go to old queues</description>
+    <errorConditionFormula>AND(
+ISCHANGED( OwnerId ),
+OR(Owner:Queue.QueueName = &apos;Claims - Flight Disruptions&apos;, Owner:Queue.QueueName = &apos;Claims - Flight Disruptions Expenses&apos;),
+OR(CONTAINS(TEXT(LIA_Claim__r.Customer_Claim_Type__c),&apos;expenses&apos;),
+CONTAINS(TEXT(LIA_Claim__r.Customer_Claim_Type__c),&apos;compensation&apos;)))</errorConditionFormula>
+    <errorMessage>You cannot manually assign cases to this queue.</errorMessage>
+</ValidationRule>

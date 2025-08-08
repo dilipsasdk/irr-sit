@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_been_sent_to_settle__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that the liability claim has been sent to settle</description>
+    <externalId>false</externalId>
+    <label>Has been sent to settle</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

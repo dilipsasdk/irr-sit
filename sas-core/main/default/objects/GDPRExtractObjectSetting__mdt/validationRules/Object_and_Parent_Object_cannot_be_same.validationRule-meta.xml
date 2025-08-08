@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Object_and_Parent_Object_cannot_be_same</fullName>
+    <active>true</active>
+    <description>Asserts that the Object for the metadata record is not the same as the parent object</description>
+    <errorConditionFormula>ObjectName__c  =  ParentObjectName__c</errorConditionFormula>
+    <errorMessage>The Object selected cannot be the same as the Parent Object</errorMessage>
+</ValidationRule>

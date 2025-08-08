@@ -1,0 +1,56 @@
+# This file is used for Git repositories to specify intentionally untracked files that Git should ignore. 
+# If you are not using git, you can delete this file. For more information see: https://git-scm.com/docs/gitignore
+# For useful gitignore templates see: https://github.com/github/gitignore
+
+# Salesforce caches
+.sfdx/
+.sf/
+
+# VS Code internals
+.vscode/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Eslint cache
+.eslintcache
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+#IntelliJ fields
+.idea/
+SAS.iml
+IlluminatedCloud/
+
+#SF components excluded from respository
+sas-core/main/default/namedCredentials
+sas-core/main/default/authproviders
+sas-core/main/default/lwc/jsconfig.json
+
+sas-core/main/default/customMetadata/C_GeneralSetting.APIM_Subscription_Key.md-meta.xml
+sas-core/main/default/customMetadata/C_GeneralSetting.APIM_TEDS_Subscription_Key.md-meta.xml
+sas-core/main/default/customMetadata/C_GeneralSetting.APIM_Voucher_Subscription_Key.md-meta.xml
+sas-core/main/default/customMetadata/C_GeneralSetting.CLM_APIM_Subscription_Key.md-meta.xml
+sas-core/main/default/customMetadata/LocalAuthProvider.APIM_Auth.md-meta.xml
+
+#Disable because this contains a lot a references to an Amazon Connect Instance
+**/callCenterRoutingMaps/**
+**/callCenters/**
+**/connectedApps/**
+**/ConversationVendorInformation/**
+**/reportTypes/Service_Cloud_**
+manifest/

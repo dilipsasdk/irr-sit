@@ -1,0 +1,8 @@
+:host {
+  --sds-c-card-color-background: #ebd10e;
+  --slds-c-card-color-border: #ebd10e;
+}
+
+p {
+  padding-top: 4px;
+}

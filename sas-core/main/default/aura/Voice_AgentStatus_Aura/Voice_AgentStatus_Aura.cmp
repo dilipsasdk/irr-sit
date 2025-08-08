@@ -1,0 +1,4 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+    <lightning:utilityBarAPI aura:id="utilitybar" />
+    <c:voice_AgentStatus aura:id="childLwc" oncomponentInitiated="{!c.registerUtilityClickHandler}"></c:voice_AgentStatus>
+</aura:component>

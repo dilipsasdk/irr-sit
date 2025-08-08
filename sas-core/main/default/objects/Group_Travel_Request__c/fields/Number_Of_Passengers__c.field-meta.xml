@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_Of_Passengers__c</fullName>
+    <description>Total number of adults, youth and children. Infants are excluded.</description>
+    <externalId>false</externalId>
+    <formula>Number_Of_Adults__c +  Number_Of_Children__c + Number_Of_Youths__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Total number of adults, youth and children. Infants are excluded.</inlineHelpText>
+    <label>Number Of Passengers</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

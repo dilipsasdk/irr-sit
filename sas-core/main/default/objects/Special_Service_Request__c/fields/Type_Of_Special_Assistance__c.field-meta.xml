@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Of_Special_Assistance__c</fullName>
+    <externalId>false</externalId>
+    <label>Type Of Special Assistance</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hearing disability</fullName>
+                <default>false</default>
+                <label>Hearing disability</label>
+            </value>
+            <value>
+                <fullName>Sight disability</fullName>
+                <default>false</default>
+                <label>Sight disability</label>
+            </value>
+            <value>
+                <fullName>WCHR Ramp</fullName>
+                <default>false</default>
+                <label>WCHR Ramp</label>
+            </value>
+            <value>
+                <fullName>WCHS Steps</fullName>
+                <default>false</default>
+                <label>WCHS Steps</label>
+            </value>
+            <value>
+                <fullName>WCHC Carry</fullName>
+                <default>false</default>
+                <label>WCHC Carry</label>
+            </value>
+            <value>
+                <fullName>Downs syndrome</fullName>
+                <default>false</default>
+                <label>Downs syndrome</label>
+            </value>
+            <value>
+                <fullName>Cerebral palsy</fullName>
+                <default>false</default>
+                <label>Cerebral palsy</label>
+            </value>
+            <value>
+                <fullName>Autism</fullName>
+                <default>false</default>
+                <label>Autism</label>
+            </value>
+            <value>
+                <fullName>Tourrette syndrome</fullName>
+                <default>false</default>
+                <label>Tourrette syndrome</label>
+            </value>
+            <value>
+                <fullName>Not applicable</fullName>
+                <default>false</default>
+                <label>Not applicable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

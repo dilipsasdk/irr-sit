@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Counted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Tracks whether this email has already been counted in the number of email messages sent/received for a case.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Tracks whether this email has already been counted in the number of email messages sent/received for a case.</inlineHelpText>
+    <label>Is Counted</label>
+    <type>Checkbox</type>
+</CustomField>

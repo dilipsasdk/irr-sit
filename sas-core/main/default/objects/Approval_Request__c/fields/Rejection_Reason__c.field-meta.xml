@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejection_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Rejection Reason</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Incorrect cost accounts</fullName>
+                <default>false</default>
+                <label>Incorrect cost accounts</label>
+            </value>
+            <value>
+                <fullName>Incorrect monetary/EuroBonus points amounts</fullName>
+                <default>false</default>
+                <label>Incorrect monetary/EuroBonus points amounts</label>
+            </value>
+            <value>
+                <fullName>No follow up/Inadequate  follow up</fullName>
+                <default>false</default>
+                <label>No follow up/Inadequate  follow up</label>
+            </value>
+            <value>
+                <fullName>Not entitled for compensation</fullName>
+                <default>false</default>
+                <label>Not entitled for compensation</label>
+            </value>
+            <value>
+                <fullName>Payment made in another claim</fullName>
+                <default>false</default>
+                <label>Payment made in another claim</label>
+            </value>
+            <value>
+                <fullName>Settlement not split between passengers</fullName>
+                <default>false</default>
+                <label>Settlement not split between passengers</label>
+            </value>
+            <value>
+                <fullName>Other errors</fullName>
+                <default>false</default>
+                <label>Other errors</label>
+            </value>
+            <value>
+                <fullName>Blocked by user</fullName>
+                <default>false</default>
+                <label>Blocked by user</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

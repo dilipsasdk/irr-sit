@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Functional_Product_Support</fullName>
+    <active>true</active>
+    <description>Record type for the functional product support knowledge articles.</description>
+    <label>Functional Product Support</label>
+    <picklistValues>
+        <picklist>FCS_SubType__c</picklist>
+        <values>
+            <fullName>Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GeneralGuidelines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Settlement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telephony</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FCS_Type__c</picklist>
+        <values>
+            <fullName>Functional Product Support</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

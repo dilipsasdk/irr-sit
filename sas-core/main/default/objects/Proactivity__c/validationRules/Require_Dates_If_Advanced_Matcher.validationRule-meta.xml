@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Dates_If_Advanced_Matcher</fullName>
+    <active>true</active>
+    <description>Requires the user to enter a from and to date when an advanced matcher is used.</description>
+    <errorConditionFormula>AND(OR(NOT(ISBLANK(Airport__c)), NOT(ISPICKVAL( Cancellation_Code__c ,&quot;&quot;))),  OR(ISBLANK(From_Date__c), ISBLANK(To_Date__c)))</errorConditionFormula>
+    <errorMessage>&quot;From date&quot; and &quot;To date&quot; are required if an advanced matcher is used. Select the same date if the proactivity is only valid for a single day.</errorMessage>
+</ValidationRule>

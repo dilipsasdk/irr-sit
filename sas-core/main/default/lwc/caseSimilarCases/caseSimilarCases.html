@@ -1,0 +1,22 @@
+<template>
+  <lightning-card title={cardTitle}>
+    <div if:true={showSpinner}>
+      <lightning-spinner
+        alternative-text="Loading"
+        size="medium"
+        variant="brand"
+      ></lightning-spinner>
+    </div>
+    <div if:false={similarCasesFound} class="slds-p-horizontal_medium">
+      <p>No similar cases found.</p>
+    </div>
+    <div if:true={similarCasesFound} class="table slds-scrollable_y">
+      <lightning-datatable
+        hide-checkbox-column
+        key-field="idx"
+        data={rows}
+        columns={columns}
+      ></lightning-datatable>
+    </div>
+  </lightning-card>
+</template>

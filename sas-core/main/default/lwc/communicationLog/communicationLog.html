@@ -1,0 +1,55 @@
+<template>
+  <div class="slds-m-top_medium">
+    <div class="slds-text-align_center" if:true={hasNoLogs}>
+      No related communication logs
+    </div>
+
+    <template if:false={hasNoLogs}>
+      <ul class="slds-has-dividers_bottom-space">
+        <template for:each={visibleLogs} for:item="log" key={index}>
+          <li
+            class="slds-border_bottom slds-p-bottom_x-small slds-m-top_xx-small"
+            key={index}
+          >
+            <strong>
+              <a onclick={navigateToLogPage} data-id={log.id}
+                >{log.channel}</a
+              > </strong
+            >&nbsp;-&nbsp;{log.flightNumber},&nbsp;
+            <lightning-formatted-date-time
+              value={log.createdDate}
+              year="numeric"
+              month="short"
+              day="2-digit"
+              hour="2-digit"
+              minute="2-digit"
+            ></lightning-formatted-date-time>
+            <div
+              class="
+                slds-text-align_left
+                slds-text-color_weak
+                slds-text-body_small
+                slds-m-top_xxx-small
+              "
+            >
+              Message
+            </div>
+            <div>{log.messageContent}</div>
+          </li>
+        </template>
+      </ul>
+
+      <div class="case-count-text">
+        <span
+          class="slds-text-align_left slds-text-color_weak slds-text-body_small"
+          >Showing {logsCount} communication logs</span
+        >
+      </div>
+      <div class="slds-m-vertical_small" if:false={showAllLogs}>
+        <a class="slds-align_absolute-center" onclick={handleDisplayAllLogs}
+          >Load more</a
+        >
+      </div>
+    </template>
+  </div>
+</template>

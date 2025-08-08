@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Liability_Claim_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Liability Claim Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EU261 Fixed Compensation</fullName>
+                <default>false</default>
+                <label>EU261 Fixed Compensation</label>
+            </value>
+            <value>
+                <fullName>Downgrading/Denied boarding</fullName>
+                <default>false</default>
+                <label>Downgrading/Denied boarding</label>
+            </value>
+            <value>
+                <fullName>Ticket refund</fullName>
+                <default>false</default>
+                <label>Ticket refund</label>
+            </value>
+            <value>
+                <fullName>Personal injury</fullName>
+                <default>false</default>
+                <label>Personal injury</label>
+            </value>
+            <value>
+                <fullName>Unruly passenger</fullName>
+                <default>false</default>
+                <label>Unruly passenger</label>
+            </value>
+            <value>
+                <fullName>Baggage</fullName>
+                <default>false</default>
+                <label>Baggage</label>
+            </value>
+            <value>
+                <fullName>Sales information</fullName>
+                <default>false</default>
+                <label>Sales information</label>
+            </value>
+            <value>
+                <fullName>EuroBonus</fullName>
+                <default>false</default>
+                <label>EuroBonus</label>
+            </value>
+            <value>
+                <fullName>PRM</fullName>
+                <default>false</default>
+                <label>PRM</label>
+            </value>
+            <value>
+                <fullName>UM</fullName>
+                <default>false</default>
+                <label>UM</label>
+            </value>
+            <value>
+                <fullName>Travel extras</fullName>
+                <default>false</default>
+                <label>Travel extras</label>
+            </value>
+            <value>
+                <fullName>Care costs</fullName>
+                <default>false</default>
+                <label>Care costs</label>
+            </value>
+            <value>
+                <fullName>Damages</fullName>
+                <default>false</default>
+                <label>Damages</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IRR_ExternalGroupId__c</fullName>
+    <description>External id for the group the message belongs to. Multiple messages may belong to the same group and is used to identify  when sending the same message to multiple recipients.</description>
+    <externalId>true</externalId>
+    <label>External Group Id</label>
+    <length>36</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

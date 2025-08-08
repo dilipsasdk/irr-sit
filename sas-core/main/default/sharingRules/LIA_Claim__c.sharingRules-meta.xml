@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Share_Claims_with_Public_Group_Liability</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Shares all the claims with users in Public Group Liability</description>
+        <label>Share Claims with Public Group Liability</label>
+        <sharedTo>
+            <group>Liability</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>LiabilityClaim</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Sharing_Claims_to_SAS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sharing Claims to SAS</label>
+        <sharedTo>
+            <role>SAS</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CustomerClaim,CompensationCard</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Sharing_Claims_to_Vendors</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sharing Claims to Vendors</label>
+        <sharedTo>
+            <group>All_Vendors</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CustomerClaim,CompensationCard</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Sharing_emergency_claims_with_emergency_group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sharing emergency claims with emergency group</label>
+        <sharedTo>
+            <group>Emergency</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>EmergencyClaim</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

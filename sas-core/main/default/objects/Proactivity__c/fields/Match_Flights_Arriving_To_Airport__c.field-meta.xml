@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Match_Flights_Arriving_To_Airport__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If the proactivity should match flights arriving to the airport</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If the proactivity should match flights arriving to the airport</inlineHelpText>
+    <label>Match Flights Arriving To Airport</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

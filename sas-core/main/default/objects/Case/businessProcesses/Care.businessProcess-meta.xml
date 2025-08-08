@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Care</fullName>
+    <description>Used for Customer Claims</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Awaiting Customer Response</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Merged</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>New Response</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Waiting for Approval</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Waiting for Control</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Waiting for Transfer</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

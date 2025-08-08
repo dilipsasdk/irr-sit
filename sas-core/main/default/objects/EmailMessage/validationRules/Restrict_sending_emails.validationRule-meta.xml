@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_sending_emails</fullName>
+    <active>true</active>
+    <description>Restrict specific groups from sending emails to one of the blacklisted email addresses.</description>
+    <errorConditionFormula>AND(
+OR(
+$Profile.Name = &quot;Business User&quot;,
+$Profile.Name = &quot;Vendor&quot;
+),
+Incoming = false,
+OR(
+CONTAINS(LOWER(ToAddress), &apos;care@sas.&apos;),
+CONTAINS(LOWER(ToAddress), &apos;scan@sas.&apos;),
+CONTAINS(LOWER(BccAddress), &apos;care@sas.&apos;),
+CONTAINS(LOWER(BccAddress), &apos;care@sas.&apos;),
+CONTAINS(LOWER(ToAddress), &apos;iwona.czerwinska@sas.dk&apos;),
+CONTAINS(LOWER(BccAddress), &apos;iwona.czerwinska@sas.dk&apos;),
+CONTAINS(LOWER(ToAddress), &apos;ap.pl@sas.dk&apos;),
+CONTAINS(LOWER(BccAddress), &apos;ap.pl@sas.dk&apos;)
+)
+)</errorConditionFormula>
+    <errorMessage>Please modify to email adress before sending the email</errorMessage>
+</ValidationRule>

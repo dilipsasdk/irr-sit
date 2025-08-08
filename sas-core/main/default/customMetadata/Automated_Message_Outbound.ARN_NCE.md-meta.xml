@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>ARN_NCE</label>
+    <protected>false</protected>
+    <values>
+        <field>Comment__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Days_Before_Comm_Need_to_Send__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Email_Template_Name__c</field>
+        <value xsi:type="xsd:string">irr_NCE_Terminal_Change_Email</value>
+    </values>
+    <values>
+        <field>Is_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Is_Send_Email__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Is_Send_SMS__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Outbound_Station_Arrival__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Outbound_Station_Departure__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Sms_Template_Name__c</field>
+        <value xsi:type="xsd:string">irr_NCE_Terminal_Change_SMS</value>
+    </values>
+    <values>
+        <field>Station_Arrival__c</field>
+        <value xsi:type="xsd:string">ARN</value>
+    </values>
+    <values>
+        <field>Station_Departure__c</field>
+        <value xsi:type="xsd:string">NCE</value>
+    </values>
+    <values>
+        <field>Type__c</field>
+        <value xsi:type="xsd:string">Current</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IATA_Number__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>IATA Number for the travel agency</description>
+    <externalId>false</externalId>
+    <inlineHelpText>IATA Number for the travel agency</inlineHelpText>
+    <label>IATA Number</label>
+    <length>10</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

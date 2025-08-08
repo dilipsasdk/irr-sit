@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAS_Voice_Call</fullName>
+    <fields>Subject</fields>
+    <fields>CaseNumber</fields>
+    <fields>FCS_EBNumber__c</fields>
+    <fields>FCS_EBLevel__c</fields>
+    <fields>FCS_IATA_Number__c</fields>
+    <fields>FCS_IATA_Level__c</fields>
+    <label>SAS Voice Call</label>
+</CompactLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>EUR 20</label>
+    <protected>false</protected>
+    <values>
+        <field>IRR_Airport_List__c</field>
+        <value xsi:type="xsd:string">BRU,HEL,TKU,LCA,BER,FRA,DUS,HAJ,HAM,MUC,STR,CHQ,MJT,RHO,ZTH,CFU,KGS,SKG,ATH,HER,JTR,VNO,FAO,LIS,OPO,FNC,ALC,BCN,MAD,AGP,PMI,IBZ,FUE,LPA,TFS,BLQ,FCO,LIN,TRN,PMO,CDG,BIQ,MPL,NCE,AMS,DUB</value>
+    </values>
+    <values>
+        <field>IRR_Reason__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>IRR_Voucher_Amount__c</field>
+        <value xsi:type="xsd:double">20.0</value>
+    </values>
+    <values>
+        <field>IRR_Voucher_Currency__c</field>
+        <value xsi:type="xsd:string">EUR</value>
+    </values>
+    <values>
+        <field>IRR_Voucher_Profile__c</field>
+        <value xsi:type="xsd:string">20 EUR</value>
+    </values>
+    <values>
+        <field>Type__c</field>
+        <value xsi:type="xsd:string">Voucher</value>
+    </values>
+    <values>
+        <field>UniqueID__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

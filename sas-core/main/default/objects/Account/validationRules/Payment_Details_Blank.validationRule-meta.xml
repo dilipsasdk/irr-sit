@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Details_Blank</fullName>
+    <active>true</active>
+    <description>Validates that Form of Payment details is blank when form of payment is not SAS Invoice Name Credit</description>
+    <errorConditionFormula>IF(NOT(ISPICKVAL(Form_of_Payment__c , &quot;SAS Invoice(Name Credit)&quot;)), NOT(ISBLANK(Form_of_Payment_Details__c)), FALSE)</errorConditionFormula>
+    <errorDisplayField>Form_of_Payment_Details__c</errorDisplayField>
+    <errorMessage>Form of Payment Details must be blank when Form of Payment is not SAS Invoice(Name Credit)</errorMessage>
+</ValidationRule>

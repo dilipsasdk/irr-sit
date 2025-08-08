@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Delay</label>
+    <protected>false</protected>
+    <values>
+        <field>AIRLINE__c</field>
+        <value xsi:type="xsd:string">SK</value>
+    </values>
+    <values>
+        <field>ERROR_BOOKING_ID__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ERROR_BOOKING_REF__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ERROR_DELAY_MINUTES__c</field>
+        <value xsi:type="xsd:string">Delay minutes is missing from event: {0}</value>
+    </values>
+    <values>
+        <field>ERROR_DEPT_TIME__c</field>
+        <value xsi:type="xsd:string">Estimated time of departure is missing from event: {0}</value>
+    </values>
+    <values>
+        <field>ERROR_FLIGHT_ID__c</field>
+        <value xsi:type="xsd:string">Flight Id is missing from event: {0}</value>
+    </values>
+    <values>
+        <field>ERROR_NEW_INFO_TIME__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ERROR_NO_ADDED_SEGMENTS__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ERROR_NO_EVENT_TIME__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ERROR_NO_EVENT__c</field>
+        <value xsi:type="xsd:string">Delay event info is missing: {0}</value>
+    </values>
+    <values>
+        <field>ERROR_SCHD_TIME__c</field>
+        <value xsi:type="xsd:string">Scheduled time of departure is missing from event: {0}</value>
+    </values>
+    <values>
+        <field>EVENT_FLOW_NAME__c</field>
+        <value xsi:type="xsd:string">IRR_EVT_DelayFlow</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_of_Judicial_Body__c</fullName>
+    <description>The name of the Judicial body</description>
+    <externalId>false</externalId>
+    <label>Name of Judicial Body</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Jurisdiction__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Agencia Estatal de Seguridad Aerea (AESA, Spain)</fullName>
+                <default>false</default>
+                <label>Agencia Estatal de Seguridad Aerea (AESA, Spain)</label>
+            </value>
+            <value>
+                <fullName>AirNav Ireland</fullName>
+                <default>false</default>
+                <label>AirNav Ireland</label>
+            </value>
+            <value>
+                <fullName>Allmänna reklamationsnämnden (Sweden)</fullName>
+                <default>false</default>
+                <label>Allmänna reklamationsnämnden (Sweden)</label>
+            </value>
+            <value>
+                <fullName>Amstgericht (Court, Germany)</fullName>
+                <default>false</default>
+                <label>Amstgericht (Court, Germany)</label>
+            </value>
+            <value>
+                <fullName>Athens Court</fullName>
+                <default>false</default>
+                <label>Athens Court</label>
+            </value>
+            <value>
+                <fullName>Attunda tingsrätt (Sweden)</fullName>
+                <default>false</default>
+                <label>Attunda tingsrätt (Sweden)</label>
+            </value>
+            <value>
+                <fullName>Autoridade Nacional da Aviação Civil (ANAC, Portugal)</fullName>
+                <default>false</default>
+                <label>Autoridade Nacional da Aviação Civil (ANAC, Portugal)</label>
+            </value>
+            <value>
+                <fullName>Better Business Bureau (BBB)</fullName>
+                <default>false</default>
+                <label>Better Business Bureau (BBB)</label>
+            </value>
+            <value>
+                <fullName>Bezirksgericht für Handelssachen Wien (Germany)</fullName>
+                <default>false</default>
+                <label>Bezirksgericht für Handelssachen Wien (Germany)</label>
+            </value>
+            <value>
+                <fullName>Bezirksgericht in Handelssachen Wien (Austria)</fullName>
+                <default>false</default>
+                <label>Bezirksgericht in Handelssachen Wien (Austria)</label>
+            </value>
+            <value>
+                <fullName>Bucks County Magisterial Court</fullName>
+                <default>false</default>
+                <label>Bucks County Magisterial Court</label>
+            </value>
+            <value>
+                <fullName>Bundesministerium für Verkehr, Innovation und Technologie (BMVIT, Austria)</fullName>
+                <default>false</default>
+                <label>Bundesministerium für Verkehr, Innovation und Technologie (BMVIT, Austria)</label>
+            </value>
+            <value>
+                <fullName>Byretten Aalborg</fullName>
+                <default>false</default>
+                <label>Byretten Aalborg</label>
+            </value>
+            <value>
+                <fullName>Byretten Kolding</fullName>
+                <default>false</default>
+                <label>Byretten Kolding</label>
+            </value>
+            <value>
+                <fullName>Byretten København</fullName>
+                <default>false</default>
+                <label>Byretten København</label>
+            </value>
+            <value>
+                <fullName>Byretten Randers</fullName>
+                <default>false</default>
+                <label>Byretten Randers</label>
+            </value>
+            <value>
+                <fullName>CAA (UK Civil Aviation Authority)</fullName>
+                <default>false</default>
+                <label>CAA (UK Civil Aviation Authority)</label>
+            </value>
+            <value>
+                <fullName>Canadian Transportation Agency (CTA)</fullName>
+                <default>false</default>
+                <label>Canadian Transportation Agency (CTA)</label>
+            </value>
+            <value>
+                <fullName>Castlebar Court Office (Ireland)</fullName>
+                <default>false</default>
+                <label>Castlebar Court Office (Ireland)</label>
+            </value>
+            <value>
+                <fullName>CEDR</fullName>
+                <default>false</default>
+                <label>CEDR</label>
+            </value>
+            <value>
+                <fullName>Center for Klageløsning (Denmark)</fullName>
+                <default>false</default>
+                <label>Center for Klageløsning (Denmark)</label>
+            </value>
+            <value>
+                <fullName>Civilinés Aviacijos Administracia (Lithuania)</fullName>
+                <default>false</default>
+                <label>Civilinés Aviacijos Administracia (Lithuania)</label>
+            </value>
+            <value>
+                <fullName>Consumer Right Protection Center (Latvia)</fullName>
+                <default>false</default>
+                <label>Consumer Right Protection Center (Latvia)</label>
+            </value>
+            <value>
+                <fullName>County Court at Cardiff (Wales)</fullName>
+                <default>false</default>
+                <label>County Court at Cardiff (Wales)</label>
+            </value>
+            <value>
+                <fullName>County Court at Liverpool (United Kingdom)</fullName>
+                <default>false</default>
+                <label>County Court at Liverpool (United Kingdom)</label>
+            </value>
+            <value>
+                <fullName>County Court at Portsmouth</fullName>
+                <default>false</default>
+                <label>County Court at Portsmouth</label>
+            </value>
+            <value>
+                <fullName>Croatian Civil Aviation Agency (Croatia)</fullName>
+                <default>false</default>
+                <label>Croatian Civil Aviation Agency (Croatia)</label>
+            </value>
+            <value>
+                <fullName>De Inspectie Leefomgeving en Transport  (ILT, Netherlands)</fullName>
+                <default>false</default>
+                <label>De Inspectie Leefomgeving en Transport  (ILT, Netherlands)</label>
+            </value>
+            <value>
+                <fullName>Direction générale de l&apos;aviation civile (DGAC, France)</fullName>
+                <default>false</default>
+                <label>Direction générale de l&apos;aviation civile (DGAC, France)</label>
+            </value>
+            <value>
+                <fullName>Diskrimineringsombudsmannen</fullName>
+                <default>false</default>
+                <label>Diskrimineringsombudsmannen</label>
+            </value>
+            <value>
+                <fullName>District Court of Netherland (Netherland)</fullName>
+                <default>false</default>
+                <label>District Court of Netherland (Netherland)</label>
+            </value>
+            <value>
+                <fullName>DOT</fullName>
+                <default>false</default>
+                <label>DOT</label>
+            </value>
+            <value>
+                <fullName>Ente Nazionale per l&apos;Aviazione Civile (ENAC, Italy)</fullName>
+                <default>false</default>
+                <label>Ente Nazionale per l&apos;Aviazione Civile (ENAC, Italy)</label>
+            </value>
+            <value>
+                <fullName>Federal Office of Civil Aviation (FOCA, Switzerland)</fullName>
+                <default>false</default>
+                <label>Federal Office of Civil Aviation (FOCA, Switzerland)</label>
+            </value>
+            <value>
+                <fullName>Forbrugerklagenævnet</fullName>
+                <default>false</default>
+                <label>Forbrugerklagenævnet</label>
+            </value>
+            <value>
+                <fullName>Forliksrådet i Norge (Norway)</fullName>
+                <default>false</default>
+                <label>Forliksrådet i Norge (Norway)</label>
+            </value>
+            <value>
+                <fullName>German Luftfahrt-Bundesamt (LBA, Germany)</fullName>
+                <default>false</default>
+                <label>German Luftfahrt-Bundesamt (LBA, Germany)</label>
+            </value>
+            <value>
+                <fullName>Giudice de Pace (Italy)</fullName>
+                <default>false</default>
+                <label>Giudice de Pace (Italy)</label>
+            </value>
+            <value>
+                <fullName>Göteborgs tingsrätt (Sweden)</fullName>
+                <default>false</default>
+                <label>Göteborgs tingsrätt (Sweden)</label>
+            </value>
+            <value>
+                <fullName>Harju Maakohtu Tallin</fullName>
+                <default>false</default>
+                <label>Harju Maakohtu Tallin</label>
+            </value>
+            <value>
+                <fullName>Hellenic Republic Ministry of Infrastructure and Transport Civil Aciation Authority/HCAA (Greece)</fullName>
+                <default>false</default>
+                <label>Hellenic Republic Ministry of Infrastructure and Transport Civil Aciation Authority/HCAA (Greece)</label>
+            </value>
+            <value>
+                <fullName>Helsingborgs tingsrätt</fullName>
+                <default>false</default>
+                <label>Helsingborgs tingsrätt</label>
+            </value>
+            <value>
+                <fullName>Juzgado de lo Mercantil (Spain)</fullName>
+                <default>false</default>
+                <label>Juzgado de lo Mercantil (Spain)</label>
+            </value>
+            <value>
+                <fullName>Kalmar tingsrätt</fullName>
+                <default>false</default>
+                <label>Kalmar tingsrätt</label>
+            </value>
+            <value>
+                <fullName>Konsument Europa (ECC, Sweden)</fullName>
+                <default>false</default>
+                <label>Konsument Europa (ECC, Sweden)</label>
+            </value>
+            <value>
+                <fullName>Kronofogdemyndigheten (Sweden)</fullName>
+                <default>false</default>
+                <label>Kronofogdemyndigheten (Sweden)</label>
+            </value>
+            <value>
+                <fullName>Kuluttajariitalautakunta (KRIL, Finland)</fullName>
+                <default>false</default>
+                <label>Kuluttajariitalautakunta (KRIL, Finland)</label>
+            </value>
+            <value>
+                <fullName>Letter Before Action (LBA)</fullName>
+                <default>false</default>
+                <label>Letter Before Action (LBA)</label>
+            </value>
+            <value>
+                <fullName>Lietuvos transporto saugos administracija</fullName>
+                <default>false</default>
+                <label>Lietuvos transporto saugos administracija</label>
+            </value>
+            <value>
+                <fullName>Luleå tingsrätt (Sweden)</fullName>
+                <default>false</default>
+                <label>Luleå tingsrätt (Sweden)</label>
+            </value>
+            <value>
+                <fullName>Mæglingsteamet for Forbrugerklager</fullName>
+                <default>false</default>
+                <label>Mæglingsteamet for Forbrugerklager</label>
+            </value>
+            <value>
+                <fullName>Organisme national de contrôle luxembourgeois National Enforcement Body (NEB) Luxembourg</fullName>
+                <default>false</default>
+                <label>Organisme national de contrôle luxembourgeois National Enforcement Body (NEB) Luxembourg</label>
+            </value>
+            <value>
+                <fullName>Östra Nylands</fullName>
+                <default>false</default>
+                <label>Östra Nylands</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pärnu Maakohtu (Estonia)</fullName>
+                <default>false</default>
+                <label>Pärnu Maakohtu (Estonia)</label>
+            </value>
+            <value>
+                <fullName>Polish Court</fullName>
+                <default>false</default>
+                <label>Polish Court</label>
+            </value>
+            <value>
+                <fullName>Polish NEB</fullName>
+                <default>false</default>
+                <label>Polish NEB</label>
+            </value>
+            <value>
+                <fullName>Samgöngustofa (Icelandic Trasnport Authority)</fullName>
+                <default>false</default>
+                <label>Samgöngustofa (Icelandic Trasnport Authority)</label>
+            </value>
+            <value>
+                <fullName>Service Public Fédéral Mobilté &amp; Transport (Belgium)</fullName>
+                <default>false</default>
+                <label>Service Public Fédéral Mobilté &amp; Transport (Belgium)</label>
+            </value>
+            <value>
+                <fullName>Small claims court</fullName>
+                <default>false</default>
+                <label>Small claims court</label>
+            </value>
+            <value>
+                <fullName>Södertörns tingsrätt (Sweden)</fullName>
+                <default>false</default>
+                <label>Södertörns tingsrätt (Sweden)</label>
+            </value>
+            <value>
+                <fullName>Solna tingsrätt (Sweden)</fullName>
+                <default>false</default>
+                <label>Solna tingsrätt (Sweden)</label>
+            </value>
+            <value>
+                <fullName>SÖP (NEB, Germany)</fullName>
+                <default>false</default>
+                <label>SÖP (NEB, Germany)</label>
+            </value>
+            <value>
+                <fullName>Stockholms tingsrätt (Sweden)</fullName>
+                <default>false</default>
+                <label>Stockholms tingsrätt (Sweden)</label>
+            </value>
+            <value>
+                <fullName>Svea Hovrätt (Sweden)</fullName>
+                <default>false</default>
+                <label>Svea Hovrätt (Sweden)</label>
+            </value>
+            <value>
+                <fullName>Tarbijakaitseamet (Estonia)</fullName>
+                <default>false</default>
+                <label>Tarbijakaitseamet (Estonia)</label>
+            </value>
+            <value>
+                <fullName>To be added to Salesforce</fullName>
+                <default>false</default>
+                <label>To be added to Salesforce</label>
+            </value>
+            <value>
+                <fullName>Traficom (Finland)</fullName>
+                <default>false</default>
+                <label>Traficom (Finland)</label>
+            </value>
+            <value>
+                <fullName>Trafikstyrelsen (Denmark)</fullName>
+                <default>false</default>
+                <label>Trafikstyrelsen (Denmark)</label>
+            </value>
+            <value>
+                <fullName>Transportklagenemnda - NEB (Norway)</fullName>
+                <default>false</default>
+                <label>Transportklagenemnda - NEB (Norway)</label>
+            </value>
+            <value>
+                <fullName>Tribunal d’Instance (France)</fullName>
+                <default>false</default>
+                <label>Tribunal d’Instance (France)</label>
+            </value>
+            <value>
+                <fullName>Umeå Tingsrätt</fullName>
+                <default>false</default>
+                <label>Umeå Tingsrätt</label>
+            </value>
+            <value>
+                <fullName>Úřad pro civilní letectví (Czech CAA)</fullName>
+                <default>false</default>
+                <label>Úřad pro civilní letectví (Czech CAA)</label>
+            </value>
+            <value>
+                <fullName>Västmanlands Tingsrätt (Sweden)</fullName>
+                <default>false</default>
+                <label>Västmanlands Tingsrätt (Sweden)</label>
+            </value>
+            <value>
+                <fullName>Ystads Tingsrätt</fullName>
+                <default>false</default>
+                <label>Ystads Tingsrätt</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>De Inspectie Leefomgeving en Transport  (ILT, Netherlands)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>District Court of Netherland (Netherland)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <controllingFieldValue>Norway</controllingFieldValue>
+            <controllingFieldValue>Poland</controllingFieldValue>
+            <controllingFieldValue>Portugal</controllingFieldValue>
+            <controllingFieldValue>Spain</controllingFieldValue>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <controllingFieldValue>Switzerland</controllingFieldValue>
+            <controllingFieldValue>Finland</controllingFieldValue>
+            <controllingFieldValue>United Kingdom (UK)</controllingFieldValue>
+            <controllingFieldValue>France</controllingFieldValue>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Greece</controllingFieldValue>
+            <controllingFieldValue>Iceland</controllingFieldValue>
+            <controllingFieldValue>Ireland</controllingFieldValue>
+            <controllingFieldValue>Italy</controllingFieldValue>
+            <controllingFieldValue>Latvia</controllingFieldValue>
+            <controllingFieldValue>Lithuania</controllingFieldValue>
+            <controllingFieldValue>Austria</controllingFieldValue>
+            <controllingFieldValue>Belgium</controllingFieldValue>
+            <controllingFieldValue>Croatia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <controllingFieldValue>Denmark</controllingFieldValue>
+            <controllingFieldValue>Estonia</controllingFieldValue>
+            <controllingFieldValue>Luxembourg</controllingFieldValue>
+            <valueName>Letter Before Action (LBA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Norway</controllingFieldValue>
+            <valueName>Forliksrådet i Norge (Norway)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Norway</controllingFieldValue>
+            <valueName>Transportklagenemnda - NEB (Norway)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poland</controllingFieldValue>
+            <valueName>Polish Court</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poland</controllingFieldValue>
+            <valueName>Polish NEB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Portugal</controllingFieldValue>
+            <valueName>Autoridade Nacional da Aviação Civil (ANAC, Portugal)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Romania</controllingFieldValue>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Slovenia</controllingFieldValue>
+            <controllingFieldValue>Hungary</controllingFieldValue>
+            <controllingFieldValue>Bulgaria</controllingFieldValue>
+            <controllingFieldValue>Cyprus</controllingFieldValue>
+            <controllingFieldValue>Malta</controllingFieldValue>
+            <valueName>To be added to Salesforce</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Spain</controllingFieldValue>
+            <valueName>Agencia Estatal de Seguridad Aerea (AESA, Spain)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Spain</controllingFieldValue>
+            <valueName>Juzgado de lo Mercantil (Spain)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Allmänna reklamationsnämnden (Sweden)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Attunda tingsrätt (Sweden)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Diskrimineringsombudsmannen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Göteborgs tingsrätt (Sweden)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Helsingborgs tingsrätt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Kalmar tingsrätt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Konsument Europa (ECC, Sweden)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Kronofogdemyndigheten (Sweden)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Luleå tingsrätt (Sweden)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Södertörns tingsrätt (Sweden)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Solna tingsrätt (Sweden)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Stockholms tingsrätt (Sweden)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Svea Hovrätt (Sweden)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Umeå Tingsrätt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Västmanlands Tingsrätt (Sweden)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sweden</controllingFieldValue>
+            <valueName>Ystads Tingsrätt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Switzerland</controllingFieldValue>
+            <valueName>Federal Office of Civil Aviation (FOCA, Switzerland)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finland</controllingFieldValue>
+            <valueName>Kuluttajariitalautakunta (KRIL, Finland)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finland</controllingFieldValue>
+            <valueName>Östra Nylands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Finland</controllingFieldValue>
+            <valueName>Traficom (Finland)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom (UK)</controllingFieldValue>
+            <valueName>CAA (UK Civil Aviation Authority)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom (UK)</controllingFieldValue>
+            <valueName>CEDR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom (UK)</controllingFieldValue>
+            <valueName>County Court at Liverpool (United Kingdom)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United Kingdom (UK)</controllingFieldValue>
+            <valueName>County Court at Portsmouth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>France</controllingFieldValue>
+            <valueName>Direction générale de l&apos;aviation civile (DGAC, France)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>France</controllingFieldValue>
+            <valueName>Tribunal d’Instance (France)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>Better Business Bureau (BBB)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>Bucks County Magisterial Court</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>DOT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>United States</controllingFieldValue>
+            <valueName>Small claims court</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>Amstgericht (Court, Germany)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>German Luftfahrt-Bundesamt (LBA, Germany)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>SÖP (NEB, Germany)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Greece</controllingFieldValue>
+            <valueName>Athens Court</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Greece</controllingFieldValue>
+            <valueName>Hellenic Republic Ministry of Infrastructure and Transport Civil Aciation Authority/HCAA (Greece)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Iceland</controllingFieldValue>
+            <valueName>Samgöngustofa (Icelandic Trasnport Authority)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ireland</controllingFieldValue>
+            <valueName>AirNav Ireland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Ireland</controllingFieldValue>
+            <valueName>Castlebar Court Office (Ireland)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Italy</controllingFieldValue>
+            <valueName>Ente Nazionale per l&apos;Aviazione Civile (ENAC, Italy)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Italy</controllingFieldValue>
+            <valueName>Giudice de Pace (Italy)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Latvia</controllingFieldValue>
+            <valueName>Consumer Right Protection Center (Latvia)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lithuania</controllingFieldValue>
+            <valueName>Civilinés Aviacijos Administracia (Lithuania)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lithuania</controllingFieldValue>
+            <valueName>Lietuvos transporto saugos administracija</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Austria</controllingFieldValue>
+            <valueName>Bezirksgericht in Handelssachen Wien (Austria)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Austria</controllingFieldValue>
+            <valueName>Bundesministerium für Verkehr, Innovation und Technologie (BMVIT, Austria)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium</controllingFieldValue>
+            <valueName>Service Public Fédéral Mobilté &amp; Transport (Belgium)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Canada</controllingFieldValue>
+            <valueName>Canadian Transportation Agency (CTA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Croatia</controllingFieldValue>
+            <valueName>Croatian Civil Aviation Agency (Croatia)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Úřad pro civilní letectví (Czech CAA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Denmark</controllingFieldValue>
+            <valueName>Byretten Aalborg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Denmark</controllingFieldValue>
+            <valueName>Byretten Kolding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Denmark</controllingFieldValue>
+            <valueName>Byretten København</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Denmark</controllingFieldValue>
+            <valueName>Byretten Randers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Denmark</controllingFieldValue>
+            <valueName>Center for Klageløsning (Denmark)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Denmark</controllingFieldValue>
+            <valueName>Forbrugerklagenævnet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Denmark</controllingFieldValue>
+            <valueName>Mæglingsteamet for Forbrugerklager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Denmark</controllingFieldValue>
+            <valueName>Trafikstyrelsen (Denmark)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Estonia</controllingFieldValue>
+            <valueName>Harju Maakohtu Tallin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Estonia</controllingFieldValue>
+            <valueName>Pärnu Maakohtu (Estonia)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Estonia</controllingFieldValue>
+            <valueName>Tarbijakaitseamet (Estonia)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Luxembourg</controllingFieldValue>
+            <valueName>Organisme national de contrôle luxembourgeois National Enforcement Body (NEB) Luxembourg</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

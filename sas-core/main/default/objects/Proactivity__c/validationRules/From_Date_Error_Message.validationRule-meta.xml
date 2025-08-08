@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>From_Date_Error_Message</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(NOT(ISBLANK(Airport__c)), NOT(ISPICKVAL( Cancellation_Code__c ,&quot;&quot;))), ISBLANK(From_Date__c))</errorConditionFormula>
+    <errorDisplayField>From_Date__c</errorDisplayField>
+    <errorMessage>Required if an advanced matcher is used</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ParentObjectName__c</fullName>
+    <description>Indicates that the object selected in the Object field on this metadata record should be included as a child to this object. If a value is set in this field, no value should be provided for the Account Identifier field.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Indicates that the object selected in the Object field on this metadata record should be included as a child to this object. If a value is set in this field, no value should be provided for the Account Identifier field.</inlineHelpText>
+    <label>Parent Object Name</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

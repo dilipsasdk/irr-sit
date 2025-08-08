@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Mix_Basic_And_Advanced_Matchers</fullName>
+    <active>true</active>
+    <description>Forces the user to choose wether to use basic or advanced matchers.</description>
+    <errorConditionFormula>AND(
+        OR(
+        NOT(ISBLANK(Airport__c)), 
+        NOT(ISPICKVAL(Cancellation_Code__c, &apos;&apos;)), NOT(ISBLANK(From_Date__c)), 
+        NOT(ISBLANK(To_Date__c))
+        ), 
+        OR(
+        NOT(ISBLANK(Bank_Account_Number__c)),
+        NOT(ISBLANK(Booking_Reference__c)),
+        NOT(ISBLANK(Claim_Firm__c)),
+        NOT(ISBLANK(Email__c)),
+        NOT(ISBLANK(EuroBonus_Number__c)),
+        NOT(ISBLANK(Flight_Id__c)),
+        NOT(ISBLANK(Passenger_Name__c)),
+        NOT(ISBLANK(Phone_Number__c)),
+        NOT(ISBLANK(PIR__c))))</errorConditionFormula>
+    <errorMessage>You cannot combine regular matchers with advanced matchers. Please remove all field values from one of the categories.</errorMessage>
+</ValidationRule>

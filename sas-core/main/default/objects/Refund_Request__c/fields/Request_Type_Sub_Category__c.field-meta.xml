@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type_Sub_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Request Type - Sub Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Request_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>USA</fullName>
+                <default>false</default>
+                <label>USA</label>
+            </value>
+            <value>
+                <fullName>China</fullName>
+                <default>false</default>
+                <label>China</label>
+            </value>
+            <value>
+                <fullName>Europe &amp; Rest of World</fullName>
+                <default>false</default>
+                <label>Europe &amp; Rest of World</label>
+            </value>
+            <value>
+                <fullName>Webform Request</fullName>
+                <default>false</default>
+                <label>Webform Request</label>
+            </value>
+            <value>
+                <fullName>Forsvaret</fullName>
+                <default>false</default>
+                <label>Forsvaret</label>
+            </value>
+            <value>
+                <fullName>24 hour</fullName>
+                <default>false</default>
+                <label>24 hour</label>
+            </value>
+            <value>
+                <fullName>SC under 180 min</fullName>
+                <default>false</default>
+                <label>SC under 180 min</label>
+            </value>
+            <value>
+                <fullName>OK in SRS</fullName>
+                <default>false</default>
+                <label>OK in SRS</label>
+            </value>
+            <value>
+                <fullName>Not in SRS</fullName>
+                <default>false</default>
+                <label>Not in SRS</label>
+            </value>
+            <value>
+                <fullName>Already sent documentation for waiver</fullName>
+                <default>false</default>
+                <label>Already sent documentation for waiver</label>
+            </value>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>No ticket issued - IBP or RC</fullName>
+                <default>false</default>
+                <label>No ticket issued - IBP or RC</label>
+            </value>
+            <value>
+                <fullName>Voucher</fullName>
+                <default>false</default>
+                <label>Voucher</label>
+            </value>
+            <value>
+                <fullName>Email Related</fullName>
+                <default>false</default>
+                <label>Email Related</label>
+            </value>
+            <value>
+                <fullName>Issue</fullName>
+                <default>false</default>
+                <label>Issue</label>
+            </value>
+            <value>
+                <fullName>Extend</fullName>
+                <default>false</default>
+                <label>Extend</label>
+            </value>
+            <value>
+                <fullName>Refund</fullName>
+                <default>false</default>
+                <label>Refund</label>
+            </value>
+            <value>
+                <fullName>1- Refund Tax</fullName>
+                <default>false</default>
+                <label>1- Refund Tax</label>
+            </value>
+            <value>
+                <fullName>2- Refund Part</fullName>
+                <default>false</default>
+                <label>2- Refund Part</label>
+            </value>
+            <value>
+                <fullName>3- Refund Flex+Restrict</fullName>
+                <default>false</default>
+                <label>3- Refund Flex+Restrict</label>
+            </value>
+            <value>
+                <fullName>4- Refund 24 hrs</fullName>
+                <default>false</default>
+                <label>4- Refund 24 hrs</label>
+            </value>
+            <value>
+                <fullName>5- Refund 24/12 hrs</fullName>
+                <default>false</default>
+                <label>5- Refund 24/12 hrs</label>
+            </value>
+            <value>
+                <fullName>6- Refund Residual Value</fullName>
+                <default>false</default>
+                <label>6- Refund Residual Value</label>
+            </value>
+            <value>
+                <fullName>7- Refund Flex</fullName>
+                <default>false</default>
+                <label>7- Refund Flex</label>
+            </value>
+            <value>
+                <fullName>8- Refund EB</fullName>
+                <default>false</default>
+                <label>8- Refund EB</label>
+            </value>
+            <value>
+                <fullName>9- Refund IRR</fullName>
+                <default>false</default>
+                <label>9- Refund IRR</label>
+            </value>
+            <value>
+                <fullName>Bank details for refund</fullName>
+                <default>false</default>
+                <label>Bank details for refund</label>
+            </value>
+            <value>
+                <fullName>14 day money back guarantee</fullName>
+                <default>false</default>
+                <label>14 day money back guarantee</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Error</fullName>
+                <default>false</default>
+                <label>Error</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Travel Agent Tickets</controllingFieldValue>
+            <controllingFieldValue>Wrongly refunded</controllingFieldValue>
+            <valueName>USA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Travel Agent Tickets</controllingFieldValue>
+            <controllingFieldValue>Wrongly refunded</controllingFieldValue>
+            <valueName>China</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Travel Agent Tickets</controllingFieldValue>
+            <controllingFieldValue>Wrongly refunded</controllingFieldValue>
+            <valueName>Europe &amp; Rest of World</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Travel Agent Tickets</controllingFieldValue>
+            <valueName>Webform Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Past Date PNR</controllingFieldValue>
+            <valueName>1- Refund Tax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Past Date PNR</controllingFieldValue>
+            <valueName>2- Refund Part</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Past Date PNR</controllingFieldValue>
+            <valueName>3- Refund Flex+Restrict</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Past Date PNR</controllingFieldValue>
+            <valueName>4- Refund 24 hrs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Past Date PNR</controllingFieldValue>
+            <valueName>5- Refund 24/12 hrs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Past Date PNR</controllingFieldValue>
+            <valueName>6- Refund Residual Value</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Past Date PNR</controllingFieldValue>
+            <valueName>7- Refund Flex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Past Date PNR</controllingFieldValue>
+            <valueName>8- Refund EB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Past Date PNR</controllingFieldValue>
+            <valueName>9- Refund IRR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refund not received</controllingFieldValue>
+            <valueName>OK in SRS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refund not received</controllingFieldValue>
+            <valueName>Not in SRS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refund not received</controllingFieldValue>
+            <valueName>Already sent documentation for waiver</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refund not received</controllingFieldValue>
+            <valueName>No ticket issued - IBP or RC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Refund not received</controllingFieldValue>
+            <valueName>Duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reserved Amount</controllingFieldValue>
+            <valueName>Credit Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reserved Amount</controllingFieldValue>
+            <valueName>Voucher</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gift Card</controllingFieldValue>
+            <valueName>14 day money back guarantee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gift Card</controllingFieldValue>
+            <valueName>Error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Passenger bank details</controllingFieldValue>
+            <valueName>Bank details for refund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voucher</controllingFieldValue>
+            <valueName>Email Related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voucher</controllingFieldValue>
+            <valueName>Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voucher</controllingFieldValue>
+            <valueName>Extend</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voucher</controllingFieldValue>
+            <valueName>Refund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Voucher</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Forsvaret</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>24 hour</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>SC under 180 min</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

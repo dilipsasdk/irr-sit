@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Charge Back</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Charge_Back_Type__c</fieldNames>
+        <fieldNames>Charge_Back_Coding__c</fieldNames>
+        <fieldNames>Charge_Back_Amount__c</fieldNames>
+        <info>&lt;p&gt;Before changing status, fix follow fields&lt;/p&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Charge_Back</recordTypeName>
+</PathAssistant>

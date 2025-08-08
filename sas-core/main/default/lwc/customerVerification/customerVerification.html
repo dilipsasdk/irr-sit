@@ -1,0 +1,72 @@
+<template>
+  <div class="slds-grid slds-gutters slds-wrap slds-grid_vertical-align-end">
+    <template lwc:if={showSpinner}>
+      <lightning-spinner
+        alternative-text="Loading"
+        size="medium"
+      ></lightning-spinner>
+    </template>
+    <div class="slds-col slds-size_1-of-1">
+      <lightning-icon
+        icon-name={action.icon}
+        alternative-text={currentMessage}
+        title={currentMessage}
+        size="small"
+        variant={action.variant}
+      ></lightning-icon>
+      <lightning-formatted-text
+        class="slds-m-left_small"
+        value={currentMessage}
+      ></lightning-formatted-text>
+    </div>
+    <template lwc:if={showReset}>
+      <div class="slds-col slds-size_1-of-1 slds-m-top_small">
+        <lightning-button
+          label="Reset verification"
+          variant="brand"
+          onclick={handleReset}
+        ></lightning-button>
+      </div>
+    </template>
+    <template lwc:elseif={isValidation}>
+      <div class="slds-col slds-size_3-of-6">
+        <lightning-input
+          type="text"
+          label="Enter OTP"
+          value={otp}
+          onchange={handleOtp}
+          min-length="6"
+          max-length="6"
+        ></lightning-input>
+      </div>
+      <div class="slds-col slds-size_3-of-6">
+        <lightning-button
+          label="Validate One-Time Password"
+          variant="brand"
+          onclick={handleVerify}
+          disabled={disableVerify}
+        ></lightning-button>
+      </div>
+    </template>
+    <template lwc:else>
+      <div class="slds-col slds-size_3-of-6">
+        <lightning-input
+          type="text"
+          label="Enter EuroBonus Number"
+          value={euroBonusNumber}
+          onchange={handleEuroBonusNumber}
+          min-length="9"
+          max-length="9"
+        ></lightning-input>
+      </div>
+      <div class="slds-col slds-size_3-of-6">
+        <lightning-button
+          label="Request One-Time Password"
+          variant="brand"
+          onclick={handleRequest}
+          disabled={disableRequest}
+        ></lightning-button>
+      </div>
+    </template>
+  </div>
+</template>

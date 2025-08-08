@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission set group to assign permission to handle chat via turi, facebook messenger and SoMe wall posts</description>
+    <label>Chat_Messenger_SoMe</label>
+    <permissionSets>Chat_User</permissionSets>
+    <permissionSets>Messaging_User</permissionSets>
+    <permissionSets>ServicePresencesSoME</permissionSets>
+    <permissionSets>Service_Presences_Breaks</permissionSets>
+    <permissionSets>Service_Presences_Chat</permissionSets>
+    <permissionSets>Service_Presences_Chat_and_FB_Messanger</permissionSets>
+    <permissionSets>Service_Presences_FB_Messenger</permissionSets>
+    <permissionSets>SocialMediaUser</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

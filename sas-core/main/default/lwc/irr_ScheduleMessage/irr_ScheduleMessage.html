@@ -1,0 +1,37 @@
+<!--
+ - @author Chetan SIngh, CoforgeTech
+ - @date 2020
+ -->
+
+<!-- IRR ScheduleSuccess Modal -->
+<template>
+    <section role="dialog" tabindex="-1" aria-labelledby="success-heading-01" aria-modal="true" aria-describedby="success-content-id-1" class={modalClass}>
+        <div class="slds-modal__container">
+            <header class="slds-modal__header slds-theme--inverse">
+                <button
+                        onclick={handleClose}
+                        class="slds-button slds-button_icon slds-modal__close"
+                        title="Close">
+                    <lightning-icon icon-name="utility:close" alternative-text="Close" title="Close" variant="inverse">
+                    </lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="success-heading-01" class="slds-modal__title slds-hyphenate">Schedule Successful</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="success-content-id-1">
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item padding="around-small" size="12">
+                        <p style="text-align: center;">
+                            The {messageText} scheduled successfully!
+                        </p>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+            <footer class="slds-modal__footer slds-modal__footer_directional">
+                <button class="slds-button slds-button_neutral" onclick={handleClose}>Close</button>
+                <button class="slds-button slds-button_brand" onclick={handleNewSearch}>New Search</button>
+            </footer>
+        </div>
+    </section>
+    <div class={backdropClass}></div>
+</template>

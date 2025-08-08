@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Settlement_Country_Settings</fullName>
+    <columns>Country_Name__c</columns>
+    <columns>Country_Short_Code__c</columns>
+    <columns>Available_Currencies__c</columns>
+    <columns>Default_Currency__c</columns>
+    <columns>Payment_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Settlement Country Settings</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCS_CustomChatName__c</fullName>
+    <description>Custom Nickname for Agents in Chat</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Custom Nickname for Agents in Chat</inlineHelpText>
+    <label>Custom Chat Name</label>
+    <length>25</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

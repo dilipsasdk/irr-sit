@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permissions for chat agents to access messaging sessions and embedded messaging.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Chat Agent</label>
+    <permissionSets>Messaging_Session_Access</permissionSets>
+    <permissionSets>Messaging_for_In_App_and_Web_User_Access</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

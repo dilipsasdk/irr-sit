@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Charge_Back_Type__c</fullName>
+    <description>The type of claim that have been issued for Charge back</description>
+    <externalId>false</externalId>
+    <label>Charge Back Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CB</fullName>
+                <default>false</default>
+                <label>CB</label>
+            </value>
+            <value>
+                <fullName>IQ</fullName>
+                <default>false</default>
+                <label>IQ</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

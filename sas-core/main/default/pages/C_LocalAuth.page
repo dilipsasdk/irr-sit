@@ -1,0 +1,32 @@
+<apex:page controller="C_LocalAuthController">
+    <apex:form>
+        <script>
+            function afterAuthenticate(){
+                if(document.getElementById("AccessTokenInputElement").value){
+                    document.getElementById("C_LocalAuthRedirectForm").submit();
+                }
+            }
+        </script>
+        <apex:actionFunction name="auth" action="{!authenticate}" reRender="C_LocalAuthParameters,C_LocalAuthRedirectParameters" oncomplete="afterAuthenticate();"/>
+        <apex:outputPanel layout="block" id="C_LocalAuthParameters">
+            <apex:pageMessages />
+            <div style="padding:0.25em;"><div style="display:inline-block;width:10em;">Username:</div> <apex:inputText value="{!username}" /></div>
+            <div style="padding:0.25em;"><div style="display:inline-block;width:10em;">Password:</div> <apex:inputSecret value="{!password}" /></div>
+            <div style="padding:0.25em;"><div style="display:inline-block;width:10em;">Additional Param 1:</div> <apex:inputText value="{!param1}" /></div>
+            <div style="padding:0.25em;"><div style="display:inline-block;width:10em;">Additional Param 2 :</div> <apex:inputText value="{!param2}" /></div>
+
+            <div style="padding:0.25em;"><button type="button" onclick="auth();">Authenticate</button></div>
+        </apex:outputPanel>
+    </apex:form>
+    <apex:outputPanel layout="block" id="C_LocalAuthRedirectParameters">
+        <form id="C_LocalAuthRedirectForm" action="{!redirectUri}" method="POST">
+            <input type="hidden" name="state" value="{!state}"/>
+            <input type="hidden" name="username" value="{!username}"/>
+            <input type="hidden" name="password" value="{!password}"/>
+            <input type="hidden" name="param1" value="{!param1}"/>
+            <input type="hidden" name="param2" value="{!param2}"/>
+            <input type="hidden" name="accessToken"  value="{!accessToken}" id="AccessTokenInputElement"/>
+        </form>
+    </apex:outputPanel>
+    
+</apex:page>

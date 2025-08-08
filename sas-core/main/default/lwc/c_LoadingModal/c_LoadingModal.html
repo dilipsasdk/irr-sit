@@ -1,0 +1,27 @@
+<!--
+ - @author Niklas Lundkvist, Deloitte
+ - @date 2020
+ -->
+
+<!-- C Loading Modal -->
+<template>
+    <section role="dialog" tabindex="-1" aria-modal="true" aria-describedby="loading-content-id-1" class={sectionClass}>
+        <div class="slds-modal__container">
+            <div class="slds-modal__content slds-p-around_medium" id="loading-content-id-1" style="height: 6rem;">
+                <div class="slds-grid slds-grid--align-center">
+                    <div class="slds-col slds-spinner">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+                <div role="status" class="slds-spinner slds-spinner_large">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class={backdropClass}></div>
+</template>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsGDPRExtract__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that this file is a generated GDPR extract and should be removed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that this file is a generated GDPR extract and should be removed.</inlineHelpText>
+    <label>Is GDPR Extract</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

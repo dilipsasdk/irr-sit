@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amadeus_Office_ID__c</fullName>
+    <description>Office ID used for travel agencies bulk</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Amadeus Office ID for travel agency</inlineHelpText>
+    <label>Amadeus Office ID</label>
+    <length>12</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

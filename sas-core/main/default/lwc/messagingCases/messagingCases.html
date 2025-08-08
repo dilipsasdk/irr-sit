@@ -1,0 +1,9 @@
+<template>
+  <lightning-card title="Related Cases For This Messaging User">
+    <div class="slds-card__body_inner">
+      <div if:true={cases}>
+        <c-case-list cases={cases}></c-case-list>
+      </div>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+/**
+* @author Niklas Lundkvist, Deloitte
+* @date 2020
+*/
+.app {
+    background-color: #fafaf9;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.no-focus:focus {
+    outline: none;
+}
+
+.no-wrap {
+    white-space: normal;
+}

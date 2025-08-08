@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <applicationVisibilities>
+        <application>SAS_Disruption</application>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <description>Used to give access to the SAS Disruption application</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>SAS Disruption User</label>
+</PermissionSet>

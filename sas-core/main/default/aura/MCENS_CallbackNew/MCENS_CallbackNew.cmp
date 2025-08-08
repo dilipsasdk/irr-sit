@@ -1,0 +1,32 @@
+<aura:component implements="lightning:actionOverride" controller="MCENS_SubscriptionService" access="global">
+    <aura:attribute name="cbName" type="String" default="" access="private" />
+    <aura:attribute name="cbUrl" type="String" default="" access="private" />
+    <aura:attribute name="cbBatchSize" type="Integer" default="1000" access="private" />
+    <aura:attribute name="errorMessage" type="String" default="" access="private" />
+    <aura:attribute name="isSaving" type="Boolean" default="false" access="private" />
+    <lightning:navigation aura:id="navService"/>
+    <div aura:id="newDialog" role="dialog" tabindex="-1" aria-labelledby="header43" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <div class="slds-modal__header">
+                <h2 class="slds-text-heading--medium">New Marketing Cloud Event Notification Service Callback</h2>
+            </div>
+            <div class="slds-modal__content slds-p-around--medium slds-grid slds-wrap ">
+                <aura:if isTrue="{!v.errorMessage}">
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                        <span class="slds-assistive-text">error</span>
+                        <lightning:icon iconName="utility:error" alternativeText="Error" title="Error" variant="inverse" size="x-small" class="slds-m-right_x-small" />
+                        <h2>{!v.errorMessage}</h2>
+                    </div>
+                </aura:if>
+                <lightning:input aura:id="cbName" name="cbName" label="Callback Name" value="{!v.cbName}" required="true" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                <lightning:input aura:id="cbUrl" name="cbUrl" label="Callback Url" value="{!v.cbUrl}" required="true" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+                <lightning:input aura:id="cbBatchSize" name="cbBatchSize" type="number" label="Max Batch Size" value="{!v.cbBatchSize}" required="true" class="slds-size--1-of-1 slds-p-horizontal_x-small" />
+            </div>
+            <div class="slds-modal__footer">       
+                <lightning:button aura:id="cancelButton" variant="neutral" label="Cancel" onclick="{!c.cancelDialog}" disabled="{!v.isSaving}" />
+                <lightning:button aura:id="saveButton" variant="brand" label="Submit" onclick="{!c.saveRecord}" disabled="{!v.isSaving}" />
+            </div>
+        </div>
+    </div>
+    <div aura:id="overlay" class="slds-backdrop slds-backdrop--open"></div>
+</aura:component>

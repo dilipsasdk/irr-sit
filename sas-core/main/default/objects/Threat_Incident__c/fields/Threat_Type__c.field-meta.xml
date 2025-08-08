@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Threat_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>What kind of threat?</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bomb</fullName>
+                <default>false</default>
+                <label>Bomb</label>
+            </value>
+            <value>
+                <fullName>Violence against staff</fullName>
+                <default>false</default>
+                <label>Violence against staff</label>
+            </value>
+            <value>
+                <fullName>Shooting</fullName>
+                <default>false</default>
+                <label>Shooting</label>
+            </value>
+            <value>
+                <fullName>Cyber threat</fullName>
+                <default>false</default>
+                <label>Cyber threat</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html style="overflow-y: hidden;">
+<head>
+	<title></title>
+</head>
+<body bgcolor="#ffffff" style="padding: 0px; height: auto; width: 100%; color: rgb(0, 0, 0); font-family: arial,helvetica,sans-serif; font-size: 16px; min-height: auto; background-color: rgb(255, 255, 255);"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta content="text/html; charset=UTF-8">
+<div style="margin: 0px auto; width: 600px;"><img height="63" src="https://image.s50.sfmc-content.com/lib/fe3e11717564047d741777/m/1/16092f30-85ad-4ba1-ba69-6abd88696641.png" style="display: block; padding: 0px; text-align: center; height: 63px; width: 600px; border: 0px;" width="600" /></div>
+
+<div style="margin: 0px auto; width: 600px; margin-top: 0px;"><img height="258" src="https://image.msg.flysas.com/lib/fe3e11717564047d741777/m/1/f9328c84-6322-4942-ad7d-e0ba8ac864c0.png" style="display: block; padding: 0px; text-align: center; height: 258px; width: 600px; border: 0px;" width="600" /></div>
+
+<div style="{{{passengerInfo.thisSegment.isShowBarcode}}}"><img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl={{{passengerInfo.thisSegment.qrCodeFormat}}}" /></div>
+
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><i>Dear Traveler,</i></span></span></p>
+
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><i>Thank you for flying SAS.<br />
+<br />
+We apologize for the delay of your flight today and would like to offer you refreshments during your wait.</i></span></span></p>
+
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><i>A digital voucher is loaded on your boarding pass. You can use it for partial or full payment at&nbsp;the following establishments at your departing airport during the next 24hours:&nbsp;</i></span></span><i><a aria-label="Link https://icpn.fyi/{{{passengerInfo.thisSegment.stationDeparture}}}" href="https://icpn.fyi/{{{passengerInfo.thisSegment.stationDeparture}}}" rel="noopener noreferrer" tabindex="-1" target="_blank" title="https://icpn.fyi/{{{passengerInfo.thisSegment.stationDeparture}}}">https: //icpn.fyi/{{{passengerInfo.thisSegment.stationDeparture}}}</a></i><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><i>.</i></span></span></p>
+
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><i>You can either use your boarding card or the attached QR code in this mail upon ordering your refreshment at any of the establishments shown in the link.</i></span></span></p>
+
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><i>The voucher cannot be exchanged for cash and no cash change will be given. Multiple vouchers can be used together.<br />
+<br />
+Please Note this voucher can not be used onboard the aircraft.</i></span></span></p>
+
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><i>{
+    {
+        {passengerInfo.thisSegment.emailBackBody
+        }
+    }
+}</i></span></span></p>
+
+<p><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:14px;"><i>Best regards<br />
+SAS</i></span></span></p>
+
+<div style="margin: 0px auto; width: 600px; margin-top: 0px; padding: 20px 50px;">
+<table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" style="background-color: transparent; min-width: 100%;" width="100%">
+	<tbody>
+		<tr>
+			<td class="stylingblock-content-wrapper camarker-inner" style="padding: 10px;">
+			<table cellpadding="0" cellspacing="0" style="width: 100%;">
+				<tbody>
+					<tr>
+						<td>
+						<table cellpadding="0" cellspacing="0" style="width: 100%;">
+							<tbody>
+								<tr>
+									<td style="width: 50%; padding-right: 3px;" valign="top">
+									<table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" style="background-color: transparent; min-width: 100%;" width="100%">
+										<tbody>
+											<tr>
+												<td class="stylingblock-content-wrapper camarker-inner" style="padding: 0px 0px 10px;"><span style="color:#999999;"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Scandinavian Airlines&nbsp;&copy; 2023</span></span></span></td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" style="min-width: 100%;" width="100%">
+										<tbody>
+											<tr>
+												<td class="stylingblock-content-wrapper camarker-inner"><span style="color:#999999;"><span style="font-size:10px;">This email has been sent by Scandinavian Airlines System Denmark-Norway-Sweden SE-195 87 Stockholm-Arlanda, Sweden, to {
+    {
+        {passengerInfo.emailAddress
+        }
+    }
+}.</span></span></td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+									<td style="width: 50%; padding-left: 3px;" valign="top">
+									<table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" style="background-color: transparent; min-width: 100%;" width="100%">
+										<tbody>
+											<tr>
+												<td class="stylingblock-content-wrapper camarker-inner" style="padding: 0px;">
+												<table cellpadding="0" cellspacing="0" width="100%">
+													<tbody>
+														<tr>
+															<td align="left"><img height="19" src="https://image.s50.sfmc-content.com/lib/fe3e11717564047d741777/m/1/1ec482c9-24f9-41d5-8467-516832f22192.png" style="display: block; padding: 0px; text-align: left; height: 19px; width: 200px;" width="200" /></td>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" style="min-width: 100%;" width="100%">
+										<tbody>
+											<tr>
+												<td class="stylingblock-content-wrapper camarker-inner">
+												<div><span style="color:#999999;"><span style="font-size:10px;"><span style="font-family:Arial,Helvetica,sans-serif;">SAS respects your privacy. Please read our </span></span></span><a href="https://www.sas.se/juridisk-information/integritetspolicy/"><span style="color:#999999;"><span style="font-size:10px;"><span style="font-family:Arial,Helvetica,sans-serif;">guidelines </span></span></span></a> <span style="color:#999999;"><span style="font-size:10px;"><span style="font-family:Arial,Helvetica,sans-serif;">for handling personal data.</span></span></span></div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</body>
+</html>

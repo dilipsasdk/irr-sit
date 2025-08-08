@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DelegateGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groups>Liability</groups>
+    <groups>Claims - Baggage</groups>
+    <groups>Claims - Other</groups>
+    <groups>Claims - Flight Disruptions</groups>
+    <groups>Customer Claim</groups>
+    <groups>Approvers</groups>
+    <groups>Control</groups>
+    <groups>Claims - High Priority</groups>
+    <groups>Claims - High Care Costs</groups>
+    <groups>Claims - Compensation Card</groups>
+    <groups>Claims - Flight Disruptions Expenses</groups>
+    <groups>Claims - Care Expenses</groups>
+    <groups>Claims - Care Semi-Automation</groups>
+    <groups>Claims - EU261</groups>
+    <groups>Claims - EU261 Semi-Automation</groups>
+    <groups>Claims - Sensitive Topics</groups>
+    <groups>Claims - Travel Extra Refunds</groups>
+    <label>Customer Claim Supervisors</label>
+    <loginAccess>false</loginAccess>
+    <permissionSets>Service Presences - Breaks</permissionSets>
+    <permissionSets>SAS Liability</permissionSets>
+    <permissionSets>SAS Proactivities Editor</permissionSets>
+    <permissionSets>SAS Claim Firms Editor</permissionSets>
+    <permissionSets>Service Presences - Customer Claims</permissionSets>
+    <permissionSets>SAS Customer Claims</permissionSets>
+    <permissionSets>SAS Settlements</permissionSets>
+    <permissionSets>Can_Edit_flightIrregularities_EU261_eligibility</permissionSets>
+    <permissionSets>Manage Own List Views</permissionSets>
+    <roles>SAS</roles>
+    <roles>Sutherland</roles>
+    <roles>Sykes</roles>
+    <roles>Student Consulting</roles>
+</DelegateGroup>

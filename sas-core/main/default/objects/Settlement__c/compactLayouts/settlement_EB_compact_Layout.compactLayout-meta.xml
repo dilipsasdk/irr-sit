@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>settlement_EB_compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>RecordTypeId</fields>
+    <fields>Claim__c</fields>
+    <fields>EuroBonus_Points__c</fields>
+    <fields>Submitter__c</fields>
+    <fields>Approver__c</fields>
+    <fields>OwnerId</fields>
+    <label>settlement EB compact Layout</label>
+</CompactLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Initially_Provided_PNR__c</fullName>
+    <description>PNR provided by the customer.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>PNR provided by the customer.</inlineHelpText>
+    <label>Initially Provided PNR</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

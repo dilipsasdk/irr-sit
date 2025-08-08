@@ -1,0 +1,120 @@
+# Unique name for this workflow
+name: Validate PR on support/master branch
+
+# Definition when the workflow should run
+on:
+  # The workflow will run whenever an event happens on a pull request
+  pull_request:
+    # The events are that a PR is opened, or when a commit is pushed
+    # to a branch that has an existing pull request
+    types: [opened, synchronize]
+    # The branches filter allows to specify that this workflow should only
+    # run if the branch name is "support/master". This way we prevent this workflow
+    # from running when PRs are opened on other branches
+    branches: [support/master]
+    # We only care about changes to the sas-core directory, which is the
+    # root directory of the sfdx project. This prevents the job from running
+    # when changing non-salesforce files (like this yml file).
+    paths:
+      - "sas-core/**"
+  workflow_dispatch:
+
+# Jobs to be executed when the above conditions are met
+jobs:
+  # This is the name of the job. You can give it whatever name you want
+  validate-deployment-on-integration-org:
+    # As mentioned in the blog post, this job runs inside a VM. Here we
+    # can specify which OS this VM should run on.
+    # In this case, we are going to run our commands on the latest version
+    # of ubuntu
+    runs-on: ubuntu-latest
+    environment: integration
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    steps:
+      - name: "Checkout source code"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Now, we need a way to let the developer specify which tests to run, which
+      # could be all tests or just the tests relevant to their deployment.
+
+      # To do this, we can ask the developer to name their test classes in the
+      # body of the PR, using the following syntax
+
+      # Apex::[CommunitiesLoginControllerTest,MyProfilePageControllerTest]::Apex
+      # or Apex::[all]::Apex to run all tests
+
+      # This special delimeter can be added to the PR template so that your
+      # team doesn't have to remember the syntax.
+
+      # Once a developer has specified a list of classes to run, we need to be able
+      # to extract this information from the PR, and pass it on the the VM.
+
+      # Now Install Salesforce CLI
+      - name: "Install Salesforce CLI"
+        run: npm install -g @salesforce/cli
+
+      # Then we install the SFDX-Git-Delta plugin - https://github.com/scolladon/sfdx-git-delta
+      # This is an awesome plugin that allows us to extract a package.xml with the metadata
+      # that has changed between commits. I highly recommend going over the github readme
+      # for more information on how this works.
+
+      - name: "Installing sfdx git delta"
+        run: echo y | sf plugins:install sfdx-git-delta
+
+      # Install java as it is required for the next step
+      #- name: "Installing java"
+      #  run: |
+      #    sudo apt-get update
+      #    sudo apt install default-jdk
+
+      # Install SFDX scanner
+      #- name: "Installing SFDX scanner"
+      #  run: sf plugins:install @salesforce/sfdx-scanner
+
+      # Key is stored as a secret in the repository
+      # We need to create a file with the key in it
+      - name: Make JWT Key File
+        id: make-jwt-key-file
+        run: |
+          echo "${{secrets.CI_KEY}}" > ./SF_JWT_KEY.key
+
+      - name: Authorize UAT Org
+        id: auth-uat-org
+        run: sf org login jwt --username ${{secrets.USERNAME}} --jwt-key-file ./SF_JWT_KEY.key --client-id ${{secrets.CLIENT_ID}} --alias INTOrg
+
+      # We use SFDX Git Delta to create a directory with only the metadata that has changed.
+      # this allows us to deploy only those changes, as opposed to deploying the entire branch.
+      # This helps reducing deployment times
+      - name: "Create delta packages for new, modified or deleted metadata"
+        run: |
+          mkdir changed-sources
+          sf sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --source sas-core/
+
+      # Now we can use the sfdx scanner to scan the code in the delta directory
+      # The output of the scan is stored in a file called apexScanResults.sarif
+
+      # The .sarif file can later be uploaded to github, so that we can see the
+      # results of the scan directly from the PR.
+
+      #- name: "Scan code"
+      #  run: |
+      #    cd changed-sources
+      #    sf scanner:run --format sarif --target './**/*.cls' --category "Design,Best Practices,Performance" --outfile 'apexScanResults.sarif'
+      #    cd ..
+
+      # Now we upload the .sarif file as explained in the previous step
+      #- name: Upload SARIF file
+      #  uses: github/codeql-action/upload-sarif@v3
+      #  with:
+      #    sarif_file: changed-sources/apexScanResults.sarif
+
+      # If the env variable equals all, we run all tests
+      - name: "Check-only deploy delta changes - run all tests"
+        run: |
+          if grep -q '<types>' changed-sources/package/package.xml; then
+            sf project deploy validate --target-org INTOrg --manifest "changed-sources/package/package.xml" --test-level RunLocalTests
+          else
+            echo "No changes to validate"
+          fi

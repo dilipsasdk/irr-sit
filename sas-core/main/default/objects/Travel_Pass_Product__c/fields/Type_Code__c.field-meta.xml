@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Type Code</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TMP</fullName>
+                <default>false</default>
+                <label>TMP</label>
+            </value>
+            <value>
+                <fullName>TPC</fullName>
+                <default>false</default>
+                <label>TPC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

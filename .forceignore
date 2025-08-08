@@ -1,0 +1,30 @@
+# List files or directories below to ignore them when running force:source:push, force:source:pull, and force:source:status
+# More information: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm
+#
+
+package.xml
+**/destructiveChangesPost.xml
+**/destructiveChangesPre.xml
+**/emails/**
+
+# LWC configuration files
+**/jsconfig.json
+**/.eslintrc.json
+
+# LWC Jest
+**/__tests__/**
+
+# Non used automatic entries
+**/AppSwitcher.appMenu-meta.xml
+**/Trial Customer Portal User.profile-meta.xml
+
+#Data Files
+**/EmailTemplate.json
+**/email/unfiled$public/**
+
+#Disable because this contains a lot a references to an Amazon Connect Instance
+**/callCenterRoutingMaps/**
+**/callCenters/**
+**/connectedApps/**
+**/ConversationVendorInformation/**
+**/reportTypes/Service_Cloud_**

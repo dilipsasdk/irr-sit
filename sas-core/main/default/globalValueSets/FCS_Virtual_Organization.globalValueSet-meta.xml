@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Direct Sales</fullName>
+        <default>false</default>
+        <label>Direct Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Global Support</fullName>
+        <default>false</default>
+        <label>Global Support</label>
+    </customValue>
+    <customValue>
+        <fullName>Liability NEB</fullName>
+        <default>false</default>
+        <label>Liability NEB</label>
+    </customValue>
+    <customValue>
+        <fullName>Agent Helpdesk</fullName>
+        <default>false</default>
+        <label>Agent Helpdesk</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Control</fullName>
+        <default>false</default>
+        <label>Sales Control</label>
+    </customValue>
+    <customValue>
+        <fullName>EuroBonus</fullName>
+        <default>false</default>
+        <label>EuroBonus</label>
+    </customValue>
+    <customValue>
+        <fullName>Group Sales</fullName>
+        <default>false</default>
+        <label>Group Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Refunds</fullName>
+        <default>false</default>
+        <label>Refunds</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Care</fullName>
+        <default>false</default>
+        <label>Customer Care</label>
+    </customValue>
+    <description>The virtual organization of the user or record owner</description>
+    <masterLabel>FCS Virtual Organization</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

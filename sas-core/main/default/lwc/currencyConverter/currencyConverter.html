@@ -1,0 +1,70 @@
+<template>
+  <lightning-card title="Currency Converter">
+    <div slot="actions" class="slds-grid slds-gutters">
+      <div
+        class="
+          slds-col slds-align-middle
+          slds-text-body_small
+          slds-text-color_weak
+        "
+      >
+        <span if:true={error} class="slds-text-color_error">{error}</span>
+      </div>
+    </div>
+
+    <div if:true={showSpinner}>
+      <lightning-spinner
+        alternative-text="Loading"
+        size="medium"
+        variant="brand"
+      ></lightning-spinner>
+    </div>
+
+    <div class="slds-grid slds-grid_vertical slds-p-horizontal_medium">
+      <div class="slds-col slds-grid slds-gutters">
+        <lightning-combobox
+          class="slds-col slds-size_1-of-2"
+          name="from"
+          label="From"
+          placeholder="From"
+          value={fromCurrency}
+          onchange={handleFromChange}
+          options={fromOptions}
+        >
+        </lightning-combobox>
+        <lightning-combobox
+          class="slds-col slds-size_1-of-2"
+          name="to"
+          label="To"
+          placeholder="To"
+          value={toCurrency}
+          onchange={handleToChange}
+          options={toOptions}
+        >
+        </lightning-combobox>
+      </div>
+      <div class="slds-col slds-grid slds-gutters">
+        <lightning-input
+          class="slds-col slds-size_1-of-2"
+          type="number"
+          label="Amount to convert"
+          value={amount}
+          step="0.01"
+          onchange={handleAmountChange}
+        >
+        </lightning-input>
+        <div
+          class="slds-col slds-size_1-of-2"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+          "
+        >
+          <p class="slds-text-title">Converted</p>
+          <p class="slds-text-heading_medium">{result} {toCurrency}</p>
+        </div>
+      </div>
+    </div>
+  </lightning-card>
+</template>

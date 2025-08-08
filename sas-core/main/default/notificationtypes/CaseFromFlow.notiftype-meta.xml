@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomNotificationType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customNotifTypeName>Case Created From Flow</customNotifTypeName>
+    <desktop>true</desktop>
+    <masterLabel>Case Created From Flow</masterLabel>
+    <mobile>true</mobile>
+</CustomNotificationType>

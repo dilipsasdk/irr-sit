@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!-- CustomerGetResponseParseError -->
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Body>
+        <!--Content of response has been removed to trigger exception in parser-->
+    </s:Body>
+</s:Envelope>

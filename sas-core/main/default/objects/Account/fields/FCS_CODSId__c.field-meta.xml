@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCS_CODSId__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Unique identifier for customer in CODA. Corresponds to ExternalId on Frequent Flyer.</description>
+    <externalId>true</externalId>
+    <label>CODS Id</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,97 @@
+<!--
+ - @author Chetan Singh, Coforge
+ - @date 2022
+ -->
+
+<!-- IRR Hotel Accomodation File send Modal -->
+
+<template>
+<template if:true={isShowModal}>
+<section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+   <div class="slds-modal__container">
+    <!-- modal header start -->
+      <header class="slds-modal__header">
+         <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBox}>
+            <lightning-icon icon-name="utility:close"
+               alternative-text="close"
+               variant="inverse"
+               size="small" ></lightning-icon>
+            <span class="slds-assistive-text">Close</span>
+         </button>
+         <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Confirm Attachment Send to Hotel Accommodation Tool</h2>
+      </header>
+      <div class="slds-modal__content slds-p-around_medium" id="confirm-content-id-1">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item padding="around-small" size="12">
+                <p style="text-align: center;">
+                    This Attachment will contain <b>{selectedCount} {passengerText}.</b>
+                </p>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+    <div class="slds-modal__content slds-p-around_medium" >
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item padding="around-small" size="12">
+                <p style="text-align: center;">
+                    Choose from the drop down to select the recipient. Also click the plus button to start adding additional recipients.
+                </p>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+      <!-- modal body start -->
+    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <div class="slds-p-around_medium lgc-bg-inverse">
+                    <lightning-combobox
+                            class="combobox-actions slds-p-left_small"
+                            slot="actions"
+                            variant="label-hidden"
+                            label="Select Email"
+                            value={emailPicklistOptions}
+                            options={emailPicklistOptions}
+                            onchange={handleChange}>
+                    </lightning-combobox>
+    </div>
+        <lightning-layout multiple-rows="true">
+            <template for:each={toAddresses} for:item="toAddress" for:index="rIdx">
+                <lightning-layout-item padding="around-small" size="6" key={toAddress.id}>
+                    <lightning-input
+                            data-recipient-index={rIdx}
+                            value={toAddress.emailAddress}
+                            onchange={handleEmailChange}
+                            required
+                            type="email"
+                            label="Email Address"
+                            name="emailAddress">
+                    </lightning-input>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item padding="around-small" size="1" class="pull-right">
+                <button
+                        onclick={handleAdd}
+                        class="slds-button slds-button_icon"
+                        title="Add">
+                    <lightning-icon icon-name="utility:add" alternative-text="Add" title="Add">
+                    </lightning-icon>
+                    <span class="slds-assistive-text">Add</span>
+                </button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+    <footer class="slds-modal__footer slds-modal__footer_directional">
+        <button class="slds-button slds-button_neutral" onclick={handleCancel}>Cancel</button>
+        <button class="slds-button slds-button_brand" onclick={handleSend} disabled={isDisabledSend}>Send</button>
+    </footer>
+      </div>
+
+      <!-- modal footer start-->
+      <footer class="slds-modal__footer">
+         <button class="slds-button slds-button_neutral" onclick={hideModalBox}>Cancel</button>
+      </footer>
+   
+   </div>
+</section>
+<div class="slds-backdrop slds-backdrop_open"></div>
+</template>
+</template>

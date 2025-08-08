@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Form_of_Payment__c</fullName>
+    <description>Form of payment for travel agencies bulk</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Form of payment for travel agencies bulk</inlineHelpText>
+    <label>Form of Payment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SAS Invoice(Name Credit)</fullName>
+                <default>false</default>
+                <label>SAS Invoice(Name Credit)</label>
+            </value>
+            <value>
+                <fullName>SAS Invoice(Diners)</fullName>
+                <default>false</default>
+                <label>SAS Invoice(Diners)</label>
+            </value>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

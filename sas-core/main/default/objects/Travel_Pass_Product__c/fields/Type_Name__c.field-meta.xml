@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Name__c</fullName>
+    <externalId>false</externalId>
+    <label>Type Name</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Travel Pass Corporate</fullName>
+                <default>false</default>
+                <label>Travel Pass Corporate</label>
+            </value>
+            <value>
+                <fullName>Travel Pass Multiple Punch</fullName>
+                <default>false</default>
+                <label>Travel Pass Multiple Punch</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

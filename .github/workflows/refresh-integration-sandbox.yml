@@ -1,0 +1,48 @@
+# Unique name for this workflow
+name: Deploy support/master branch to integration org
+
+# Definition when the workflow should run
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * 1-5"
+
+# Jobs to be executed
+jobs:
+  deploy-branch-to-integration-org:
+    runs-on: ubuntu-latest
+    environment: integration
+    if: ${{ github.actor != 'dependabot[bot]' }}
+    steps:
+      - name: Install latest CLI version
+        id: install-cli
+        run: npm install -g @salesforce/cli
+
+      - name: "Installing sfdx git delta"
+        run: echo y | sf plugins:install sfdx-git-delta
+
+      - name: Checkout sources
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: "support/master"
+
+      # Key is stored as a secret in the repository
+      # We need to create a file with the key in it
+      - name: Make JWT Key File
+        id: make-jwt-key-file
+        run: echo "${{secrets.CI_KEY}}" > ./SF_JWT_KEY.key
+
+      - name: Authorize to integration org
+        id: auth-prod-org
+        run: sf org login jwt --username ${{secrets.USERNAME}} --jwt-key-file ./SF_JWT_KEY.key --client-id ${{secrets.CLIENT_ID}} --alias INTOrg
+
+      - name: "Create delta packages for new, modified or deleted metadata"
+        run: |
+          mkdir changed-sources
+          sf sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta --source sas-core/
+
+      - name: "Deploy the entire branch to integration org"
+        run: |
+          sf project generate manifest --source-dir sas-core/ -d manifest/
+          sf project deploy start --manifest manifest/package.xml --post-destructive-changes changed-sources/destructiveChanges/destructiveChanges.xml --target-org INTOrg --ignore-warnings --ignore-conflicts

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Automatic_Reminder</name>
+        <label>Automatic Reminder</label>
+        <locationX>50</locationX>
+        <locationY>408</locationY>
+        <actionName>Case.Automatic_Reminder_About_Awaiting_Customer_Response_Case</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <name>Check_if_case_still_has_Awaiting_Customer_Response_status</name>
+        <label>Check if case still has Awaiting Customer Response status</label>
+        <locationX>710</locationX>
+        <locationY>288</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>After_20_Days_wait</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Awaiting Customer Response</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Case_Status</targetReference>
+            </connector>
+            <label>After 20 Days</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_if_status_is_still_in_Awaiting_Customer_Response</name>
+        <label>Check if status is still in Awaiting Customer Response</label>
+        <locationX>182</locationX>
+        <locationY>288</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>After_15_Days_wait</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Awaiting Customer Response</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Automatic_Reminder</targetReference>
+            </connector>
+            <label>After 15 Days</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>CASE Action About Awaiting Response Case {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>CASE Action About Awaiting Response Case</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Case_Status</name>
+        <label>Update Case Status</label>
+        <locationX>578</locationX>
+        <locationY>408</locationY>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>122</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Awaiting Customer Response</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Department__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Customer Claim</stringValue>
+            </value>
+        </filters>
+        <object>Case</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <name>After_15_days</name>
+            <connector>
+                <targetReference>Check_if_status_is_still_in_Awaiting_Customer_Response</targetReference>
+            </connector>
+            <label>After 15 days</label>
+            <offsetNumber>15</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <scheduledPaths>
+            <name>After_20_Days</name>
+            <connector>
+                <targetReference>Check_if_case_still_has_Awaiting_Customer_Response_status</targetReference>
+            </connector>
+            <label>After 20 Days</label>
+            <offsetNumber>20</offsetNumber>
+            <offsetUnit>Days</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

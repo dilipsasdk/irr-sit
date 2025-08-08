@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Claim_Firm_is_reviewed_for_payments</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( Active__c = true ,  TEXT(Claim_Firm__r.Status__c)  &lt;&gt; &apos;Reviewed&apos;)</errorConditionFormula>
+    <errorMessage>The Claim Firm needs to be reviewed before activating a bank account for it</errorMessage>
+</ValidationRule>

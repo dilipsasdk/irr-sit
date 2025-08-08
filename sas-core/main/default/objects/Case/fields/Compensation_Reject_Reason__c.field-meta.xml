@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compensation_Reject_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Compensation Reject Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Airport and governmental authorities</fullName>
+                <default>false</default>
+                <label>Airport and governmental authorities</label>
+            </value>
+            <value>
+                <fullName>Air traffic flow management</fullName>
+                <default>false</default>
+                <label>Air traffic flow management</label>
+            </value>
+            <value>
+                <fullName>ATC</fullName>
+                <default>false</default>
+                <label>ATC</label>
+            </value>
+            <value>
+                <fullName>Bird Strike</fullName>
+                <default>false</default>
+                <label>Bird Strike</label>
+            </value>
+            <value>
+                <fullName>Boarding &amp; De-Boarding of Disabled passenger</fullName>
+                <default>false</default>
+                <label>Boarding &amp; De-Boarding of Disabled passenger</label>
+            </value>
+            <value>
+                <fullName>Cancelation done 14 days prior</fullName>
+                <default>false</default>
+                <label>Cancelation done 14 days prior</label>
+            </value>
+            <value>
+                <fullName>Claim outside Time Limit</fullName>
+                <default>false</default>
+                <label>Claim outside Time Limit</label>
+            </value>
+            <value>
+                <fullName>Delay less than 2 hrs. for canceled flight</fullName>
+                <default>false</default>
+                <label>Delay less than 2 hrs. for canceled flight</label>
+            </value>
+            <value>
+                <fullName>Delay less than 3 hrs. for delayed flight</fullName>
+                <default>false</default>
+                <label>Delay less than 3 hrs. for delayed flight</label>
+            </value>
+            <value>
+                <fullName>Duplicate case</fullName>
+                <default>false</default>
+                <label>Duplicate case</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Industrial Strike</fullName>
+                <default>false</default>
+                <label>Industrial Strike</label>
+            </value>
+            <value>
+                <fullName>Lighting Strike</fullName>
+                <default>false</default>
+                <label>Lighting Strike</label>
+            </value>
+            <value>
+                <fullName>Non Operation carrier</fullName>
+                <default>false</default>
+                <label>Non Operation carrier</label>
+            </value>
+            <value>
+                <fullName>Weather</fullName>
+                <default>false</default>
+                <label>Weather</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

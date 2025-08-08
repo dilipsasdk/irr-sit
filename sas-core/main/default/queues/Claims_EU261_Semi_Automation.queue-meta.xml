@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Claims - EU261 Semi-Automation</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>Claims_EU261_Semi_Automation</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueRoutingConfig>Flight_Disruption</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

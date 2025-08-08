@@ -1,0 +1,52 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <p class="slds-p-around_small">
+                <lightning-formatted-text value="Last refreshed: "></lightning-formatted-text>
+                <lightning-formatted-date-time value={lastRefreshed} year="2-digit" month="short" day="2-digit" hour="numeric"
+                minute="2-digit" second="2-digit"></lightning-formatted-date-time>
+            </p>
+        </h3>
+        <lightning-button icon-name="utility:refresh" label="Refresh" variant="Neutral" onclick={handleRefresh} slot="actions"></lightning-button>
+        <div>
+            <div class="slds-p-around_small">
+                <template lwc:if={totalCallOverview}>
+                    <p>
+                        <lightning-formatted-text value="Calls Waiting: " ></lightning-formatted-text>
+                        <lightning-formatted-number value={totalCallOverview.callsWaiting}></lightning-formatted-number>
+                    </p>
+                    <p>
+                        <lightning-formatted-text value="Average Call Waiting Time: " ></lightning-formatted-text>
+                        <lightning-formatted-text value={totalCallOverview.averageWaitingTime}></lightning-formatted-text>
+                    </p>
+                </template>
+            </div>
+            <div class="slds-p-around_small">
+                <template if:true={agentPresencesOverview}>
+                    <lightning-datatable
+                        data={agentPresencesOverview}
+                        columns={presence_columns}
+                        key-field="presence"
+                        hide-checkbox-column
+                    ></lightning-datatable>
+                </template>
+            </div>
+        </div>
+        <div>
+            <div class="slds-p-around_small">
+                <template if:true={agentCallOverview}>
+                    <lightning-datatable
+                        data={agentCallOverview}
+                        columns={calls_columns}
+                        key-field="queuename"
+                        hide-checkbox-column
+                    ></lightning-datatable>
+                </template>
+            </div>
+        </div>
+
+        <div if:true={showSpinner}>
+            <lightning-spinner alternative-text="Loading..." size="medium" variant="brand"></lightning-spinner>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Draft</fullName>
+                <default>true</default>
+                <label>Draft</label>
+            </value>
+            <value>
+                <fullName>Pending L1 confirmation</fullName>
+                <default>false</default>
+                <label>Pending L1 confirmation</label>
+            </value>
+            <value>
+                <fullName>Waiting for transfer</fullName>
+                <default>false</default>
+                <label>Waiting for transfer</label>
+            </value>
+            <value>
+                <fullName>Sent to Racer</fullName>
+                <default>false</default>
+                <label>Sent to Racer</label>
+            </value>
+            <value>
+                <fullName>Rejected by Racer</fullName>
+                <default>false</default>
+                <label>Rejected by Racer</label>
+            </value>
+            <value>
+                <fullName>Done</fullName>
+                <default>false</default>
+                <label>Done</label>
+            </value>
+            <value>
+                <fullName>Settlement failed</fullName>
+                <default>false</default>
+                <label>Settlement failed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

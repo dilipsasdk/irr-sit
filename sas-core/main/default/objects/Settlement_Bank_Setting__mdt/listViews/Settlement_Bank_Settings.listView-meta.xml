@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Settlement_Bank_Settings</fullName>
+    <columns>MasterLabel</columns>
+    <columns>accountHolderName__c</columns>
+    <columns>Bank__c</columns>
+    <columns>bankAccountNumber__c</columns>
+    <columns>addressLine1__c</columns>
+    <columns>city__c</columns>
+    <columns>country__c</columns>
+    <columns>bankEDIIDNumber__c</columns>
+    <columns>postalCode__c</columns>
+    <columns>bankSiteCode__c</columns>
+    <columns>ref1Batch__c</columns>
+    <columns>tradingPartnerCode__c</columns>
+    <columns>translatorCode__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Settlement Bank Settings</label>
+    <language>en_US</language>
+</ListView>

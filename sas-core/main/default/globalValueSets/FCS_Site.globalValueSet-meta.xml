@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>EVG</fullName>
+        <default>false</default>
+        <label>EVG</label>
+    </customValue>
+    <customValue>
+        <fullName>ODE</fullName>
+        <default>false</default>
+        <label>ODE</label>
+    </customValue>
+    <customValue>
+        <fullName>OER</fullName>
+        <default>false</default>
+        <label>OER</label>
+    </customValue>
+    <customValue>
+        <fullName>LCA</fullName>
+        <default>false</default>
+        <label>LCA</label>
+    </customValue>
+    <customValue>
+        <fullName>STO</fullName>
+        <default>false</default>
+        <label>STO</label>
+    </customValue>
+    <customValue>
+        <fullName>BOM</fullName>
+        <default>false</default>
+        <label>BOM</label>
+    </customValue>
+    <description>The site of the user or record owner</description>
+    <masterLabel>FCS Site</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

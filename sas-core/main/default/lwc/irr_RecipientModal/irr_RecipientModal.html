@@ -1,0 +1,86 @@
+<!--
+ - @author Niklas Lundkvist, Deloitte
+ - @date 2020
+ -->
+
+<!-- IRR Recipient Modal -->
+<template>
+    <section role="dialog" tabindex="-1" aria-labelledby="confirm-heading-01" aria-modal="true" aria-describedby="confirm-content-id-1" class={modalClass}>
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button
+                        onclick={handleCancel}
+                        class="slds-button slds-button_icon slds-modal__close"
+                        title="Close">
+                    <lightning-icon icon-name="utility:close" alternative-text="Close" title="Close" variant="inverse">
+                    </lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="confirm-heading-01" class="slds-modal__title slds-hyphenate">Additional Recipients</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="confirm-content-id-1">
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item padding="around-small" size="12">
+                        <p style="text-align: center;">
+                            This message will be sent to these additional recipients. Click the plus button to start adding recipients.
+                        </p>
+                    </lightning-layout-item>
+                    <template for:each={recipients} for:item="recipient" for:index="rIdx">
+                        <lightning-layout-item padding="around-small" size="6" key={recipient.id}>
+                            <lightning-input
+                                    data-input-group="additionalRecipient"
+                                    data-recipient-index={rIdx}
+                                    value={recipient.emailAddress}
+                                    onchange={handleChange}
+                                    type="email"
+                                    label="Email Address"
+                                    name="emailAddress">
+                            </lightning-input>
+                        </lightning-layout-item>
+                        <lightning-layout-item padding="around-small" size="5" key={recipient.id}>
+                            <lightning-input
+                                    data-input-group="additionalRecipient"
+                                    data-recipient-index={rIdx}
+                                    value={recipient.phoneNumber}
+                                    onchange={handleChange}
+                                    type="text"
+                                    pattern="([1-9]|\+){1}([0-9]{5,})"
+                                    message-when-pattern-mismatch="Please enter number with country prefix"
+                                    label="Phone Number"
+                                    name="phoneNumber">
+                            </lightning-input>
+                        </lightning-layout-item>
+                        <lightning-layout-item padding="around-small" size="1" key={recipient.id} class="pull-down">
+                            <button
+                                    data-recipient-index={rIdx}
+                                    onclick={handleRemove}
+                                    class="slds-button slds-button_icon"
+                                    title="Remove">
+                                <lightning-icon icon-name="utility:close" alternative-text="Remove" title="Remove">
+                                </lightning-icon>
+                                <span class="slds-assistive-text">Remove</span>
+                            </button>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout>
+                <lightning-layout>
+                    <lightning-layout-item padding="around-small" size="1" class="pull-right">
+                        <button
+                                onclick={handleAdd}
+                                class="slds-button slds-button_icon"
+                                title="Add">
+                            <lightning-icon icon-name="utility:add" alternative-text="Add" title="Add">
+                            </lightning-icon>
+                            <span class="slds-assistive-text">Add</span>
+                        </button>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+            <footer class="slds-modal__footer slds-modal__footer_directional">
+                <button class="slds-button slds-button_neutral" onclick={handleCancel}>Cancel</button>
+                <button class="slds-button slds-button_brand" onclick={handleSave}>Save</button>
+            </footer>
+        </div>
+    </section>
+    <div class={backdropClass}></div>
+</template>

@@ -1,0 +1,142 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  - master
+
+pool:
+  vmImage: "ubuntu-latest"
+
+variables:
+  CLIURL: https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+  SFDX_AUTOUPDATE_DISABLE: false
+  SFDX_USE_GENERIC_UNIX_KEYCHAIN: true
+  SFDX_DOMAIN_RETRY: 300
+  SFDX_DISABLE_APP_HUB: true
+  SFDX_LOG_LEVEL: DEBUG
+steps:
+  - task: DownloadSecureFile@1
+    name: ci_cert
+    displayName: "Download Certificate"
+    inputs:
+      secureFile: "ci_cert_new.key"
+
+  - script: |
+      #mkdir $(Agent.BuildDirectory)/sfdx
+      #wget -qO- $CLIURL | tar xJ -C $(Agent.BuildDirectory)/sfdx --strip-components 1
+      #sudo $(Agent.BuildDirectory)/sfdx/install
+      #export PATH=$(Agent.BuildDirectory)/sfdx/:$PATH
+      #sudo npm install sfdx-cli --global
+      sudo npm install sfdx-cli@7.209.6 --global
+      sfdx --version
+      sfdx plugins --core
+    displayName: "Install SFDX"
+
+  - script: |
+      sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile $(ci_cert.secureFilePath) --username $HUB_USER_NAME --setdefaultdevhubusername --setalias HubOrg
+      sfdx force:org:create --targetdevhubusername HubOrg --setdefaultusername --definitionfile config/project-scratch-def.json --setalias ciorg --wait 10 --durationdays 1
+      sfdx force:org:display --targetusername ciorg
+      sfdx force:user:permset:assign --permsetname ContactCenterAdminExternalTelephony --targetusername ciorg
+    displayName: "Setup Org"
+
+  - script: |
+      if [ -e ./$(PACKAGE_FOLDER)/EmailTemplate.json ]; then
+        sfdx force:data:tree:import -f ./$(PACKAGE_FOLDER)/EmailTemplate.json
+      fi
+    displayName: "Import email templates"
+
+  - script: |
+      if [ -d ./$(PACKAGE_FOLDER)/main/default/sharingRules ]; then
+        mv ./$(PACKAGE_FOLDER)/main/default/sharingRules ./$(PACKAGE_FOLDER)/sharingRules
+      fi
+    displayName: "Remove sharing rules"
+
+  - script: |
+      sleep 4m
+    displayName: "Sleep for 4 minutes to allow sharing rule changes to complete"
+
+  - script: |
+      sfdx force:source:push --targetusername ciorg --forceoverwrite
+    displayName: "Push Source"
+
+  - script: |
+      numCls="`find ./ -name '*.cls' -not -path './sfdx/*' | wc -l`"
+      if [ $numCls -gt 0 ]; then 
+        sfdx force:apex:test:run --targetusername ciorg --wait 10 --resultformat junit --outputdir $(Common.TestResultsDirectory) --testlevel RunLocalTests
+      else 
+        echo "Test skipped due to no classes"
+      fi
+      testResFiles="`ls test-results`"
+      echo $testResFiles
+    displayName: "Run Tests"
+
+  - script: |
+      sfdx force:org:delete --targetusername ciorg --noprompt
+    displayName: "Delete Org"
+    condition: always()
+
+  - task: PythonScript@0
+    inputs:
+      scriptSource: "inline"
+      script: |
+        import os
+        from xml.etree.ElementTree import ElementTree
+        import re
+
+        reTest = re.compile("test-.*-junit\\.xml")
+
+        for file in os.listdir("/$(Common.TestResultsDirectory)"):
+          if reTest.match(file)!=None:
+            print(file)
+            tree = ElementTree()
+            tree.parse("/$(Common.TestResultsDirectory)/"+file)
+            for elem in tree.findall("./testsuite/testcase"):
+              elem.set('name',elem.get("classname")+"/"+elem.get("name"))
+            tree.write("/$(Common.TestResultsDirectory)/"+file)
+    displayName: "Transform Test Results"
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: "JUnit"
+      testResultsFiles: "$(Common.TestResultsDirectory)/test-*-junit.xml"
+      failTaskOnFailedTests: true
+
+  - script: |
+      if [ -d ./$(PACKAGE_FOLDER)/sharingRules ]; then
+        mv ./$(PACKAGE_FOLDER)/sharingRules ./$(PACKAGE_FOLDER)/main/default/sharingRules
+      fi
+    displayName: "Return sharing rules"
+
+  - script: |
+      sed -i.bak 's/0N97T000000k9bhSAA/$(SF_PHONE_CHANNEL_ID)/g' sas-core/main/default/flows/VOICECALL_Routing.flow-meta.xml && rm sas-core/main/default/flows/VOICECALL_Routing.flow-meta.xml.bak
+    displayName: "Replace Service Channel Id for Omni-Channel Flows" 
+    
+  - script: |
+      sfdx force:source:convert --rootdir ./$(PACKAGE_FOLDER) --outputdir ./package-md
+    displayName: "Convert to metadata package"
+
+  - script: |
+      if [ -e ./$(PACKAGE_FOLDER)/destructiveChangesPre.xml ]; then
+        cp ./$(PACKAGE_FOLDER)/destructiveChangesPre.xml ./package-md/destructiveChangesPre.xml
+      fi
+      if [ -e ./$(PACKAGE_FOLDER)/destructiveChangesPost.xml ]; then
+        cp ./$(PACKAGE_FOLDER)/destructiveChangesPost.xml ./package-md/destructiveChangesPost.xml
+      fi
+    displayName: "Evaluate destructive changes"
+
+  - task: ArchiveFiles@2
+    inputs:
+      rootFolderOrFile: "./package-md"
+      includeRootFolder: true
+      archiveType: "zip"
+      archiveFile: "$(Build.ArtifactStagingDirectory)/package-md.zip"
+      replaceExistingArchive: true
+    displayName: "Create metadata package artifact"
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      PathtoPublish: "$(Build.ArtifactStagingDirectory)"
+      ArtifactName: "Package"
+      publishLocation: "Container"

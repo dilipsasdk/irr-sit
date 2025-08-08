@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Net_Amount_After_Deductible__c</fullName>
+    <description>The amount which SAS can claim from our insurance companyin the same currency as the settlement item. Set only for claim types against which SAS is insured.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The amount which SAS can claim from our insurance companyin the same currency as the settlement item. Set only for claim types against which SAS is insured.</inlineHelpText>
+    <label>Net Amount After Deductible</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

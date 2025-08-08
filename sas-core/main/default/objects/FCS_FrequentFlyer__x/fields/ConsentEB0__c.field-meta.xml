@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ConsentEB0__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates that customer has not given consent to EuroBonus, but to having a SAS portal account</description>
+    <externalDeveloperName>ConsentEB0</externalDeveloperName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that customer has not given consent to EuroBonus, but to having a SAS portal account</inlineHelpText>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>true</isSortingDisabled>
+    <label>Consent EuroBonus0</label>
+    <type>Checkbox</type>
+</CustomField>

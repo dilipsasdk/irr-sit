@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SignatureKey__c</fullName>
+    <description>The key used to verify the requests to the callback.</description>
+    <externalId>false</externalId>
+    <label>Signature Key</label>
+    <length>175</length>
+    <maskChar>asterisk</maskChar>
+    <maskType>all</maskType>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>EncryptedText</type>
+</CustomField>

@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="GDPR Extract" icon-name="action:download">
+        <div class="slds-grid slds-gutters_medium slds-align_absolute-center">
+            <div class="slds-col">
+                    <p>Download an extract of this account's Personal Data.</p>
+            </div>
+            <div class="slds-col">
+                <div class="slds-float_right">
+                    <lightning-button variant="brand" label="Download" title="Download button" onclick={downloadExtract}> </lightning-button>
+                </div>
+            </div>
+        </div>
+        <!--Spinner graphics dynamically rendered, controlled by JS-->
+        <div if:true={showSpinner}>
+            <lightning-spinner alternative-text="Loading" size="medium" variant="brand"></lightning-spinner>
+        </div>
+        <!--Custom child component to render errors in search-->
+        <template if:true={error}>
+            <c-c_-error-panel errors={error}></c-c_-error-panel>
+        </template>
+    </lightning-card>
+</template>

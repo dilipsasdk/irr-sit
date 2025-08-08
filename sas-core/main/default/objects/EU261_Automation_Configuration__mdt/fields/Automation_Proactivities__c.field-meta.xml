@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Automation_Proactivities__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Wether or not do enable/disable proactivities which aid the automation</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Automation Proactivities</label>
+    <type>Checkbox</type>
+</CustomField>

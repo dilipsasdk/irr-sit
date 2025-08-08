@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Maximum_Time_To_Claim_Compensation__c</fullName>
+    <description>Holds the maxiumum amount of time a customer can wait before they file a claim to get compensated for e.g. a delayed/cancelled flight.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Holds the maxiumum amount of time a customer can wait before they file a claim to get compensated for e.g. a delayed/cancelled flight.</inlineHelpText>
+    <label>Maximum Time To Claim Compensation</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

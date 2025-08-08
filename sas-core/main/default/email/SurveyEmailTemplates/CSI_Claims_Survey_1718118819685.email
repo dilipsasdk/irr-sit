@@ -1,0 +1,36 @@
+<html>
+<head>
+</head>
+<body style="height: auto; min-height: auto;">&nbsp;&nbsp; &nbsp;<title></title>
+<div><br />
+<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;">Dear Customer</span><br />
+<br />
+We would like to hear your feedback about your recent case {{{Case.CaseNumber}}} with SAS Customer Service.</span><br />
+<br />
+Please share your opinion by answering the questions in the link below:<br />
+<br />
+&nbsp;</div>
+
+<div><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-size:16px;"><a href="{{{Case.FCS_SurveyInvitationLink__c}}}" style="vertical-align:middle; border:1px solid transparent; transition:border .15s linear; background-color:#000099; border-color:#000099; color:#ffffff; display:inline-block; background-clip:border-box; border-radius:.25rem; line-height:1.875rem; text-decoration:none; -webkit-appearance:none; white-space:normal; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; padding:0 1rem" target="_blank">Open Survey</a></span></span></div>
+
+<div><br />
+<br />
+<span style="font-size:16px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="color:#172b4d"><span style="background:white">Thank you for your cooperation.</span></span></span><br />
+<br />
+<br />
+<span style="color:#172b4d">&nbsp;</span><br />
+<span style="color:#172b4d"><span style="background:white">Best regards</span></span></span><br />
+<span style="color:#172b4d">&nbsp;</span><br />
+<span style="color:#172b4d"><span style="background:white">SAS Customer Service</span></span><br />
+<br />
+<br />
+<span style="font-size:14px;"><span style="font-family:Arial,Helvetica,sans-serif;"><span style="font-style:italic">Obs! Denna enkät går även att besvara på svenska – följ länken och välj önskat språk!</span><br />
+<span style="font-style:italic">Obs! Denne kundeundersøgelse kan også besvares på dansk - klik på linket og vælg dit foretrukne sprog!</span><br />
+<span style="font-style:italic">Obs! Denne kundeundersøkelsen kan også besvares på norsk – klikk på linken og velg ditt foretrukne språk!</span></span></span><br />
+&nbsp;
+<p>&nbsp;</p>
+<br />
+<br />
+<br />
+<span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;"><i><span lang="EN-US"><span style="line-height:115%">This email has been sent by Scandinavian Airlines System Denmark-Norway-Sweden SE-195 87 Stockholm-Arlanda, Sweden. SAS respects your privacy. Please read our </span></span></i><a href="http://www.flysas.com/en/legal-info/manage-personal-data/"><i><span lang="EN-US"><span style="line-height:115%">privacy policy </span></span></i></a> <i><span lang="EN-US"><span style="line-height:115%">for more details</span></span></i></span></span></div></body>
+</html>

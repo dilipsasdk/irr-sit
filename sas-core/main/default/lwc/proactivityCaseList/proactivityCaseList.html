@@ -1,0 +1,25 @@
+<template>
+  <lightning-card title={cardTitle}>
+    <div if:true={showSpinner}>
+      <lightning-spinner
+        alternative-text="Loading"
+        size="medium"
+        variant="brand"
+      ></lightning-spinner>
+    </div>
+    <div if:false={casesFound} class="slds-p-horizontal_medium">
+      <p>No cases found matching this proactivity.</p>
+    </div>
+    <div if:true={tooManyMatches} class="slds-p-horizontal_medium">
+      <p>Too many matches to display.</p>
+    </div>
+    <div if:true={showTable} class="table slds-scrollable_y">
+      <lightning-datatable
+        hide-checkbox-column
+        key-field="Id"
+        data={rows}
+        columns={columns}
+      ></lightning-datatable>
+    </div>
+  </lightning-card>
+</template>

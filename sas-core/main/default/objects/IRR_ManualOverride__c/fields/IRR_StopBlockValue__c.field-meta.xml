@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IRR_StopBlockValue__c</fullName>
+    <description>Used in SOQL query criteria</description>
+    <externalId>false</externalId>
+    <formula>YEAR(IRR_StopBlockDate__c) * 100000000 + MONTH(IRR_StopBlockDate__c) * 1000000 + DAY(IRR_StopBlockDate__c) * 10000 + HOUR(IRR_StopBlockTime__c) * 100 + MINUTE(IRR_StopBlockTime__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Stop Block Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

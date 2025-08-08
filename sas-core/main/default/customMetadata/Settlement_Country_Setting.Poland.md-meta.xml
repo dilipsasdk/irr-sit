@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Poland</label>
+    <protected>false</protected>
+    <values>
+        <field>Available_Currencies__c</field>
+        <value xsi:type="xsd:string">PLN</value>
+    </values>
+    <values>
+        <field>Country_Name__c</field>
+        <value xsi:type="xsd:string">Poland</value>
+    </values>
+    <values>
+        <field>Country_Short_Code__c</field>
+        <value xsi:type="xsd:string">PL</value>
+    </values>
+    <values>
+        <field>Default_Currency__c</field>
+        <value xsi:type="xsd:string">PLN</value>
+    </values>
+    <values>
+        <field>Payment_Type__c</field>
+        <value xsi:type="xsd:string">SEB PLN PAYMENTS TO PL</value>
+    </values>
+    <values>
+        <field>Uses_IBAN__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+</CustomMetadata>

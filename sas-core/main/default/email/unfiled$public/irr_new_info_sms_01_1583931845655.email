@@ -1,0 +1,20 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Important information about your SAS booking {{{passengerInfo.bookingReference}}} 
+  <br /> 
+  <br /> Hi, 
+  <br /> 
+  <br /> Your Flight {{{newInfo.flightRef}}} {{{newInfo.departureCity}}} ({{{newInfo.stationDeparture}}}) - {{{newInfo.arrivalCity}}} ({{{newInfo.stationArrival}}}) [[[formatDatetimeUTC(newInfo.scheduledTimeOfDepartureLocal, 'd MMM')]]], with departure time [[[formatDatetimeUTC(newInfo.scheduledTimeOfDepartureLocal, 'HH:mm')]]] will be delayed, new departure time is unknown. 
+  <br /> 
+  <br /> New information will be given at [[[formatDatetimeUTC(newInfo.newInfoTimeLocal, 'HH:mm')]]] [[[formatDatetimeUTC(newInfo.newInfoTimeLocal, 'd MMM')]]]. 
+  <br /> 
+  <br /> Please check in according to original departure time. 
+  <br /> 
+  <br /> Read more about your rights here https://www.flysas.com/en/legal-info/eu-passenger-rights 
+  <br /> 
+  <br /> Regards, SAS
+ </body>
+</html>

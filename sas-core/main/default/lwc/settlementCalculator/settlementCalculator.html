@@ -1,0 +1,352 @@
+<template>
+  <lightning-card title="Settlement Items">
+    <div slot="actions" class="slds-grid slds-gutters">
+      <div
+        class="
+          slds-col slds-align-middle
+          slds-text-body_small
+          slds-text-color_weak
+        "
+      >
+        <span if:true={error} class="slds-text-color_error">{error}</span>
+        <template if:false={error}>
+          <template if:true={cannotBeUpdated}>
+            <span>Locked</span>
+          </template>
+          <template if:false={cannotBeUpdated}>
+            <span if:true={dirty}>Unsaved changes</span>
+            <span if:false={dirty}>Saved</span>
+          </template>
+        </template>
+      </div>
+      <lightning-button
+        variant="brand"
+        label="Save"
+        title="Saves the settlement"
+        disabled={cannotBeUpdated}
+        onclick={handleSave}
+        class="slds-col slds-align-bottom"
+      >
+      </lightning-button>
+    </div>
+    <div if:true={showSpinner}>
+      <lightning-spinner
+        alternative-text="Loading"
+        size="medium"
+        variant="brand"
+      ></lightning-spinner>
+    </div>
+    <div class="slds-p-horizontal_medium">
+      <div class="slds-grid slds-grid_vertical slds-gutters">
+        <template if:false={type.isEuroBonusPoints}>
+          <div class="slds-grid slds-grid_align-spread">
+            <div class="slds-col">
+              <lightning-formatted-rich-text
+                value={totals.currencyText}
+              ></lightning-formatted-rich-text>
+            </div>
+            <template if:true={isBaggageClaim}>
+              <div class="slds-col">
+                <lightning-formatted-rich-text
+                  value={maxLiabilityDescription}
+                ></lightning-formatted-rich-text>
+              </div>
+            </template>
+          </div>
+        </template>
+        <template if:true={warnMaxLiability}>
+          <div class="slds-grid slds-grid_align-end">
+            <div class="slds-col">
+              <lightning-formatted-text
+                value={maxLiabilityWarning}
+                class="max-liability-text"
+              >
+              </lightning-formatted-text>
+            </div>
+          </div>
+        </template>
+        <!--Use template if:true to display/hide popup based on isModalOpen value-->
+        <template if:true={isModalOpen}>
+          <!-- Modal/Popup Box LWC starts here -->
+          <section
+            role="dialog"
+            tabindex="-1"
+            aria-labelledby="modal-heading-01"
+            aria-modal="true"
+            aria-describedby="modal-content-id-1"
+            class="slds-modal slds-fade-in-open"
+          >
+            <div class="slds-modal__container">
+              <!-- Modal/Popup Box LWC header here -->
+              <header class="slds-modal__header">
+                <button
+                  class="
+                    slds-button slds-button_icon
+                    slds-modal__close
+                    slds-button_icon-inverse
+                  "
+                  title="Close"
+                  onclick={closeModal}
+                >
+                  <lightning-icon
+                    icon-name="utility:close"
+                    alternative-text="close"
+                    variant="inverse"
+                    size="small"
+                  ></lightning-icon>
+                  <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2
+                  id="modal-heading-01"
+                  class="slds-text-heading_medium slds-hyphenate"
+                >
+                  Warning
+                </h2>
+              </header>
+              <!-- Modal/Popup Box LWC body starts here -->
+              <div
+                class="slds-modal__content slds-p-around_medium"
+                id="modal-content-id-1"
+              >
+                <p>
+                  <b
+                    >Are you aware that you're paying out a high amount? Please
+                    review if '{totals.points} {totals.currency}' is the amount
+                    you want to pay out.
+                  </b>
+                </p>
+                <p>
+                  <b
+                    >If the amount is correct, please proceed. If it is not,
+                    please update the amount.
+                  </b>
+                </p>
+              </div>
+              <!-- Modal/Popup Box LWC footer starts here -->
+              <footer class="slds-modal__footer">
+                <button
+                  class="slds-button slds-button_brand"
+                  onclick={closeModal}
+                  title="OK"
+                >
+                  OK
+                </button>
+              </footer>
+            </div>
+          </section>
+          <div class="slds-backdrop slds-backdrop_open"></div>
+        </template>
+        <template if:true={type.isEuroBonusPoints}>
+          <div class="slds-col">
+            Total settlement: <b>{totals.points}</b> points
+          </div>
+        </template>
+        <div
+          for:each={rows}
+          for:item="row"
+          for:index="index"
+          key={row.idx}
+          class="slds-col slds-grid slds-gutters"
+        >
+          <template if:true={type.isEuroBonusPoints}>
+            <div class="slds-col slds-size_3-of-12">
+              <lightning-combobox
+                name="customer"
+                label="Customer"
+                value={row.customer}
+                disabled={cannotBeUpdated}
+                required
+                placeholder="Select Customer"
+                options={customerOptions}
+                onchange={handleCustomerChange}
+                data-idx={row.idx}
+              >
+              </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_3-of-12">
+              <lightning-combobox
+                name="cost-account"
+                label="Cost Account"
+                value={row.costAccount}
+                disabled={cannotBeUpdated}
+                required
+                placeholder="Select Cost Account"
+                options={costAccountOptions}
+                onchange={handleCostAccountChange}
+                data-idx={row.idx}
+                if:false={isVoucher}
+              >
+              </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+              <lightning-input
+                data-idx={row.idx}
+                required
+                value={row.amount}
+                disabled={cannotBeUpdated}
+                type="number"
+                step="1"
+                label={amountLabel}
+                onchange={handleAmountChange}
+              >
+              </lightning-input>
+            </div>
+            <div class="slds-col slds-size_3-of-12">
+              <lightning-input
+                label="Comments"
+                data-idx={row.idx}
+                disabled={cannotBeUpdated}
+                value={row.comments}
+                onchange={handleCommentsChange}
+              >
+              </lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align-bottom">
+              <lightning-button
+                variant="destructive"
+                label="X"
+                title="Removes the row"
+                disabled={cannotBeUpdated}
+                data-idx={row.idx}
+                onclick={handleRemoveRow}
+              >
+              </lightning-button>
+            </div>
+          </template>
+
+          <template if:true={type.isMonetary}>
+            <div class="slds-col slds-size_3-of-12">
+              <lightning-combobox
+                name="customer"
+                label="Customer"
+                value={row.customer}
+                disabled={cannotBeUpdated}
+                required
+                placeholder="Select Customer"
+                options={customerOptions}
+                onchange={handleCustomerChange}
+                data-idx={row.idx}
+              >
+              </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_3-of-12">
+              <lightning-combobox
+                name="cost-account"
+                label="Cost Account"
+                value={row.costAccount}
+                disabled={cannotBeUpdated}
+                required
+                placeholder="Select Cost Account"
+                options={costAccountOptions}
+                onchange={handleCostAccountChange}
+                data-idx={row.idx}
+                if:false={isVoucher}
+              >
+              </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+              <lightning-input
+                data-idx={row.idx}
+                required
+                value={row.amount}
+                disabled={cannotBeUpdated}
+                type="number"
+                step=".01"
+                label={amountLabel}
+                onchange={handleAmountChange}
+              >
+              </lightning-input>
+            </div>
+            <div class="slds-col slds-size_3-of-12">
+              <lightning-input
+                label="Comments"
+                data-idx={row.idx}
+                disabled={cannotBeUpdated}
+                value={row.comments}
+                onchange={handleCommentsChange}
+              >
+              </lightning-input>
+            </div>
+            <div class="slds-grid">
+              <div class="slds-col slds-size_1-of-2 slds-align-bottom">
+                <lightning-button
+                  variant="destructive"
+                  label="X"
+                  title="Removes the row"
+                  disabled={cannotBeUpdated}
+                  data-idx={row.idx}
+                  onclick={handleRemoveRow}
+                >
+                </lightning-button>
+              </div>
+            </div>
+          </template>
+
+          <template if:true={type.isVoucher}>
+            <div class="slds-col slds-size_4-of-12">
+              <lightning-combobox
+                name="customer"
+                label="Customer"
+                value={row.customer}
+                disabled={cannotBeUpdated}
+                required
+                placeholder="Select Customer"
+                options={customerOptions}
+                onchange={handleCustomerChange}
+                data-idx={row.idx}
+              >
+              </lightning-combobox>
+            </div>
+            <div class="slds-col slds-size_2-of-12">
+              <lightning-input
+                data-idx={row.idx}
+                required
+                value={row.amount}
+                disabled={cannotBeUpdated}
+                type="number"
+                step="1"
+                label={amountLabel}
+                onchange={handleAmountChange}
+              >
+              </lightning-input>
+            </div>
+            <div class="slds-col slds-size_5-of-12">
+              <lightning-input
+                label="Comments"
+                data-idx={row.idx}
+                disabled={cannotBeUpdated}
+                value={row.comments}
+                onchange={handleCommentsChange}
+              >
+              </lightning-input>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align-bottom">
+              <lightning-button
+                variant="destructive"
+                label="X"
+                title="Removes the row"
+                disabled={cannotBeUpdated}
+                data-idx={row.idx}
+                onclick={handleRemoveRow}
+              >
+              </lightning-button>
+            </div>
+          </template>
+        </div>
+        <div
+          class="slds-col slds-p-top_small"
+          if:false={type.isEuroBonusPoints}
+        >
+          <lightning-button
+            variant="neutral"
+            label="Add another row"
+            title="Adds a new item"
+            disabled={cannotBeUpdated}
+            onclick={handleAddRow}
+          >
+          </lightning-button>
+        </div>
+      </div>
+    </div>
+  </lightning-card>
+</template>

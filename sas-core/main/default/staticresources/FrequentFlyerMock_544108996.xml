@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <s:Body>
+        <CustomerGetResponse xmlns="http://www.flysas.com/wcf/CSharkCustomerManagementTicketless/v1">
+            <CustomerGetResult xmlns:a="http://www.flysas.com/wcf/CSharkCustomerManagement/v1" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+                <a:BirthDate>1988-12-12T00:00:00</a:BirthDate>
+                <a:CitizenOf i:nil="true"/>
+                <a:Closed>false</a:Closed>
+                <a:CustomerValue i:nil="true"/>
+                <a:EngagementList>
+                    <a:Engagement i:type="a:EuroBonusEngagement">
+                        <a:Profile i:nil="true"/>
+                        <a:Account i:nil="true"/>
+                        <a:CID i:nil="true"/>
+                        <a:CMP i:nil="true"/>
+                        <a:CommunicationLanguage i:nil="true"/>
+                        <a:CorporateBuyerAccess>false</a:CorporateBuyerAccess>
+                        <a:EarnEbPoints>true</a:EarnEbPoints>
+                        <a:EnrollmentDate>2018-10-29T00:00:00</a:EnrollmentDate>
+                        <a:EuroBonusNumber>544108996</a:EuroBonusNumber>
+                        <a:IncentiveLevel>G</a:IncentiveLevel>
+                        <a:LastModified>2018-11-08T12:28:15.7848015</a:LastModified>
+                        <a:MemberStatus>EB</a:MemberStatus>
+                        <a:NameOnCard i:nil="true"/>
+                        <a:PointsInformation i:nil="true"/>
+                    </a:Engagement>
+                    <a:Engagement i:type="a:SiteMemberEngagement">
+                        <a:Profile i:nil="true"/>
+                        <a:CID i:nil="true"/>
+                        <a:CMP i:nil="true"/>
+                        <a:CommunicationLanguage i:nil="true"/>
+                        <a:FrequentFlyerPrograms i:nil="true"/>
+                        <a:LastModified>2018-10-29T09:19:20.7123966</a:LastModified>
+                        <a:Password i:nil="true"/>
+                        <a:PurchaseNeedPassword>false</a:PurchaseNeedPassword>
+                        <a:UserName>cvvdfffree@der.dd</a:UserName>
+                    </a:Engagement>
+                    <a:Engagement i:type="a:SubscriptionEngagement">
+                        <a:Profile i:nil="true"/>
+                        <a:LastModified>2018-10-29T09:19:21.9936698</a:LastModified>
+                        <a:SubscriptionID>544108996</a:SubscriptionID>
+                        <a:Subscriptions>
+                            <a:SubscriptionItem>
+                                <a:Active>false</a:Active>
+                                <a:CommunicationLanguage i:nil="true"/>
+                                <a:CountryCode i:nil="true"/>
+                                <a:Market i:nil="true"/>
+                                <a:NotificationAddress>+4676565432</a:NotificationAddress>
+                                <a:NotificationType>SMS</a:NotificationType>
+                                <a:SourceMarket i:nil="true"/>
+                                <a:SubscriptionItemKey>0</a:SubscriptionItemKey>
+                                <a:SubscriptionItemSource i:nil="true"/>
+                                <a:SubscriptionType>FlightInfo</a:SubscriptionType>
+                            </a:SubscriptionItem>
+                            <a:SubscriptionItem>
+                                <a:Active>false</a:Active>
+                                <a:CommunicationLanguage i:nil="true"/>
+                                <a:CountryCode i:nil="true"/>
+                                <a:Market i:nil="true"/>
+                                <a:NotificationAddress>+4676565432</a:NotificationAddress>
+                                <a:NotificationType>SMS</a:NotificationType>
+                                <a:SourceMarket i:nil="true"/>
+                                <a:SubscriptionItemKey>1</a:SubscriptionItemKey>
+                                <a:SubscriptionItemSource i:nil="true"/>
+                                <a:SubscriptionType>CheckIn</a:SubscriptionType>
+                            </a:SubscriptionItem>
+                            <a:SubscriptionItem>
+                                <a:Active>false</a:Active>
+                                <a:CommunicationLanguage i:nil="true"/>
+                                <a:CountryCode i:nil="true"/>
+                                <a:Market i:nil="true"/>
+                                <a:NotificationAddress>cvvdfffree@der.dd</a:NotificationAddress>
+                                <a:NotificationType>EMail</a:NotificationType>
+                                <a:SourceMarket i:nil="true"/>
+                                <a:SubscriptionItemKey>2</a:SubscriptionItemKey>
+                                <a:SubscriptionItemSource i:nil="true"/>
+                                <a:SubscriptionType>CheckIn</a:SubscriptionType>
+                            </a:SubscriptionItem>
+                            <a:SubscriptionItem>
+                                <a:Active>false</a:Active>
+                                <a:CommunicationLanguage i:nil="true"/>
+                                <a:CountryCode i:nil="true"/>
+                                <a:Market i:nil="true"/>
+                                <a:NotificationAddress>cvvdfffree@der.dd</a:NotificationAddress>
+                                <a:NotificationType>EMail</a:NotificationType>
+                                <a:SourceMarket i:nil="true"/>
+                                <a:SubscriptionItemKey>3</a:SubscriptionItemKey>
+                                <a:SubscriptionItemSource i:nil="true"/>
+                                <a:SubscriptionType>NewsLetter</a:SubscriptionType>
+                            </a:SubscriptionItem>
+                            <a:SubscriptionItem>
+                                <a:Active>false</a:Active>
+                                <a:CommunicationLanguage i:nil="true"/>
+                                <a:CountryCode i:nil="true"/>
+                                <a:Market i:nil="true"/>
+                                <a:NotificationAddress>+4676565432</a:NotificationAddress>
+                                <a:NotificationType>SMS</a:NotificationType>
+                                <a:SourceMarket i:nil="true"/>
+                                <a:SubscriptionItemKey>4</a:SubscriptionItemKey>
+                                <a:SubscriptionItemSource i:nil="true"/>
+                                <a:SubscriptionType>NewsLetter</a:SubscriptionType>
+                            </a:SubscriptionItem>
+                            <a:SubscriptionItem>
+                                <a:Active>false</a:Active>
+                                <a:CommunicationLanguage i:nil="true"/>
+                                <a:CountryCode i:nil="true"/>
+                                <a:Market i:nil="true"/>
+                                <a:NotificationAddress>+4676565432</a:NotificationAddress>
+                                <a:NotificationType>Telemarketing</a:NotificationType>
+                                <a:SourceMarket i:nil="true"/>
+                                <a:SubscriptionItemKey>5</a:SubscriptionItemKey>
+                                <a:SubscriptionItemSource i:nil="true"/>
+                                <a:SubscriptionType>NewsLetter</a:SubscriptionType>
+                            </a:SubscriptionItem>
+                        </a:Subscriptions>
+                    </a:Engagement>
+                    <a:Engagement i:type="a:PrivacySettings">
+                        <a:Profile i:nil="true"/>
+                        <a:LastModified>2018-10-29T09:19:21.9936698</a:LastModified>
+                        <a:SettingID>10787700</a:SettingID>
+                        <a:Settings>
+                            <a:PrivacyItem>
+                                <a:ActivationDate i:nil="true"/>
+                                <a:Active>false</a:Active>
+                                <a:PrivacyArea>DirectMarketing</a:PrivacyArea>
+                                <a:PrivacyItemKey>1</a:PrivacyItemKey>
+                                <a:Type>EMail</a:Type>
+                                <a:Version i:nil="true"/>
+                            </a:PrivacyItem>
+                            <a:PrivacyItem>
+                                <a:ActivationDate i:nil="true"/>
+                                <a:Active>false</a:Active>
+                                <a:PrivacyArea>DirectMarketing</a:PrivacyArea>
+                                <a:PrivacyItemKey>2</a:PrivacyItemKey>
+                                <a:Type>SMS</a:Type>
+                                <a:Version i:nil="true"/>
+                            </a:PrivacyItem>
+                            <a:PrivacyItem>
+                                <a:ActivationDate i:nil="true"/>
+                                <a:Active>false</a:Active>
+                                <a:PrivacyArea>DirectMarketing</a:PrivacyArea>
+                                <a:PrivacyItemKey>3</a:PrivacyItemKey>
+                                <a:Type>Telemarketing</a:Type>
+                                <a:Version i:nil="true"/>
+                            </a:PrivacyItem>
+                            <a:PrivacyItem>
+                                <a:ActivationDate>2018-10-29T09:19:21.9783343</a:ActivationDate>
+                                <a:Active>true</a:Active>
+                                <a:PrivacyArea>TOC</a:PrivacyArea>
+                                <a:PrivacyItemKey>5</a:PrivacyItemKey>
+                                <a:Type>EB</a:Type>
+                                <a:Version>3</a:Version>
+                            </a:PrivacyItem>
+                        </a:Settings>
+                    </a:Engagement>
+                    <a:Engagement i:type="a:DefaultProfileEngagement">
+                        <a:Profile>
+                            <a:CoTravelers/>
+                            <a:FOIDs/>
+                            <a:FOPs/>
+                            <a:Flight i:nil="true"/>
+                            <a:Hotels/>
+                            <a:PhysicalAddresses/>
+                            <a:PreferredCommunicationLanguage>sv</a:PreferredCommunicationLanguage>
+                            <a:VirtualAddresses>
+                                <a:VirtualAddress>
+                                    <a:Bounced>false</a:Bounced>
+                                    <a:Functions>
+                                        <a:Function>
+                                            <a:FunctionName>HomeMobile</a:FunctionName>
+                                        </a:Function>
+                                    </a:Functions>
+                                    <a:VirtualAddressKey>0</a:VirtualAddressKey>
+                                    <a:VirtualAddressLine>+4676565432</a:VirtualAddressLine>
+                                </a:VirtualAddress>
+                                <a:VirtualAddress>
+                                    <a:Bounced>false</a:Bounced>
+                                    <a:Functions>
+                                        <a:Function>
+                                            <a:FunctionName>HomeE-mail</a:FunctionName>
+                                        </a:Function>
+                                    </a:Functions>
+                                    <a:VirtualAddressKey>1</a:VirtualAddressKey>
+                                    <a:VirtualAddressLine>cvvdfffree@der.dd</a:VirtualAddressLine>
+                                </a:VirtualAddress>
+                            </a:VirtualAddresses>
+                        </a:Profile>
+                    </a:Engagement>
+                </a:EngagementList>
+                <a:FirstName>December</a:FirstName>
+                <a:Gender>F</a:Gender>
+                <a:Identifier>10787700</a:Identifier>
+                <a:LastModified>2018-10-29T09:19:20.7280157</a:LastModified>
+                <a:LastName>Lady</a:LastName>
+                <a:MiddleName i:nil="true"/>
+                <a:Salutation i:nil="true"/>
+                <a:Title>Ms</a:Title>
+            </CustomerGetResult>
+        </CustomerGetResponse>
+    </s:Body>
+</s:Envelope>

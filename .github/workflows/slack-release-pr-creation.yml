@@ -1,0 +1,58 @@
+name: Notify Slack on PR creation
+on:
+  pull_request:
+    types: [opened]
+    branches: [master]
+
+jobs:
+  new_push_job:
+    runs-on: ubuntu-latest
+    name: New Release Pull Request Created
+    steps:
+      - name: Publish to slack channel via bot token
+        id: slack
+        uses: slackapi/slack-github-action@v1.21.0
+        with:
+          channel-id: "C0763FE0MPA" # ID of Slack Channel you want to post to
+          payload: |
+            {
+                "blocks": [
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": "${{ github.event.pull_request.title }} was opened"
+                        }
+                    },
+                    {
+                        "type": "section",
+                        "fields": [
+                            {
+                                "type": "mrkdwn",
+                                "text": "*Source:* \n ${{ github.head_ref }}"
+                            },
+                            {
+                                "type": "mrkdwn",
+                                "text": "*Target:* \n ${{ github.base_ref }}"
+                            },
+                            {
+                                "type": "mrkdwn",
+                                "text": "*Opened by:* \n ${{ github.actor }}"
+                            },
+                            {
+                                "type": "mrkdwn",
+                                "text": "*Opened at:* \n ${{ github.event.pull_request.created_at }}"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "section",
+                        "text": {
+                            "type": "mrkdwn",
+                            "text": "To see the contents of this release, please view this pull request on Github \n ${{ github.event.pull_request.html_url }}"
+                        }
+                    }
+                ]
+            }
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}

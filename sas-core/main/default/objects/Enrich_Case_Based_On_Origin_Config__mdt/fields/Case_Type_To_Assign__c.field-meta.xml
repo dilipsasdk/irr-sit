@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Type_To_Assign__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Case Type To Assign</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Channel</fullName>
+                <default>true</default>
+                <label>Channel</label>
+            </value>
+            <value>
+                <fullName>Charge Back</fullName>
+                <default>false</default>
+                <label>Charge Back</label>
+            </value>
+            <value>
+                <fullName>Claim</fullName>
+                <default>false</default>
+                <label>Claim</label>
+            </value>
+            <value>
+                <fullName>CS Feedback</fullName>
+                <default>false</default>
+                <label>CS Feedback</label>
+            </value>
+            <value>
+                <fullName>EB Vendor</fullName>
+                <default>false</default>
+                <label>EB Vendor</label>
+            </value>
+            <value>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+                <label>Feedback</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Functional Product Support</fullName>
+                <default>false</default>
+                <label>Functional Product Support</label>
+            </value>
+            <value>
+                <fullName>Information</fullName>
+                <default>false</default>
+                <label>Information</label>
+            </value>
+            <value>
+                <fullName>Refund</fullName>
+                <default>false</default>
+                <label>Refund</label>
+            </value>
+            <value>
+                <fullName>Sales Control</fullName>
+                <default>false</default>
+                <label>Sales Control</label>
+            </value>
+            <value>
+                <fullName>Sales Information</fullName>
+                <default>false</default>
+                <label>Sales Information</label>
+            </value>
+            <value>
+                <fullName>SASSI Internal</fullName>
+                <default>false</default>
+                <label>SASSI Internal</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>System</fullName>
+                <default>false</default>
+                <label>System</label>
+            </value>
+            <value>
+                <fullName>Tariff</fullName>
+                <default>false</default>
+                <label>Tariff</label>
+            </value>
+            <value>
+                <fullName>Ticketless</fullName>
+                <default>false</default>
+                <label>Ticketless</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,52 @@
+{
+  "objects": [
+    {
+      "query": "SELECT Name, FCS_CMP__c, FCS_EBLevel__c, FCS_EBNumber__c, FCS_TPAccountNumber__c FROM Account",
+      "operation": "Insert"
+    },
+    {
+      "query": "SELECT TEDS_Identifier__c, Name, City__c, Country_Code__c, Country_Name__c, Latitude__c, Longitude__c FROM Airport__c",
+      "operation": "Insert"
+    },
+    {
+      "query": "SELECT Booking_Reference__c, Is_Cancelled__c, TEDS_Identifier__c, Type__c FROM Booking__c",
+      "operation": "Insert"
+    },
+    {
+      "query": "SELECT Department__c, Origin, Team__c, Refund_Request__c, RecordTypeId FROM Case",
+      "operation": "Insert"
+    },
+    {
+      "query": "SELECT Case__c, Case__c FROM CaseToBooking__c",
+      "operation": "Insert"
+    },
+    {
+      "query": "SELECT Date__c, From_Currency__c, To_Currency__c, Rate__c FROM Exchange_Rate__c",
+      "operation": "Insert"
+    },
+    {
+      "query": "SELECT Arrival_Airport__c, Departure_Airport__c, Scheduled_Arrival_Time__c, Scheduled_Departure_Time__c, TEDS_Identifier__c FROM Flight__c",
+      "operation": "Insert"
+    },
+    {
+      "query": "SELECT IRR_BookingReference__c, IRR_Channel__c, IRR_EBNumber__c, IRR_FlightId__c, IRR_MessageContent__c FROM IRR_CommunicationLog__c",
+      "operation": "Insert"
+    },
+    {
+      "query": "SELECT Account__c, Booking__c, EuroBonus_Number__c, First_Name__c, Identifier__c, Last_Name__c, Name FROM Passenger__c",
+      "operation": "Insert"
+    },
+    {
+      "query": "SELECT Country_of_Purchase__c, Note__c, PNR__c, Refund_Macro__c, Ticket_Numbers__c FROM Refund_Request__c",
+      "operation": "Insert"
+    },
+    {
+      "query": "SELECT Baggage_Quantity__c, Booking__c, Booking_Class__c, Check_In_Status__c, Flight__c, Identifier__c, Is_Boarded__c, Trip_Type__c FROM Segment__c",
+      "operation": "Insert"
+    },
+    {
+      "query": "SELECT Account__c, Category_Code__c, Category_Name__c, External_Name__c, Internal_Name__c, Name, Type_Code__c, Type_Name__c FROM Travel_Pass_Product__c",
+      "operation": "Insert"
+    }
+  ]
+}

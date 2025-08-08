@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Case_for_Liability_Claims</fullName>
+    <active>true</active>
+    <description>Case cannot be closed if the result field in claim is empty</description>
+    <errorConditionFormula>AND(
+AND(
+    $RecordType.Name = &quot;Claim&quot;,
+    AND(
+        ISCHANGED(IsClosed),
+        ISPICKVAL(Status, &quot;Closed&quot;)
+    ), OR(ISPICKVAL(LIA_Claim__r.Result__c,&quot;&quot;),ISPICKVAL(LIA_Claim__r.Result__c,&quot;Pending&quot;))
+),
+ NOT(LIA_Claim__r.Name = &quot;&quot;)
+)</errorConditionFormula>
+    <errorMessage>Please pick a value for Result field in the Liability Claim</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+deployments:
+  environmentMapping:
+    development:
+      - "integration"
+    testing:
+      - "uat"
+    production:
+      - "production"

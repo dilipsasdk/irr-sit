@@ -1,0 +1,3 @@
+<!-- Visualforce Page for Remove Ownership button in SocialPost listviews -->
+<apex:page standardController="SocialPost" recordSetVar="socialPosts" extensions="FCS_SocialPostController" action="{!takeOwnership}">
+</apex:page>

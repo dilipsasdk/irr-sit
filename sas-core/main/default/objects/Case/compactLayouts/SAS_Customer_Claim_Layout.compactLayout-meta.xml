@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SAS_Customer_Claim_Layout</fullName>
+    <fields>CaseNumber</fields>
+    <fields>Status</fields>
+    <fields>OwnerId</fields>
+    <fields>Approval_Submitter__c</fields>
+    <fields>Customer_Claim_Category__c</fields>
+    <fields>Customer_Claim_Type__c</fields>
+    <fields>FCS_EBLevel__c</fields>
+    <fields>Priority</fields>
+    <label>SAS Customer Claim Layout</label>
+</CompactLayout>

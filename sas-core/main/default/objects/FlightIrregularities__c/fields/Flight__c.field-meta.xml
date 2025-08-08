@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flight__c</fullName>
+    <description>The flight to which the irregularity pertains</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The flight to which the irregularity pertains</inlineHelpText>
+    <label>Flight</label>
+    <referenceTo>Flight__c</referenceTo>
+    <relationshipName>Flight_Irregularities</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

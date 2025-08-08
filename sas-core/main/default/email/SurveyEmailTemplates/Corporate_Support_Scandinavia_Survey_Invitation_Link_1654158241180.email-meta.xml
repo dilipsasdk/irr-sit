@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email with the survey invitation link</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Corporate Support Scandinavia Survey Invitation Link</name>
+    <relatedEntityType>Case</relatedEntityType>
+    <style>none</style>
+    <subject>We look forward to your feedback on case {{{Case.CaseNumber}}}</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>

@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="height: auto; min-height: auto;"><font face="Arial, Helvetica, sans-serif"><span style="font-size: 18px;"><b><u>Details of the person who received the threat</u></b></span></font><br />
+<br />
+<span style="font-family:Arial,Helvetica,sans-serif;"><strong>Threat received by:</strong>&nbsp;{{{Threat_Incident__c.Threat_Receiver__c}}}<br />
+<b>Company:</b> {{{Threat_Incident__c.Company__c}}}<br />
+<strong>Location:</strong>&nbsp;{{{Threat_Incident__c.Location__c}}}&nbsp;<br />
+<strong>Phone to Manager on Duty:&nbsp;</strong>{{{Threat_Incident__c.SubmitterPhone__c}}}&nbsp;</span><br />
+<br />
+<span style="font-family:Arial,Helvetica,sans-serif;"><u><span style="font-size: 18px;"><b>Threat incident</b></span></u><br />
+<br />
+<strong>Date/time:</strong> {{{Threat_Incident__c.Date_Time__c}}}&nbsp;<br />
+<strong>Threat origin:</strong>&nbsp;{{{Threat_Incident__c.Threat_Origin__c}}}&nbsp;<br />
+<strong>Wording of the message:&nbsp;</strong>{{{Threat_Incident__c.Message_Wording__c}}}&nbsp;<br />
+<br />
+<u><span style="font-size: 18px;"><b>Useful questions to collect more specific information</b></span></u><br />
+<br />
+<strong>What kind of threat?</strong> {{{Threat_Incident__c.Threat_Type__c}}}<br />
+<strong>Where will the threat take place?</strong> {{{Threat_Incident__c.Threat_Location__c}}}<br />
+<strong>Flight Number: </strong>{{{Threat_Incident__c.Flight_Number__c}}}<br />
+<strong>From:&nbsp;</strong>&nbsp;{{{Threat_Incident__c.From__c}}}<br />
+<strong>To:&nbsp;</strong>&nbsp;{{{Threat_Incident__c.To__c}}}<br />
+<strong>Will it happen during the flight?</strong> {{{Threat_Incident__c.During_Flight__c}}}<br />
+<strong>Details about the threat place:&nbsp;</strong>{{{Threat_Incident__c.Threat_Details__c}}}<br />
+<strong>When shall it take place? </strong>{{{Threat_Incident__c.Threat_Execution_Time__c}}}<br />
+<strong>If it is a bomb, what does it look like? </strong>{{{Threat_Incident__c.Explosive_Device_Description__c}}}<br />
+<strong>Why are you doing this?&nbsp;&nbsp;</strong>{{{Threat_Incident__c.Threat_Reason__c}}}<br />
+<strong>Who are you?&nbsp;</strong>{{{Threat_Incident__c.Caller_Name__c}}}<br />
+<strong>Organization:</strong>&nbsp;&nbsp;{{{Threat_Incident__c.Organization__c}}}<br />
+<strong>Where are you at:</strong>&nbsp;{{{Threat_Incident__c.Caller_Location__c}}}<br />
+<br />
+<u><span style="font-size:18px"><b>Additional details</b></span></u><br />
+<br />
+<strong>Email:</strong>&nbsp;{{{Threat_Incident__c.Caller_Email__c}}}<br />
+<strong>Salesforce Case Number:</strong>&nbsp;{{{Threat_Incident__c.ThreatCaseNumber__c}}}<br />
+<strong>Phone: </strong>{{{Threat_Incident__c.ThreatCaseNumber__c}}}<br />
+<strong>EuroBonus Number:&nbsp;</strong>{{{Threat_Incident__c.Caller_EuroBonus_Number__c}}}<br />
+<strong>Caller' Identity:</strong>&nbsp;{{{Threat_Incident__c.Caller_Identity__c}}}<br />
+<strong>Approximate age:&nbsp;</strong>{{{Threat_Incident__c.Caller_Approx_Age__c}}}</span>
+<table border="0" cellpadding="0" cellspacing="0">
+	
+		<tr>
+			<td colspan="3"><span style="font-family:Arial,Helvetica,sans-serif;"><strong>Did it seem as if the person knows about the aircraft/flight or building based on the description of where the bomb is placed?&nbsp;</strong>{{{Threat_Incident__c.Aircraft_Flight_or_Building_Knowledge__c}}}<br />
+			<strong>Language ability:</strong>&nbsp;{{{Threat_Incident__c.Language_Ability__c}}}<br />
+			<strong>Voice characteristics:&nbsp;</strong>{{{Threat_Incident__c.Voice_Characteristics__c}}}<br />
+			<strong>Speech:</strong>&nbsp;{{{Threat_Incident__c.Speech__c}}}<br />
+			<strong>Accent:</strong>&nbsp;{{{Threat_Incident__c.Accent__c}}}<br />
+			<strong>Attitude:&nbsp;</strong>{{{Threat_Incident__c.Attitude__c}}}<br />
+			<strong>Background noise:</strong>&nbsp;{{{Threat_Incident__c.Background_Noise__c}}}<br />
+			<strong>Other details:</strong>&nbsp;{{{Threat_Incident__c.Other_Details__c}}}</span><br />
+			&nbsp;</td>
+		</tr>
+	
+</table>
+<br />
+<br />
+<br />
+<br />
+<br />
+&nbsp;</body>
+</html>

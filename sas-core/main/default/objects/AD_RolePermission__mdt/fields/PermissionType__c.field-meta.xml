@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PermissionType__c</fullName>
+    <description>Represents the type of permission assigned to the user.</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>Permission Type</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Permission Set</fullName>
+                <default>true</default>
+                <label>Permission Set</label>
+            </value>
+            <value>
+                <fullName>Group</fullName>
+                <default>false</default>
+                <label>Group</label>
+            </value>
+            <value>
+                <fullName>Profile</fullName>
+                <default>false</default>
+                <label>Profile</label>
+            </value>
+            <value>
+                <fullName>Role</fullName>
+                <default>false</default>
+                <label>Role</label>
+            </value>
+            <value>
+                <fullName>User Permission</fullName>
+                <default>false</default>
+                <label>User Permission</label>
+            </value>
+            <value>
+                <fullName>Call Center</fullName>
+                <default>false</default>
+                <label>Call Center</label>
+            </value>
+            <value>
+                <fullName>Permission License</fullName>
+                <default>false</default>
+                <label>Permission License</label>
+            </value>
+            <value>
+                <fullName>Collaboration Group</fullName>
+                <default>false</default>
+                <label>Collaboration Group</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

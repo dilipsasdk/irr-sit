@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>IRR_FlightId__c</columns>
+    <columns>IRR_FlightNumber__c</columns>
+    <columns>IRR_DepartureDate__c</columns>
+    <columns>IRR_StationDeparture__c</columns>
+    <columns>IRR_StationArrival__c</columns>
+    <columns>IRR_StartBlockDate__c</columns>
+    <columns>IRR_StartBlockTime__c</columns>
+    <columns>IRR_StopBlockDate__c</columns>
+    <columns>IRR_StopBlockTime__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

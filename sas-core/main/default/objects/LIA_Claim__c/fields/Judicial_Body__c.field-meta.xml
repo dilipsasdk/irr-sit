@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Judicial_Body__c</fullName>
+    <externalId>false</externalId>
+    <label>Judicial Body</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>ADR</fullName>
+                <default>false</default>
+                <label>ADR</label>
+            </value>
+            <value>
+                <fullName>Bailiff</fullName>
+                <default>false</default>
+                <label>Bailiff</label>
+            </value>
+            <value>
+                <fullName>European Court Case</fullName>
+                <default>false</default>
+                <label>European Court Case</label>
+            </value>
+            <value>
+                <fullName>Letter Before Action (LBA)</fullName>
+                <default>false</default>
+                <label>Letter Before Action (LBA)</label>
+            </value>
+            <value>
+                <fullName>National Court Case</fullName>
+                <default>false</default>
+                <label>National Court Case</label>
+            </value>
+            <value>
+                <fullName>NEB</fullName>
+                <default>false</default>
+                <label>NEB</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

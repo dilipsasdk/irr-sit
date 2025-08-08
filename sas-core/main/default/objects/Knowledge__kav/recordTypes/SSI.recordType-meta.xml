@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SSI</fullName>
+    <active>true</active>
+    <description>Knowledge article for SSI</description>
+    <label>SSI</label>
+    <picklistValues>
+        <picklist>FCS_SubType__c</picklist>
+        <values>
+            <fullName>Allowances</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allowances - hand baggage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Animals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assistance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baggage general</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cobranded with EuroBonus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dangerous Goods%2FWeapons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Death of passenger or the passenger%27s immediate family - SAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EB Highlights%2FError reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Earning points</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EuroBonus Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Excess baggage - Charge %26 Keep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Excess baggage - Charges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Excess baggage - Prepaid XBAG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forbidden items in hand baggage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form of Payment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form of Payment-Advanced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Former Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fragile and special value items</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Give Away Membership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IATA baggage resolution 302</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Life Time Gold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meals - Advanced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Membership levels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Minor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Musical Instruments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Name change and name correction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Name in reservation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non cobranded cards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prepaid card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refund in case of death</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAS Pandion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seating Advanced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sequential use of flight coupons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Benefits for Diamond Members</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Benefits for Gold Members</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Benefits for Silver Members</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special baggage and Sporting Equipment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Specific Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spending points</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrade for points</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upgrading</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FCS_Type__c</picklist>¨
+        <values>
+            <fullName>EuroBonus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reservations</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

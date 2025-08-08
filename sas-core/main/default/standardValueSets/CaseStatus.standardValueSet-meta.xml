@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+        <label>On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting</fullName>
+        <default>false</default>
+        <label>Awaiting</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting Customer Response</fullName>
+        <default>false</default>
+        <label>Awaiting Customer Response</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>New Response</fullName>
+        <default>false</default>
+        <label>New Response</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>CB-Disputed/Won/Pre-arb rcv&apos;d/Accepted</fullName>
+        <default>false</default>
+        <label>Disputed/Won/Pre-arb rcv&apos;d/Accepted</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>CB-Disputed/Won</fullName>
+        <default>false</default>
+        <label>Disputed/Won</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>CB-Disputed/Loss</fullName>
+        <default>false</default>
+        <label>Disputed/Loss</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>CB-Accepted/Airline Acceptance</fullName>
+        <default>false</default>
+        <label>Accepted/Airline Acceptance</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+        <label>Escalated</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Auto-Solved</fullName>
+        <default>false</default>
+        <label>Auto-Solved</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Merged</fullName>
+        <default>false</default>
+        <label>Merged</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for Approval</fullName>
+        <default>false</default>
+        <label>Waiting for Approval</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for Control</fullName>
+        <default>false</default>
+        <label>Waiting for Control</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for Transfer</fullName>
+        <default>false</default>
+        <label>Waiting for Transfer</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>CB-Disputed/Won/Pre-arb rcvd/Disputed/Won</fullName>
+        <default>false</default>
+        <label>Disputed/Won/Pre-arb rcvd/Disputed/Won</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>CB-Disputed/Won/Pre-arb rcvd/Disputed/Loss</fullName>
+        <default>false</default>
+        <label>Disputed/Won/Pre-arb rcvd/Disputed/Loss</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>CB-Awaiting Acquirer</fullName>
+        <default>false</default>
+        <label>Awaiting Acquirer</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>CB-Awaiting Travel Agent</fullName>
+        <default>false</default>
+        <label>Awaiting Travel Agent</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>CB-Awaiting Credit</fullName>
+        <default>false</default>
+        <label>Awaiting Credit</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>CB-Closed</fullName>
+        <default>false</default>
+        <label>CB - Closed</label>
+        <closed>true</closed>
+    </standardValue>
+</StandardValueSet>

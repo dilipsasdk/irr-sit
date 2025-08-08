@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>51.0</apiVersion>
+    <assignments>
+        <name>SetRecordType</name>
+        <label>SetRecordType</label>
+        <locationX>356</locationX>
+        <locationY>245</locationY>
+        <assignmentItems>
+            <assignToReference>RecordTypeOutput</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>GetRecordTypeId.Id</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Assigns Record Type for Case Object based on Department/Team</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>RecordTypeName</name>
+        <dataType>String</dataType>
+        <expression>IF( OR({!Department} = &quot;Info Hub&quot;, {!Team} = &quot;Feedback&quot;, {!Team} = &quot;EB Vendor Support&quot;, {!Team} = &quot;Ticketless Support&quot;, {!Team} = &quot;Fraud Investigation&quot;), &quot;Internal/Backoffice&quot;, 
+IF( {!Department} = &quot;Functional Product Support&quot;, &quot;Functional Product Support&quot;, 
+IF( {!Department} = &quot;Liability&quot;, &quot;Claim&quot;,
+IF( {!Department} = &quot;Charge Back&quot;, &quot;Charge Back&quot;,
+IF( {!Department} = &quot;Customer Claim&quot;, &quot;Customer Claim&quot;,  &quot;Channel&quot;)))))</expression>
+    </formulas>
+    <interviewLabel>Assign Record Type for Case Object {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Assign Record Type for Case Object</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>GetRecordTypeId</name>
+        <label>GetRecordTypeId</label>
+        <locationX>88</locationX>
+        <locationY>234</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>SetRecordType</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>RecordTypeName</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>RecordType</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>GetRecordTypeId</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Department from other flow</description>
+        <name>Department</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>RecordTypeOutput</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Team from other flow</description>
+        <name>Team</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

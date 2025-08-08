@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Sharing_Liability_Cases_with_Liability_group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Sharing Liability Cases with Liability group</label>
+        <sharedTo>
+            <group>Liability</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Claim</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Sharing_cases_with_SAS_people</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing all cases with SAS people except emergency cases</description>
+        <label>Sharing cases with SAS people</label>
+        <sharedTo>
+            <role>SAS</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>CaseNumber</field>
+            <operation>notEqual</operation>
+            <value>00000000</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Claim,Emergency</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

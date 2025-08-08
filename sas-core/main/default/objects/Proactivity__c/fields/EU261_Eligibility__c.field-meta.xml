@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EU261_Eligibility__c</fullName>
+    <defaultValue>&quot;Tentative&quot;</defaultValue>
+    <description>Whether or not a claim with a &quot;root cause&quot;-flight which matches this proactivity should be eligible or not for EU261 compensation.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Whether or not a claim with a &quot;root cause&quot;-flight which matches this proactivity should be eligible or not for EU261 compensation.</inlineHelpText>
+    <label>EU261 Eligibility</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>EU261_Eligibility</valueSetName>
+    </valueSet>
+</CustomField>

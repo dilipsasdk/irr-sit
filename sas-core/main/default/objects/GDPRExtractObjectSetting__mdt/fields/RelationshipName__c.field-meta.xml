@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RelationshipName__c</fullName>
+    <description>The name of the relationship to the Parent Object, if the value is set. The relationship name can be found on the field on the field definition on the Child Object that relates to the Parent Object.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>The name of the relationship to the Parent Object, if the value is set. The relationship name can be found on the field on the field definition on the Child Object that relates to the Parent Object.</inlineHelpText>
+    <label>Relationship Name</label>
+    <length>255</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

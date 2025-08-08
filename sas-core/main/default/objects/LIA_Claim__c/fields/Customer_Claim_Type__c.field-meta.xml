@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Claim_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Customer Claim Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Customer_Claim_Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Baggage damaged</fullName>
+                <default>false</default>
+                <label>Baggage damaged</label>
+            </value>
+            <value>
+                <fullName>Baggage delayed/lost</fullName>
+                <default>false</default>
+                <label>Baggage delayed/lost</label>
+            </value>
+            <value>
+                <fullName>Booking error</fullName>
+                <default>false</default>
+                <label>Booking error</label>
+            </value>
+            <value>
+                <fullName>Cabin environment</fullName>
+                <default>false</default>
+                <label>Cabin environment</label>
+            </value>
+            <value>
+                <fullName>Complaint about a refund</fullName>
+                <default>false</default>
+                <label>Complaint about a refund</label>
+            </value>
+            <value>
+                <fullName>Extra baggage</fullName>
+                <default>false</default>
+                <label>Extra baggage</label>
+            </value>
+            <value>
+                <fullName>Flight cancellation</fullName>
+                <default>false</default>
+                <label>Flight cancellation</label>
+            </value>
+            <value>
+                <fullName>Flight delay</fullName>
+                <default>false</default>
+                <label>Flight delay</label>
+            </value>
+            <value>
+                <fullName>Gate issues</fullName>
+                <default>false</default>
+                <label>Gate issues</label>
+            </value>
+            <value>
+                <fullName>In-flight meal</fullName>
+                <default>false</default>
+                <label>In-flight meal</label>
+            </value>
+            <value>
+                <fullName>In-flight service</fullName>
+                <default>false</default>
+                <label>In-flight service</label>
+            </value>
+            <value>
+                <fullName>Items missing from checked-in baggage</fullName>
+                <default>false</default>
+                <label>Items missing from checked-in baggage</label>
+            </value>
+            <value>
+                <fullName>Lounge</fullName>
+                <default>false</default>
+                <label>Lounge</label>
+            </value>
+            <value>
+                <fullName>Meals/Drinks</fullName>
+                <default>false</default>
+                <label>Meals/Drinks</label>
+            </value>
+            <value>
+                <fullName>Missed connection</fullName>
+                <default>false</default>
+                <label>Missed connection</label>
+            </value>
+            <value>
+                <fullName>Personal injury</fullName>
+                <default>false</default>
+                <label>Personal injury</label>
+            </value>
+            <value>
+                <fullName>Prepaid seat</fullName>
+                <default>false</default>
+                <label>Prepaid seat</label>
+            </value>
+            <value>
+                <fullName>Special assistance</fullName>
+                <default>false</default>
+                <label>Special assistance</label>
+            </value>
+            <value>
+                <fullName>Travel document control</fullName>
+                <default>false</default>
+                <label>Travel document control</label>
+            </value>
+            <value>
+                <fullName>WiFi</fullName>
+                <default>false</default>
+                <label>WiFi</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Involuntary Denied Boarding</fullName>
+                <default>false</default>
+                <label>Involuntary Denied Boarding</label>
+            </value>
+            <value>
+                <fullName>Involuntary Downgrading</fullName>
+                <default>false</default>
+                <label>Involuntary Downgrading</label>
+            </value>
+            <value>
+                <fullName>Voluntary Denied Boarding</fullName>
+                <default>false</default>
+                <label>Voluntary Denied Boarding</label>
+            </value>
+            <value>
+                <fullName>Voluntary Downgrading</fullName>
+                <default>false</default>
+                <label>Voluntary Downgrading</label>
+            </value>
+            <value>
+                <fullName>Denied boarding</fullName>
+                <default>false</default>
+                <label>Denied boarding</label>
+            </value>
+            <value>
+                <fullName>Downgrading</fullName>
+                <default>false</default>
+                <label>Downgrading</label>
+            </value>
+            <value>
+                <fullName>Missed connection - compensation</fullName>
+                <default>false</default>
+                <label>Missed connection - compensation</label>
+            </value>
+            <value>
+                <fullName>Missed connection - expenses</fullName>
+                <default>false</default>
+                <label>Missed connection - expenses</label>
+            </value>
+            <value>
+                <fullName>Flight cancellation - compensation</fullName>
+                <default>false</default>
+                <label>Flight cancellation - compensation</label>
+            </value>
+            <value>
+                <fullName>Flight cancellation - expenses</fullName>
+                <default>false</default>
+                <label>Flight cancellation - expenses</label>
+            </value>
+            <value>
+                <fullName>Flight delay - compensation</fullName>
+                <default>false</default>
+                <label>Flight delay - compensation</label>
+            </value>
+            <value>
+                <fullName>Flight delay - expenses</fullName>
+                <default>false</default>
+                <label>Flight delay - expenses</label>
+            </value>
+            <value>
+                <fullName>Redress insurance companies</fullName>
+                <default>false</default>
+                <label>Redress insurance companies</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Accident &amp; injury</controllingFieldValue>
+            <valueName>Personal injury</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Accident &amp; injury</controllingFieldValue>
+            <controllingFieldValue>Airport experience</controllingFieldValue>
+            <controllingFieldValue>Booking</controllingFieldValue>
+            <controllingFieldValue>Compensation Card</controllingFieldValue>
+            <controllingFieldValue>Flight experience</controllingFieldValue>
+            <controllingFieldValue>Travel extras bought not rendered</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Airport experience</controllingFieldValue>
+            <valueName>Gate issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Airport experience</controllingFieldValue>
+            <valueName>Special assistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Airport experience</controllingFieldValue>
+            <valueName>Travel document control</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baggage</controllingFieldValue>
+            <valueName>Baggage damaged</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baggage</controllingFieldValue>
+            <valueName>Baggage delayed/lost</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baggage</controllingFieldValue>
+            <valueName>Items missing from checked-in baggage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Baggage</controllingFieldValue>
+            <valueName>Redress insurance companies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booking</controllingFieldValue>
+            <valueName>Booking error</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Booking</controllingFieldValue>
+            <valueName>Complaint about a refund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compensation Card</controllingFieldValue>
+            <valueName>Involuntary Denied Boarding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compensation Card</controllingFieldValue>
+            <valueName>Involuntary Downgrading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compensation Card</controllingFieldValue>
+            <valueName>Voluntary Denied Boarding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compensation Card</controllingFieldValue>
+            <valueName>Voluntary Downgrading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flight disruptions</controllingFieldValue>
+            <valueName>Denied boarding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flight disruptions</controllingFieldValue>
+            <valueName>Downgrading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flight disruptions</controllingFieldValue>
+            <valueName>Missed connection - compensation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flight disruptions</controllingFieldValue>
+            <valueName>Missed connection - expenses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flight disruptions</controllingFieldValue>
+            <valueName>Flight cancellation - compensation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flight disruptions</controllingFieldValue>
+            <valueName>Flight cancellation - expenses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flight disruptions</controllingFieldValue>
+            <valueName>Flight delay - compensation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flight disruptions</controllingFieldValue>
+            <valueName>Flight delay - expenses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flight experience</controllingFieldValue>
+            <valueName>Cabin environment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flight experience</controllingFieldValue>
+            <valueName>In-flight service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Flight experience</controllingFieldValue>
+            <valueName>Meals/Drinks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Travel extras bought not rendered</controllingFieldValue>
+            <valueName>Extra baggage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Travel extras bought not rendered</controllingFieldValue>
+            <valueName>In-flight meal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Travel extras bought not rendered</controllingFieldValue>
+            <valueName>Lounge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Travel extras bought not rendered</controllingFieldValue>
+            <valueName>Prepaid seat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Travel extras bought not rendered</controllingFieldValue>
+            <valueName>WiFi</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

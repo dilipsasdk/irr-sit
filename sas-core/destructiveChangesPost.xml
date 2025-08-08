@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+
+  <!--INSTRUCTIONS
+    FOR DESTRUCTIVE CHANGES
+    This file will remove the included components *AFTER* the deploy.
+
+    For each destructive change, create a new block of changes and create a comment header
+    for the block including date, author and reason for change. Duplicates of type blocks can be
+    duplicated in the document.
+    duplicated in the document.
+
+    When it is confirmed that an included change has been deployed to relevant environments,
+    the block can be removed from this document.
+-->
+
+
+  <types>
+    <members>GroupTravelJsonToApex</members>
+    <members>GroupTravelRequestForm</members>
+    <members>RefundRequestForm</members>
+    <members>SpecialServiceJSON2Apex</members>
+    <members>SpecialServiceRequestForm</members>
+    <members>GroupTravelService</members>
+    <members>RefundRequestService</members>
+    <members>SpecialServiceRequestService</members>
+    <members>GroupTravelRequestTest</members>
+    <members>RefundRequestFormTest</members>
+    <members>SpecialServiceRequestTest</members>
+    <members>IRR_BCH_SendAutomatedSecurityMessages</members>
+    <members>IRR_BCH_SendAutomatedSecurityMessages2</members>
+    <name>ApexClass</name>
+  </types>
+  <types><members>unfiled$public/irr_delay_icoupon_email</members>
+    <members>unfiled$public/irr_delay_icoupon_sms</members>
+    <name>EmailTemplate</name></types>
+</Package>

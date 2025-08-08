@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCS_PostReplied__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked if the post is replied to from SF to  e.g Facebook or Twitter</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checked if the post is replied to from SF to e.g Facebook or Twitter</inlineHelpText>
+    <label>Replied</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

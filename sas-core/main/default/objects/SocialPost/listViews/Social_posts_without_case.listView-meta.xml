@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Social_posts_without_case</fullName>
+    <columns>ReviewedStatus</columns>
+    <columns>Name</columns>
+    <columns>Content</columns>
+    <columns>ReplyTo</columns>
+    <columns>FCS_ParentMessage__c</columns>
+    <columns>Provider</columns>
+    <columns>Posted</columns>
+    <columns>Persona</columns>
+    <columns>Parent</columns>
+    <columns>Owner</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Parent</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>ReviewedStatus</field>
+        <operation>equals</operation>
+        <value>Needed</value>
+    </filters>
+    <label>Social Posts without Cases</label>
+</ListView>

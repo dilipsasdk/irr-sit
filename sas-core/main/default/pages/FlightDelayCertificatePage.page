@@ -1,0 +1,108 @@
+<apex:page controller="FlightDelayCertificateController" renderAs="pdf" applyBodyTag="false" applyHtmlTag="false" showHeader="false"
+    standardStylesheets="false">
+    <html>
+
+    <head>
+        <style type="text/css">
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .infoText {
+                font-size: 16px;
+            }
+
+            .flightInfo {
+                font-size: 16px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <apex:image value="{!imageLink}" width="100%" />
+        <h1>Flight Delay Certificate</h1>
+        <apex:outputText value="It is hereby certified that the following passenger was affected by a flight irregularity" styleClass="infoText"
+        />
+        <h2>Name of Passenger</h2>
+        <apex:outputText value="{!passengerName}" styleClass="infoText" />
+        <h2>Booking Reference</h2>
+        <apex:outputText value="{!bookingReference}" styleClass="infoText" />
+        <h2>SAS Reference</h2>
+        <apex:outputText value="{!caseNumber}" styleClass="infoText" />
+        <h2>Date of Issue</h2>
+        <apex:outputText value="{0, date, MMMM d,  yyyy}" styleClass="infoText">
+            <apex:param value="{!TODAY()}" />
+        </apex:outputText>
+        <h2>Your requested flight</h2>
+        <apex:outputText value="{!enteredFlight}" styleClass="infoText" />
+        <br/>
+        <h2>All flights in your booking</h2>
+        <apex:dataTable value="{!flightWrappers}" var="flight" id="flightsTable" cellspacing="2px">
+            <apex:column>
+                <apex:facet name="header">Flight Number</apex:facet>
+                <apex:outputText value="{!flight.FlightNumber}" styleClass="flightInfo" />
+            </apex:column>
+            <apex:column>
+                <apex:facet name="header">Departure Airport</apex:facet>
+                <apex:outputText value="{!flight.DepartureAirport}" styleClass="flightInfo" />
+            </apex:column>
+            <apex:column>
+                <apex:facet name="header">Arrival Airport</apex:facet>
+                <apex:outputText value="{!flight.ArrivalAirport}" styleClass="flightInfo" />
+            </apex:column>
+            <apex:column>
+                <apex:facet name="header">Flight Status</apex:facet>
+                <apex:outputText value="{!flight.FlightStatus}" styleClass="flightInfo" />
+            </apex:column>
+            <apex:column>
+                <apex:facet name="header">Scheduled Time of Departure</apex:facet>
+                <apex:outputText value="{!flight.ScheduledTimeOfDeparture}" styleClass="flightInfo" />
+            </apex:column>
+            <apex:column>
+                <apex:facet name="header">Scheduled Time of Arrival</apex:facet>
+                <apex:outputText value="{!flight.ScheduledTimeOfArrival}" styleClass="flightInfo" />
+            </apex:column>
+            <apex:column>
+                <apex:facet name="header">Actual Time of Arrival</apex:facet>
+                <apex:outputText value="{!flight.ActualTimeOfArrival}" styleClass="flightInfo" />
+            </apex:column>
+        </apex:dataTable>
+        <p>All times are in UTC</p>
+        <p>
+            <span style="color: #000099;">
+                <span style="font-size: 16px;">
+                    <span>
+                        <strong>SAS
+                            <br />Scandinavian Airlines System
+                            <br />Denmark-Norway-Sweden</strong>
+                    </span>
+                </span>
+            </span>
+            <br/>
+            <span style="font-size: 16px;">
+                <span>Address: DK-2770 Kastrup / P.O. Box 144, NO-2061 Gardermoen / SE-195 87 Stockholm
+                    <br />Visit: Fr&ouml;sundaviks All&eacute; 1</span>
+            </span>
+            <br/>
+            <span style="font-size: 16px;">
+                <span>Reg. No. Denmark: 35421041 &ndash; Norway: 961 510 740 &ndash; Sweden &amp; International: 902001-7720
+                    <br />
+                    <a href="http://www.flysas.com/" target="_blank">flysas.com</a>,
+                    <a href="https://www.facebook.com/SAS" target="_blank">Facebook</a>,
+                    <a href="https://twitter.com/sas" target="_blank">Twitter</a>,&nbsp;
+                    <a href="https://www.youtube.com/ScandinavianAirlines" target="_blank">Youtube</a>
+                </span>
+            </span>
+        </p>
+    </body>
+
+    </html>
+</apex:page>

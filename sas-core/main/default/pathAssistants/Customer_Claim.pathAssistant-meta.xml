@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Customer Claim</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The status is automatically set when an email is sent.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;A case will be auto closed after being in Awaiting customer for 20 days.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;After day 15 a reminder is automatically sent to the passenger regarding closure...&lt;/p&gt;</info>
+        <picklistValueName>Awaiting Customer Response</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The case is closed&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;3 months after a case has been closed it will be permanently closed. However, a permanently closed case can be reopened if more action is needed please ask your team lead for assitance.&lt;/p&gt;</info>
+        <picklistValueName>Closed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The case has been escalated to language queue for handling.&lt;/p&gt;</info>
+        <picklistValueName>Escalated</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Active status for ongoing work.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Case can be submitted to approval.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;A support case can be created.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Case can also be redirected/escalated from this status.&lt;/p&gt;</info>
+        <picklistValueName>In Progress</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Case can only be assigned.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Omni channel is the tool to receive new cases if nothing else is said.&lt;/p&gt;</info>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Status is automatically set when a new email is received.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;Look in the feed of the case for the latest email and take necessary action.&lt;/p&gt;</info>
+        <picklistValueName>New Response</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;No active work to be conducted from on hold status.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Case should be on hold when waiting for support.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Remember to set Case to in progress before continue working with it.&lt;/p&gt;</info>
+        <picklistValueName>On Hold</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The case has been handled and the created settlement is waiting to be verified. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;The settlement can be recalled if any further actions or changes is needed.&lt;/p&gt;</info>
+        <picklistValueName>Waiting for Approval</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The settlement has been sent for control.&lt;/p&gt;</info>
+        <picklistValueName>Waiting for Control</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;The settlement has been approved and the payment is waiting for transfer between SAS and the claimants bank.&lt;/p&gt;</info>
+        <picklistValueName>Waiting for Transfer</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Customer_Claim</recordTypeName>
+</PathAssistant>

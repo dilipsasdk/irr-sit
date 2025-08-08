@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Voice_Call</fullName>
+    <fields>FromPhoneNumber</fields>
+    <fields>CallStartDateTime</fields>
+    <fields>CallType</fields>
+    <fields>Recipient_Country__c</fields>
+    <fields>Caller_IVR_Language__c</fields>
+    <fields>Caller_IVR_Selection__c</fields>
+    <fields>Ancillary_Menu_Selection__c</fields>
+    <fields>CallQueuedDateTime</fields>
+    <label>Voice Call</label>
+</CompactLayout>

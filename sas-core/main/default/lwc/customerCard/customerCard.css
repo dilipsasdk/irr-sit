@@ -1,0 +1,21 @@
+:host {
+  --sds-c-accordion-heading-font-size: 14px;
+}
+
+.slds-card__body {
+  margin-bottom: 0;
+}
+
+.slds-card__footer {
+  border: none;
+  padding: 0;
+  margin-top: 0;
+  background-color: #ecebea;
+  padding: 5px 20px;
+  text-align: right;
+}
+
+.field-label {
+  font-size: 12px;
+  color: grey;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCS_TakeOwnership</fullName>
+    <availability>online</availability>
+    <description>Assigns selected SocialPosts to the User</description>
+    <displayType>massActionButton</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Take Ownership</masterLabel>
+    <openType>sidebar</openType>
+    <page>FCS_SocialPostTakeOwnershipButton</page>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+</WebLink>

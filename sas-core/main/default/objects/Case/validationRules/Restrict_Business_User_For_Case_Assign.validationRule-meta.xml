@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Business_User_For_Case_Assign</fullName>
+    <active>true</active>
+    <description>CSSF-378
+
+It should be able to redirect cases to all queues except the below
+SAS Automation Process
+SAS Site Forms
+SAS Automation Queue</description>
+    <errorConditionFormula>AND(
+AND(
+ISCHANGED(OwnerId),
+OR(
+$Profile.Name = &quot;Business User&quot;,
+$Profile.Name = &quot;Vendor&quot;
+),
+OR(
+Owner:Queue.QueueName = &apos;SAS Automation Process&apos;,
+Owner:Queue.QueueName = &apos;SAS Site Forms&apos;,
+Owner:Queue.QueueName = &apos;SAS Automation Queue&apos;
+)
+)
+)</errorConditionFormula>
+    <errorMessage>You cannot manually assign cases to this queue.</errorMessage>
+</ValidationRule>

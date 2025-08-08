@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customObject>true</customObject>
+    <description>A settlement is a single payment to a customer about a specific claim, and a single claim can have several settlements made related to it.</description>
+    <motif>Custom17: Sack</motif>
+</CustomTab>

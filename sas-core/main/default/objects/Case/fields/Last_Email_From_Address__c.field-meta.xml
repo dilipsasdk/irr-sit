@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Email_From_Address__c</fullName>
+    <description>The email address from which the last email came to this case.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The email address from which the last email came to this case.</inlineHelpText>
+    <label>Last Email From Address</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

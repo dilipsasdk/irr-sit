@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Schedule__c</fullName>
+    <description>The schedule for which days should include the given batch in the batch run.</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>Schedule</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Daily</fullName>
+                <default>true</default>
+                <label>Daily</label>
+            </value>
+            <value>
+                <fullName>Day Of Week</fullName>
+                <default>false</default>
+                <label>Day Of Week</label>
+            </value>
+            <value>
+                <fullName>Day Of Month</fullName>
+                <default>false</default>
+                <label>Day Of Month</label>
+            </value>
+            <value>
+                <fullName>Last Day Of Month</fullName>
+                <default>false</default>
+                <label>Last Day Of Month</label>
+            </value>
+            <value>
+                <fullName>Day Of Year</fullName>
+                <default>false</default>
+                <label>Day Of Year</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

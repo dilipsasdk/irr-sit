@@ -1,0 +1,16 @@
+/**
+* @author Niklas Lundkvist, Deloitte
+* @date 2020
+*/
+
+.pull-down {
+    margin-top: auto;
+}
+
+.pull-right {
+    margin-left: auto;
+}
+
+.no-padding {
+    padding: 0;
+}

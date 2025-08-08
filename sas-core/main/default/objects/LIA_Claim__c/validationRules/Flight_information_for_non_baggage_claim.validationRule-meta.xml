@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flight_information_for_non_baggage_claim</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( RecordType.Name =&quot;CustomerClaim&quot;,
+NOT(TEXT(Customer_Claim_Category__c) = &quot;Baggage&quot;),
+NOT(ISBLANK(TEXT(Customer_Claim_Category__c))),
+OR(AND(ISBLANK(Travel_Agent_Booking_Reference__c),ISBLANK(Liability_PNR__c)),ISBLANK(Flight_Date__c),ISBLANK(Flight_Number__c )))</errorConditionFormula>
+    <errorMessage>PNR , Flight Number and Flight Date are required for the selected Customer Claim Category</errorMessage>
+</ValidationRule>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caller_IVR_Selection__c</fullName>
+    <externalId>false</externalId>
+    <label>Caller IVR Selection</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>AGT</fullName>
+                <default>false</default>
+                <label>Agent Helpdesk</label>
+            </value>
+            <value>
+                <fullName>AGTAH</fullName>
+                <default>false</default>
+                <label>Agent Helpdesk After Hours</label>
+            </value>
+            <value>
+                <fullName>AMEX</fullName>
+                <default>false</default>
+                <label>American Express</label>
+            </value>
+            <value>
+                <fullName>BAG</fullName>
+                <default>false</default>
+                <label>Baggage Service</label>
+            </value>
+            <value>
+                <fullName>DS-CB</fullName>
+                <default>false</default>
+                <label>Change Booking</label>
+            </value>
+            <value>
+                <fullName>CORPB2C</fullName>
+                <default>false</default>
+                <label>Corporate Support B2C</label>
+            </value>
+            <value>
+                <fullName>DIAMOND</fullName>
+                <default>false</default>
+                <label>Diamond</label>
+            </value>
+            <value>
+                <fullName>DIRECTGRP</fullName>
+                <default>false</default>
+                <label>Direct Group Sales</label>
+            </value>
+            <value>
+                <fullName>DS</fullName>
+                <default>false</default>
+                <label>Direct Sales</label>
+            </value>
+            <value>
+                <fullName>ERO</fullName>
+                <default>false</default>
+                <label>Emergency Response</label>
+            </value>
+            <value>
+                <fullName>EB</fullName>
+                <default>false</default>
+                <label>Eurobonus</label>
+            </value>
+            <value>
+                <fullName>INFO</fullName>
+                <default>false</default>
+                <label>General Info</label>
+            </value>
+            <value>
+                <fullName>GOLD</fullName>
+                <default>false</default>
+                <label>Gold</label>
+            </value>
+            <value>
+                <fullName>GRP</fullName>
+                <default>false</default>
+                <label>Group Sales</label>
+            </value>
+            <value>
+                <fullName>GRPBULK</fullName>
+                <default>false</default>
+                <label>Group Sales Bulk</label>
+            </value>
+            <value>
+                <fullName>DS-NB</fullName>
+                <default>false</default>
+                <label>New Booking</label>
+            </value>
+            <value>
+                <fullName>NDCORP</fullName>
+                <default>false</default>
+                <label>Norwegian Defense Corporate</label>
+            </value>
+            <value>
+                <fullName>NDFLO</fullName>
+                <default>false</default>
+                <label>Norwegian Defense Flo Trans</label>
+            </value>
+            <value>
+                <fullName>NDFLOAH</fullName>
+                <default>false</default>
+                <label>Norwegian Defense Flo Trans After Hours</label>
+            </value>
+            <value>
+                <fullName>NDGRP</fullName>
+                <default>false</default>
+                <label>Norwegian Defense Group Sales</label>
+            </value>
+            <value>
+                <fullName>NDIND</fullName>
+                <default>false</default>
+                <label>Norwegian Defense Individual</label>
+            </value>
+            <value>
+                <fullName>PANDION</fullName>
+                <default>false</default>
+                <label>Pandion</label>
+            </value>
+            <value>
+                <fullName>POSTERO</fullName>
+                <default>false</default>
+                <label>Post Emergency Response</label>
+            </value>
+            <value>
+                <fullName>PREMIUM</fullName>
+                <default>false</default>
+                <label>Premium</label>
+            </value>
+            <value>
+                <fullName>PREMIUMAH</fullName>
+                <default>false</default>
+                <label>Premium After Hours</label>
+            </value>
+            <value>
+                <fullName>PMCORPSUP</fullName>
+                <default>false</default>
+                <label>Premium Corporate Support</label>
+            </value>
+            <value>
+                <fullName>REFSUP</fullName>
+                <default>false</default>
+                <label>Refund Support</label>
+            </value>
+            <value>
+                <fullName>HQSUP-SALES</fullName>
+                <default>false</default>
+                <label>Sales Support</label>
+            </value>
+            <value>
+                <fullName>SSALES</fullName>
+                <default>false</default>
+                <label>Special Sales</label>
+            </value>
+            <value>
+                <fullName>HQSUP-STAR</fullName>
+                <default>false</default>
+                <label>STAR Alliance</label>
+            </value>
+            <value>
+                <fullName>HQSUP-TICKETLESS</fullName>
+                <default>false</default>
+                <label>Ticketless</label>
+            </value>
+            <value>
+                <fullName>CORP</fullName>
+                <default>false</default>
+                <label>Travel Pass / Corporate Support</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

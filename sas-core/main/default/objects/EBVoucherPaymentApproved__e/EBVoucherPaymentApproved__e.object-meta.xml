@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This event is dispatched whenever a eurobonus or voucher payment is approved.</description>
+    <eventType>HighVolume</eventType>
+    <label>EBVoucherPaymentApproved</label>
+    <pluralLabel>EBVoucherPaymentApproved</pluralLabel>
+    <publishBehavior>PublishAfterCommit</publishBehavior>
+</CustomObject>

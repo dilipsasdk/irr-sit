@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Request Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Travel Agent Tickets</fullName>
+                <default>false</default>
+                <label>Travel Agent Tickets</label>
+            </value>
+            <value>
+                <fullName>Wrongly refunded</fullName>
+                <default>false</default>
+                <label>Wrongly refunded</label>
+            </value>
+            <value>
+                <fullName>Past Date PNR</fullName>
+                <default>false</default>
+                <label>Past Date PNR</label>
+            </value>
+            <value>
+                <fullName>Refund not received</fullName>
+                <default>false</default>
+                <label>Refund not received</label>
+            </value>
+            <value>
+                <fullName>Reserved Amount</fullName>
+                <default>false</default>
+                <label>Reserved Amount</label>
+            </value>
+            <value>
+                <fullName>Gift Card</fullName>
+                <default>false</default>
+                <label>Gift Card</label>
+            </value>
+            <value>
+                <fullName>Passenger bank details</fullName>
+                <default>false</default>
+                <label>Passenger bank details</label>
+            </value>
+            <value>
+                <fullName>Voucher</fullName>
+                <default>false</default>
+                <label>Voucher</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

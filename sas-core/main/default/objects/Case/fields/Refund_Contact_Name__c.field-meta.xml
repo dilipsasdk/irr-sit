@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Refund_Contact_Name__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Refund_Request__r.First_Name__c),&quot;&quot;, Refund_Request__r.First_Name__c + &quot; &quot; + Refund_Request__r.Last_Name__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Refund Contact Name</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

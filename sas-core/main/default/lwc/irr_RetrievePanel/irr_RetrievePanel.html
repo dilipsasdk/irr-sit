@@ -1,0 +1,265 @@
+<!--
+ - @author Niklas Lundkvist, Deloitte
+ - @date 2020
+ -->
+
+<!-- IRR Retrieve Panel -->
+<template>
+    <lightning-card title="Retrieve List" icon-name="utility:salesforce1">
+        <lightning-button
+                slot="actions"
+                variant="neutral"
+                label="Bypass"
+                title="Enter without retrieving a passenger list"
+                onclick={handleBypass}>
+        </lightning-button>
+        <lightning-button
+                slot="actions"
+                class="slds-p-left_small"
+                variant="brand"
+                label="Retrieve"
+                title="Retrieve Passenger List"
+                onclick={handleRetrieve}>
+        </lightning-button>
+        <div class="slds-media" onkeypress={handleKeyPress}>
+            <div class="slds-media__body">
+                <lightning-tabset>
+                    <lightning-tab
+                            class="no-padding"
+                            value="FLIGHT_REFERENCE"
+                            label="Flight"
+                            title="Retrieve passengers by Flight"
+                            onactive={handleTabSwitch}>
+                    <template if:true={showFlightInputParams}>
+                        <template for:each={flights} for:item="flight" for:index="flightIdx">
+                            <span  key={flight.key}>
+                            <p if:true={flight.isTimeZoneVisible} style="padding-left: 252px;color: red;">Scheduled Time of Departure (Local)</p>
+                            <lightning-layout>
+                               
+                                <lightning-layout-item padding="around-small">
+                                    <lightning-layout>
+                                        <lightning-layout-item size="2"
+                                                               class="slds-p-left_x-small slds-p-right_small slds-m-top_x-large">
+                                            <lightning-formatted-text class="pull-down" value="SK"></lightning-formatted-text>
+                                        </lightning-layout-item>
+                                        <lightning-layout-item size="10">
+                                            <lightning-input
+                                                    value={flight.flightNumber}
+                                                    data-flight-idx={flightIdx}
+                                                    type="text"
+                                                    name="flightNumber"
+                                                    label="Flight Number"
+                                                    data-tab-group="FLIGHT_REFERENCE"
+                                                    pattern="^([0-9]{1,4})$"
+                                                    required
+                                                    message-when-pattern-mismatch="Input 1 to 4 digits"
+                                                    onchange={handleFlightChange}>
+                                            </lightning-input>
+                                        </lightning-layout-item>
+                                    </lightning-layout>
+                                </lightning-layout-item>
+            
+                                <lightning-layout-item  padding="around-small">
+                                    <lightning-input if:true={flight.isTimeZoneVisible}
+                                            value={flight.departureDate}
+                                            data-flight-idx={flightIdx}
+                                            type="datetime"
+                                            timezone={flight.timeZone}
+                                            name="departureDate"
+                                            label=""
+                                            data-tab-group="FLIGHT_REFERENCE"
+                                            required
+                                            onchange={handleFlightChange}>
+                                    </lightning-input>
+                                </lightning-layout-item>
+
+                                <lightning-layout-item   padding="around-small">
+                                    <lightning-input if:false={flight.isTimeZoneVisible}
+                                            value={flight.departureDate}
+                                            data-flight-idx={flightIdx}
+                                            type="date"
+                                            name="departureDate"
+                                            label="Departure Date"
+                                            data-tab-group="FLIGHT_REFERENCE"
+                                            required
+                                            onchange={handleFlightChange}>
+                                    </lightning-input>
+                                </lightning-layout-item>
+                                <lightning-layout-item padding="around-small">
+                                    <lightning-input
+                                            value={flight.stationDeparture}
+                                            data-flight-idx={flightIdx}
+                                            type="text"
+                                            name="stationDeparture"
+                                            label="Station Departure"
+                                            data-tab-group="FLIGHT_REFERENCE"
+                                            pattern="([A-Z]{3})"
+                                            required
+                                            message-when-pattern-mismatch="Enter three letter station code"
+                                            onchange={handleFlightChange}>
+                                    </lightning-input>
+                                </lightning-layout-item>
+                                <lightning-layout-item padding="around-small">
+                                    <lightning-input
+                                            value={flight.stationArrival}
+                                            data-flight-idx={flightIdx}
+                                            type="text"
+                                            name="stationArrival"
+                                            label="Station Arrival"
+                                            data-tab-group="FLIGHT_REFERENCE"
+                                            pattern="([A-Z]{3})"
+                                            required
+                                            message-when-pattern-mismatch="Enter three letter station code"
+                                            onchange={handleFlightChange}>
+                                    </lightning-input>
+                                </lightning-layout-item>
+                                <lightning-layout-item padding="around-small" size="1" class="pull-down">
+                                    <button
+                                            data-flight-idx={flightIdx}
+                                            onclick={handleFlightRemove}
+                                            class="slds-button slds-button_icon"
+                                            title="Remove">
+                                        <lightning-icon icon-name="utility:close" alternative-text="Remove" title="Remove">
+                                        </lightning-icon>
+                                        <span class="slds-assistive-text">Remove</span>
+                                    </button>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        </span>
+                        </template>
+                    </template>
+                    <template if:true={showFlightInputParams}>
+                        <lightning-layout>
+                            <lightning-layout-item padding="around-small" size="1" class="pull-right">
+                                <button
+                                        onclick={handleFlightAdd}
+                                        class="slds-button slds-button_icon"
+                                        title="Add">
+                                    <lightning-icon icon-name="utility:add" alternative-text="Add" title="Add">
+                                    </lightning-icon>
+                                    <span class="slds-assistive-text">Add</span>
+                                </button>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </template>
+                        <lightning-layout>
+                            <lightning-layout-item padding="around-small" size="2" class="slds-p-left_x-small slds-p-right_small slds-m-top_x-large">
+                                <lightning-input type="checkbox" label="Use Advanced Filter" data-advance-filter="checkbox"
+                                    onchange={handleAdvanceFilterChange}>
+                                </lightning-input>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </lightning-tab>
+                    <lightning-tab
+                            class="no-padding"
+                            value="BOOKING_REFERENCE"
+                            label="Booking"
+                            title="Retrieve passengers by Booking"
+                            onactive={handleTabSwitch}>
+                        <lightning-layout>
+                                <lightning-layout-item padding="around-small" size="3">
+                                    <lightning-input
+                                            value={retrieveParameters.bookingId}
+                                            type="text"
+                                            name="bookingId"
+                                            label="Booking Reference(s)"
+                                            field-level-help="Specify one or more booking references, separated by comma"
+                                            data-tab-group="BOOKING_REFERENCE"
+                                            required
+                                            onchange={handleParameterChange}>
+                                    </lightning-input>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </lightning-tab>
+                    <template if:true={showBookingFiltersTab}>
+                        <template for:each={bookings} for:item="booking" for:index="bookingIdx">
+                            <lightning-layout key={booking.key}>
+                                <lightning-layout-item padding="around-small" class="pull-down">
+                                        <lightning-layout>
+                                            <lightning-layout-item size="10">
+                                                <lightning-input
+                                                        value={booking.departureStation}
+                                                        data-booking-idx={bookingIdx}
+                                                        type="text"
+                                                        name="departureStation"
+                                                        label="Departure Station"
+                                                        data-tab-group="BOOKING_FILTER"
+                                                        pattern="([A-Z]{3})"
+                                                        message-when-pattern-mismatch="Enter three letter station code"
+                                                        onchange={handleBookingsFilter}>
+                                                </lightning-input>
+                                            </lightning-layout-item>
+                                        </lightning-layout>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="around-small"  class="pull-down">
+                                        <lightning-input
+                                                value={booking.arrivalStation}
+                                                data-booking-idx={bookingIdx}
+                                                type="text"
+                                                name="arrivalStation"
+                                                label="Arrival Station"
+                                                pattern="([A-Z]{3})"
+                                                data-tab-group="BOOKING_FILTER"
+                                                message-when-pattern-mismatch="Enter three letter station code"
+                                                onchange={handleBookingsFilter}>
+                                        </lightning-input>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="around-small">
+                                        <lightning-input
+                                                value={booking.departureDate}
+                                                timezone="GMT"
+                                                data-booking-idx={bookingIdx}
+                                                type="datetime"
+                                                name="departureDate"
+                                                label="Departure Date (UTC)"
+                                                field-level-help="Date is in UTC timezone"
+                                                data-tab-group="BOOKING_FILTER"
+                                                required
+                                                onchange={handleBookingsFilter}>
+                                        </lightning-input>
+                                    </lightning-layout-item>
+                                    <lightning-layout-item padding="around-small">
+                                        <lightning-input
+                                                value={booking.arrivalDate}
+                                                timezone="GMT"
+                                                data-booking-idx={bookingIdx}
+                                                type="datetime"
+                                                name="arrivalDate"
+                                                label="Arrival Date (UTC)"
+                                                field-level-help="Date is in UTC timezone"
+                                                data-tab-group="BOOKING_FILTER"
+                                                required
+                                                onchange={handleBookingsFilter}>
+                                        </lightning-input>
+                                    </lightning-layout-item>
+                                        <lightning-layout-item padding="around-small" size="1" class="pull-down">
+                                            <button
+                                                    data-booking-idx={bookingIdx}
+                                                    onclick={handleBookingsRemove}
+                                                    class="slds-button slds-button_icon"
+                                                    title="Remove">
+                                                <lightning-icon icon-name="utility:close" alternative-text="Remove" title="Remove">
+                                                </lightning-icon>
+                                                <span class="slds-assistive-text">Remove</span>
+                                            </button>
+                                        </lightning-layout-item>
+                                </lightning-layout>
+                            </template>
+                                <lightning-layout>
+                                    <lightning-layout-item padding="around-small" size="1" class="pull-right">
+                                        <button
+                                                onclick={handleBookingAdd}
+                                                class="slds-button slds-button_icon"
+                                                title="Add">
+                                            <lightning-icon icon-name="utility:add" alternative-text="Add" title="Add">
+                                            </lightning-icon>
+                                            <span class="slds-assistive-text">Add</span>
+                                        </button>
+                                    </lightning-layout-item>
+                                </lightning-layout>
+                        </template>
+                </lightning-tabset>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,6 @@
+Id,Department__c,Origin,Team__c,Refund_Request__c,RecordTypeId,RecordType.$$DeveloperName$NamespacePrefix$SobjectType
+5001j000009l0QhAAI,Customer Claim,Form - Claims DK,Claims,,0121j000004AjytAAC,Customer_Claim;Case
+5001j000009l0QoAAI,Customer Claim,Form - Claims DK,Claims,,0121j000004AjytAAC,Customer_Claim;Case
+5001j000009l0TvAAI,Corporate,Email - Corporate Support Backoffice,Support Backoffice,,0121j000004AjyxAAC,Internal_Backoffice;Case
+5001j000009l0hkAAA,EuroBonus,,Gold DK,,0121j000004AjyxAAC,Internal_Backoffice;Case
+5001j000009l0hlAAA,Refunds,,BOM BSP,a0T1j000004B90OEAS,0121j000004AjyxAAC,Internal_Backoffice;Case

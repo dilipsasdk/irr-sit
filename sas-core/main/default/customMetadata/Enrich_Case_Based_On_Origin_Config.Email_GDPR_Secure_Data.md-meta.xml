@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Email - GDPR Secure Data</label>
+    <protected>false</protected>
+    <values>
+        <field>Case_Type_To_Assign__c</field>
+        <value xsi:type="xsd:string">Channel</value>
+    </values>
+    <values>
+        <field>Department_To_Assign__c</field>
+        <value xsi:type="xsd:string">SAS Operating Center</value>
+    </values>
+    <values>
+        <field>Incoming_Case_Origin__c</field>
+        <value xsi:type="xsd:string">Email - GDPR Secure Data</value>
+    </values>
+    <values>
+        <field>Team_To_Assign__c</field>
+        <value xsi:type="xsd:string">GDPR</value>
+    </values>
+</CustomMetadata>

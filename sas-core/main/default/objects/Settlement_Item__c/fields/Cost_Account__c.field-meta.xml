@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cost_Account__c</fullName>
+    <externalId>false</externalId>
+    <label>Cost Account</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>6721</fullName>
+                <default>false</default>
+                <label>6721 - Liability - Denied Boarding Compensation</label>
+            </value>
+            <value>
+                <fullName>6722</fullName>
+                <default>false</default>
+                <label>6722 - Liability - Downgrading Compensation</label>
+            </value>
+            <value>
+                <fullName>6727</fullName>
+                <default>false</default>
+                <label>6727 - Liability - EU 261 Compensation</label>
+            </value>
+            <value>
+                <fullName>6730</fullName>
+                <default>false</default>
+                <label>6730 - Traffic Disturbances - OAL</label>
+            </value>
+            <value>
+                <fullName>6731</fullName>
+                <default>false</default>
+                <label>6731 - Traffic Disturbances - OAL - Compensation Ex Gratia - Pre Travel</label>
+            </value>
+            <value>
+                <fullName>6732</fullName>
+                <default>false</default>
+                <label>6732 - Traffic Disturbances - OAL - Compensation Ex Gratia - During Travel</label>
+            </value>
+            <value>
+                <fullName>6733</fullName>
+                <default>false</default>
+                <label>6733 - Goodwill Compensation</label>
+            </value>
+            <value>
+                <fullName>6734</fullName>
+                <default>false</default>
+                <label>6734 - Traffic Disturbances - OAL - Legal Compensation - Pre Travel</label>
+            </value>
+            <value>
+                <fullName>6735</fullName>
+                <default>false</default>
+                <label>6735 - Liability - Other</label>
+            </value>
+            <value>
+                <fullName>6736</fullName>
+                <default>false</default>
+                <label>6736 - Traffic Disturbances - OAL - Legal Compensation - After Travel</label>
+            </value>
+            <value>
+                <fullName>6737</fullName>
+                <default>false</default>
+                <label>6737 - Refund of tickets and ancillary</label>
+            </value>
+            <value>
+                <fullName>6738</fullName>
+                <default>false</default>
+                <label>6738 - Liability - Care (Meal, Hotel, Transportation)</label>
+            </value>
+            <value>
+                <fullName>6739</fullName>
+                <default>false</default>
+                <label>6739 - Voucher NRTBONUS</label>
+            </value>
+            <value>
+                <fullName>6740</fullName>
+                <default>false</default>
+                <label>6740 - Baggage</label>
+            </value>
+            <value>
+                <fullName>6741</fullName>
+                <default>false</default>
+                <label>6741 - Liability - Baggage Damaged</label>
+            </value>
+            <value>
+                <fullName>6742</fullName>
+                <default>false</default>
+                <label>6742 - Liability - Baggage Delayed/missing/lost</label>
+            </value>
+            <value>
+                <fullName>6743</fullName>
+                <default>false</default>
+                <label>6743 - Liability - Baggage Pilfered</label>
+            </value>
+            <value>
+                <fullName>6744</fullName>
+                <default>false</default>
+                <label>6744 - Baggage - temporary settlement</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

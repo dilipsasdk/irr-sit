@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Call_Dropped__c</fullName>
+    <description>used for reporting</description>
+    <externalId>false</externalId>
+    <formula>ISBLANK( CallAcceptDateTime ) &amp;&amp; NOT(ISBLANK( CallEndDateTime ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Call Dropped</label>
+    <type>Checkbox</type>
+</CustomField>

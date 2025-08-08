@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Currency__c</fullName>
+    <description>The currency to which these counters apply.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The currency to which these counters apply.</inlineHelpText>
+    <label>Currency</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>DKK</fullName>
+                <default>false</default>
+                <label>DKK</label>
+            </value>
+            <value>
+                <fullName>NOK</fullName>
+                <default>false</default>
+                <label>NOK</label>
+            </value>
+            <value>
+                <fullName>OTH</fullName>
+                <default>false</default>
+                <label>OTH</label>
+            </value>
+            <value>
+                <fullName>SEK</fullName>
+                <default>false</default>
+                <label>SEK</label>
+            </value>
+            <value>
+                <fullName>USD</fullName>
+                <default>false</default>
+                <label>USD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

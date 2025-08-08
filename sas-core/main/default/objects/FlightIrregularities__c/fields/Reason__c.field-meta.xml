@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason__c</fullName>
+    <description>The reason why the flight was delayed/cancelled. Can hold about an A4 of information (2000 characters).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The reason why the flight was delayed/cancelled. Can hold about an A4 of information (2000 characters).</inlineHelpText>
+    <label>Reason</label>
+    <length>2000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_email_to_station_manger</name>
+        <label>Send email to station manger</label>
+        <locationX>524</locationX>
+        <locationY>970</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>emailBody1</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>Get_station_manager_email_id.To_Address__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <stringValue>no-reply@flysas.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <elementReference>subect1</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>56.0</apiVersion>
+    <decisions>
+        <name>Check_Org_Type</name>
+        <label>Check Org Type</label>
+        <locationX>581</locationX>
+        <locationY>519</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>IS_PROD</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_Org_Detail.IsSandbox</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_station_manager_email_id</targetReference>
+            </connector>
+            <label>IS PROD</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>check_station_maser_email_address</name>
+        <label>check station maser email address</label>
+        <locationX>518</locationX>
+        <locationY>727</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Is_Email_There</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Get_station_manager_email_id.To_Address__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_email_to_station_manger</targetReference>
+            </connector>
+            <label>Is Email There</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>emailBody1</name>
+        <dataType>String</dataType>
+        <expression>&apos;Please note iCoupon activated for flight &apos; &amp;  LEFT({!$Record.IRR_FlightId__c}, 6)&amp;&apos;/&apos; &amp; MID({!$Record.IRR_FlightId__c},14 , 2)  &amp;  
+CASE(
+MID({!$Record.IRR_FlightId__c},12 , 2), 
+&apos;01&apos;, &apos;JAN&apos;,
+&apos;02&apos;, &apos;FEB&apos;,
+&apos;03&apos;, &apos;MAR&apos;,
+&apos;04&apos;, &apos;APR&apos;,
+&apos;05&apos;, &apos;MAY&apos;,
+&apos;06&apos;, &apos;JUN&apos;,
+&apos;07&apos;, &apos;JUL&apos;,
+&apos;08&apos;, &apos;AUG&apos;,
+&apos;09&apos;, &apos;SEP&apos;,
+&apos;10&apos;, &apos;OCT&apos;, 
+&apos;11&apos;, &apos;NOV&apos;, 
+&apos;12&apos;, &apos;DEC&apos;, 
+&apos;None&apos;
+) &amp;&apos; &apos;&amp; RIGHT({!$Record.IRR_FlightId__c}, 7) &amp;&apos;.&apos;&amp; BR() &amp;  BR() &amp;
+&apos;Passengers are informed via SMS/E-mail accordingly.&apos;  &amp; BR() &amp;  BR()  &amp; &apos;Regards,&apos; &amp; BR() &amp;  &apos;SAS&apos;</expression>
+    </formulas>
+    <formulas>
+        <name>subect1</name>
+        <dataType>String</dataType>
+        <expression>&apos;iCoupon activated &apos; &amp; LEFT({!$Record.IRR_FlightId__c}, 6) &amp; &apos;/&apos;&amp;MID({!$Record.IRR_FlightId__c},14 , 2)  &amp;  
+CASE(
+MID({!$Record.IRR_FlightId__c},12 , 2), 
+&apos;01&apos;, &apos;JAN&apos;,
+&apos;02&apos;, &apos;FEB&apos;,
+&apos;03&apos;, &apos;MAR&apos;,
+&apos;04&apos;, &apos;APR&apos;,
+&apos;05&apos;, &apos;MAY&apos;,
+&apos;06&apos;, &apos;JUN&apos;,
+&apos;07&apos;, &apos;JUL&apos;,
+&apos;08&apos;, &apos;AUG&apos;,
+&apos;09&apos;, &apos;SEP&apos;,
+&apos;10&apos;, &apos;OCT&apos;, 
+&apos;11&apos;, &apos;NOV&apos;, 
+&apos;12&apos;, &apos;DEC&apos;, 
+&apos;None&apos;
+) &amp;&apos; &apos;&amp; RIGHT({!$Record.IRR_FlightId__c}, 7)</expression>
+    </formulas>
+    <interviewLabel>IRR Email to Icoupon station manager {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>IRR Email to Icoupon station manager</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Org_Detail</name>
+        <label>Get Org Detail</label>
+        <locationX>461</locationX>
+        <locationY>425</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_Org_Type</targetReference>
+        </connector>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Organization</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_station_manager_email_id</name>
+        <label>Get station manager email id</label>
+        <locationX>404</locationX>
+        <locationY>639</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>check_station_maser_email_address</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.IRR_Station_Departure__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>IRR_Icoupon_Station_Manager__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <start>
+        <locationX>330</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Get_Org_Detail</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Is_Communication_Send__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>IRR_Event_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>ICOUPON</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Is_Communication_Send__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>IRR_EventLog__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>emailbody</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Please note iCoupon activated for flight {!$Record.IRR_FlightId__c}. 
+Passengers are informed via SMS/E-mail accordingly. 
+
+Regards, 
+SAS</text>
+    </textTemplates>
+    <textTemplates>
+        <name>subject</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>iCoupon activated {!$Record.IRR_FlightId__c}</text>
+    </textTemplates>
+    <variables>
+        <name>OrgWideEmailAddress</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>OrgWideEmailAddress</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>SenderName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>SAS iCoupon</stringValue>
+        </value>
+    </variables>
+</Flow>

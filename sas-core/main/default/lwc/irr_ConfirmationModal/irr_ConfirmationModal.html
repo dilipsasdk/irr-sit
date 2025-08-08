@@ -1,0 +1,81 @@
+<!--
+ - @author Niklas Lundkvist, Deloitte
+ - @date 2020
+ -->
+
+<!-- IRR Confirmation Modal -->
+<template>
+    <section role="dialog" tabindex="-1" aria-labelledby="confirm-heading-01" aria-modal="true" aria-describedby="confirm-content-id-1" class={modalClass}>
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button
+                        onclick={handleCancel}
+                        class="slds-button slds-button_icon slds-modal__close"
+                        title="Close">
+                    <lightning-icon icon-name="utility:close" alternative-text="Close" title="Close" variant="inverse">
+                    </lightning-icon>
+                    <span class="slds-assistive-text">Close</span>
+                </button>
+                <h2 id="confirm-heading-01" class="slds-modal__title slds-hyphenate">Confirm Send</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="confirm-content-id-1">
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item padding="around-small" size="12">
+                        <p style="text-align: center;">
+                            This message will be sent to <b>{selectedCount} {recipientText}</b>, please choose channel(s) below before sending.<br>
+                            Schedule message if you want it delivered later.
+                        </p>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="6">
+                        <lightning-input
+                                checked={sendSMS}
+                                disabled={disableSMS}
+                                onchange={handleChange}
+                                type="checkbox"
+                                label="Send SMS"
+                                name="sendSMS">
+                        </lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="6">
+                        <lightning-input
+                                checked={sendEmail}
+                                disabled={disableEmail}
+                                onchange={handleChange}
+                                type="checkbox"
+                                label="Send Email"
+                                name="sendEmail">
+                        </lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="6">
+                        <lightning-radio-group name="radioGroup"
+                           label="Send Options"
+                           options={sendOptions}
+                           value={value}
+                           required
+                           type="button"
+                           onchange={handleScheduleOptions}>
+                        </lightning-radio-group>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small" size="6">
+                        <lightning-input
+                          if:true={displayScheduleTime}
+                          type="datetime"
+                          class="dateCmp"
+                          timezone="Europe/Stockholm"
+                          name="scheduledTimeOfMessage"
+                          label="Scheduled Time of Message(CET)"
+                          value={scheduleTime}
+                          required
+                          onchange={handleScheduleSendTime}>
+                        </lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+            <footer class="slds-modal__footer slds-modal__footer_directional">
+                <button class="slds-button slds-button_neutral" onclick={handleCancel}>Cancel</button>
+                <button class="slds-button slds-button_brand" onclick={handleSend}>Send Messages</button>
+            </footer>
+        </div>
+    </section>
+    <div class={backdropClass}></div>
+</template>

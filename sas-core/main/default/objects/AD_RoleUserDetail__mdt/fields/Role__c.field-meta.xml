@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <description>The ad role which the user detail should be set for.</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>AD Role</label>
+    <referenceTo>AD_Role__mdt</referenceTo>
+    <relationshipLabel>AD Role User Details</relationshipLabel>
+    <relationshipName>RoleUserDetails</relationshipName>
+    <required>true</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

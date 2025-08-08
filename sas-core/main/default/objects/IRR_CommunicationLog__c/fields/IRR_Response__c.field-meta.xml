@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IRR_Response__c</fullName>
+    <description>The response message from the customer. Separated by comma if multiple with the most recent response first.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The response message from the customer. Separated by comma if multiple with the most recent response first.</inlineHelpText>
+    <label>Response</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

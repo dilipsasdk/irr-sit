@@ -1,0 +1,143 @@
+<!--
+ - @author Niklas Lundkvist, Deloitte
+ - @date 2020
+ -->
+
+<!-- IRR Filter Panel -->
+<template>
+        <div class="slds-media">
+            <div class="slds-media__body">
+                <div class="slds-text-heading_small">Segment Status</div>
+                <lightning-checkbox-group
+                        class="slds-m-horizontal_small"
+                        name="thisSegment.statusCode"
+                        label="labelIsRequired"
+                        options={segmentOptions}
+                        value={segmentStatusGroupValue}
+                        variant="label-hidden"
+                        onchange={handleValueSelect}>
+                </lightning-checkbox-group>
+                <div class="slds-p-vertical_x-small">
+                    <div class="slds-text-heading_small">Special Service Req</div>
+                    <lightning-input
+                            name="SSR"
+                            data-checkbox-filter-value="*"
+                            data-checkbox-single-group="SSR"
+                            class="slds-m-horizontal_small"
+                            type="checkbox"
+                            label="Only show SSR"
+                            onchange={handleSingleCheckbox}>
+                    </lightning-input>
+                    <lightning-input
+                            name="SSR"
+                            data-checkbox-filter-value="NULL"
+                            data-checkbox-single-group="SSR"
+                            class="slds-m-horizontal_small"
+                            type="checkbox"
+                            label="Don't show SSR"
+                            onchange={handleSingleCheckbox}>
+                    </lightning-input>
+                    <lightning-input
+                            name="SSR"
+                            data-checkbox-filter-value="LGHT"
+                            data-checkbox-single-group="SSR"
+                            class="slds-m-horizontal_small"
+                            type="checkbox"
+                            label="Only show LGHT"
+                            onchange={handleSingleCheckbox}>
+                    </lightning-input>
+                    <lightning-input
+                            name="SSR"
+                            data-checkbox-filter-value="NULL"
+                            data-checkbox-single-group="SSR"
+                            class="slds-m-horizontal_small"
+                            type="checkbox"
+                            label="Don't show LGHT"
+                            onchange={handleSingleCheckbox}>
+                    </lightning-input>
+                </div>
+                <div class="slds-p-vertical_x-small">
+                    <div class="slds-text-heading_small">Connecting Flight</div>
+                    <lightning-input
+                            name="hasPrevSegment"
+                            data-checkbox-filter-value="TRUE"
+                            data-checkbox-single-group="FILTER_CONNECTION"
+                            class="slds-m-horizontal_small"
+                            type="checkbox"
+                            label="Inbound Flight"
+                            onchange={handleSingleCheckbox}>
+                    </lightning-input>
+                    <lightning-input
+                            name="hasNextSegment"
+                            data-checkbox-filter-value="TRUE"
+                            data-checkbox-single-group="FILTER_CONNECTION"
+                            class="slds-m-horizontal_small"
+                            type="checkbox"
+                            label="Outbound Flight"
+                            onchange={handleSingleCheckbox}>
+                    </lightning-input>
+                    <lightning-input
+                            name="hasThisSegment"
+                            data-checkbox-filter-value="TRUE"
+                            data-checkbox-single-group="FILTER_CONNECTION"
+                            class="slds-m-horizontal_small"
+                            type="checkbox"
+                            label="Local Only"
+                            onchange={handleSingleCheckbox}>
+                    </lightning-input>
+                </div>
+                <div class="slds-p-vertical_x-small">
+                    <div class="slds-text-heading_small">Service Class</div>
+                    <lightning-input
+                            name="thisSegment.serviceClass"
+                            data-checkbox-filter-value="C"
+                            data-checkbox-single-group="FILTER_SERVCLASS"
+                            class="slds-m-horizontal_small"
+                            type="checkbox"
+                            label="C"
+                            onchange={handleSingleCheckbox}>
+                    </lightning-input>
+                    <lightning-input
+                            name="thisSegment.serviceClass"
+                            data-checkbox-filter-value="Y"
+                            data-checkbox-single-group="FILTER_SERVCLASS"
+                            class="slds-m-horizontal_small"
+                            type="checkbox"
+                            label="Y"
+                            onchange={handleSingleCheckbox}>
+                    </lightning-input>
+                    <lightning-input
+                            name="thisSegment.serviceClass"
+                            data-checkbox-filter-value="M"
+                            data-checkbox-single-group="FILTER_SERVCLASS"
+                            class="slds-m-horizontal_small"
+                            type="checkbox"
+                            label="M"
+                            onchange={handleSingleCheckbox}>
+                    </lightning-input>
+                </div>
+                  <div class="slds-p-vertical_x-small">
+                    <div class="slds-text-heading_small">FQTV Level</div>
+                    <lightning-input
+                            name="ebLevel"
+                            data-checkbox-filter-value="EBG,EBD,EBP,ELIP"
+                            data-checkbox-single-group="FILTER_FQTV"
+                            class="slds-m-horizontal_small"
+                            type="checkbox"
+                            label="Show High Tiers"
+                            onchange={handleSingleCheckbox}>
+                    </lightning-input>
+    
+                     <lightning-input
+                            name="ebLevel"
+                            data-checkbox-filter-value="null,EBS,EBB"
+                            data-checkbox-single-group="FILTER_FQTV"
+                            class="slds-m-horizontal_small"
+                            type="checkbox"
+                            label="Don't Show High Tiers"
+                            onchange={handleSingleCheckbox}>
+                    </lightning-input>
+                  </div>
+            </div>
+        </div>
+    </template>

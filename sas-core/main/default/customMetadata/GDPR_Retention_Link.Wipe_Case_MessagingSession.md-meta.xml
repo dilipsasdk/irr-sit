@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Wipe Case MessagingSession</label>
+    <protected>false</protected>
+    <values>
+        <field>GDPR_Related_Channel_Object_Link__c</field>
+        <value xsi:type="xsd:string">Wipe_Case_Batch</value>
+    </values>
+    <values>
+        <field>GDPR_Related_Channel_Object__c</field>
+        <value xsi:type="xsd:string">MessagingSession</value>
+    </values>
+    <values>
+        <field>Related_LookupField__c</field>
+        <value xsi:type="xsd:string">CaseId</value>
+    </values>
+</CustomMetadata>

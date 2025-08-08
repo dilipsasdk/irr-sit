@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InactiveCaseOwner__c</fullName>
+    <externalId>false</externalId>
+    <formula>AND(BEGINS(Owner:User.Id , &quot;005&quot;),Owner:User.IsActive = false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>InactiveCaseOwner</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

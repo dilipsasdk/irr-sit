@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+ <title></title>
+</head>
+<body bgcolor="#ffffff" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); padding: 0px; text-size-adjust: none; font-size: 16px; font-family: arial, helvetica, sans-serif; height: auto; min-height: auto;">
+ <table bgcolor="#ffffff" cellpadding="0" cellspacing="0" class="tb_properties border_style" style="background-color:#FFFFFF;" width="100%">
+  <tbody>
+  <tr>
+   <td align="center" valign="top">
+    <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+     <tbody>
+     <tr>
+      <td class="content_padding" style="">
+       <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+        <tr>
+         <td align="center" class="header" valign="top">
+          <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+           <tbody>
+           <tr>
+            <td align="left" valign="top">
+             <table cellpadding="0" cellspacing="0" style="width:100%">
+              <tbody>
+              <tr>
+               <td class="responsive-td" style="width: 100%;" valign="top">
+                <table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" style="min-width: 100%;" width="100%">
+                 <tbody>
+                 <tr>
+                  <td class="stylingblock-content-wrapper camarker-inner">
+                   <table cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                    <tr>
+                     <td align="center"><img height="63" src="https://image.msg.flysas.com/lib/fe3e11717564047d741777/m/1/16092f30-85ad-4ba1-ba69-6abd88696641.png" style="display: block; padding: 0px; text-align: center; height: 63px; width: 600px; border: 0px;" width="600" /></td>
+                    </tr>
+                    </tbody>
+                   </table>
+                  </td>
+                 </tr>
+                 </tbody>
+                </table>
+                <table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" style="min-width: 100%;" width="100%">
+                 <tbody>
+                 <tr>
+                  <td class="stylingblock-content-wrapper camarker-inner">
+                   <table cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                    <tr>
+                     <td align="center"><img height="258" src="https://image.msg.flysas.com/lib/fe3c11717564047c751d73/m/1/55ea2095-bae1-456e-b891-d907bf22821e.jpg" style="display: block; padding: 0px; text-align: center; height: 258px; width: 600px; border: 0px;" width="600" /></td>
+                    </tr>
+                    </tbody>
+                   </table>
+                  </td>
+                 </tr>
+                 </tbody>
+                </table>
+
+                <table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" style="background-color: transparent; min-width: 100%;" width="100%">
+                 <tbody>
+                 <tr>
+                  <td class="stylingblock-content-wrapper camarker-inner" style="padding: 0px 50px;">
+                   <div style="text-align: center;"><br />
+                    <br />
+                    <span style="font-size:16px;">Important information about your SAS booking {{{passengerInfo.bookingReference}}}</span><br />
+                    <br />
+                   </div>
+
+                   <div><span style="font-size:11px;">Hi,<br /></span>
+                   <br />
+                   [[[DISPLAYIF(scheduledChangeInfo.isDayChange)]]]<span style="font-size:11px;">PLEASE NOTE - DATE CHANGE in itinerary.<br /></span>
+                   <br />[[[ENDDISPLAYIF()]]]
+                   <span style="font-size:11px;">We’ve made an adjustment to our flight schedule that impacts your SAS trip with booking reference {{{passengerInfo.bookingReference}}}. Your new itinerary is shown in Manage My Booking (link below).<br /></span>
+                   <br />
+                   <span style="font-size:11px;">We apologize and hope that the new times will work for you. Kindly inform anyone else traveling with you about the change.<br /></span>
+                   <br />
+                   <span style="font-size:11px;">Please go to "View Booking" to review your new flight and find options regarding your booking such as accept new flight, voucher or rebooking. If you have connecting flights, please make sure to check your entire itinerary.<br /></span>
+                   <br />
+                   <span style="font-size:11px;">If we haven't heard from you within 5 days, we will understand that you've accepted the new trip and this will constitute our new agreement with you.<br /></span>
+                   <br />
+                   <span style="font-size:11px;">Best Regards, <br />SAS<br /><br />Read more about Safe Travel with SAS here: https://www.flysas.com/en/safe-travel/<br />If you need to get in touch with us: https://www.flysas.com/en/customer-service/</span><br />
+                   </div>
+                  </td>
+                 </tr>
+                 </tbody>
+                </table>
+                <table cellpadding="0" cellspacing="0" width="100%" class="stylingblock-content-wrapper" style="min-width: 100%; "><tr><td class="stylingblock-content-margin-cell" style="padding: 15px; "><table cellpadding="0" cellspacing="0" width="100%" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><table border="0" cellspacing="0" cellpadding="0"><tr><td class="innertd buttonblock" bgcolor="#000099" style=" border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background-color: #000099;"><a target="_blank" class="buttonstyles" style=" font-size: 14px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; min-width: 200px; width: 100%; background-color: #000099; border: 1px solid #5D5D5D; padding: 10px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;" href="https://sas.travel/go/mmb?l=en&r={{{passengerInfo.bookingReference}}}&n={{{passengerInfo.lastName}}}">VIEW BOOKING</a></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+                <table cellpadding="0" cellspacing="0" width="100%" class="stylingblock-content-wrapper" style="min-width: 100%; "><tr><td class="stylingblock-content-margin-cell" style="padding: 15px; "><table cellpadding="0" cellspacing="0" width="100%" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><table border="0" cellspacing="0" cellpadding="0"><tr><td class="innertd buttonblock" bgcolor="#000099" style=" border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background-color: #000099;"><a target="_blank" class="buttonstyles" style=" font-size: 14px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; min-width: 200px; width: 100%; background-color: #000099; border: 1px solid #5D5D5D; padding: 10px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;" href="https://www.flysas.com/en/traffic-information/message/">MORE INFORMATION</a></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+                <table cellpadding="0" cellspacing="0" width="100%" class="stylingblock-content-wrapper" style="min-width: 100%; "><tr><td class="stylingblock-content-margin-cell" style="padding: 15px; "><table cellpadding="0" cellspacing="0" width="100%" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td align="center"><table border="0" cellspacing="0" cellpadding="0"><tr><td class="innertd buttonblock" bgcolor="#000099" style=" border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; background-color: #000099;"><a target="_blank" class="buttonstyles" style=" font-size: 14px; font-family: Arial, helvetica, sans-serif; color: #FFFFFF; text-align: center; text-decoration: none; display: block; min-width: 200px; width: 100%; background-color: #000099; border: 1px solid #5D5D5D; padding: 10px; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;" href="https://www.flysas.com/en/legal-info/eu-passenger-rights/">PASSENGER RIGHTS</a></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+                <table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" style="min-width: 100%;" width="100%">
+                 <tbody>
+                 <tr>
+                  <td class="stylingblock-content-wrapper camarker-inner" style="padding: 10px;">
+                   <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                    <tbody>
+                    <tr>
+                     <td>
+                      <table cellpadding="0" cellspacing="0" style="width: 100%;">
+                       <tbody>
+                       <tr>
+                        <td class="responsive-td" style="width: 50%; padding-right: 3px;" valign="top">
+                         <table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" style="background-color: transparent; min-width: 100%;" width="100%">
+                          <tbody>
+                          <tr>
+                           <td class="stylingblock-content-wrapper camarker-inner" style="padding: 0px 0px 10px;"><span style="color:#999999;"><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Scandinavian Airlines&nbsp;&copy; 2020</span></span></span></td>
+                          </tr>
+                          </tbody>
+                         </table>
+                         <table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" style="min-width: 100%;" width="100%">
+                          <tbody>
+                          <tr>
+                           <td class="stylingblock-content-wrapper camarker-inner"><span style="color:#999999;"><span style="font-size:10px;">This email has been sent by Scandinavian Airlines System Denmark-Norway-Sweden SE-195 87 Stockholm-Arlanda, Sweden, to {{{passengerInfo.emailAddress}}}.</span></span></td>
+                          </tr>
+                          </tbody>
+                         </table>
+                        </td>
+                        <td class="responsive-td" style="width: 50%; padding-left: 3px;" valign="top">
+                         <table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" style="background-color: transparent; min-width: 100%;" width="100%">
+                          <tbody>
+                          <tr>
+                           <td class="stylingblock-content-wrapper camarker-inner" style="padding: 0px;">
+                            <table cellpadding="0" cellspacing="0" width="100%">
+                             <tbody>
+                             <tr>
+                              <td align="left"><img height="19" src="https://image.msg.flysas.com/lib/fe3e11717564047d741777/m/1/1ec482c9-24f9-41d5-8467-516832f22192.png" style="display: block; padding: 0px; text-align: left; height: 19px; width: 200px;" width="200" /></td>
+                             </tr>
+                             </tbody>
+                            </table>
+                           </td>
+                          </tr>
+                          </tbody>
+                         </table>
+                         <table cellpadding="0" cellspacing="0" class="stylingblock-content-wrapper" style="min-width: 100%;" width="100%">
+                          <tbody>
+                          <tr>
+                           <td class="stylingblock-content-wrapper camarker-inner">
+                            <div><span style="color:#999999;"><span style="font-size:10px;"><span style="font-family:Arial,Helvetica,sans-serif;">SAS respects your privacy. Please read our </span></span></span><a href="https://www.sas.se/juridisk-information/integritetspolicy/"><span style="color:#999999;"><span style="font-size:10px;"><span style="font-family:Arial,Helvetica,sans-serif;">guidelines </span></span></span></a> <span style="color:#999999;"><span style="font-size:10px;"><span style="font-family:Arial,Helvetica,sans-serif;">for handling personal data. We welcome </span></span></span><a href="https://www.sas.se/kundservice/kontakt/"><span style="color:#999999;"><span style="font-size:10px;"><span style="font-family:Arial,Helvetica,sans-serif;">feedback </span></span></span></a> <span style="color:#999999;"><span style="font-size:10px;"><span style="font-family:Arial,Helvetica,sans-serif;">from our customers.</span></span></span></div>
+                           </td>
+                          </tr>
+                          </tbody>
+                         </table>
+                        </td>
+                       </tr>
+                       </tbody>
+                      </table>
+                     </td>
+                    </tr>
+                    </tbody>
+                   </table>
+                  </td>
+                 </tr>
+                 </tbody>
+                </table>
+               </td>
+              </tr>
+              </tbody>
+             </table>
+            </td>
+           </tr>
+           </tbody>
+          </table>
+         </td>
+        </tr>
+        </tbody>
+       </table>
+      </td>
+     </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  </tbody>
+ </table>
+</body>
+</html>

@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incoming_Case_Origin__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Incoming Case Origin</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Chat</fullName>
+                <default>false</default>
+                <label>Chat</label>
+            </value>
+            <value>
+                <fullName>Email - Charge Back</fullName>
+                <default>false</default>
+                <label>Email - Charge Back</label>
+            </value>
+            <value>
+                <fullName>Email - Agent Helpdesk International</fullName>
+                <default>false</default>
+                <label>Email - Agent Helpdesk International</label>
+            </value>
+            <value>
+                <fullName>Email - Agent Helpdesk Scandinavia</fullName>
+                <default>false</default>
+                <label>Email - Agent Helpdesk Scandinavia</label>
+            </value>
+            <value>
+                <fullName>Email - Businesstravel STO</fullName>
+                <default>false</default>
+                <label>Email - Businesstravel STO</label>
+            </value>
+            <value>
+                <fullName>Email - Corporate Support Backoffice</fullName>
+                <default>false</default>
+                <label>Email - Corporate Support Backoffice</label>
+            </value>
+            <value>
+                <fullName>Email - Corporate Support International</fullName>
+                <default>false</default>
+                <label>Email - Corporate Support International</label>
+            </value>
+            <value>
+                <fullName>Email - Corporate Support Scandinavia</fullName>
+                <default>false</default>
+                <label>Email - Corporate Support Scandinavia</label>
+            </value>
+            <value>
+                <fullName>Email - CS Denmark</fullName>
+                <default>false</default>
+                <label>Email - CS Denmark</label>
+            </value>
+            <value>
+                <fullName>Email - CS Feedback</fullName>
+                <default>false</default>
+                <label>Email - CS Feedback</label>
+            </value>
+            <value>
+                <fullName>Email - CS Norway</fullName>
+                <default>false</default>
+                <label>Email - CS Norway</label>
+            </value>
+            <value>
+                <fullName>Email - CS Sweden</fullName>
+                <default>false</default>
+                <label>Email - CS Sweden</label>
+            </value>
+            <value>
+                <fullName>Email - Customer Claim</fullName>
+                <default>false</default>
+                <label>Email - Customer Claim</label>
+            </value>
+            <value>
+                <fullName>Email - Customer Claim DBC</fullName>
+                <default>false</default>
+                <label>Email - Customer Claim DBC</label>
+            </value>
+            <value>
+                <fullName>Email - Customer Claim Regression</fullName>
+                <default>false</default>
+                <label>Email - Customer Claim Regression</label>
+            </value>
+            <value>
+                <fullName>Email - Customer Claim Scanning</fullName>
+                <default>false</default>
+                <label>Email - Customer Claim Scanning</label>
+            </value>
+            <value>
+                <fullName>Email - Digital Channel Support Internal</fullName>
+                <default>false</default>
+                <label>Email - Digital Channel Support Internal</label>
+            </value>
+            <value>
+                <fullName>Email - Direct Sales Reservations DK</fullName>
+                <default>false</default>
+                <label>Email - Direct Sales Reservations DK</label>
+            </value>
+            <value>
+                <fullName>Email - EB Missing Points</fullName>
+                <default>false</default>
+                <label>Email - EB Missing Points</label>
+            </value>
+            <value>
+                <fullName>Email - EB Pai Manual</fullName>
+                <default>false</default>
+                <label>Email - EB Pai Manual</label>
+            </value>
+            <value>
+                <fullName>Email - EB Tier</fullName>
+                <default>false</default>
+                <label>Email - EB Tier</label>
+            </value>
+            <value>
+                <fullName>Email - EB Vendor Support</fullName>
+                <default>false</default>
+                <label>Email - EB Vendor Support</label>
+            </value>
+            <value>
+                <fullName>Email - EuroBonus Diamond DK</fullName>
+                <default>false</default>
+                <label>Email - EuroBonus Diamond DK</label>
+            </value>
+            <value>
+                <fullName>Email - EuroBonus Diamond NO</fullName>
+                <default>false</default>
+                <label>Email - EuroBonus Diamond NO</label>
+            </value>
+            <value>
+                <fullName>Email - EuroBonus Diamond SE</fullName>
+                <default>false</default>
+                <label>Email - EuroBonus Diamond SE</label>
+            </value>
+            <value>
+                <fullName>Email - EuroBonus Gold DK</fullName>
+                <default>false</default>
+                <label>Email - EuroBonus Gold DK</label>
+            </value>
+            <value>
+                <fullName>Email - EuroBonus Gold NO</fullName>
+                <default>false</default>
+                <label>Email - EuroBonus Gold NO</label>
+            </value>
+            <value>
+                <fullName>Email - EuroBonus Gold SE</fullName>
+                <default>false</default>
+                <label>Email - EuroBonus Gold SE</label>
+            </value>
+            <value>
+                <fullName>Email - EuroBonus Identify Customer</fullName>
+                <default>false</default>
+                <label>Email - EuroBonus Identify Customer</label>
+            </value>
+            <value>
+                <fullName>Email - EuroBonus Partner Support</fullName>
+                <default>false</default>
+                <label>Email - EuroBonus Partner Support</label>
+            </value>
+            <value>
+                <fullName>Email - EuroBonus Support</fullName>
+                <default>false</default>
+                <label>Email - EuroBonus Support</label>
+            </value>
+            <value>
+                <fullName>Email - Forsvaret NO</fullName>
+                <default>false</default>
+                <label>Email - Forsvaret NO</label>
+            </value>
+            <value>
+                <fullName>Email - Foundever Customer Care</fullName>
+                <default>false</default>
+                <label>Email - Foundever Customer Care</label>
+            </value>
+            <value>
+                <fullName>Email - Fraud EMEA</fullName>
+                <default>false</default>
+                <label>Email - Fraud EMEA</label>
+            </value>
+            <value>
+                <fullName>Email - Fraud Investigation</fullName>
+                <default>false</default>
+                <label>Email - Fraud Investigation</label>
+            </value>
+            <value>
+                <fullName>Email - Functional Product Support</fullName>
+                <default>false</default>
+                <label>Email - Functional Product Support</label>
+            </value>
+            <value>
+                <fullName>Email - GDPR Secure Data</fullName>
+                <default>false</default>
+                <label>Email - GDPR Secure Data</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales ACE</fullName>
+                <default>false</default>
+                <label>Email - Group Sales ACE</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales ADM</fullName>
+                <default>false</default>
+                <label>Email - Group Sales ADM</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales AT</fullName>
+                <default>false</default>
+                <label>Email - Group Sales AT</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales Benelux</fullName>
+                <default>false</default>
+                <label>Email - Group Sales Benelux</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales Bulk</fullName>
+                <default>false</default>
+                <label>Email - Group Sales Bulk</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales CH</fullName>
+                <default>false</default>
+                <label>Email - Group Sales CH</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales DE</fullName>
+                <default>false</default>
+                <label>Email - Group Sales DE</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales DK</fullName>
+                <default>false</default>
+                <label>Email - Group Sales DK</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales EE</fullName>
+                <default>false</default>
+                <label>Email - Group Sales EE</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales ES</fullName>
+                <default>false</default>
+                <label>Email - Group Sales ES</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales FI</fullName>
+                <default>false</default>
+                <label>Email - Group Sales FI</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales FR</fullName>
+                <default>false</default>
+                <label>Email - Group Sales FR</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales IE</fullName>
+                <default>false</default>
+                <label>Email - Group Sales IE</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales Interline</fullName>
+                <default>false</default>
+                <label>Email - Group Sales Interline</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales IS</fullName>
+                <default>false</default>
+                <label>Email - Group Sales IS</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales IT</fullName>
+                <default>false</default>
+                <label>Email - Group Sales IT</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales LT</fullName>
+                <default>false</default>
+                <label>Email - Group Sales LT</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales LV</fullName>
+                <default>false</default>
+                <label>Email - Group Sales LV</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales NO</fullName>
+                <default>false</default>
+                <label>Email - Group Sales NO</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales PL</fullName>
+                <default>false</default>
+                <label>Email - Group Sales PL</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales RU</fullName>
+                <default>false</default>
+                <label>Email - Group Sales RU</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales SE</fullName>
+                <default>false</default>
+                <label>Email - Group Sales SE</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales UK</fullName>
+                <default>false</default>
+                <label>Email - Group Sales UK</label>
+            </value>
+            <value>
+                <fullName>Email - Group Sales US</fullName>
+                <default>false</default>
+                <label>Email - Group Sales US</label>
+            </value>
+            <value>
+                <fullName>Email - Liability Claim</fullName>
+                <default>false</default>
+                <label>Email - Liability Claim</label>
+            </value>
+            <value>
+                <fullName>Email - Liability Claim BOM</fullName>
+                <default>false</default>
+                <label>Email - Liability Claim BOM</label>
+            </value>
+            <value>
+                <fullName>Email - OC KANA Bank Payment</fullName>
+                <default>false</default>
+                <label>Email - OC KANA Bank Payment</label>
+            </value>
+            <value>
+                <fullName>Email - OC KANA Groups</fullName>
+                <default>false</default>
+                <label>Email - OC KANA Groups</label>
+            </value>
+            <value>
+                <fullName>Email - OC KANA HQ Expert</fullName>
+                <default>false</default>
+                <label>Email - OC KANA HQ Expert</label>
+            </value>
+            <value>
+                <fullName>Email - OC KANA STOPY</fullName>
+                <default>false</default>
+                <label>Email - OC KANA STOPY</label>
+            </value>
+            <value>
+                <fullName>Email - OC KANA TAWEB</fullName>
+                <default>false</default>
+                <label>Email - OC KANA TAWEB</label>
+            </value>
+            <value>
+                <fullName>Email - OC KANA US</fullName>
+                <default>false</default>
+                <label>Email - OC KANA US</label>
+            </value>
+            <value>
+                <fullName>Email - Olympic DK</fullName>
+                <default>false</default>
+                <label>Email - Olympic DK</label>
+            </value>
+            <value>
+                <fullName>Email - Olympic NO</fullName>
+                <default>false</default>
+                <label>Email - Olympic NO</label>
+            </value>
+            <value>
+                <fullName>Email - Olympic SE</fullName>
+                <default>false</default>
+                <label>Email - Olympic SE</label>
+            </value>
+            <value>
+                <fullName>Email - Pandion DK</fullName>
+                <default>false</default>
+                <label>Email - Pandion DK</label>
+            </value>
+            <value>
+                <fullName>Email - Pandion NO</fullName>
+                <default>false</default>
+                <label>Email - Pandion NO</label>
+            </value>
+            <value>
+                <fullName>Email - Pandion SE</fullName>
+                <default>false</default>
+                <label>Email - Pandion SE</label>
+            </value>
+            <value>
+                <fullName>Email - Passengers With Disability CA EN</fullName>
+                <default>false</default>
+                <label>Email - Passengers With Disability CA EN</label>
+            </value>
+            <value>
+                <fullName>Email - Premium Corporate Support</fullName>
+                <default>false</default>
+                <label>Email - Premium Corporate Support</label>
+            </value>
+            <value>
+                <fullName>Email - Redress</fullName>
+                <default>false</default>
+                <label>Email - Redress</label>
+            </value>
+            <value>
+                <fullName>Email - Refund BSP General</fullName>
+                <default>false</default>
+                <label>Email - Refund BSP General</label>
+            </value>
+            <value>
+                <fullName>Email - Refund BSP General 2</fullName>
+                <default>false</default>
+                <label>Email - Refund BSP General 2</label>
+            </value>
+            <value>
+                <fullName>Email - Refund DK General</fullName>
+                <default>false</default>
+                <label>Email - Refund DK General</label>
+            </value>
+            <value>
+                <fullName>Email - Refund FI General</fullName>
+                <default>false</default>
+                <label>Email - Refund FI General</label>
+            </value>
+            <value>
+                <fullName>Email - Refund IOM</fullName>
+                <default>false</default>
+                <label>Email - Refund IOM</label>
+            </value>
+            <value>
+                <fullName>Email - Refund NCE General</fullName>
+                <default>false</default>
+                <label>Email - Refund NCE General</label>
+            </value>
+            <value>
+                <fullName>Email - Refund NO General</fullName>
+                <default>false</default>
+                <label>Email - Refund NO General</label>
+            </value>
+            <value>
+                <fullName>Email - Refund OC Error Handling</fullName>
+                <default>false</default>
+                <label>Email - Refund OC Error Handling</label>
+            </value>
+            <value>
+                <fullName>Email - Refund OC External</fullName>
+                <default>false</default>
+                <label>Email - Refund OC External</label>
+            </value>
+            <value>
+                <fullName>Email - Refund Operating Center</fullName>
+                <default>false</default>
+                <label>Email - Refund Operating Center</label>
+            </value>
+            <value>
+                <fullName>Email - Refund SE General</fullName>
+                <default>false</default>
+                <label>Email - Refund SE General</label>
+            </value>
+            <value>
+                <fullName>Email - Refund SE General 2</fullName>
+                <default>false</default>
+                <label>Email - Refund SE General 2</label>
+            </value>
+            <value>
+                <fullName>Email - Refund US General</fullName>
+                <default>false</default>
+                <label>Email - Refund US General</label>
+            </value>
+            <value>
+                <fullName>Email - Sales Control</fullName>
+                <default>false</default>
+                <label>Email - Sales Control</label>
+            </value>
+            <value>
+                <fullName>Email - Sales Control OC DK</fullName>
+                <default>false</default>
+                <label>Email - Sales Control OC DK</label>
+            </value>
+            <value>
+                <fullName>Email - Sales Control OC NO</fullName>
+                <default>false</default>
+                <label>Email - Sales Control OC NO</label>
+            </value>
+            <value>
+                <fullName>Email - Sales Control OC SE</fullName>
+                <default>false</default>
+                <label>Email - Sales Control OC SE</label>
+            </value>
+            <value>
+                <fullName>Email - Sales Information</fullName>
+                <default>false</default>
+                <label>Email - Sales Information</label>
+            </value>
+            <value>
+                <fullName>Email - SAS Poland</fullName>
+                <default>false</default>
+                <label>Email - SAS Poland</label>
+            </value>
+            <value>
+                <fullName>Email - SASSI Internal</fullName>
+                <default>false</default>
+                <label>Email - SASSI Internal</label>
+            </value>
+            <value>
+                <fullName>Email - Scanned Compensation Cards</fullName>
+                <default>false</default>
+                <label>Email - Scanned Compensation Cards</label>
+            </value>
+            <value>
+                <fullName>Email - SGH Bag DK</fullName>
+                <default>false</default>
+                <label>Email - SGH Bag DK</label>
+            </value>
+            <value>
+                <fullName>Email - SGH Bag NO</fullName>
+                <default>false</default>
+                <label>Email - SGH Bag NO</label>
+            </value>
+            <value>
+                <fullName>Email - SGH Bag SE</fullName>
+                <default>false</default>
+                <label>Email - SGH Bag SE</label>
+            </value>
+            <value>
+                <fullName>Email - SME International</fullName>
+                <default>false</default>
+                <label>Email - SME International</label>
+            </value>
+            <value>
+                <fullName>Email - SME Scandinavia</fullName>
+                <default>false</default>
+                <label>Email - SME Scandinavia</label>
+            </value>
+            <value>
+                <fullName>Email - SoMe Support</fullName>
+                <default>false</default>
+                <label>Email - SoMe Support</label>
+            </value>
+            <value>
+                <fullName>Email - Special Sales NO</fullName>
+                <default>false</default>
+                <label>Email - Special Sales NO</label>
+            </value>
+            <value>
+                <fullName>Email - Star Alliance Request</fullName>
+                <default>false</default>
+                <label>Email - Star Alliance Request</label>
+            </value>
+            <value>
+                <fullName>Email - Star Alliance Upgrades</fullName>
+                <default>false</default>
+                <label>Email - Star Alliance Upgrades</label>
+            </value>
+            <value>
+                <fullName>Email - System &amp; Tariff</fullName>
+                <default>false</default>
+                <label>Email - System &amp; Tariff</label>
+            </value>
+            <value>
+                <fullName>Email - Ticketless Support</fullName>
+                <default>false</default>
+                <label>Email - Ticketless Support</label>
+            </value>
+            <value>
+                <fullName>Email - Vendor Management</fullName>
+                <default>false</default>
+                <label>Email - Vendor Management</label>
+            </value>
+            <value>
+                <fullName>Email - Vendor Refund</fullName>
+                <default>false</default>
+                <label>Email - Vendor Refund</label>
+            </value>
+            <value>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+                <label>Facebook</label>
+            </value>
+            <value>
+                <fullName>Facebook Messenger</fullName>
+                <default>false</default>
+                <label>Facebook Messenger</label>
+            </value>
+            <value>
+                <fullName>Form - Claims DK</fullName>
+                <default>false</default>
+                <label>Form - Claims DK</label>
+            </value>
+            <value>
+                <fullName>Form - Claims International</fullName>
+                <default>false</default>
+                <label>Form - Claims International</label>
+            </value>
+            <value>
+                <fullName>Form - Claims NO</fullName>
+                <default>false</default>
+                <label>Form - Claims NO</label>
+            </value>
+            <value>
+                <fullName>Form - Claims SE</fullName>
+                <default>false</default>
+                <label>Form - Claims SE</label>
+            </value>
+            <value>
+                <fullName>Form - Compensation Card DK</fullName>
+                <default>false</default>
+                <label>Form - Compensation Card DK</label>
+            </value>
+            <value>
+                <fullName>Form - Compensation Card International</fullName>
+                <default>false</default>
+                <label>Form - Compensation Card International</label>
+            </value>
+            <value>
+                <fullName>Form - Compensation Card NO</fullName>
+                <default>false</default>
+                <label>Form - Compensation Card NO</label>
+            </value>
+            <value>
+                <fullName>Form - Compensation Card SE</fullName>
+                <default>false</default>
+                <label>Form - Compensation Card SE</label>
+            </value>
+            <value>
+                <fullName>Form - Death Certificate DK</fullName>
+                <default>false</default>
+                <label>Form - Death Certificate DK</label>
+            </value>
+            <value>
+                <fullName>Form - Death Certificate International</fullName>
+                <default>false</default>
+                <label>Form - Death Certificate International</label>
+            </value>
+            <value>
+                <fullName>Form - Death Certificate NO</fullName>
+                <default>false</default>
+                <label>Form - Death Certificate NO</label>
+            </value>
+            <value>
+                <fullName>Form - Death Certificate SE</fullName>
+                <default>false</default>
+                <label>Form - Death Certificate SE</label>
+            </value>
+            <value>
+                <fullName>Form - Feedback DK</fullName>
+                <default>false</default>
+                <label>Form - Feedback DK</label>
+            </value>
+            <value>
+                <fullName>Form - Feedback International</fullName>
+                <default>false</default>
+                <label>Form - Feedback International</label>
+            </value>
+            <value>
+                <fullName>Form - Feedback NO</fullName>
+                <default>false</default>
+                <label>Form - Feedback NO</label>
+            </value>
+            <value>
+                <fullName>Form - Feedback SE</fullName>
+                <default>false</default>
+                <label>Form - Feedback SE</label>
+            </value>
+            <value>
+                <fullName>Form - Flight Delay Certificate DK</fullName>
+                <default>false</default>
+                <label>Form - Flight Delay Certificate DK</label>
+            </value>
+            <value>
+                <fullName>Form - Flight Delay Certificate International</fullName>
+                <default>false</default>
+                <label>Form - Flight Delay Certificate International</label>
+            </value>
+            <value>
+                <fullName>Form - Flight Delay Certificate NO</fullName>
+                <default>false</default>
+                <label>Form - Flight Delay Certificate NO</label>
+            </value>
+            <value>
+                <fullName>Form - Flight Delay Certificate SE</fullName>
+                <default>false</default>
+                <label>Form - Flight Delay Certificate SE</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel BE</fullName>
+                <default>false</default>
+                <label>Form - Group Travel BE</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel CH-de</fullName>
+                <default>false</default>
+                <label>Form - Group Travel CH-de</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel CH-fr</fullName>
+                <default>false</default>
+                <label>Form - Group Travel CH-fr</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel DE</fullName>
+                <default>false</default>
+                <label>Form - Group Travel DE</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel DK</fullName>
+                <default>false</default>
+                <label>Form - Group Travel DK</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel ES</fullName>
+                <default>false</default>
+                <label>Form - Group Travel ES</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel FI</fullName>
+                <default>false</default>
+                <label>Form - Group Travel FI</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel FR</fullName>
+                <default>false</default>
+                <label>Form - Group Travel FR</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel GB</fullName>
+                <default>false</default>
+                <label>Form - Group Travel GB</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel IE</fullName>
+                <default>false</default>
+                <label>Form - Group Travel IE</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel IT</fullName>
+                <default>false</default>
+                <label>Form - Group Travel IT</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel LU</fullName>
+                <default>false</default>
+                <label>Form - Group Travel LU</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel NL</fullName>
+                <default>false</default>
+                <label>Form - Group Travel NL</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel NO</fullName>
+                <default>false</default>
+                <label>Form - Group Travel NO</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel PL</fullName>
+                <default>false</default>
+                <label>Form - Group Travel PL</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel RU</fullName>
+                <default>false</default>
+                <label>Form - Group Travel RU</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel SE</fullName>
+                <default>false</default>
+                <label>Form - Group Travel SE</label>
+            </value>
+            <value>
+                <fullName>Form - Group Travel US</fullName>
+                <default>false</default>
+                <label>Form - Group Travel US</label>
+            </value>
+            <value>
+                <fullName>Form - Medical Approval EN</fullName>
+                <default>false</default>
+                <label>Form - Medical Approval EN</label>
+            </value>
+            <value>
+                <fullName>Form - Passengers With Disability CA EN</fullName>
+                <default>false</default>
+                <label>Form - Passengers With Disability CA EN</label>
+            </value>
+            <value>
+                <fullName>Form - Refund Customer</fullName>
+                <default>false</default>
+                <label>Form - Refund Customer</label>
+            </value>
+            <value>
+                <fullName>Form - Refund Forsvaret</fullName>
+                <default>false</default>
+                <label>Form - Refund Forsvaret</label>
+            </value>
+            <value>
+                <fullName>Form - Refund SC Under 180 Minutes</fullName>
+                <default>false</default>
+                <label>Form - Refund SC Under 180 Minutes</label>
+            </value>
+            <value>
+                <fullName>Form - Refunds Customer DK</fullName>
+                <default>false</default>
+                <label>Form - Refunds Customer DK</label>
+            </value>
+            <value>
+                <fullName>Form - Refunds Customer International</fullName>
+                <default>false</default>
+                <label>Form - Refunds Customer International</label>
+            </value>
+            <value>
+                <fullName>Form - Refunds Customer NO</fullName>
+                <default>false</default>
+                <label>Form - Refunds Customer NO</label>
+            </value>
+            <value>
+                <fullName>Form - Refunds Customer SE</fullName>
+                <default>false</default>
+                <label>Form - Refunds Customer SE</label>
+            </value>
+            <value>
+                <fullName>Form - Refunds Travel Agent DK</fullName>
+                <default>false</default>
+                <label>Form - Refunds Travel Agent DK</label>
+            </value>
+            <value>
+                <fullName>Form - Refunds Travel Agent International</fullName>
+                <default>false</default>
+                <label>Form - Refunds Travel Agent International</label>
+            </value>
+            <value>
+                <fullName>Form - Refunds Travel Agent NO</fullName>
+                <default>false</default>
+                <label>Form - Refunds Travel Agent NO</label>
+            </value>
+            <value>
+                <fullName>Form - Refunds Travel Agent SE</fullName>
+                <default>false</default>
+                <label>Form - Refunds Travel Agent SE</label>
+            </value>
+            <value>
+                <fullName>Form - Refund Travel Agent</fullName>
+                <default>false</default>
+                <label>Form - Refund Travel Agent</label>
+            </value>
+            <value>
+                <fullName>Form - SSR DK</fullName>
+                <default>false</default>
+                <label>Form - SSR DK</label>
+            </value>
+            <value>
+                <fullName>Form - SSR International</fullName>
+                <default>false</default>
+                <label>Form - SSR International</label>
+            </value>
+            <value>
+                <fullName>Form - SSR NO</fullName>
+                <default>false</default>
+                <label>Form - SSR NO</label>
+            </value>
+            <value>
+                <fullName>Form - SSR SE</fullName>
+                <default>false</default>
+                <label>Form - SSR SE</label>
+            </value>
+            <value>
+                <fullName>Form - Visa Rejection DK</fullName>
+                <default>false</default>
+                <label>Form - Visa Rejection DK</label>
+            </value>
+            <value>
+                <fullName>Form - Visa Rejection International</fullName>
+                <default>false</default>
+                <label>Form - Visa Rejection International</label>
+            </value>
+            <value>
+                <fullName>Form - Visa Rejection NO</fullName>
+                <default>false</default>
+                <label>Form - Visa Rejection NO</label>
+            </value>
+            <value>
+                <fullName>Form - Visa Rejection SE</fullName>
+                <default>false</default>
+                <label>Form - Visa Rejection SE</label>
+            </value>
+            <value>
+                <fullName>Manual - NO Refunds Migration</fullName>
+                <default>false</default>
+                <label>Manual - NO Refunds Migration</label>
+            </value>
+            <value>
+                <fullName>Twitter</fullName>
+                <default>false</default>
+                <label>Twitter</label>
+            </value>
+            <value>
+                <fullName>White Paper - Liability Claim</fullName>
+                <default>false</default>
+                <label>White Paper - Liability Claim</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+RAC0110000 {-DATE-}672790801{-S1NAME---}                         SEKD000000000005000                        SK {PR}SF   01
+RAC0110000 {-DATE-}672790801{-S2NAME---}                         SEKD000000000006000                        SK {PR}SF   01
+RAC0110000 {-DATE-}672790801{-S3NAME---}                         SEKD000000000007000                        SK {PR}SF   01
+RAC0110000 {-DATE-}674190801{-S4NAME---}                         SEKD000000000007000                        SK {PR}SF   01
+RAC0110000 {-DATE-}166290801{-S4NAME---}                         SEKD000000000005000SAS Insurance           SK {PR}SF   01
+RAC0110000 {-DATE-}674071470{-S5NAME---}                         SEKD000000000007000                        SK {PR}SF   01
+RAC0110000 {-DATE-}165490801CARE{PR}                           SEKC000000000005000Balance post for debits SK {PR}SF   01
+RAC0110000 {-DATE-}165490801CARE{PR}                           SEKC000000000006000Balance post for debits SK {PR}SF   01
+RAC0110000 {-DATE-}165490801CARE{PR}                           SEKC000000000007000Balance post for debits SK {PR}SF   01
+RAC0110000 {-DATE-}165490801CARE{PR}                           SEKC000000000012000Balance post for debits SK {PR}SF   01
+RAC0110000 {-DATE-}165490801CARE{PR}                           SEKC000000000007000Balance post for debits SK {PR}SF   01
+RAT0110000                                                       00000000000037000                        SK {PR}SF   01

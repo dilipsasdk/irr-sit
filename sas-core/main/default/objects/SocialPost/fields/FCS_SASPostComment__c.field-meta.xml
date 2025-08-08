@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCS_SASPostComment__c</fullName>
+    <complianceGroup>Wipe</complianceGroup>
+    <defaultValue>false</defaultValue>
+    <description>Cheked if the comment/reply is a comment/reply on a SAS post</description>
+    <externalId>false</externalId>
+    <label>Comment on SAS Post</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

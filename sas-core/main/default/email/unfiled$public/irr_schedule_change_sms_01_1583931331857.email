@@ -1,0 +1,21 @@
+<html>
+ <head> 
+  <title></title> 
+ </head> 
+ <body style="height: auto; min-height: auto;">
+  Important information about your SAS booking {{{passengerInfo.bookingReference}}}
+  <br />
+  <br />Hi,
+  <br />
+  [[[DISPLAYIF(scheduledChangeInfo.isDayChange)]]]<br />PLEASE NOTE - DATE CHANGE in travel plan
+  <br />[[[ENDDISPLAYIF()]]]
+  <br />We've changed our flight schedule, and this has impacted your trip.
+  <br />
+  <br />To check your current reservation:
+  <br />https://sas.travel/go/mmb?l=en&r={{{passengerInfo.bookingReference}}}&n={{{passengerInfo.lastName}}}
+  <br />
+  <br />We hope the new times will work for you.
+  <br />
+  <br />Regards, SAS​
+ </body>
+</html>

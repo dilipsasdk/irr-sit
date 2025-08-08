@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>ShareEmailContactsInternally</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share email contacts internally with all SAS users.</description>
+        <label>Share Email Contacts Internally</label>
+        <sharedTo>
+            <group>SAS</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Email Contact</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -1,0 +1,76 @@
+<apex:page controller="FlightDelayCertificateController" showHeader="false" applyHtmlTag="true" applyBodyTag="false" docType="html-5.0"
+    lightningStylesheets="true">
+
+    <head>
+        <apex:slds />
+    </head>
+
+    <body class="slds-scope" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <apex:form id="enterFlights">
+            <apex:pageBlock >
+                <apex:pageMessages />
+                <apex:pageBlockTable value="{!flightWrappers}" var="flight">
+                    <apex:variable value="{!0}" var="rowIndex" />
+                    <apex:column >
+                        <apex:facet name="header">Flight Number</apex:facet>
+                        <apex:input value="{!flight.FlightNumber}" type="text" styleClass="flightInfo" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Departure Airport</apex:facet>
+                        <apex:input value="{!flight.DepartureAirport}" type="text" styleClass="flightInfo" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Arrival Airport</apex:facet>
+                        <apex:input value="{!flight.ArrivalAirport}" type="text" styleClass="flightInfo" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Flight Status</apex:facet>
+                        <apex:selectList value="{!flight.FlightStatus}" size="1">
+                            <apex:selectOption itemValue="ontime" itemLabel="On time" />
+                            <apex:selectOption itemValue="delayed" itemLabel="Delayed" />
+                            <apex:selectOption itemValue="cancelled" itemLabel="Cancelled" />
+                        </apex:selectList>
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Scheduled Time of Departure</apex:facet>
+                        <apex:input value="{!flight.ScheduledTimeOfDeparture}" type="datetime" styleClass="flightInfo" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Scheduled Time of Arrival</apex:facet>
+                        <apex:input value="{!flight.ScheduledTimeOfArrival}" type="datetime" styleClass="flightInfo" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header">Actual Time of Arrival</apex:facet>
+                        <apex:input value="{!flight.ActualTimeOfArrival}" type="datetime" styleClass="flightInfo" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:commandLink value="Remove Flight" action="{!removeFlight}">
+                            <apex:param name="index" value="{!rowIndex}" />
+                        </apex:commandLink>
+                        <apex:variable var="rowIndex" value="{!rowIndex+1}" />
+                    </apex:column>
+                </apex:pageBlockTable>
+                <div class="slds-grid">
+                    <div class="slds-p-right_xx-small">
+                        <apex:outputLabel value="Booking Reference:" />
+                        <apex:input value="{!bookingReference}" id="bookingReference" styleClass="flightInfo" />
+                    </div>
+                    <div class="slds-p-right_xx-small">
+                        <apex:outputLabel value="Passenger Name:" />
+                        <apex:input value="{!passengerName}" id="passengerName" styleClass="flightInfo" />
+                    </div>
+                    <div class="slds-p-right_xx-small">
+                        <apex:outputLabel value="Entered Flight:" />
+                        <apex:input value="{!enteredFlight}" id="enteredFlight" styleClass="flightInfo" />
+                    </div>
+                    <div class="slds-col_bump-left slds-p-right_xx-small">
+                        <apex:commandButton value="Add Flight" action="{!addFlight}" />
+                    </div>
+                    <div class="slds-p-right_xx-small">
+                        <apex:commandButton value="Generate Certificate" action="{!createManualCertificateFromData}" status="loadingSpinner" />
+                    </div>
+                </div>
+            </apex:pageBlock>
+        </apex:form>
+    </body>
+</apex:page>

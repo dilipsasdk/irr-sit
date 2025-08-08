@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>MasterLabel</columns>
+    <columns>Active__c</columns>
+    <columns>Class__c</columns>
+    <columns>Group__c</columns>
+    <columns>TimeSegment__c</columns>
+    <columns>Schedule__c</columns>
+    <columns>OnlyExecuteOnWorkingDays__c</columns>
+    <columns>WorkingDayOffset__c</columns>
+    <columns>ScopeSize__c</columns>
+    <columns>Priority__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

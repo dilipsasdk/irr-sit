@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mobility_Device_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Mobility Device Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dry Battery Wheelchair (WCBD)</fullName>
+                <default>false</default>
+                <label>Dry Battery Wheelchair (WCBD)</label>
+            </value>
+            <value>
+                <fullName>Wet Battery Wheelchair (WCBW)</fullName>
+                <default>false</default>
+                <label>Wet Battery Wheelchair (WCBW)</label>
+            </value>
+            <value>
+                <fullName>Lithium Battery Wheelchair (WCLB)</fullName>
+                <default>false</default>
+                <label>Lithium Battery Wheelchair (WCLB)</label>
+            </value>
+            <value>
+                <fullName>Manual Power Wheelchair (WCMP)</fullName>
+                <default>false</default>
+                <label>Manual Power Wheelchair (WCMP)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

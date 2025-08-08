@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NetomiGetText</fullName>
+    <description>AgentAssistModule_GetTextEvent</description>
+    <displayedFields>
+        <field>Netomi_Conv_ID__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>NetomiGetText</label>
+</FieldSet>

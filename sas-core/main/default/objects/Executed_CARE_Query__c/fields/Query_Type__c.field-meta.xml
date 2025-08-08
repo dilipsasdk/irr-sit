@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Query_Type__c</fullName>
+    <description>Which field was queried with the query text from CARE.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Which field was queried with the query text from CARE.</inlineHelpText>
+    <label>Query Field</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PNR</fullName>
+                <default>false</default>
+                <label>PNR</label>
+            </value>
+            <value>
+                <fullName>PIR</fullName>
+                <default>false</default>
+                <label>PIR</label>
+            </value>
+            <value>
+                <fullName>CaseId</fullName>
+                <default>false</default>
+                <label>CaseId</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

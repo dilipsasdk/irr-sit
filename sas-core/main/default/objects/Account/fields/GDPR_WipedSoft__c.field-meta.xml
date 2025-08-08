@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GDPR_WipedSoft__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Whether the data has been softly wiped from the account. I.e. the data may be restored since the account still has an identifier which enables the information to be refetched for the account.</description>
+    <externalId>false</externalId>
+    <label>Wiped Soft</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

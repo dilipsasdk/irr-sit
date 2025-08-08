@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Entitlement_To_Assign__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Entitlement To Assign</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Basic 8 - 17</fullName>
+                <default>false</default>
+                <label>Basic 8 - 17</label>
+            </value>
+            <value>
+                <fullName>Basic 9 - 17</fullName>
+                <default>false</default>
+                <label>Basic 9 - 17</label>
+            </value>
+            <value>
+                <fullName>Customer Claim</fullName>
+                <default>false</default>
+                <label>Customer Claim</label>
+            </value>
+            <value>
+                <fullName>Digital Channel Support</fullName>
+                <default>false</default>
+                <label>Digital Channel Support</label>
+            </value>
+            <value>
+                <fullName>EB Missing Points</fullName>
+                <default>false</default>
+                <label>EB Missing Points</label>
+            </value>
+            <value>
+                <fullName>Pandion</fullName>
+                <default>false</default>
+                <label>Pandion</label>
+            </value>
+            <value>
+                <fullName>Refunds BOM</fullName>
+                <default>false</default>
+                <label>Refunds BOM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

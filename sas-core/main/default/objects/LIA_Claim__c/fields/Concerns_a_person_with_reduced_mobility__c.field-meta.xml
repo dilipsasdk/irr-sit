@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Concerns_a_person_with_reduced_mobility__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates whether the customer claim is related to a person with reduced mobility</description>
+    <externalId>false</externalId>
+    <label>Concerns a person with reduced mobility</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

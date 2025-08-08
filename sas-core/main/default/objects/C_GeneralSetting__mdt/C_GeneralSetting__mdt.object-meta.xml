@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>General purpose settings metadata where group of settins can stored for different purposes.</description>
+    <label>General Setting</label>
+    <pluralLabel>General Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

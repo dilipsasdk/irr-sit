@@ -1,0 +1,12 @@
+<template>
+  <template if:true={hasHandlingInstructions}>
+    <lightning-card title="Claim Handling Instructions">
+      <div class="slds-p-horizontal_medium">
+        <p><b>Actions needed:</b></p>
+        <template for:each={handlingInstructions} for:item="item">
+          <p key={item}>{item}</p>
+        </template>
+      </div>
+    </lightning-card>
+  </template>
+</template>

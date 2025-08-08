@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Settlement_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Settlement Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In progress</fullName>
+                <default>true</default>
+                <label>In progress</label>
+            </value>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <label>Denied</label>
+            </value>
+            <value>
+                <fullName>Blocked</fullName>
+                <default>false</default>
+                <label>Blocked</label>
+            </value>
+            <value>
+                <fullName>Waiting for approval</fullName>
+                <default>false</default>
+                <label>Waiting for approval</label>
+            </value>
+            <value>
+                <fullName>Waiting for control</fullName>
+                <default>false</default>
+                <label>Waiting for control</label>
+            </value>
+            <value>
+                <fullName>Controlled</fullName>
+                <default>false</default>
+                <label>Controlled</label>
+            </value>
+            <value>
+                <fullName>Waiting for transfer</fullName>
+                <default>false</default>
+                <label>Waiting for transfer</label>
+            </value>
+            <value>
+                <fullName>Sent to Racer</fullName>
+                <default>false</default>
+                <label>Sent to Racer</label>
+            </value>
+            <value>
+                <fullName>Rejected by Racer</fullName>
+                <default>false</default>
+                <label>Rejected by Racer</label>
+            </value>
+            <value>
+                <fullName>Sent to bank</fullName>
+                <default>false</default>
+                <label>Sent to bank</label>
+            </value>
+            <value>
+                <fullName>Rejected by bank</fullName>
+                <default>false</default>
+                <label>Rejected by bank</label>
+            </value>
+            <value>
+                <fullName>Failed</fullName>
+                <default>false</default>
+                <label>Failed</label>
+            </value>
+            <value>
+                <fullName>Failed - Processed</fullName>
+                <default>false</default>
+                <label>Failed - Processed</label>
+            </value>
+            <value>
+                <fullName>Done</fullName>
+                <default>false</default>
+                <label>Done</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

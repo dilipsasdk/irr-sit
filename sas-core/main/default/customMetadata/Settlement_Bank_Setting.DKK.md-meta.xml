@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>DKK</label>
+    <protected>false</protected>
+    <values>
+        <field>Bank__c</field>
+        <value xsi:type="xsd:string">SEB</value>
+    </values>
+    <values>
+        <field>Currency__c</field>
+        <value xsi:type="xsd:string">DKK</value>
+    </values>
+    <values>
+        <field>EFT_Requester__c</field>
+        <value xsi:type="xsd:string">35421041</value>
+    </values>
+    <values>
+        <field>accountHolderName__c</field>
+        <value xsi:type="xsd:string">SAS SF DKK</value>
+    </values>
+    <values>
+        <field>addressLine1__c</field>
+        <value xsi:type="xsd:string">P O BOX 2098</value>
+    </values>
+    <values>
+        <field>bankAccountNumber__c</field>
+        <value xsi:type="xsd:string">52950010002818</value>
+    </values>
+    <values>
+        <field>bankEDIIDNumber__c</field>
+        <value xsi:type="xsd:string">ESSEDKKK</value>
+    </values>
+    <values>
+        <field>bankSiteCode__c</field>
+        <value xsi:type="xsd:string">10272</value>
+    </values>
+    <values>
+        <field>city__c</field>
+        <value xsi:type="xsd:string">Copenhagen</value>
+    </values>
+    <values>
+        <field>country__c</field>
+        <value xsi:type="xsd:string">DK</value>
+    </values>
+    <values>
+        <field>postalCode__c</field>
+        <value xsi:type="xsd:string">1014</value>
+    </values>
+    <values>
+        <field>ref1Batch__c</field>
+        <value xsi:type="xsd:string">3001</value>
+    </values>
+    <values>
+        <field>tradingPartnerCode__c</field>
+        <value xsi:type="xsd:string">SEB DK1</value>
+    </values>
+    <values>
+        <field>translatorCode__c</field>
+        <value xsi:type="xsd:string">SEB DK1</value>
+    </values>
+</CustomMetadata>

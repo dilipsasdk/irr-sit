@@ -1,0 +1,101 @@
+<template>
+    <lightning-card title="Manage agents"> 
+        <div
+            for:each={selectedOptions}
+            for:item="row"
+            for:index="index"
+            key={row.idx}
+            class="slds-grid slds-gutters slds-grid_vertical-align-end slds-m-around_xxx-small"
+        >
+            <div class="slds-col slds-size_5of-12">
+                <lightning-input disabled type="text" label="Agent Name" value={row.name}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+                <lightning-input disabled type="text" label="Group Name" value={row.group}></lightning-input>
+            </div>
+            <div class="slds-col slds-size_3-of-12">
+                <lightning-button label="Remove" data-idx={row.idx} onclick={handleRemoveRow} variant="destructive"></lightning-button>
+            </div>
+        </div>
+        <div class="slds-grid slds-grid_vertical-align-end slds-gutters slds-m-around_xxx-small">
+            <div class="slds-col slds-size_5-of-12">
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control">
+                        <lightning-input label="Select Agent" type="search"
+                            onchange={handleSearch} onfocus={handleOnfocus} value={currentAgentName} data-type="agent">
+                        </lightning-input>
+                        <div if:true={showAgents} class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                            role="listbox">
+                            <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                <template for:each={agentOptions} for:item="searchResult">
+                                    <li key={searchResult.value} data-value={searchResult.value} data-type="agent" role="presentation"
+                                        onclick={selectSearchResult} class="slds-listbox__item">
+                                        <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small "
+                                            role="option">
+                                            <span class="slds-media__body">
+                                                <span class="slds-truncate" title={searchResult.label}>
+                                                    {searchResult.label}
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_4-of-12">
+                <div class="slds-form-element">
+                    <div class="slds-form-element__control">
+                        <lightning-input label="Select Group" type="search"
+                            onchange={handleSearch} onfocus={handleOnfocus} value={currentGroupName} data-type="group">
+                        </lightning-input>
+                        <div if:true={showGroups} class="slds-dropdown slds-dropdown_length-5 slds-dropdown_fluid"
+                            role="listbox">
+                            <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                                <template for:each={groupOptions} for:item="searchResult">
+                                    <li key={searchResult.value} data-value={searchResult.value} data-type="group" role="presentation"
+                                        onclick={selectSearchResult} class="slds-listbox__item">
+                                        <div class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small "
+                                            role="option">
+                                            <span class="slds-media__body">
+                                                <span class="slds-truncate" title={searchResult.label}>
+                                                    {searchResult.label}
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_3-of-12">
+                <lightning-button label="Add" onclick={handleAddRow} variant="brand"></lightning-button>
+            </div>
+        </div>
+
+        <div class="slds-grid slds-gutters slds-grid_vertical-align-end slds-m-around_xxx-small slds-p-top_small">
+            <div class="slds-col">
+                <lightning-button
+                variant="brand"
+                label="Submit"
+                title="Saves the changes"
+                disabled={cannotSave}
+                onclick={handleSave}
+                class="slds-align-bottom slds-align-right"
+                >
+                </lightning-button>
+            </div>    
+            <div if:true={showSpinner}>
+                <lightning-spinner
+                  alternative-text="Loading"
+                  size="medium"
+                  variant="brand"
+                ></lightning-spinner>
+              </div>
+        </div>
+    </lightning-card>
+</template>

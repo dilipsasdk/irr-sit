@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Form - Group Travel NL</label>
+    <protected>false</protected>
+    <values>
+        <field>Case_Type_To_Assign__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Department_To_Assign__c</field>
+        <value xsi:type="xsd:string">Group Sales</value>
+    </values>
+    <values>
+        <field>Entitlement_To_Assign__c</field>
+        <value xsi:type="xsd:string">Basic 9 - 17</value>
+    </values>
+    <values>
+        <field>Incoming_Case_Origin__c</field>
+        <value xsi:type="xsd:string">Form - Group Travel NL</value>
+    </values>
+    <values>
+        <field>Team_To_Assign__c</field>
+        <value xsi:type="xsd:string">Benelux</value>
+    </values>
+</CustomMetadata>

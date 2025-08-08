@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCS_IsReply__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>States weather the post is a reply (3rd line in chain or not)</description>
+    <externalId>false</externalId>
+    <label>Is Reply</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

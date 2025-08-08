@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IRR_StopBlockTime__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter stop time for block period in UTC. Automatic communication will be blocked until this time according to the filters set.</inlineHelpText>
+    <label>Stop Block Time (UTC)</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Time</type>
+</CustomField>

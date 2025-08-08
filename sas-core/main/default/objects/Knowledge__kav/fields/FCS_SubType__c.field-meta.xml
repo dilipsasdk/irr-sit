@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FCS_SubType__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub-type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>FCS_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Allowances</fullName>
+                <default>false</default>
+                <label>Allowances</label>
+            </value>
+            <value>
+                <fullName>Allowances - hand baggage</fullName>
+                <default>false</default>
+                <label>Allowances - hand baggage</label>
+            </value>
+            <value>
+                <fullName>Animals</fullName>
+                <default>false</default>
+                <label>Animals</label>
+            </value>
+            <value>
+                <fullName>Assistance</fullName>
+                <default>false</default>
+                <label>Assistance</label>
+            </value>
+            <value>
+                <fullName>Baggage general</fullName>
+                <default>false</default>
+                <label>Baggage general</label>
+            </value>
+            <value>
+                <fullName>Cobranded with EuroBonus</fullName>
+                <default>false</default>
+                <label>Cobranded with EuroBonus</label>
+            </value>
+            <value>
+                <fullName>Dangerous Goods/Weapons</fullName>
+                <default>false</default>
+                <label>Dangerous Goods/Weapons</label>
+            </value>
+            <value>
+                <fullName>Death of passenger or the passenger&apos;s immediate family - SAS</fullName>
+                <default>false</default>
+                <label>Death of passenger or the passenger&apos;s immediate family - SAS</label>
+            </value>
+            <value>
+                <fullName>Earning points</fullName>
+                <default>false</default>
+                <label>Earning points</label>
+            </value>
+            <value>
+                <fullName>EB Highlights/Error reports</fullName>
+                <default>false</default>
+                <label>EB Highlights/Error reports</label>
+            </value>
+            <value>
+                <fullName>EuroBonus Program</fullName>
+                <default>false</default>
+                <label>EuroBonus Program</label>
+            </value>
+            <value>
+                <fullName>Excess baggage - Charge &amp; Keep</fullName>
+                <default>false</default>
+                <label>Excess baggage - Charge &amp; Keep</label>
+            </value>
+            <value>
+                <fullName>Excess baggage - Charges</fullName>
+                <default>false</default>
+                <label>Excess baggage - Charges</label>
+            </value>
+            <value>
+                <fullName>Excess baggage - Prepaid XBAG</fullName>
+                <default>false</default>
+                <label>Excess baggage - Prepaid XBAG</label>
+            </value>
+            <value>
+                <fullName>Forbidden items in hand baggage</fullName>
+                <default>false</default>
+                <label>Forbidden items in hand baggage</label>
+            </value>
+            <value>
+                <fullName>Former Partners</fullName>
+                <default>false</default>
+                <label>Former Partners</label>
+            </value>
+            <value>
+                <fullName>Form of Payment</fullName>
+                <default>false</default>
+                <label>Form of Payment</label>
+            </value>
+            <value>
+                <fullName>Form of Payment-Advanced</fullName>
+                <default>false</default>
+                <label>Form of Payment-Advanced</label>
+            </value>
+            <value>
+                <fullName>Fragile and special value items</fullName>
+                <default>false</default>
+                <label>Fragile and special value items</label>
+            </value>
+            <value>
+                <fullName>Give Away Membership</fullName>
+                <default>false</default>
+                <label>Give Away Membership</label>
+            </value>
+            <value>
+                <fullName>Hotel Partners</fullName>
+                <default>false</default>
+                <label>Hotel Partners</label>
+            </value>
+            <value>
+                <fullName>IATA baggage resolution 302</fullName>
+                <default>false</default>
+                <label>IATA baggage resolution 302</label>
+            </value>
+            <value>
+                <fullName>Life Time Gold</fullName>
+                <default>false</default>
+                <label>Life Time Gold</label>
+            </value>
+            <value>
+                <fullName>Meals</fullName>
+                <default>false</default>
+                <label>Meals</label>
+            </value>
+            <value>
+                <fullName>Meals - Advanced</fullName>
+                <default>false</default>
+                <label>Meals - Advanced</label>
+            </value>
+            <value>
+                <fullName>Medical</fullName>
+                <default>false</default>
+                <label>Medical</label>
+            </value>
+            <value>
+                <fullName>Membership levels</fullName>
+                <default>false</default>
+                <label>Membership levels</label>
+            </value>
+            <value>
+                <fullName>Minor</fullName>
+                <default>false</default>
+                <label>Minor</label>
+            </value>
+            <value>
+                <fullName>Musical Instruments</fullName>
+                <default>false</default>
+                <label>Musical Instruments</label>
+            </value>
+            <value>
+                <fullName>Name change and name correction</fullName>
+                <default>false</default>
+                <label>Name change and name correction</label>
+            </value>
+            <value>
+                <fullName>Name in reservation</fullName>
+                <default>false</default>
+                <label>Name in reservation</label>
+            </value>
+            <value>
+                <fullName>Non cobranded cards</fullName>
+                <default>false</default>
+                <label>Non cobranded cards</label>
+            </value>
+            <value>
+                <fullName>Other Partners</fullName>
+                <default>false</default>
+                <label>Other Partners</label>
+            </value>
+            <value>
+                <fullName>Prepaid card</fullName>
+                <default>false</default>
+                <label>Prepaid card</label>
+            </value>
+            <value>
+                <fullName>Refund in case of death</fullName>
+                <default>false</default>
+                <label>Refund in case of death</label>
+            </value>
+            <value>
+                <fullName>SAS Pandion</fullName>
+                <default>false</default>
+                <label>SAS Pandion</label>
+            </value>
+            <value>
+                <fullName>Seating</fullName>
+                <default>false</default>
+                <label>Seating</label>
+            </value>
+            <value>
+                <fullName>Seating Advanced</fullName>
+                <default>false</default>
+                <label>Seating Advanced</label>
+            </value>
+            <value>
+                <fullName>Sequential use of flight coupons</fullName>
+                <default>false</default>
+                <label>Sequential use of flight coupons</label>
+            </value>
+            <value>
+                <fullName>Service Benefits for Diamond Members</fullName>
+                <default>false</default>
+                <label>Service Benefits for Diamond Members</label>
+            </value>
+            <value>
+                <fullName>Service Benefits for Gold Members</fullName>
+                <default>false</default>
+                <label>Service Benefits for Gold Members</label>
+            </value>
+            <value>
+                <fullName>Service Benefits for Silver Members</fullName>
+                <default>false</default>
+                <label>Service Benefits for Silver Members</label>
+            </value>
+            <value>
+                <fullName>Special baggage and Sporting Equipment</fullName>
+                <default>false</default>
+                <label>Special baggage and Sporting Equipment</label>
+            </value>
+            <value>
+                <fullName>Specific Information</fullName>
+                <default>false</default>
+                <label>Specific Information</label>
+            </value>
+            <value>
+                <fullName>Spending points</fullName>
+                <default>false</default>
+                <label>Spending points</label>
+            </value>
+            <value>
+                <fullName>Upgrade for points</fullName>
+                <default>false</default>
+                <label>Upgrade for points</label>
+            </value>
+            <value>
+                <fullName>Upgrading</fullName>
+                <default>false</default>
+                <label>Upgrading</label>
+            </value>
+            <value>
+                <fullName>Case</fullName>
+                <default>false</default>
+                <label>Case</label>
+            </value>
+            <value>
+                <fullName>Chat</fullName>
+                <default>false</default>
+                <label>Chat</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Settlement</fullName>
+                <default>false</default>
+                <label>Settlement</label>
+            </value>
+            <value>
+                <fullName>Telephony</fullName>
+                <default>false</default>
+                <label>Telephony</label>
+            </value>
+            <value>
+                <fullName>GeneralGuidelines</fullName>
+                <default>false</default>
+                <label>General Guidelines</label>
+            </value>
+            <value>
+                <fullName>Access</fullName>
+                <default>false</default>
+                <label>Access</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Cobranded with EuroBonus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Earning points</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>EB Highlights/Error reports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>EuroBonus Program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Former Partners</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Give Away Membership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Hotel Partners</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Life Time Gold</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Membership levels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Non cobranded cards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Other Partners</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Prepaid card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>SAS Pandion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Service Benefits for Diamond Members</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Service Benefits for Gold Members</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Service Benefits for Silver Members</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Specific Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Spending points</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EuroBonus</controllingFieldValue>
+            <valueName>Upgrade for points</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Allowances</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Allowances - hand baggage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Animals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Assistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Baggage general</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Dangerous Goods/Weapons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Death of passenger or the passenger&apos;s immediate family - SAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Excess baggage - Charge &amp; Keep</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Excess baggage - Charges</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Excess baggage - Prepaid XBAG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Forbidden items in hand baggage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Form of Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Form of Payment-Advanced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Fragile and special value items</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>IATA baggage resolution 302</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Meals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Meals - Advanced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Medical</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Minor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Musical Instruments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Name change and name correction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Name in reservation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Refund in case of death</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Seating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Seating Advanced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Sequential use of flight coupons</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Special baggage and Sporting Equipment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reservations</controllingFieldValue>
+            <valueName>Upgrading</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Product Support</controllingFieldValue>
+            <valueName>Case</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Product Support</controllingFieldValue>
+            <valueName>Chat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Product Support</controllingFieldValue>
+            <valueName>Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Product Support</controllingFieldValue>
+            <valueName>Settlement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Product Support</controllingFieldValue>
+            <valueName>Telephony</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Product Support</controllingFieldValue>
+            <valueName>GeneralGuidelines</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Functional Product Support</controllingFieldValue>
+            <valueName>Access</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,352 @@
+<!--
+ - @author Niklas Lundkvist, Deloitte
+ - @date 2020
+ -->
+
+<!-- IRR Send Panel -->
+<template>
+  <lightning-card title="Send Messages" icon-name="utility:email">
+    <ul style="padding-left: 643px">
+      <li>
+        <lightning-button
+          class={cancelButtonClass}
+          icon-name="utility:chevronleft"
+          slot="actions"
+          variant="brand"
+          label="Back"
+          title="Cancel"
+          onclick={handleCancel}
+        >
+        </lightning-button>
+      </li>
+      <li>
+        <lightning-combobox
+          style="width: 185px"
+          if:true={showTemplatePicklist}
+          class="combobox-actions slds-p-left_small"
+          slot="actions"
+          variant="label-hidden"
+          label="Select template"
+          value={manualTemplate.templateName}
+          options={templatePicklistOptions}
+          onchange={handleTemplateChange}
+        >
+        </lightning-combobox>
+      </li>
+      <li>
+        <lightning-button
+          class="slds-p-left_small"
+          slot="actions"
+          variant="neutral"
+          label={additionalRecipientLabel}
+          title="Add Additional Recipients"
+          onclick={handleShowRecipientModal}
+        >
+        </lightning-button>
+      </li>
+      <li>
+        <lightning-button
+          class="slds-p-left_small"
+          slot="actions"
+          variant="brand"
+          label="Send Messages"
+          title="Send Messages"
+          onclick={handleSend}
+        >
+        </lightning-button>
+      </li>
+    </ul>
+    <div class="slds-media">
+      <div class="slds-media__body">
+        <lightning-tabset>
+          <lightning-tab
+            class="no-padding"
+            value="CUSTOM"
+            label="Custom"
+            title="Send a custom message"
+            onactive={handleTabSwitch}
+          >
+            <lightning-layout>
+              <lightning-layout-item padding="around-small" size="4">
+                <lightning-input
+                  type="text"
+                  name="subject"
+                  label="Subject"
+                  required
+                  field-level-help="Used as subject line in both SMS and Email"
+                  data-tab-group="CUSTOM"
+                  onchange={handleParameterChange}
+                >
+                </lightning-input>
+                <lightning-textarea
+                  name="smscontent"
+                  label={customContentLabel}
+                  class="sms-content-height"
+                  variant="standard"
+                  data-tab-group="CUSTOM"
+                  onchange={handleParameterChange}
+                >
+                </lightning-textarea>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-small" size="6">
+                <lightning-input-rich-text
+                  formats={formats}
+                  name="content"
+                  class="lightningInputRichText"
+                  label="Email Content"
+                  label-visible
+                  data-tab-group="CUSTOM"
+                  onchange={handleParameterChange}
+                >
+                </lightning-input-rich-text>
+              </lightning-layout-item>
+              <lightning-layout-item
+                class="fileUpload"
+                padding="around-small"
+                size="2"
+              >
+                <lightning-formatted-text
+                  value="** Only PDF file with size less than 3 MB is supported"
+                  style="color: red"
+                >
+                </lightning-formatted-text>
+                <lightning-input
+                  type="file"
+                  label="Email Attachment"
+                  onchange={handleFileChange}
+                ></lightning-input>
+                <div class="uploaded-file" lwc:if={uploadedFileData.fileName}>
+                  <span title={uploadedFileData.fileName} class="file-name"
+                    >{uploadedFileData.fileName}</span
+                  >
+                  <span
+                    title="Remove Attachment"
+                    class="remove-file"
+                    onclick={removeEmailUploadedFile}
+                    >X</span
+                  >
+                </div>
+              </lightning-layout-item>
+            </lightning-layout>
+          </lightning-tab>
+          <lightning-tab
+            class="no-padding"
+            value="TEMPLATE"
+            label="Template"
+            title="Send a template message"
+            onactive={handleTabSwitch}
+          >
+            <div class="slds-p-around_small">
+              <lightning-formatted-text
+                value="Please choose a template to continue. No input is necessary."
+              >
+              </lightning-formatted-text>
+            </div>
+          </lightning-tab>
+          <lightning-tab
+            if:false={hideFlightIdTabs}
+            class="no-padding"
+            value="DELAY"
+            label="Delay"
+            title="Send Delay Message"
+            onactive={handleTabSwitch}
+          >
+            <lightning-layout>
+              <lightning-layout-item
+                padding="around-small"
+                size="3"
+                class="pull-down"
+              >
+                <lightning-input
+                  class="slds-p-vertical_xx-small"
+                  type="text"
+                  name="flightId"
+                  label="Flight Id"
+                  value={flightId}
+                  field-level-help="Format SK1238-20200213-ARN-CPH"
+                  pattern="([A-Z]{2})([0-9]{4})-([0-9]{8})-([A-Z]{3})-([A-Z]{3})"
+                  required
+                  message-when-pattern-mismatch="Input format SK1238-20200213-ARN-CPH"
+                  data-tab-group="DELAY"
+                  onchange={handleParameterChange}
+                >
+                </lightning-input>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-small">
+                <lightning-input
+                  type="datetime"
+                  timezone="GMT"
+                  value={sendParameters.scheduledTimeOfDepartureLocal}
+                  name="scheduledTimeOfDepartureLocal"
+                  label="Scheduled Time of Departure (Local)"
+                  required
+                  data-tab-group="DELAY"
+                  onchange={handleParameterChange}
+                >
+                </lightning-input>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-small">
+                <lightning-input
+                  type="datetime"
+                  timezone="GMT"
+                  name="estimatedTimeOfDepartureLocal"
+                  label="Estimated Time of Departure (Local)"
+                  required
+                  data-tab-group="DELAY"
+                  onchange={handleParameterChange}
+                >
+                </lightning-input>
+              </lightning-layout-item>
+            </lightning-layout>
+          </lightning-tab>
+          <lightning-tab
+            if:false={hideFlightIdTabs}
+            class="no-padding"
+            value="NEW_INFO"
+            label="New Info"
+            title="Send New Info Message"
+            onactive={handleTabSwitch}
+          >
+            <lightning-layout>
+              <lightning-layout-item
+                padding="around-small"
+                size="3"
+                class="pull-down"
+              >
+                <lightning-input
+                  class="slds-p-vertical_xx-small"
+                  type="text"
+                  name="flightId"
+                  label="Flight Id"
+                  value={flightId}
+                  field-level-help="Format SK1238-20200213-ARN-CPH"
+                  pattern="([A-Z]{2})([0-9]{4})-([0-9]{8})-([A-Z]{3})-([A-Z]{3})"
+                  required
+                  message-when-pattern-mismatch="Input format SK1238-20200213-ARN-CPH"
+                  data-tab-group="NEW_INFO"
+                  onchange={handleParameterChange}
+                >
+                </lightning-input>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-small">
+                <lightning-input
+                  type="datetime"
+                  timezone="GMT"
+                  value={sendParameters.scheduledTimeOfDepartureLocal}
+                  name="scheduledTimeOfDepartureLocal"
+                  label="Scheduled Time of Departure (Local)"
+                  required
+                  data-tab-group="NEW_INFO"
+                  onchange={handleParameterChange}
+                >
+                </lightning-input>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-small">
+                <lightning-input
+                  type="datetime"
+                  timezone="GMT"
+                  name="newInfoTimeLocal"
+                  label="New Info Time (Local)"
+                  required
+                  data-tab-group="NEW_INFO"
+                  onchange={handleParameterChange}
+                >
+                </lightning-input>
+               
+              </lightning-layout-item>
+            </lightning-layout>
+          </lightning-tab>
+          <lightning-tab
+            if:false={hideFlightIdTabs}
+            class="no-padding"
+            value="CANCEL"
+            label="Cancellation"
+            title="Send Cancellation Message"
+            onactive={handleTabSwitch}
+          >
+            <lightning-layout>
+              <lightning-layout-item
+                padding="around-small"
+                size="3"
+                class="pull-down"
+              >
+                <lightning-input
+                  class="slds-p-vertical_xx-small"
+                  type="text"
+                  name="flightId"
+                  label="Flight Id"
+                  value={flightId}
+                  field-level-help="Format SK1238-20200213-ARN-CPH"
+                  pattern="([A-Z]{2})([0-9]{4})-([0-9]{8})-([A-Z]{3})-([A-Z]{3})"
+                  required
+                  message-when-pattern-mismatch="Input format SK1238-20200213-ARN-CPH"
+                  data-tab-group="CANCEL"
+                  onchange={handleParameterChange}
+                >
+                </lightning-input>
+              </lightning-layout-item>
+              <lightning-layout-item padding="around-small">
+                <lightning-input
+                  type="datetime"
+                  timezone="GMT"
+                  value={sendParameters.scheduledTimeOfDepartureLocal}
+                  name="scheduledTimeOfDepartureLocal"
+                  label="Scheduled Time of Departure (Local)"
+                  required
+                  data-tab-group="CANCEL"
+                  onchange={handleParameterChange}
+                >
+                </lightning-input>
+              </lightning-layout-item>
+            </lightning-layout>
+          </lightning-tab>
+          <lightning-tab
+            class="no-padding"
+            value="REBOOK"
+            label="Rebooking"
+            title="Send Rebooking Message"
+            onactive={handleTabSwitch}
+          >
+            <div class="slds-p-around_small">
+              <lightning-formatted-text
+                value="Passengers will be sent their current booking itinerary. No input is necessary."
+              >
+              </lightning-formatted-text>
+            </div>
+          </lightning-tab>
+          <lightning-tab
+            class="no-padding"
+            value="SCHEDULED_CHANGE"
+            label="Schedule Change"
+            title="Send Schedule Change Message"
+            onactive={handleTabSwitch}
+          >
+            <lightning-layout>
+              <lightning-layout-item padding="around-small">
+                <lightning-input
+                  label="Day Change applies"
+                  value={sendParameters.isDayChange}
+                  name="isDayChange"
+                  type="checkbox"
+                  onchange={handleParameterChange}
+                >
+                </lightning-input>
+              </lightning-layout-item>
+            </lightning-layout>
+
+
+
+          </lightning-tab>
+<lightning-tab
+            class="no-padding"
+            value="LOUNGE_VOUCHER"
+            label="CPH Lounge"
+            title="CPH Lounge Message"
+            onactive={handleTabSwitch}
+          >
+          </lightning-tab>
+        </lightning-tabset>
+      </div>
+    </div>
+  </lightning-card>
+</template>

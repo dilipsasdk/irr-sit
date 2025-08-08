@@ -1,0 +1,17 @@
+{
+  "packageDirectories": [
+    {
+      "path": "sas-core",
+      "default": true,
+      "package": "SAS Core",
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT"
+    }
+  ],
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "59.0",
+  "packageAliases": {
+    "SAS Core": "0Ho2p000000k9gcCAA"
+  }
+}
