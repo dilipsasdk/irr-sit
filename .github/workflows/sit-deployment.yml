@@ -4,7 +4,7 @@ name: Deploy develop branch to SIT org
 # Definition when the workflow should run
 on:
   push:
-    branches: [irr/develop]
+    branches: [main]
     paths:
       - "sas-core/**"
   workflow_dispatch:
