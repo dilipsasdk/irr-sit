@@ -50,7 +50,7 @@ global class AD_SamlJitHandler implements Auth.SamlJitHandler {
     */
   private static final String NS_ASSERTION = 'urn:oasis:names:tc:SAML:2.0:assertion';
   /**
-        Permission type API name for Chatter group
+        Permission type API name for Chatter group hello
     */
   private static final String PERMISSION_TYPE_CHATTER_GROUP = 'Collaboration Group';
 
